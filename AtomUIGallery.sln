@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery", "src\AtomUIGallery\AtomUIGallery.csproj", "{DEA09899-AF41-45E4-8A6B-AA477161C6BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.Desktop", "src\AtomUIGallery.Desktop\AtomUIGallery.Desktop.csproj", "{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

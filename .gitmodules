@@ -1,0 +1,3 @@
+[submodule "packages/AtomUI"]
+	path = packages/AtomUI
+	url = https://github.com/chinware/AtomUI.git

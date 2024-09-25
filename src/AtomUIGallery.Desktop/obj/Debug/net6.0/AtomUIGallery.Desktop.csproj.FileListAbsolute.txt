@@ -1,0 +1,12 @@
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\bin\Debug\net6.0\AtomUIGallery.Desktop.deps.json
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\bin\Debug\net6.0\AtomUIGallery.Desktop.dll
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\bin\Debug\net6.0\AtomUIGallery.Desktop.pdb
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.AssemblyInfoInputs.cache
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.AssemblyInfo.cs
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.csproj.CoreCompileInputs.cache
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.sourcelink.json
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.dll
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\refint\AtomUIGallery.Desktop.dll
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\AtomUIGallery.Desktop.pdb
+D:\Workspace\Projects\DotNET\AtomUIGallery\src\AtomUIGallery.Desktop\obj\Debug\net6.0\ref\AtomUIGallery.Desktop.dll
