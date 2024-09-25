@@ -1,8 +1,57 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery", "src\AtomUIGallery\AtomUIGallery.csproj", "{DEA09899-AF41-45E4-8A6B-AA477161C6BD}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.Desktop", "src\AtomUIGallery.Desktop\AtomUIGallery.Desktop.csproj", "{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E3103E91-AEAE-482A-8008-1489058B0814}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AtomUI", "AtomUI", "{AB05E310-C053-41CD-884F-CF7BAC5D394A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Base", "packages\AtomUI\src\AtomUI.Base\AtomUI.Base.csproj", "{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls", "packages\AtomUI\src\AtomUI.Controls\AtomUI.Controls.csproj", "{13B9EDE5-1B51-4252-A98C-71218CEE9064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Generator", "packages\AtomUI\src\AtomUI.Generator\AtomUI.Generator.csproj", "{2CE89D68-7973-4D77-BE24-9063CF2F8902}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Icon", "packages\AtomUI\src\AtomUI.Icon\AtomUI.Icon.csproj", "{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Icon.AntDesign", "packages\AtomUI\src\AtomUI.Icon.AntDesign\AtomUI.Icon.AntDesign.csproj", "{98523A5A-AFE0-4DE9-B84B-0D49890F50CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Icon.Generator", "packages\AtomUI\src\AtomUI.Icon.Generator\AtomUI.Icon.Generator.csproj", "{B3848D38-7E3F-4887-B574-D2689F340454}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Theme", "packages\AtomUI\src\AtomUI.Theme\AtomUI.Theme.csproj", "{12E70E12-E781-413D-A840-08B7DED8A559}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Generators", "Generators", "{A9E445A8-483F-4E86-B19B-CD609F2A169A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{31C78028-1493-4405-892E-BE102007FAD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI", "packages\AtomUI\packages\AtomUI\AtomUI.csproj", "{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{242CB011-5AB4-45D1-AC56-96735F1BF353}"
+	ProjectSection(SolutionItems) = preProject
+		build\Common.props = build\Common.props
+		build\Output.props = build\Output.props
+		build\Version.props = build\Version.props
+		Directory.Build.props = Directory.Build.props
+		Directory.Build.targets = Directory.Build.targets
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{5ECD4286-848E-457C-A74C-647BEC38B4B8}"
+	ProjectSection(SolutionItems) = preProject
+		packages\AtomUI\Directory.Build.props = packages\AtomUI\Directory.Build.props
+		packages\AtomUI\Directory.Build.targets = packages\AtomUI\Directory.Build.targets
+		packages\AtomUI\Directory.Packages.props = packages\AtomUI\Directory.Packages.props
+		packages\AtomUI\build\!Nuget.bat = packages\AtomUI\build\!Nuget.bat
+		packages\AtomUI\build\!Nuget.Local.bat = packages\AtomUI\build\!Nuget.Local.bat
+		packages\AtomUI\build\!Package.All.Release.bat = packages\AtomUI\build\!Package.All.Release.bat
+		packages\AtomUI\build\Common.props = packages\AtomUI\build\Common.props
+		packages\AtomUI\build\Internal.Using.props = packages\AtomUI\build\Internal.Using.props
+		packages\AtomUI\build\Nuget.props = packages\AtomUI\build\Nuget.props
+		packages\AtomUI\build\Output.App.props = packages\AtomUI\build\Output.App.props
+		packages\AtomUI\build\Output.Local.props = packages\AtomUI\build\Output.Local.props
+		packages\AtomUI\build\Output.props = packages\AtomUI\build\Output.props
+		packages\AtomUI\build\Version.props = packages\AtomUI\build\Version.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,13 +59,55 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DEA09899-AF41-45E4-8A6B-AA477161C6BD}.Release|Any CPU.Build.0 = Release|Any CPU
 		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13B9EDE5-1B51-4252-A98C-71218CEE9064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13B9EDE5-1B51-4252-A98C-71218CEE9064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13B9EDE5-1B51-4252-A98C-71218CEE9064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13B9EDE5-1B51-4252-A98C-71218CEE9064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CE89D68-7973-4D77-BE24-9063CF2F8902}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE89D68-7973-4D77-BE24-9063CF2F8902}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE89D68-7973-4D77-BE24-9063CF2F8902}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE89D68-7973-4D77-BE24-9063CF2F8902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98523A5A-AFE0-4DE9-B84B-0D49890F50CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98523A5A-AFE0-4DE9-B84B-0D49890F50CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98523A5A-AFE0-4DE9-B84B-0D49890F50CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98523A5A-AFE0-4DE9-B84B-0D49890F50CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3848D38-7E3F-4887-B574-D2689F340454}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3848D38-7E3F-4887-B574-D2689F340454}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3848D38-7E3F-4887-B574-D2689F340454}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3848D38-7E3F-4887-B574-D2689F340454}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E70E12-E781-413D-A840-08B7DED8A559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E70E12-E781-413D-A840-08B7DED8A559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E70E12-E781-413D-A840-08B7DED8A559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E70E12-E781-413D-A840-08B7DED8A559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AB05E310-C053-41CD-884F-CF7BAC5D394A} = {E3103E91-AEAE-482A-8008-1489058B0814}
+		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{13B9EDE5-1B51-4252-A98C-71218CEE9064} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{BC256FD5-2BBD-4AE3-8074-E4BBE5947C74} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{98523A5A-AFE0-4DE9-B84B-0D49890F50CA} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{12E70E12-E781-413D-A840-08B7DED8A559} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{A9E445A8-483F-4E86-B19B-CD609F2A169A} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{2CE89D68-7973-4D77-BE24-9063CF2F8902} = {A9E445A8-483F-4E86-B19B-CD609F2A169A}
+		{B3848D38-7E3F-4887-B574-D2689F340454} = {A9E445A8-483F-4E86-B19B-CD609F2A169A}
+		{31C78028-1493-4405-892E-BE102007FAD5} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
+		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC} = {31C78028-1493-4405-892E-BE102007FAD5}
+		{5ECD4286-848E-457C-A74C-647BEC38B4B8} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
 	EndGlobalSection
 EndGlobal
