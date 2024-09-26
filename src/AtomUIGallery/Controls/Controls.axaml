@@ -3,5 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceInclude Source="ShowCaseItem.axaml" />
         <ResourceInclude Source="ShowCasePanel.axaml" />
+        <ResourceInclude Source="ColorItemControl.axaml" />
+        <ResourceInclude Source="ColorListControl.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
