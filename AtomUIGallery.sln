@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.Desktop", "src\AtomUIGallery.Desktop\AtomUIGallery.Desktop.csproj", "{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.DesktopOld", "src\AtomUIGallery.DesktopOld\AtomUIGallery.DesktopOld.csproj", "{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E3103E91-AEAE-482A-8008-1489058B0814}"
 EndProject
@@ -53,6 +53,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{5ECD4286
 		packages\AtomUI\build\Version.props = packages\AtomUI\build\Version.props
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery", "src\AtomUIGallery\AtomUIGallery.csproj", "{A676BF83-57B4-45D3-8642-AF6164044E06}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.Desktop", "src\AtomUIGallery.Desktop\AtomUIGallery.Desktop.csproj", "{A1A48669-4330-4B69-B13C-F3D2A24B6047}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +99,14 @@ Global
 		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA59F22A-5943-4EF3-8D3E-F51597BEA3DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A676BF83-57B4-45D3-8642-AF6164044E06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A676BF83-57B4-45D3-8642-AF6164044E06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A676BF83-57B4-45D3-8642-AF6164044E06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A676BF83-57B4-45D3-8642-AF6164044E06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1A48669-4330-4B69-B13C-F3D2A24B6047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1A48669-4330-4B69-B13C-F3D2A24B6047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1A48669-4330-4B69-B13C-F3D2A24B6047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1A48669-4330-4B69-B13C-F3D2A24B6047}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB05E310-C053-41CD-884F-CF7BAC5D394A} = {E3103E91-AEAE-482A-8008-1489058B0814}

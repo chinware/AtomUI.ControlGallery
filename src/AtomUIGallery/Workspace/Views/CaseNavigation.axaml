@@ -1,0 +1,63 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AtomUIGallery.Workspace.Views.CaseNavigation"
+             xmlns:atom="https://atomui.net">
+    <StackPanel>
+        <atom:NavMenu Mode="Inline" Width="250">
+            <atom:NavMenuItem Header="General">
+                <atom:NavMenuItem Header="Palette" />
+                <atom:NavMenuItem Header="Icons" />
+                <atom:NavMenuItem Header="Button" />
+                <atom:NavMenuItem Header="SplitButton" />
+                <atom:NavMenuItem Header="Separator" />
+            </atom:NavMenuItem>
+
+            <atom:NavMenuItem Header="Navigation">
+                <atom:NavMenuItem Header="ComboBox" />
+                <atom:NavMenuItem Header="DropdownButton" />
+                <atom:NavMenuItem Header="ButtonSpinner" />
+                <atom:NavMenuItem Header="Menu" />
+            </atom:NavMenuItem>
+
+            <atom:NavMenuItem Header="Data Entry">
+                <atom:NavMenuItem Header="CheckBox" />
+                <atom:NavMenuItem Header="Menu" />
+                <atom:NavMenuItem Header="LineEdit" />
+                <atom:NavMenuItem Header="NumberUpDown" />
+                <atom:NavMenuItem Header="RadioButton" />
+                <atom:NavMenuItem Header="ToggleSwitch" />
+                <atom:NavMenuItem Header="Slider" />
+                <atom:NavMenuItem Header="DatePicker" />
+                <atom:NavMenuItem Header="TimePicker" />
+            </atom:NavMenuItem>
+
+            <atom:NavMenuItem Header="Data Display">
+                <atom:NavMenuItem Header="Badge" />
+                <atom:NavMenuItem Header="Calendar" />
+                <atom:NavMenuItem Header="Collapse" />
+                <atom:NavMenuItem Header="Expander" />
+                <atom:NavMenuItem Header="Empty" />
+                <atom:NavMenuItem Header="GroupBox" />
+                <atom:NavMenuItem Header="ListBox" />
+                <atom:NavMenuItem Header="Popover" />
+                <atom:NavMenuItem Header="Segmented" />
+                <atom:NavMenuItem Header="TabControl" />
+                <atom:NavMenuItem Header="Timeline" />
+                <atom:NavMenuItem Header="TreeView" />
+                <atom:NavMenuItem Header="Tooltip" />
+                <atom:NavMenuItem Header="Tag" />
+            </atom:NavMenuItem>
+
+            <atom:NavMenuItem Header="Feedback">
+                <atom:NavMenuItem Header="Alert" />
+                <atom:NavMenuItem Header="Drawer" />
+                <atom:NavMenuItem Header="Message" />
+                <atom:NavMenuItem Header="Notification" />
+                <atom:NavMenuItem Header="PopupConfirm" />
+                <atom:NavMenuItem Header="ProgressBar" />
+                <atom:NavMenuItem Header="LoadingIndicator" />
+                <atom:NavMenuItem Header="Watermark" />
+            </atom:NavMenuItem>
+        </atom:NavMenu>
+    </StackPanel>
+</UserControl>

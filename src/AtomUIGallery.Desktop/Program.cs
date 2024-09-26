@@ -2,19 +2,14 @@
 using AtomUI.Icon.AntDesign;
 using AtomUI.Theme;
 using Avalonia;
-using Avalonia.Dialogs;
 using Avalonia.Media;
-#if DEBUG
+using Avalonia.ReactiveUI;
 using Nlnet.Avalonia.DevTools;
-#endif
 
-namespace AtomUI.Demo.Desktop;
+namespace AtomUIGallery.Desktop;
 
 internal class Program
 {
-    // Initialization code. Don't use any Avalonia, third-party APIs or any
-    // SynchronizationContext-reliant code before AppMain is called: things aren't initialized
-    // yet and stuff might break.
     [STAThread]
     public static void Main(string[] args)
     {
@@ -25,10 +20,10 @@ internal class Program
                 {
                     FontFallbacks = new[]
                     {
-                    new FontFallback
-                    {
-                        FontFamily = new FontFamily("Microsoft YaHei")
-                    }
+                        new FontFallback
+                        {
+                            FontFamily = new FontFamily("Microsoft YaHei")
+                        }
                     }
                 })
                 .StartWithClassicDesktopLifetime(args);
@@ -43,15 +38,15 @@ internal class Program
     }
 
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<App>()
-                     .ConfigureAtomUI()
-                     .UseManagedSystemDialogs()
-                     .UsePlatformDetect()
-                     .UseAtomUI()
+        => AppBuilder.Configure<GalleryApplication>()
+            .UseReactiveUI()
+            .ConfigureAtomUI()
+            .UsePlatformDetect()
+            .UseAtomUI()
 #if DEBUG
-                     .UseDevToolsForAvalonia()
+            .UseDevToolsForAvalonia()
 #endif
-                     .UseIconPackage<AntDesignIconPackage>(true)
-                     .With(new Win32PlatformOptions())
-                     .LogToTrace();
+            .UseIconPackage<AntDesignIconPackage>(true)
+            .With(new Win32PlatformOptions())
+            .LogToTrace();
 }

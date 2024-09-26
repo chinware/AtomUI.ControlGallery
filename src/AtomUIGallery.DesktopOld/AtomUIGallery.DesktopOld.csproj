@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+<PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>AtomUI.Demo.Desktop</RootNamespace>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+</PropertyGroup>
+
+<ItemGroup>
+    <AvaloniaResource Include="Assets\**"/>
+</ItemGroup>
+
+<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <IsTrimmable>true</IsTrimmable>
+    <PublishTrimmed>true</PublishTrimmed>
+    <PublishAot>true</PublishAot>
+</PropertyGroup>
+
+<PropertyGroup>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+</PropertyGroup>
+
+<ItemGroup>
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Nlnet.Avalonia.DevTools"/>
+</ItemGroup>
+
+<ItemGroup>
+  <ProjectReference Include="..\AtomUIGallery\AtomUIGallery.csproj" />
+</ItemGroup>
+
+<ItemGroup>
+  <TrimmerRootDescriptor Include="Roots.xml" />
+</ItemGroup>
+
+</Project>

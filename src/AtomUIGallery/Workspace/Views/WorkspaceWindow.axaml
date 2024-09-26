@@ -1,0 +1,15 @@
+<atom:Window xmlns="https://github.com/avaloniaui"
+             xmlns:rxui="http://reactiveui.net"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:atom="clr-namespace:AtomUI.Controls;assembly=AtomUI.Controls"
+             xmlns:workspaceviews="clr-namespace:AtomUIGallery.Workspace.Views"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="AtomUIGallery.Workspace.Views.WorkspaceWindow"
+             Title="AtomUI Gallery">
+    <DockPanel LastChildFill="True">
+        <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
+        <rxui:RoutedViewHost Router="{Binding Router}" PageTransition="{x:Null}"/>
+    </DockPanel>
+</atom:Window>
