@@ -7,6 +7,7 @@ namespace AtomUIGallery.Workspace.Views;
 
 public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
 {
+    
     public WorkspaceWindow()
     {
         this.WhenActivated(disposables => { });
