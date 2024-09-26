@@ -1,9 +1,15 @@
 ﻿using Avalonia.Controls.ApplicationLifetimes;
+using Avalonia.Styling;
 
 namespace AtomUIGallery.Desktop;
 
 public class GalleryApplication : BaseGalleryApplication
 {
+    public GalleryApplication()
+    {
+        RequestedThemeVariant = ThemeVariant.Light;
+    }
+    
     public override void OnFrameworkInitializationCompleted()
     {
         switch (ApplicationLifetime)

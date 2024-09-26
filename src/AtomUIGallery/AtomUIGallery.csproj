@@ -38,11 +38,5 @@
     <ItemGroup>
         <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersionThatSampleUsed)"/>
     </ItemGroup>
-    
-    <ItemGroup>
-      <Reference Include="Avalonia.Controls">
-        <HintPath>C:\Users\pulsarware\.nuget\packages\avalonia\11.1.2\lib\net6.0\Avalonia.Controls.dll</HintPath>
-      </Reference>
-    </ItemGroup>
 
 </Project>

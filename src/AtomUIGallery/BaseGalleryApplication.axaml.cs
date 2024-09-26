@@ -5,7 +5,7 @@ using Avalonia;
 
 namespace AtomUIGallery;
 
-public abstract class BaseGalleryApplication : Application
+public partial class BaseGalleryApplication : Application
 {
     protected WorkspaceWindow CreateWorkspaceWindow()
     {

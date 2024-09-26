@@ -1,0 +1,30 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:atom="https://atomui.net"
+    xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    <ControlTheme x:Key="{x:Type gallerycontrols:ShowCaseItem}" 
+                  TargetType="{x:Type gallerycontrols:ShowCaseItem}">
+        <Setter Property="Template">
+            <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCaseItem}">
+                <Border BorderBrush="rgba(10, 5, 5, 5)"
+                        BorderThickness="1"
+                        Padding="20"
+                        CornerRadius="8">
+                    <StackPanel Orientation="Vertical">
+                        <ContentPresenter
+                            Content="{TemplateBinding Content}"
+                            ContentTemplate="{TemplateBinding ContentTemplate}"
+                            Margin="0, 0, 0, 10" />
+                        <atom:Separator TitlePosition="Left"
+                                        FontWeight="Bold"
+                                        Title="{TemplateBinding Title}" />
+                        <TextBlock TextWrapping="Wrap"
+                                   Margin="0, 10, 0, 0"
+                                   Text="{TemplateBinding Description}" />
+                    </StackPanel>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+    </ControlTheme>
+</ResourceDictionary>
