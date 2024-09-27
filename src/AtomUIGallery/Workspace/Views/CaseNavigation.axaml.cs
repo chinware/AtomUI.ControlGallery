@@ -16,23 +16,29 @@ public partial class CaseNavigation : UserControl
 
     private void HandleNavMenuItemClick(object? sender, NavMenuItemClickEventArgs args)
     {
-        Console.WriteLine(args.NavMenuItem.ItemKey);
+        if (DataContext is CaseNavigationViewModel caseNavigationViewModel)
+        {
+            var showCaseId = args.NavMenuItem.ItemKey;
+            if (showCaseId is null)
+            {
+                // TODO 是不是可以跳转到默认的 ShowCase 页面
+                return;
+            }
+            caseNavigationViewModel.NavigateTo(showCaseId);
+        }
     }
 
     protected override void OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs e)
     {
         base.OnAttachedToLogicalTree(e);
-        if (DataContext is null)
+        var current = Parent;
+        while (current is not null)
         {
-            var current = Parent;
-            while (current is not null)
+            if (current.DataContext is IScreen screen)
             {
-                if (current.DataContext is IScreen screen)
-                {
-                    DataContext = new CaseNavigationViewModel(screen);
-                }
-                current = current.Parent;
+                DataContext = new CaseNavigationViewModel(screen);
             }
+            current = current.Parent;
         }
     }
 }

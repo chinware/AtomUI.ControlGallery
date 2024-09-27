@@ -4,9 +4,9 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class SwitchShowCase : ReactiveUserControl<SwitchShowCaseViewModel>
+public partial class ToggleSwitchShowCase : ReactiveUserControl<SwitchShowCaseViewModel>
 {
-    public SwitchShowCase()
+    public ToggleSwitchShowCase()
     {
         this.WhenActivated(disposables => { });
         InitializeComponent();

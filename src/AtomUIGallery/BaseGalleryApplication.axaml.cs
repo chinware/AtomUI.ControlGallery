@@ -9,10 +9,8 @@ public partial class BaseGalleryApplication : Application
 {
     protected WorkspaceWindow CreateWorkspaceWindow()
     {
-        return new WorkspaceWindow()
-        {
-            DataContext = new WorkspaceWindowViewModel()
-        };
+        Console.WriteLine("CreateWorkspaceWindow");
+        return new WorkspaceWindow();
     }
 
     public override void RegisterServices()

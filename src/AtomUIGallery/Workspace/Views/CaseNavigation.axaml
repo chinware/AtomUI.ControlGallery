@@ -2,63 +2,102 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.Workspace.Views.CaseNavigation"
              xmlns:atom="https://atomui.net"
-             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
+             xmlns:viewmodels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
     <StackPanel>
         <atom:NavMenu Mode="Inline" Width="250" Name="ShowCaseNavMenu">
             <atom:NavMenuItem Header="General">
                 <atom:NavMenuItem Header="Palette" 
-                                  ItemKey="{x:Static viewModels:PaletteShowCaseViewModel.ID}"/>
-                <atom:NavMenuItem Header="Icons" />
-                <atom:NavMenuItem Header="Button" />
-                <atom:NavMenuItem Header="SplitButton" />
-                <atom:NavMenuItem Header="Separator" />
+                                  ItemKey="{x:Static viewmodels:PaletteShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Icons"
+                                  ItemKey="{x:Static viewmodels:IconShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Button"
+                                  ItemKey="{x:Static viewmodels:ButtonShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="SplitButton" 
+                                  ItemKey="{x:Static viewmodels:SplitButtonShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Separator"
+                                  ItemKey="{x:Static viewmodels:SeparatorShowCaseViewModel.ID}"/>
             </atom:NavMenuItem>
 
             <atom:NavMenuItem Header="Navigation">
-                <atom:NavMenuItem Header="ComboBox" />
-                <atom:NavMenuItem Header="DropdownButton" />
-                <atom:NavMenuItem Header="ButtonSpinner" />
-                <atom:NavMenuItem Header="Menu" />
+                <atom:NavMenuItem Header="ComboBox" 
+                                  ItemKey="{x:Static viewmodels:ComboBoxShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="DropdownButton" 
+                                  ItemKey="{x:Static viewmodels:DropdownButtonShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="ButtonSpinner" 
+                                  ItemKey="{x:Static viewmodels:ButtonSpinnerShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Menu" 
+                                  ItemKey="{x:Static viewmodels:MenuShowCaseViewModel.ID}"/>
             </atom:NavMenuItem>
 
             <atom:NavMenuItem Header="Data Entry">
-                <atom:NavMenuItem Header="CheckBox" />
-                <atom:NavMenuItem Header="Menu" />
-                <atom:NavMenuItem Header="LineEdit" />
-                <atom:NavMenuItem Header="NumberUpDown" />
-                <atom:NavMenuItem Header="RadioButton" />
-                <atom:NavMenuItem Header="ToggleSwitch" />
-                <atom:NavMenuItem Header="Slider" />
-                <atom:NavMenuItem Header="DatePicker" />
-                <atom:NavMenuItem Header="TimePicker" />
+                <atom:NavMenuItem Header="CheckBox" 
+                                  ItemKey="{x:Static viewmodels:CheckBoxShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Menu" 
+                                  ItemKey="{x:Static viewmodels:MenuShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="LineEdit"
+                                  ItemKey="{x:Static viewmodels:LineEditShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="NumberUpDown"
+                                  ItemKey="{x:Static viewmodels:NumberUpDownShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="RadioButton"
+                                  ItemKey="{x:Static viewmodels:RadioButtonShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="ToggleSwitch"
+                                  ItemKey="{x:Static viewmodels:ToggleSwitchShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Slider"
+                                  ItemKey="{x:Static viewmodels:SliderShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="DatePicker" 
+                                  ItemKey="{x:Static viewmodels:DatePickerShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="TimePicker"
+                                  ItemKey="{x:Static viewmodels:TimePickerShowCaseViewModel.ID}"/>
             </atom:NavMenuItem>
 
             <atom:NavMenuItem Header="Data Display">
-                <atom:NavMenuItem Header="Badge" />
-                <atom:NavMenuItem Header="Calendar" />
-                <atom:NavMenuItem Header="Collapse" />
-                <atom:NavMenuItem Header="Expander" />
-                <atom:NavMenuItem Header="Empty" />
-                <atom:NavMenuItem Header="GroupBox" />
-                <atom:NavMenuItem Header="ListBox" />
-                <atom:NavMenuItem Header="Popover" />
-                <atom:NavMenuItem Header="Segmented" />
-                <atom:NavMenuItem Header="TabControl" />
-                <atom:NavMenuItem Header="Timeline" />
-                <atom:NavMenuItem Header="TreeView" />
-                <atom:NavMenuItem Header="Tooltip" />
-                <atom:NavMenuItem Header="Tag" />
+                <atom:NavMenuItem Header="Badge" 
+                                  ItemKey="{x:Static viewmodels:BadgeShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Calendar" 
+                                  ItemKey="{x:Static viewmodels:CalendarShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Collapse" 
+                                  ItemKey="{x:Static viewmodels:CollapseShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Expander" 
+                                  ItemKey="{x:Static viewmodels:ExpanderShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Empty" 
+                                  ItemKey="{x:Static viewmodels:EmptyShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="GroupBox" 
+                                  ItemKey="{x:Static viewmodels:GroupBoxShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="ListBox" 
+                                  ItemKey="{x:Static viewmodels:ListBoxShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Popover"
+                                  ItemKey="{x:Static viewmodels:PopupConfirmShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Segmented"
+                                  ItemKey="{x:Static viewmodels:SegmentedShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="TabControl" 
+                                  ItemKey="{x:Static viewmodels:TabControlShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Timeline" 
+                                  ItemKey="{x:Static viewmodels:TimelineShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="TreeView" 
+                                  ItemKey="{x:Static viewmodels:TreeViewShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Tooltip"
+                                  ItemKey="{x:Static viewmodels:TooltipShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Tag" 
+                                  ItemKey="{x:Static viewmodels:TagShowCaseViewModel.ID}"/>
             </atom:NavMenuItem>
 
             <atom:NavMenuItem Header="Feedback">
-                <atom:NavMenuItem Header="Alert" />
-                <atom:NavMenuItem Header="Drawer" />
-                <atom:NavMenuItem Header="Message" />
-                <atom:NavMenuItem Header="Notification" />
-                <atom:NavMenuItem Header="PopupConfirm" />
-                <atom:NavMenuItem Header="ProgressBar" />
-                <atom:NavMenuItem Header="LoadingIndicator" />
-                <atom:NavMenuItem Header="Watermark" />
+                <atom:NavMenuItem Header="Alert"
+                                  ItemKey="{x:Static viewmodels:AlertShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Drawer" 
+                                  ItemKey="{x:Static viewmodels:DrawerShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Message" 
+                                  ItemKey="{x:Static viewmodels:MessageShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Notification"
+                                  ItemKey="{x:Static viewmodels:NotificationShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="PopupConfirm"
+                                  ItemKey="{x:Static viewmodels:PopupConfirmShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="ProgressBar"
+                                  ItemKey="{x:Static viewmodels:ProgressBarShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="LoadingIndicator"
+                                  ItemKey="{x:Static viewmodels:LoadingIndicatorShowCaseViewModel.ID}"/>
+                <atom:NavMenuItem Header="Watermark" 
+                                  ItemKey="{x:Static viewmodels:WatermarkShowCaseViewModel.ID}"/>
             </atom:NavMenuItem>
         </atom:NavMenu>
     </StackPanel>
