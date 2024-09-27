@@ -6,7 +6,7 @@
                   TargetType="{x:Type gallerycontrols:ShowCasePanel}">
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCasePanel}">
-                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
                     <UniformGrid Rows="1" Columns="2" Margin="0">
                         <StackPanel Name="PART_LeftPanel"
                                     Orientation="Vertical"

@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Styles>
         <Styles>
+            <FluentTheme />
             <Styles.Resources>
                 <ResourceDictionary>
                     <ResourceDictionary.MergedDictionaries>

@@ -3,7 +3,7 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Avalonia" Version="11.1.2" />
+    <PackageVersion Include="Avalonia" Version="$(AvaloniaVersionThatLibrariesUsed)" />
     <PackageVersion Include="Avalonia.Desktop" Version="$(AvaloniaVersionThatLibrariesUsed)" />
     <PackageVersion Include="Avalonia.Diagnostics" Version="$(AvaloniaVersionThatLibrariesUsed)" />
     <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="$(AvaloniaVersionThatLibrariesUsed)" />
