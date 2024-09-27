@@ -1,4 +1,5 @@
-﻿using AtomUIGallery.Workspace.ViewModes;
+﻿using AtomUI.Controls;
+using AtomUIGallery.Workspace.ViewModes;
 using Avalonia.Controls;
 using Avalonia.LogicalTree;
 using ReactiveUI;
@@ -10,6 +11,12 @@ public partial class CaseNavigation : UserControl
     public CaseNavigation()
     {
         InitializeComponent();
+        ShowCaseNavMenu.NavMenuItemClick += HandleNavMenuItemClick;
+    }
+
+    private void HandleNavMenuItemClick(object? sender, NavMenuItemClickEventArgs args)
+    {
+        Console.WriteLine(args.NavMenuItem.ItemKey);
     }
 
     protected override void OnAttachedToLogicalTree(LogicalTreeAttachmentEventArgs e)

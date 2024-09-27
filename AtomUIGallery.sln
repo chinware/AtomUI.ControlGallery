@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.DesktopOld", "src\AtomUIGallery.DesktopOld\AtomUIGallery.DesktopOld.csproj", "{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{E3103E91-AEAE-482A-8008-1489058B0814}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AtomUI", "AtomUI", "{AB05E310-C053-41CD-884F-CF7BAC5D394A}"
@@ -63,10 +61,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{473C12C6-A19F-49DA-8DE1-D7A69FEF498F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26DF9BD4-92F1-42B0-959D-9855EB9B9BCE}.Release|Any CPU.ActiveCfg = Release|Any CPU

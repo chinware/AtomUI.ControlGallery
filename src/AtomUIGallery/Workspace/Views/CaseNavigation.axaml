@@ -1,11 +1,13 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.Workspace.Views.CaseNavigation"
-             xmlns:atom="https://atomui.net">
+             xmlns:atom="https://atomui.net"
+             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
     <StackPanel>
-        <atom:NavMenu Mode="Inline" Width="250">
+        <atom:NavMenu Mode="Inline" Width="250" Name="ShowCaseNavMenu">
             <atom:NavMenuItem Header="General">
-                <atom:NavMenuItem Header="Palette" />
+                <atom:NavMenuItem Header="Palette" 
+                                  ItemKey="{x:Static viewModels:PaletteShowCaseViewModel.ID}"/>
                 <atom:NavMenuItem Header="Icons" />
                 <atom:NavMenuItem Header="Button" />
                 <atom:NavMenuItem Header="SplitButton" />
