@@ -10,6 +10,11 @@
              Title="AtomUI Gallery">
     <DockPanel LastChildFill="True">
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
-        <rxui:RoutedViewHost Router="{Binding Router}" PageTransition="{x:Null}"/>
+        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
+        <rxui:RoutedViewHost Router="{Binding Router}" 
+                             PageTransition="{x:Null}"
+                             Margin="10"
+                             />
+        </ScrollViewer>
     </DockPanel>
 </atom:Window>

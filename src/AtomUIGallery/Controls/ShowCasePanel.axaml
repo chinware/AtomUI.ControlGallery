@@ -1,13 +1,12 @@
 <ResourceDictionary
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:atom="https://atomui.net"
     xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <ControlTheme x:Key="{x:Type gallerycontrols:ShowCasePanel}"
                   TargetType="{x:Type gallerycontrols:ShowCasePanel}">
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCasePanel}">
-                <ScrollViewer>
+                <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Visible">
                     <UniformGrid Rows="1" Columns="2" Margin="0">
                         <StackPanel Name="PART_LeftPanel"
                                     Orientation="Vertical"

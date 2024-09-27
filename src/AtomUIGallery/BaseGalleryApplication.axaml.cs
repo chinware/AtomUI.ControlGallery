@@ -9,7 +9,6 @@ public partial class BaseGalleryApplication : Application
 {
     protected WorkspaceWindow CreateWorkspaceWindow()
     {
-        Console.WriteLine("CreateWorkspaceWindow");
         return new WorkspaceWindow();
     }
 

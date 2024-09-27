@@ -1,4 +1,3 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Metadata;
@@ -23,11 +22,6 @@ public class ShowCasePanel : TemplatedControl
         base.OnApplyTemplate(e);
         _leftPanel  = e.NameScope.Get<StackPanel>(LeftPanelPart);
         _rightPanel = e.NameScope.Get<StackPanel>(RightPanelPart);
-    }
-
-    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
-    {
-        base.OnAttachedToVisualTree(e);
         if (!_initialized)
         {
             for (var i = 0; i < Children.Count; ++i)

@@ -3,11 +3,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:atom="https://atomui.net"
     xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
-    <ControlTheme x:Key="{x:Type gallerycontrols:ShowCaseItem}" 
+    <ControlTheme x:Key="{x:Type gallerycontrols:ShowCaseItem}"
                   TargetType="{x:Type gallerycontrols:ShowCaseItem}">
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCaseItem}">
-                <Border BorderBrush="rgba(10, 5, 5, 5)"
+                <Border BorderBrush="rgb(245, 245, 245)"
                         BorderThickness="1"
                         Padding="20"
                         CornerRadius="8">

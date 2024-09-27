@@ -8,10 +8,10 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
 {
     public WorkspaceWindow()
     {
-        DataContext = new WorkspaceWindowViewModel();
-        InitializeComponent();
 #if DEBUG
         this.AttachDevTools();
 #endif
+        DataContext = new WorkspaceWindowViewModel();
+        InitializeComponent();
     }
 }
