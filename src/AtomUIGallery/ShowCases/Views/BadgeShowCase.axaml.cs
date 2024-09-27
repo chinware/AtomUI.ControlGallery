@@ -8,7 +8,6 @@ public partial class BadgeShowCase : ReactiveUserControl<BadgeShowCaseViewModel>
 {
     public BadgeShowCase()
     {
-        this.WhenActivated(disposables => { });
         InitializeComponent();
     }
 }

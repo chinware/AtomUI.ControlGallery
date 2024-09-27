@@ -1,4 +1,5 @@
-﻿using AtomUIGallery.ShowCases.ViewModels;
+﻿using System.Reactive.Disposables;
+using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
 
@@ -8,7 +9,24 @@ public partial class ButtonShowCase : ReactiveUserControl<ButtonShowCaseViewMode
 {
     public ButtonShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is ButtonShowCaseViewModel buttonShowCaseViewModel)
+            {
+                ButtonSizeTypeOptionGroup.OptionCheckedChanged += buttonShowCaseViewModel.HandleButtonSizeTypeOptionCheckedChanged;
+                LoadingBtn1.Click += buttonShowCaseViewModel.HandleLoadingBtnClick;
+                LoadingBtn2.Click += buttonShowCaseViewModel.HandleLoadingBtnClick;
+                LoadingBtn3.Click += buttonShowCaseViewModel.HandleLoadingBtnClick;
+                
+                Disposable.Create(() =>
+                {
+                    ButtonSizeTypeOptionGroup.OptionCheckedChanged -= buttonShowCaseViewModel.HandleButtonSizeTypeOptionCheckedChanged;
+                    LoadingBtn1.Click -= buttonShowCaseViewModel.HandleLoadingBtnClick;
+                    LoadingBtn2.Click -= buttonShowCaseViewModel.HandleLoadingBtnClick;
+                    LoadingBtn3.Click -= buttonShowCaseViewModel.HandleLoadingBtnClick;
+                }).DisposeWith(disposables);
+            }
+        });
         InitializeComponent();
     }
 }
