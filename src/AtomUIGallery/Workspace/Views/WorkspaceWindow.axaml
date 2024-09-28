@@ -7,6 +7,7 @@
              xmlns:workspaceviews="clr-namespace:AtomUIGallery.Workspace.Views"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="AtomUIGallery.Workspace.Views.WorkspaceWindow"
+             Icon="/Assets/ATOMUI-LOGO.ico"
              Title="AtomUI Gallery">
     <DockPanel LastChildFill="True">
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
