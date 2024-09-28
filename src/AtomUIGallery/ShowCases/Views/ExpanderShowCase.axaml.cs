@@ -8,7 +8,14 @@ public partial class ExpanderShowCase : ReactiveUserControl<ExpanderShowCaseView
 {
     public ExpanderShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is ExpanderShowCaseViewModel viewModel)
+            {
+                ExpandButtonPosGroup.OptionCheckedChanged       += viewModel.HandleExpandButtonPosOptionCheckedChanged;
+                ExpandDirectionOptionGroup.OptionCheckedChanged += viewModel.HandleExpandDirectionOptionCheckedChanged;
+            }
+        });
         InitializeComponent();
     }
 }

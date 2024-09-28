@@ -7,6 +7,7 @@ public class CaseNavigationViewModel : ReactiveObject
 {
     private Dictionary<string, Func<IRoutableViewModel>> _showCaseViewModelFactories;
     private Dictionary<string, IRoutableViewModel> _showCaseViewModels;
+    private string? _currentShowCase;
     
     public IScreen HostScreen { get; }
 
@@ -63,7 +64,14 @@ public class CaseNavigationViewModel : ReactiveObject
 
     public void NavigateTo(string showCaseId)
     {
+        if (_currentShowCase is not null && _currentShowCase == showCaseId)
+        {
+            return;
+        }
+
+        _currentShowCase = showCaseId;
         IRoutableViewModel? viewModel = null;
+        
         if (_showCaseViewModels.ContainsKey(showCaseId))
         {
             viewModel = _showCaseViewModels[showCaseId];
@@ -78,6 +86,7 @@ public class CaseNavigationViewModel : ReactiveObject
             viewModel = _showCaseViewModelFactories[showCaseId]();
             _showCaseViewModels.Add(showCaseId, viewModel);
         }
+        
         HostScreen.Router.Navigate.Execute(viewModel);
     }
 }
