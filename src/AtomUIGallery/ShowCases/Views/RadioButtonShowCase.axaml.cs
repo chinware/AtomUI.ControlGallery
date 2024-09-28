@@ -11,4 +11,10 @@ public partial class RadioButtonShowCase : ReactiveUserControl<RadioButtonShowCa
         this.WhenActivated(disposables => { });
         InitializeComponent();
     }
+    
+    public void ToggleDisabledStatus(object arg)
+    {
+        ToggleDisabledRadioUnChecked.IsEnabled = !ToggleDisabledRadioUnChecked.IsEnabled;
+        ToggleDisabledRadioChecked.IsEnabled   = !ToggleDisabledRadioChecked.IsEnabled;
+    }
 }

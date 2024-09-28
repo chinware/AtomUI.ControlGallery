@@ -40,11 +40,11 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new SeparatorShowCase(), typeof(IViewFor<SeparatorShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new SliderShowCase(), typeof(IViewFor<SliderShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new SplitButtonShowCase(), typeof(IViewFor<SplitButtonShowCaseViewModel>));
-        Locator.CurrentMutable.Register(() => new ToggleSwitchShowCase(), typeof(IViewFor<SwitchShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TabControlShowCase(), typeof(IViewFor<TabControlShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TagShowCase(), typeof(IViewFor<TagShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TimelineShowCase(), typeof(IViewFor<TimelineShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TimePickerShowCase(), typeof(IViewFor<TimePickerShowCaseViewModel>));
+        Locator.CurrentMutable.Register(() => new ToggleSwitchShowCase(), typeof(IViewFor<ToggleSwitchShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TooltipShowCase(), typeof(IViewFor<TooltipShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TreeViewShowCase(), typeof(IViewFor<TreeViewShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new WatermarkShowCase(), typeof(IViewFor<WatermarkShowCaseViewModel>));

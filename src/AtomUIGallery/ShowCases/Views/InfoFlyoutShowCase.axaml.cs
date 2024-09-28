@@ -8,7 +8,13 @@ public partial class InfoFlyoutShowCase : ReactiveUserControl<InfoFlyoutShowCase
 {
     public InfoFlyoutShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is InfoFlyoutShowCaseViewModel viewModel)
+            {
+                ArrowSegmented.SelectionChanged += viewModel.HandleSelectionChanged;
+            }
+        });
         InitializeComponent();
     }
 }

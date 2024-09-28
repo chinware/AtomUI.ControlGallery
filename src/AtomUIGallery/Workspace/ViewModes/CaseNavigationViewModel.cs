@@ -52,7 +52,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(SeparatorShowCaseViewModel.ID, () => new SeparatorShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SliderShowCaseViewModel.ID, () => new SliderShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SplitButtonShowCaseViewModel.ID, () => new SplitButtonShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(SwitchShowCaseViewModel.ID, () => new SwitchShowCaseViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ToggleSwitchShowCaseViewModel.ID, () => new ToggleSwitchShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TabControlShowCaseViewModel.ID, () => new TabControlShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TagShowCaseViewModel.ID, () => new TagShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TimelineShowCaseViewModel.ID, () => new TimelineShowCaseViewModel(HostScreen));

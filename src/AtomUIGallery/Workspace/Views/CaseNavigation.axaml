@@ -62,10 +62,10 @@
                               ItemKey="{x:Static viewmodels:EmptyShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="GroupBox"
                               ItemKey="{x:Static viewmodels:GroupBoxShowCaseViewModel.ID}" />
+            <atom:NavMenuItem Header="InfoFlyout"
+                              ItemKey="{x:Static viewmodels:InfoFlyoutShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="ListBox"
                               ItemKey="{x:Static viewmodels:ListBoxShowCaseViewModel.ID}" />
-            <atom:NavMenuItem Header="Popover"
-                              ItemKey="{x:Static viewmodels:PopupConfirmShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="Segmented"
                               ItemKey="{x:Static viewmodels:SegmentedShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="TabControl"
