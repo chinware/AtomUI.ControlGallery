@@ -5,5 +5,7 @@
         <ResourceInclude Source="ShowCasePanel.axaml" />
         <ResourceInclude Source="ColorItemControl.axaml" />
         <ResourceInclude Source="ColorListControl.axaml" />
+        <ResourceInclude Source="IconGallery.axaml" />
+        <ResourceInclude Source="IconInfoItem.axaml" />
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
