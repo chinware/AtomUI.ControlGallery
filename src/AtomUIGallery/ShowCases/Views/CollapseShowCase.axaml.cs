@@ -8,7 +8,13 @@ public partial class CollapseShowCase : ReactiveUserControl<CollapseShowCaseView
 {
     public CollapseShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is CollapseShowCaseViewModel viewModel)
+            {
+                ExpandButtonPosGroup.OptionCheckedChanged += viewModel.HandleExpandButtonPosOptionCheckedChanged;
+            }
+        });
         InitializeComponent();
     }
 }
