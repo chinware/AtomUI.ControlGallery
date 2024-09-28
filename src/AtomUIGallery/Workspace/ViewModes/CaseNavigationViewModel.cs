@@ -23,6 +23,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(AlertShowCaseViewModel.ID, () => new AlertShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(BadgeShowCaseViewModel.ID, () => new BadgeShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(ButtonShowCaseViewModel.ID, () => new ButtonShowCaseViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ButtonSpinnerShowCaseViewModel.ID, () => new ButtonSpinnerShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CalendarShowCaseViewModel.ID, () => new CalendarShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CheckBoxShowCaseViewModel.ID, () => new CheckBoxShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CollapseShowCaseViewModel.ID, () => new CollapseShowCaseViewModel(HostScreen));
