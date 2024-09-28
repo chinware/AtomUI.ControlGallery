@@ -8,7 +8,14 @@ public partial class DatePickerShowCase : ReactiveUserControl<DatePickerShowCase
 {
     public DatePickerShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is DatePickerShowCaseViewModel viewModel)
+            {
+                PickerSizeTypeOptionGroup.OptionCheckedChanged  += viewModel.HandlePickerSizeTypeOptionCheckedChanged;
+                PickerPlacementOptionGroup.OptionCheckedChanged += viewModel.HandlePickerPlacementCheckedChanged;
+            }
+        });
         InitializeComponent();
     }
 }
