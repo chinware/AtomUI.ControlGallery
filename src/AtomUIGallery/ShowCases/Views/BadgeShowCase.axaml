@@ -4,7 +4,6 @@
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
-
         <gallerycontrols:ShowCaseItem Title="Basic"
                                       Description="Simplest Usage. Badge will be hidden when count is 0, but we can use showZero to show it.">
             <StackPanel Orientation="Horizontal" Spacing="20">
@@ -14,7 +13,7 @@
                             Background="rgb(191,191,191)"
                             CornerRadius="8" />
                 </atom:CountBadge>
-                <atom:CountBadge Count="0">
+                <atom:CountBadge Count="0" ShowZero="True">
                     <Border Width="40"
                             Height="40"
                             Background="rgb(191,191,191)"
@@ -111,7 +110,7 @@
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="20">
-                    <atom:CountBadge BadgeIsVisible="{Binding DynamicDotBadgeVisible}" Count="99">
+                    <atom:CountBadge BadgeIsVisible="{Binding DynamicDotBadgeVisible}" Count="9">
                         <Border Width="40"
                                 Height="40"
                                 Background="rgb(191,191,191)"
@@ -133,10 +132,10 @@
                                       Description="This will simply display a red badge, without a specific count. If count equals 0, it won't display the dot.">
             <StackPanel Orientation="Vertical" Spacing="20">
                 <StackPanel Orientation="Horizontal">
-                    <atom:DotBadge Offset="15,9">
+                    <atom:DotBadge Offset="-7,8">
                         <atom:Button ButtonType="Link" Icon="{atom:IconProvider Kind=NotificationOutlined}" />
                     </atom:DotBadge>
-                    <atom:DotBadge Offset="15,12">
+                    <atom:DotBadge Offset="-14,12">
                         <atom:Button ButtonType="Link" Text="Link something" />
                     </atom:DotBadge>
                 </StackPanel>
