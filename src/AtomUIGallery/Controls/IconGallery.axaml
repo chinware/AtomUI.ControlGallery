@@ -18,7 +18,7 @@
                         <DataTemplate x:DataType="models:PackageIconItem">
                             <gallerycontrols:IconInfoItem
                                 IconName="{Binding IconName}"
-                                IconKind="{Binding IconKind}" />
+                                IconInfo="{Binding IconInfo}" />
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

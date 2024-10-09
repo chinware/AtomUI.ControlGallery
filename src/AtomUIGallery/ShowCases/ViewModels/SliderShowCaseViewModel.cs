@@ -21,12 +21,12 @@ public class SliderShowCaseViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _sliderMarks, value);
     }
 
-    private bool _normalDisabled;
+    private bool _normalEnabled = true;
 
-    public bool NormalDisabled
+    public bool NormalEnabled
     {
-        get => _normalDisabled;
-        set => this.RaiseAndSetIfChanged(ref _normalDisabled, value);
+        get => _normalEnabled;
+        set => this.RaiseAndSetIfChanged(ref _normalEnabled, value);
     }
         
     public SliderShowCaseViewModel(IScreen screen)

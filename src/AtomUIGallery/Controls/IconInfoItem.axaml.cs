@@ -1,3 +1,4 @@
+using AtomUI.IconPkg;
 using Avalonia;
 using Avalonia.Controls.Primitives;
 
@@ -8,8 +9,8 @@ public class IconInfoItem : TemplatedControl
     public static readonly StyledProperty<string> IconNameProperty = 
         AvaloniaProperty.Register<IconInfoItem, string>(nameof(IconName));
     
-    public static readonly StyledProperty<string> IconKindProperty = 
-        AvaloniaProperty.Register<IconInfoItem, string>(nameof(IconKind));
+    public static readonly StyledProperty<IconInfo> IconInfoProperty = 
+        AvaloniaProperty.Register<IconInfoItem, IconInfo>(nameof(IconInfo));
 
     public string IconName
     {
@@ -17,9 +18,9 @@ public class IconInfoItem : TemplatedControl
         set => SetValue(IconNameProperty, value);
     }
     
-    public string IconKind
+    public IconInfo IconInfo
     {
-        get => GetValue(IconKindProperty);
-        set => SetValue(IconKindProperty, value);
+        get => GetValue(IconInfoProperty);
+        set => SetValue(IconInfoProperty, value);
     }
 }

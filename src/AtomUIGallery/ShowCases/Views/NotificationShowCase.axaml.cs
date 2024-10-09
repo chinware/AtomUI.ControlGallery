@@ -1,11 +1,11 @@
 ﻿using AtomUI.Controls;
+using AtomUI.IconPkg.AntDesign;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
-using PathIcon = AtomUI.Controls.PathIcon;
 
 namespace AtomUIGallery.ShowCases.Views;
 
@@ -199,10 +199,7 @@ public partial class NotificationShowCase : ReactiveUserControl<NotificationShow
         _basicManager?.Show(new Notification(
             "Notification Title",
             "This is the content of the notification. This is the content of the notification. This is the content of the notification.",
-            icon: new PathIcon
-            {
-                Kind = "SettingOutlined"
-            }
+            icon: AntDesignIconPackage.SettingOutlined()
         ));
     }
 

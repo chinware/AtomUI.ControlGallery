@@ -16,9 +16,9 @@
                     Height="{TemplateBinding Height}"
                     Background="{TemplateBinding Background}">
                     <StackPanel Orientation="Vertical">
-                        <atom:PathIcon
+                        <atom:Icon
                             HorizontalAlignment="Center"
-                            Kind="{TemplateBinding IconKind}"
+                            IconInfo="{TemplateBinding IconInfo}"
                             Width="48"
                             Height="48" />
                         <TextBlock

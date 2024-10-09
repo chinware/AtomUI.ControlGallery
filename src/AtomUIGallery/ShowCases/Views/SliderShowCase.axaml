@@ -14,7 +14,7 @@
                     TickFrequency="5"
                     IsEnabled="{Binding NormalEnabled}"
                     Value="50" />
-
+                
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -32,8 +32,8 @@
                     RangeValue="20, 80" />
 
                 <StackPanel Orientation="Horizontal" Spacing="2">
-                    <TextBlock>Disabled:</TextBlock>
-                    <atom:ToggleSwitch SizeType="Small" IsChecked="{Binding NormalEnabled}" />
+                    <TextBlock>Enabled:</TextBlock>
+                    <atom:ToggleSwitch SizeType="Small" IsChecked="{Binding NormalEnabled, Mode=TwoWay}" />
                 </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
@@ -51,7 +51,7 @@
                     Value="20" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Vertical"
             Description="The vertical Slider.">
@@ -71,7 +71,7 @@
                     RangeValue="20, 80"
                     IsSnapToTickEnabled="True"
                     Value="20" />
-
+        
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -79,7 +79,7 @@
                     TickFrequency="1"
                     Marks="{Binding SliderMarks}"
                     Value="20" />
-
+        
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -88,10 +88,10 @@
                     TickFrequency="5"
                     Marks="{Binding SliderMarks}"
                     RangeValue="20, 80" />
-
+        
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Graduated slider"
             Description="Using marks property to mark a graduated slider, use value or defaultValue to specify the position of thumb.
@@ -104,7 +104,7 @@
                     TickFrequency="1"
                     Marks="{Binding SliderMarks}"
                     Value="20" />
-
+        
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -112,7 +112,7 @@
                     TickFrequency="5"
                     Marks="{Binding SliderMarks}"
                     RangeValue="20, 80" />
-
+        
                 <TextBlock FontWeight="Bold">included=false</TextBlock>
                 <atom:Slider
                     Maximum="100"
@@ -121,7 +121,7 @@
                     Marks="{Binding SliderMarks}"
                     Included="False"
                     Value="20" />
-
+        
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -130,7 +130,7 @@
                     Included="False"
                     Marks="{Binding SliderMarks}"
                     RangeValue="20, 80" />
-
+        
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>

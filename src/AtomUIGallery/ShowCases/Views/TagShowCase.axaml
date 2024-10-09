@@ -16,10 +16,8 @@
                 <atom:Tag>Tag 1</atom:Tag>
                 <atom:Tag>Link</atom:Tag>
                 <atom:Tag IsClosable="true">Prevent Default</atom:Tag>
-                <atom:Tag IsClosable="True">
-                    <atom:Tag.CloseIcon>
-                        <atom:PathIcon Kind="CloseCircleOutlined " />
-                    </atom:Tag.CloseIcon>
+                <atom:Tag IsClosable="True"
+                          CloseIcon="{atom:IconProvider Kind=CloseCircleOutlined}">
                     Tag 2
                 </atom:Tag>
             </WrapPanel>
@@ -70,40 +68,28 @@
 
                 <TextBlock FontWeight="Bold" FontSize="14" Margin="0, 20, 0, 10">Custom</TextBlock>
                 <WrapPanel HorizontalAlignment="Left">
-                    <atom:Tag TagColor="success">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="CheckCircleOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="success"
+                              Icon="{atom:IconProvider Kind=CheckCircleOutlined}">
                         success
                     </atom:Tag>
-                    <atom:Tag TagColor="info">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="SyncOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="info"
+                              Icon="{atom:IconProvider Kind=SyncOutlined}">
                         processing
                     </atom:Tag>
-                    <atom:Tag TagColor="error">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="CloseCircleOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="error"
+                              Icon="{atom:IconProvider Kind=CloseCircleOutlined}">
                         error
                     </atom:Tag>
-                    <atom:Tag TagColor="warning">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="ExclamationCircleOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="warning"
+                              Icon="{atom:IconProvider Kind=ExclamationCircleOutlined}">
                         warning
                     </atom:Tag>
-                    <atom:Tag TagColor="default">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="ClockCircleOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="default"
+                              Icon="{atom:IconProvider Kind=ClockCircleOutlined}">
                         default
                     </atom:Tag>
-                    <atom:Tag TagColor="default">
-                        <atom:Tag.Icon>
-                            <atom:PathIcon Kind="MinusCircleOutlined" />
-                        </atom:Tag.Icon>
+                    <atom:Tag TagColor="default"
+                              Icon="{atom:IconProvider Kind=MinusCircleOutlined}">
                         default
                     </atom:Tag>
                 </WrapPanel>
@@ -116,28 +102,20 @@
             Description="Tag components can contain an Icon. This is done by setting the icon property or placing an Icon component within the Tag.
 If you want specific control over the positioning and placement of the Icon, then that should be done by placing the Icon component within the Tag rather than using the icon property.">
             <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal">
-                <atom:Tag TagColor="#55acee">
-                    <atom:Tag.Icon>
-                        <atom:PathIcon Kind="TwitterOutlined" />
-                    </atom:Tag.Icon>
+                <atom:Tag TagColor="#55acee"
+                          Icon="{atom:IconProvider Kind=TwitterOutlined}">
                     Twitter
                 </atom:Tag>
-                <atom:Tag TagColor="#cd201f">
-                    <atom:Tag.Icon>
-                        <atom:PathIcon Kind="YoutubeOutlined" />
-                    </atom:Tag.Icon>
+                <atom:Tag TagColor="#cd201f"
+                          Icon="{atom:IconProvider Kind=YoutubeOutlined}">
                     Youtube
                 </atom:Tag>
-                <atom:Tag TagColor="#3b5999">
-                    <atom:Tag.Icon>
-                        <atom:PathIcon Kind="FacebookOutlined" />
-                    </atom:Tag.Icon>
+                <atom:Tag TagColor="#3b5999"
+                          Icon="{atom:IconProvider Kind=FacebookOutlined}">
                     Facebook
                 </atom:Tag>
-                <atom:Tag TagColor="#55acee">
-                    <atom:Tag.Icon>
-                        <atom:PathIcon Kind="LinkedinOutlined" />
-                    </atom:Tag.Icon>
+                <atom:Tag TagColor="#55acee"
+                          Icon="{atom:IconProvider Kind=LinkedinOutlined}">
                     Linkedin
                 </atom:Tag>
             </WrapPanel>
