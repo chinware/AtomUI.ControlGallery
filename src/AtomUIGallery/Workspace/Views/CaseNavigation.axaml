@@ -4,7 +4,7 @@
              xmlns:atom="https://atomui.net"
              xmlns:viewmodels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
     <atom:NavMenu Mode="Inline" Width="250" Name="ShowCaseNavMenu">
-        <atom:NavMenuItem Header="General">
+        <atom:NavMenuItem Header="General" Icon="{atom:IconProvider Kind=WindowsOutlined}">
             <atom:NavMenuItem Header="Palette"
                               ItemKey="{x:Static viewmodels:PaletteShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="Icons"
@@ -17,7 +17,7 @@
                               ItemKey="{x:Static viewmodels:SeparatorShowCaseViewModel.ID}" />
         </atom:NavMenuItem>
 
-        <atom:NavMenuItem Header="Navigation">
+        <atom:NavMenuItem Header="Navigation" Icon="{atom:IconProvider Kind=MenuOutlined}">
             <atom:NavMenuItem Header="ComboBox"
                               ItemKey="{x:Static viewmodels:ComboBoxShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="DropdownButton"
@@ -28,7 +28,7 @@
                               ItemKey="{x:Static viewmodels:MenuShowCaseViewModel.ID}" />
         </atom:NavMenuItem>
 
-        <atom:NavMenuItem Header="Data Entry">
+        <atom:NavMenuItem Header="Data Entry" Icon="{atom:IconProvider Kind=FormOutlined}">
             <atom:NavMenuItem Header="CheckBox"
                               ItemKey="{x:Static viewmodels:CheckBoxShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="Menu"
@@ -49,7 +49,7 @@
                               ItemKey="{x:Static viewmodels:TimePickerShowCaseViewModel.ID}" />
         </atom:NavMenuItem>
 
-        <atom:NavMenuItem Header="Data Display">
+        <atom:NavMenuItem Header="Data Display" Icon="{atom:IconProvider Kind=AreaChartOutlined}">
             <atom:NavMenuItem Header="Badge"
                               ItemKey="{x:Static viewmodels:BadgeShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="Calendar"
@@ -80,7 +80,7 @@
                               ItemKey="{x:Static viewmodels:TagShowCaseViewModel.ID}" />
         </atom:NavMenuItem>
 
-        <atom:NavMenuItem Header="Feedback">
+        <atom:NavMenuItem Header="Feedback" Icon="{atom:IconProvider Kind=UserSwitchOutlined}">
             <atom:NavMenuItem Header="Alert"
                               ItemKey="{x:Static viewmodels:AlertShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="Drawer"

@@ -38,5 +38,9 @@
     <ItemGroup>
         <PackageReference Include="Avalonia.ReactiveUI"/>
     </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\AtomUIGallery.Icon.Application\AtomUIGallery.Icon.Application.csproj" />
+    </ItemGroup>
 
 </Project>
