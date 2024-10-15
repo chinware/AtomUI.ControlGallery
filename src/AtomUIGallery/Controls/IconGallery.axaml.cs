@@ -1,5 +1,5 @@
-﻿using AtomUI.Icon;
-using AtomUI.Icon.AntDesign;
+﻿using AtomUI.IconPkg;
+using AtomUI.IconPkg.AntDesign;
 using AtomUIGallery.Models;
 using Avalonia;
 using Avalonia.Collections;
@@ -53,17 +53,11 @@ public class IconGallery : TemplatedControl
 
     private void ReLoadIcons()
     {
-        var iconPackage = IconManager.Current.GetIconProvider<AntDesignIconPackage>();
-        if (iconPackage is null)
-        {
-            return;
-        }
-
         var list = new AvaloniaList<PackageIconItem>();
-        var iconInfos = iconPackage.GetIconInfos(IconThemeType);
+        var iconInfos = AntDesignIconPackage.Current.GetIconInfos(IconThemeType);
         foreach (var iconInfo in iconInfos)
         {
-            list.Add(new PackageIconItem(iconInfo.Name, iconInfo.Name));
+            list.Add(new PackageIconItem(iconInfo.Name, iconInfo));
         }
         IconInfos = list;
     }

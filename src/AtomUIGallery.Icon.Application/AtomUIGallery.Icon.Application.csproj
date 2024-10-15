@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>GeneratedFiles</CompilerGeneratedFilesOutputPath>
+    </PropertyGroup>
+    
+    <ItemGroup>
+        <AdditionalFiles Include="Assets\Svg\**\*.svg"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\packages\AtomUI\src\AtomUI.IconPkg.Generator\AtomUI.IconPkg.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false"/>
+      <ProjectReference Include="..\..\packages\AtomUI\src\AtomUI.IconPkg\AtomUI.IconPkg.csproj" />
+    </ItemGroup>
+
+</Project>

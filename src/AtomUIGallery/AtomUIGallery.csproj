@@ -36,7 +36,11 @@
     </ItemGroup>
     
     <ItemGroup>
-        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersionThatSampleUsed)"/>
+        <PackageReference Include="Avalonia.ReactiveUI"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\AtomUIGallery.Icon.Application\AtomUIGallery.Icon.Application.csproj" />
     </ItemGroup>
 
 </Project>

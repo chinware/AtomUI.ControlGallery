@@ -39,18 +39,18 @@
                     OffContent="关" />
                 <atom:ToggleSwitch>
                     <atom:ToggleSwitch.OnContent>
-                        <atom:PathIcon Kind="TwitterOutlined" />
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=TwitterOutlined}" />
                     </atom:ToggleSwitch.OnContent>
                     <atom:ToggleSwitch.OffContent>
-                        <atom:PathIcon Kind="WechatOutlined" />
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=WechatOutlined}" />
                     </atom:ToggleSwitch.OffContent>
                 </atom:ToggleSwitch>
                 <atom:ToggleSwitch SizeType="Small">
                     <atom:ToggleSwitch.OnContent>
-                        <atom:PathIcon Kind="CheckOutlined" />
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=CheckOutlined}" />
                     </atom:ToggleSwitch.OnContent>
                     <atom:ToggleSwitch.OffContent>
-                        <atom:PathIcon Kind="CloseOutlined" />
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=CloseOutlined}" />
                     </atom:ToggleSwitch.OffContent>
                 </atom:ToggleSwitch>
             </StackPanel>

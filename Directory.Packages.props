@@ -10,11 +10,13 @@
     <PackageVersion Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersionThatLibrariesUsed)" />
     <PackageVersion Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersionThatLibrariesUsed)" />
     <PackageVersion Include="Avalonia.Win32" Version="$(AvaloniaVersionThatLibrariesUsed)" />
+    <PackageVersion Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersionThatLibrariesUsed)"/>
     <PackageVersion Include="AtomUI" Version="$(NugetPackageVersion)" />
     <!-- TODO 版本是否跟随 AvaloniaVersionThatLibrariesUsed？-->
     <PackageVersion Include="Avalonia.Svg" Version="11.1.0" />
     <PackageVersion Include="Avalonia.Controls.TreeDataGrid" Version="11.0.10" />
     <PackageVersion Include="System.Reactive" Version="6.0.1" />
+
     <!-- 测试相关依赖 -->
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.10.0-release-24177-07" />
     <PackageVersion Include="NSubstitute" Version="5.1.0" />

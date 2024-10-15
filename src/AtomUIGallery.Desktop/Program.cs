@@ -1,6 +1,4 @@
-﻿using AtomUI.Icon;
-using AtomUI.Icon.AntDesign;
-using AtomUI.Theme;
+﻿using AtomUI.Theme;
 using Avalonia;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
@@ -46,7 +44,6 @@ internal class Program
 #if DEBUG
             .UseDevToolsForAvalonia()
 #endif
-            .UseIconPackage<AntDesignIconPackage>(true)
             .With(new Win32PlatformOptions())
             .LogToTrace();
 }

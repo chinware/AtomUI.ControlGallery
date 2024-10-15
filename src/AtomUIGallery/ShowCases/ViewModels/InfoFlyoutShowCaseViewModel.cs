@@ -12,7 +12,7 @@ public class InfoFlyoutShowCaseViewModel : ReactiveObject, IRoutableViewModel
     
     public string UrlPathSegment { get; } = ID;
 
-    private bool _showArrow;
+    private bool _showArrow = true;
 
     public bool ShowArrow
     {
