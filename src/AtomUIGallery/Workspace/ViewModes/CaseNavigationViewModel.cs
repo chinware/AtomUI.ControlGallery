@@ -60,6 +60,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(TooltipShowCaseViewModel.ID, () => new TooltipShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TreeViewShowCaseViewModel.ID, () => new TreeViewShowCaseViewModel(HostScreen));
         _showCaseViewModelFactories.Add(WatermarkShowCaseViewModel.ID, () => new WatermarkShowCaseViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(BoxPanelShowCaseViewModel.ID, () => new BoxPanelShowCaseViewModel(HostScreen));
     }
 
     public void NavigateTo(string showCaseId)

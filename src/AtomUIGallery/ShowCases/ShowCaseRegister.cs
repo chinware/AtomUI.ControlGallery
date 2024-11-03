@@ -48,5 +48,6 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new TooltipShowCase(), typeof(IViewFor<TooltipShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new TreeViewShowCase(), typeof(IViewFor<TreeViewShowCaseViewModel>));
         Locator.CurrentMutable.Register(() => new WatermarkShowCase(), typeof(IViewFor<WatermarkShowCaseViewModel>));
+        Locator.CurrentMutable.Register(() => new BoxPanelShowCase(), typeof(IViewFor<BoxPanelShowCaseViewModel>));
     }
 }
