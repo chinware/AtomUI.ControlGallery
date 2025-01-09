@@ -3,16 +3,16 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="Avalonia" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Desktop" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Diagnostics" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.Win32" Version="$(AvaloniaVersionThatLibrariesUsed)" />
-    <PackageVersion Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersionThatLibrariesUsed)"/>
+    <PackageVersion Include="Avalonia" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Controls.ColorPicker" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.Win32" Version="$(AvaloniaVersion)" />
+    <PackageVersion Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)"/>
     <PackageVersion Include="AtomUI" Version="$(NugetPackageVersion)" />
-    <!-- TODO 版本是否跟随 AvaloniaVersionThatLibrariesUsed？-->
+    <!-- TODO 版本是否跟随 AvaloniaVersion？-->
     <PackageVersion Include="Avalonia.Svg" Version="11.1.0" />
     <PackageVersion Include="Avalonia.Controls.TreeDataGrid" Version="11.0.10" />
     <PackageVersion Include="System.Reactive" Version="6.0.1" />
