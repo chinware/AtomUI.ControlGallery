@@ -197,3 +197,5 @@ coc-settings.json
 *.map
 node_modules
 api/diff
+
+output/
