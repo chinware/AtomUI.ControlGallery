@@ -23,11 +23,7 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Nlnet.Avalonia.DevTools"/>
-    </ItemGroup>
-
+    
     <ItemGroup>
         <ProjectReference Include="..\AtomUIGallery\AtomUIGallery.csproj" />
     </ItemGroup>

@@ -2,7 +2,6 @@
 using Avalonia;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
-using Nlnet.Avalonia.DevTools;
 
 namespace AtomUIGallery.Desktop;
 
@@ -41,9 +40,6 @@ internal class Program
             .ConfigureAtomUI()
             .UsePlatformDetect()
             .UseAtomUI()
-#if DEBUG
-            .UseDevToolsForAvalonia()
-#endif
             .With(new Win32PlatformOptions())
             .LogToTrace();
 }

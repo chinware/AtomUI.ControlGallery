@@ -13,11 +13,11 @@ public partial class TimelineShowCase : ReactiveUserControl<TimelineShowCaseView
         this.WhenActivated(disposables => { });
         InitializeComponent();
         
-        ModeLeft.Checked += ModeChecked;
+        ModeLeft.IsCheckedChanged += ModeChecked;
 
-        ModeRight.Checked += ModeChecked;
+        ModeRight.IsCheckedChanged += ModeChecked;
 
-        ModeAlternate.Checked += ModeChecked;
+        ModeAlternate.IsCheckedChanged += ModeChecked;
         
         ReverseButton.Click += ReverseButtonClick;
     }
