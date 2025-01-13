@@ -199,3 +199,4 @@ node_modules
 api/diff
 
 output/
+cmake-build-*/

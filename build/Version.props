@@ -4,12 +4,14 @@
         <NoWarn>$(NoWarn);CS7035</NoWarn>
 
         <AvaloniaVersion>11.2.3</AvaloniaVersion>
-        <AvaloniaVersionThatSampleUsed>11.1.3</AvaloniaVersionThatSampleUsed>
         <AtomUIGalleryVersion>0.0.1</AtomUIGalleryVersion>
-        <NugetPackageVersion>$(AtomUIGalleryVersion)-local.1</NugetPackageVersion>
-        <NugetPackageVersion>$(AtomUIGalleryVersion)-preview.1</NugetPackageVersion>
-        <FileVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd HH:mm:ss"))</FileVersion>
+        <NugetPackageVersion>$(AtomUIGalleryVersion)</NugetPackageVersion>
         <AssemblyVersion>$(AtomUIGalleryVersion)</AssemblyVersion>
 
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <FileVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd HH:mm:ss"))</FileVersion>
+        <NugetPackageVersion>$(NugetPackageVersion)+build.$([System.DateTime]::Now.ToString("yyyyMMdd"))</NugetPackageVersion>
     </PropertyGroup>
 </Project>
