@@ -8,7 +8,13 @@ public partial class TooltipShowCase : ReactiveUserControl<TooltipShowCaseViewMo
 {
     public TooltipShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is TooltipShowCaseViewModel viewModel)
+            {
+                ArrowSegmented.SelectionChanged += viewModel.HandleSelectionChanged;
+            }
+        });
         InitializeComponent();
     }
 }
