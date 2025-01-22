@@ -40,6 +40,11 @@
                                            Icon="{atom:IconProvider Kind=CopyOutlined}" />
                             <atom:MenuItem Header="Delete" InputGesture="Ctrl+D"
                                            Icon="{atom:IconProvider Kind=DeleteOutlined}" />
+                            <atom:MenuItem Header="Paste">
+                                <atom:MenuItem Header="Paste" InputGesture="Ctrl+P"
+                                               Icon="{atom:IconProvider Kind=FileDoneOutlined}" />
+                                <atom:MenuItem Header="Paste from History" InputGesture="Ctrl+Shift+V" />
+                            </atom:MenuItem>
                         </atom:MenuFlyout>
                     </atom:DropdownButton.DropdownFlyout>
                 </atom:DropdownButton>
