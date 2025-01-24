@@ -26,12 +26,12 @@ public class TreeViewShowCaseViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _showIconSwitchChecked, value);
     }
 
-    private bool _showLeafSwitcherSwitchChecked;
+    private bool _showLeafIconSwitchChecked;
 
-    public bool ShowLeafSwitcherSwitchChecked
+    public bool ShowLeafIconSwitchChecked
     {
-        get => _showLeafSwitcherSwitchChecked;
-        set => this.RaiseAndSetIfChanged(ref _showLeafSwitcherSwitchChecked, value);
+        get => _showLeafIconSwitchChecked;
+        set => this.RaiseAndSetIfChanged(ref _showLeafIconSwitchChecked, value);
     }
 
     public TreeViewShowCaseViewModel(IScreen screen)

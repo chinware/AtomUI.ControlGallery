@@ -36,23 +36,23 @@
             Description="Tree with connected line between nodes, turn on by showLine, customize the preset icon by switcherIcon.">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <StackPanel Orientation="Horizontal" Spacing="10">
-                    <TextBlock>showLine:</TextBlock>
-                    <atom:ToggleSwitch IsChecked="{Binding ShowLineSwitchChecked,Mode=TwoWay}" />
+                    <TextBlock VerticalAlignment="Center">showLine:</TextBlock>
+                    <atom:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding ShowLineSwitchChecked,Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Spacing="10">
-                    <TextBlock>showIcon:</TextBlock>
-                    <atom:ToggleSwitch IsChecked="{Binding ShowIconSwitchChecked,Mode=TwoWay}" />
+                    <TextBlock VerticalAlignment="Center" >showIcon:</TextBlock>
+                    <atom:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding ShowIconSwitchChecked,Mode=TwoWay}" />
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Spacing="10">
-                    <TextBlock>ShowLeafSwitcher:</TextBlock>
-                    <atom:ToggleSwitch IsChecked="{Binding ShowLeafSwitcherSwitchChecked,Mode=TwoWay}" />
+                    <TextBlock VerticalAlignment="Center">ShowLeafIcon:</TextBlock>
+                    <atom:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding ShowLeafIconSwitchChecked,Mode=TwoWay}" />
                 </StackPanel>
 
                 <atom:TreeView IsShowLine="{Binding ShowLineSwitchChecked}"
                                IsShowIcon="{Binding ShowIconSwitchChecked}"
-                               IsShowLeafSwitcher="{Binding ShowLeafSwitcherSwitchChecked}">
+                               IsShowLeafIcon="{Binding ShowLeafIconSwitchChecked}">
                     <atom:TreeViewItem Header="parent 1" Icon="{atom:IconProvider Kind=CarryOutOutlined}"
                                        IsExpanded="True">
                         <atom:TreeViewItem Header="parent 1-0" Icon="{atom:IconProvider Kind=CarryOutOutlined}"
