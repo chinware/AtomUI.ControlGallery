@@ -32,8 +32,8 @@
                     RangeValue="20, 80" />
 
                 <StackPanel Orientation="Horizontal" Spacing="2">
-                    <TextBlock>Enabled:</TextBlock>
-                    <atom:ToggleSwitch SizeType="Small" IsChecked="{Binding NormalEnabled, Mode=TwoWay}" />
+                    <TextBlock VerticalAlignment="Center">Enabled:</TextBlock>
+                    <atom:ToggleSwitch VerticalAlignment="Center" SizeType="Small" IsChecked="{Binding NormalEnabled, Mode=TwoWay}" />
                 </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
