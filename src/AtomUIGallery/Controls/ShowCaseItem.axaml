@@ -15,7 +15,7 @@
                         <ContentPresenter
                             Content="{TemplateBinding Content}"
                             ContentTemplate="{TemplateBinding ContentTemplate}"
-                            Margin="0, 0, 0, 10" />
+                            Margin="0, 0, 0, 40" />
                         <atom:Separator TitlePosition="Left"
                                         FontWeight="Bold"
                                         Title="{TemplateBinding Title}" />
