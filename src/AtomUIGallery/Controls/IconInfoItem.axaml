@@ -32,8 +32,5 @@
                 </Border>
             </ControlTemplate>
         </Setter>
-        <!-- <Style Selector="^:pointerover /template/ TextBlock#PART_HexTextBlock"> -->
-        <!--     <Setter Property="TextBlock.IsVisible" Value="True" /> -->
-        <!-- </Style> -->
     </ControlTheme>
 </ResourceDictionary>
