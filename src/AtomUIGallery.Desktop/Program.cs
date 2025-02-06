@@ -36,6 +36,10 @@ internal class Program
 
     public static AppBuilder BuildAvaloniaApp()
         => AppBuilder.Configure<GalleryApplication>()
+            .AfterSetup(builder =>
+            {
+                builder.Instance!.Name = "AtomUIGallery";
+            })
             .UseReactiveUI()
             .ConfigureAtomUI()
             .UsePlatformDetect()
