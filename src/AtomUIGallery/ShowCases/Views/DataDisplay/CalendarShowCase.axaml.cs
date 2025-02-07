@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class CalendarShowCase : ReactiveUserControl<CalendarShowCaseViewModel>
+public partial class CalendarShowCase : ReactiveUserControl<CalendarViewModel>
 {
     public CalendarShowCase()
     {

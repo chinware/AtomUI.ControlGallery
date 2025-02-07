@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TagShowCase : ReactiveUserControl<TagShowCaseViewModel>
+public partial class TagShowCase : ReactiveUserControl<TagViewModel>
 {
     public TagShowCase()
     {

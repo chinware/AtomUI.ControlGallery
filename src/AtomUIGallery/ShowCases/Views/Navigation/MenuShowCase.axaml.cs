@@ -4,13 +4,13 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class MenuShowCase : ReactiveUserControl<MenuShowCaseViewModel>
+public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
 {
     public MenuShowCase()
     {
         this.WhenActivated(disposables =>
         {
-            if (DataContext is MenuShowCaseViewModel viewModel)
+            if (DataContext is MenuViewModel viewModel)
             {
                 ChangeModeSwitch.IsCheckedChanged  += viewModel.HandleChangeModeCheckChanged;
                 ChangeStyleSwitch.IsCheckedChanged += viewModel.HandleChangeStyleCheckChanged;

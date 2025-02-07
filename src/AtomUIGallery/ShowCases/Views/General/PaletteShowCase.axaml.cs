@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class PaletteShowCase : ReactiveUserControl<PaletteShowCaseViewModel>
+public partial class PaletteShowCase : ReactiveUserControl<PaletteViewModel>
 {
     public PaletteShowCase()
     {

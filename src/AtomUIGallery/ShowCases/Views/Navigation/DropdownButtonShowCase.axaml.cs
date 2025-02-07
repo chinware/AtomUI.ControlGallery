@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class DropdownButtonShowCase : ReactiveUserControl<DropdownButtonShowCaseViewModel>
+public partial class DropdownButtonShowCase : ReactiveUserControl<DropdownButtonViewModel>
 {
     public DropdownButtonShowCase()
     {

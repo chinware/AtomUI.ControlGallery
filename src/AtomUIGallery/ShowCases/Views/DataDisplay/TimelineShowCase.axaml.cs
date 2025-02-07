@@ -6,7 +6,7 @@ using RadioButton = Avalonia.Controls.RadioButton;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TimelineShowCase : ReactiveUserControl<TimelineShowCaseViewModel>
+public partial class TimelineShowCase : ReactiveUserControl<TimelineViewModel>
 {
     public TimelineShowCase()
     {

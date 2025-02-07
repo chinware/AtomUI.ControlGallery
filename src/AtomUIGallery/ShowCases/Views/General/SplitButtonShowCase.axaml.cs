@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class SplitButtonShowCase : ReactiveUserControl<SplitButtonShowCaseViewModel>
+public partial class SplitButtonShowCase : ReactiveUserControl<SplitButtonViewModel>
 {
     public SplitButtonShowCase()
     {

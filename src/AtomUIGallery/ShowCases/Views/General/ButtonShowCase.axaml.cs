@@ -5,13 +5,13 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class ButtonShowCase : ReactiveUserControl<ButtonShowCaseViewModel>
+public partial class ButtonShowCase : ReactiveUserControl<ButtonViewModel>
 {
     public ButtonShowCase()
     {
         this.WhenActivated(disposables =>
         {
-            if (DataContext is ButtonShowCaseViewModel buttonShowCaseViewModel)
+            if (DataContext is ButtonViewModel buttonShowCaseViewModel)
             {
                 ButtonSizeTypeOptionGroup.OptionCheckedChanged += buttonShowCaseViewModel.HandleButtonSizeTypeOptionCheckedChanged;
                 LoadingBtn1.Click += buttonShowCaseViewModel.HandleLoadingBtnClick;

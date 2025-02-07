@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class AlertShowCase : ReactiveUserControl<AlertShowCaseViewModel>
+public partial class AlertShowCase : ReactiveUserControl<AlertViewModel>
 {
     public AlertShowCase()
     {

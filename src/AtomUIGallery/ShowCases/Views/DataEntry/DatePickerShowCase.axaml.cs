@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class DatePickerShowCase : ReactiveUserControl<DatePickerShowCaseViewModel>
+public partial class DatePickerShowCase : ReactiveUserControl<DatePickerViewModel>
 {
     public DatePickerShowCase()
     {

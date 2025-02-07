@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class SegmentedShowCase : ReactiveUserControl<SegmentedShowCaseViewModel>
+public partial class SegmentedShowCase : ReactiveUserControl<SegmentedViewModel>
 {
     public SegmentedShowCase()
     {

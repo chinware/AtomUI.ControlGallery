@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class WatermarkShowCase : ReactiveUserControl<WatermarkShowCaseViewModel>
+public partial class WatermarkShowCase : ReactiveUserControl<WatermarkViewModel>
 {
     public WatermarkShowCase()
     {

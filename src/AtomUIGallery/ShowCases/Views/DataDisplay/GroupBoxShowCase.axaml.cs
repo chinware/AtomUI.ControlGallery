@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class GroupBoxShowCase : ReactiveUserControl<GroupBoxShowCaseViewModel>
+public partial class GroupBoxShowCase : ReactiveUserControl<GroupBoxViewModel>
 {
     public GroupBoxShowCase()
     {

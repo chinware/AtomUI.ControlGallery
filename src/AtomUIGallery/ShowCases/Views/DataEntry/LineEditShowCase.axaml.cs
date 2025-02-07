@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class LineEditShowCase : ReactiveUserControl<LineEditShowCaseViewModel>
+public partial class LineEditShowCase : ReactiveUserControl<LineEditViewModel>
 {
     public LineEditShowCase()
     {

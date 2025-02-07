@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class SliderShowCase : ReactiveUserControl<SliderShowCaseViewModel>
+public partial class SliderShowCase : ReactiveUserControl<SliderViewModel>
 {
     
     

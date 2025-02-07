@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class ProgressBarShowCase : ReactiveUserControl<ProgressBarShowCaseViewModel>
+public partial class ProgressBarShowCase : ReactiveUserControl<ProgressBarViewModel>
 {
     public ProgressBarShowCase()
     {

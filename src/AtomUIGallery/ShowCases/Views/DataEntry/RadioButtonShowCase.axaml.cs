@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class RadioButtonShowCase : ReactiveUserControl<RadioButtonShowCaseViewModel>
+public partial class RadioButtonShowCase : ReactiveUserControl<RadioButtonViewModel>
 {
     public RadioButtonShowCase()
     {

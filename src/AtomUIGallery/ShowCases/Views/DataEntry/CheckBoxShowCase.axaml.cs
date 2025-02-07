@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class CheckBoxShowCase : ReactiveUserControl<CheckBoxShowCaseViewModel>
+public partial class CheckBoxShowCase : ReactiveUserControl<CheckBoxViewModel>
 {
     public CheckBoxShowCase()
     {

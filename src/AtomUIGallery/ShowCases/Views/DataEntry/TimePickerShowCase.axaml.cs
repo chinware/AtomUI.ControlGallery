@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TimePickerShowCase : ReactiveUserControl<TimePickerShowCaseViewModel>
+public partial class TimePickerShowCase : ReactiveUserControl<TimePickerViewModel>
 {
     public TimePickerShowCase()
     {

@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class EmptyShowCase : ReactiveUserControl<EmptyShowCaseViewModel>
+public partial class EmptyShowCase : ReactiveUserControl<EmptyViewModel>
 {
     public EmptyShowCase()
     {

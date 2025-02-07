@@ -8,7 +8,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class MessageShowCase : ReactiveUserControl<MessageShowCaseViewModel>
+public partial class MessageShowCase : ReactiveUserControl<MessageViewModel>
 {
     private WindowMessageManager? _messageManager;
     public MessageShowCase()

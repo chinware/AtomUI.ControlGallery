@@ -6,13 +6,13 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TabControlShowCase : ReactiveUserControl<TabControlShowCaseViewModel>
+public partial class TabControlShowCase : ReactiveUserControl<TabControlViewModel>
 {
     public TabControlShowCase()
     {
         this.WhenActivated(disposables =>
         {
-            if (DataContext is TabControlShowCaseViewModel viewModel)
+            if (DataContext is TabControlViewModel viewModel)
             {
                 PositionTabStripOptionGroup.OptionCheckedChanged     += viewModel.HandleTabStripPlacementOptionCheckedChanged;
                 PositionCardTabStripOptionGroup.OptionCheckedChanged += viewModel.HandleCardTabStripPlacementOptionCheckedChanged;

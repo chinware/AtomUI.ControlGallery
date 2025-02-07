@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TreeViewShowCase : ReactiveUserControl<TreeViewShowCaseViewModel>
+public partial class TreeViewShowCase : ReactiveUserControl<TreeViewViewModel>
 {
     public TreeViewShowCase()
     {

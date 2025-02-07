@@ -3,7 +3,7 @@ using Avalonia.ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class BadgeShowCase : ReactiveUserControl<BadgeShowCaseViewModel>
+public partial class BadgeShowCase : ReactiveUserControl<BadgeViewModel>
 {
     public BadgeShowCase()
     {

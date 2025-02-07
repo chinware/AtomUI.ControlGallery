@@ -8,7 +8,7 @@ public class CaseNavigationViewModel : ReactiveObject
     private Dictionary<string, Func<IRoutableViewModel>> _showCaseViewModelFactories;
     private Dictionary<string, IRoutableViewModel> _showCaseViewModels;
     private string? _currentShowCase;
-    
+
     public IScreen HostScreen { get; }
 
     public CaseNavigationViewModel(IScreen hostScreen)
@@ -21,45 +21,70 @@ public class CaseNavigationViewModel : ReactiveObject
 
     private void RegisterShowCaseViewModels()
     {
-        _showCaseViewModelFactories.Add(AlertShowCaseViewModel.ID, () => new AlertShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(BadgeShowCaseViewModel.ID, () => new BadgeShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ButtonShowCaseViewModel.ID, () => new ButtonShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ButtonSpinnerShowCaseViewModel.ID, () => new ButtonSpinnerShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(CalendarShowCaseViewModel.ID, () => new CalendarShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(CheckBoxShowCaseViewModel.ID, () => new CheckBoxShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(CollapseShowCaseViewModel.ID, () => new CollapseShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ComboBoxShowCaseViewModel.ID, () => new ComboBoxShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(DatePickerShowCaseViewModel.ID, () => new DatePickerShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(DrawerShowCaseViewModel.ID, () => new DrawerShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(DropdownButtonShowCaseViewModel.ID, () => new DropdownButtonShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(EmptyShowCaseViewModel.ID, () => new EmptyShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ExpanderShowCaseViewModel.ID, () => new ExpanderShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(GroupBoxShowCaseViewModel.ID, () => new GroupBoxShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(IconShowCaseViewModel.ID, () => new IconShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(InfoFlyoutShowCaseViewModel.ID, () => new InfoFlyoutShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(LineEditShowCaseViewModel.ID, () => new LineEditShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ListBoxShowCaseViewModel.ID, () => new ListBoxShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(LoadingIndicatorShowCaseViewModel.ID, () => new LoadingIndicatorShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(MenuShowCaseViewModel.ID, () => new MenuShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(MessageShowCaseViewModel.ID, () => new MessageShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(NotificationShowCaseViewModel.ID, () => new NotificationShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(NumberUpDownShowCaseViewModel.ID, () => new NumberUpDownShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(PaletteShowCaseViewModel.ID, () => new PaletteShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(PopupConfirmShowCaseViewModel.ID, () => new PopupConfirmShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ProgressBarShowCaseViewModel.ID, () => new ProgressBarShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(RadioButtonShowCaseViewModel.ID, () => new RadioButtonShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(SegmentedShowCaseViewModel.ID, () => new SegmentedShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(SeparatorShowCaseViewModel.ID, () => new SeparatorShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(SliderShowCaseViewModel.ID, () => new SliderShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(SplitButtonShowCaseViewModel.ID, () => new SplitButtonShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(ToggleSwitchShowCaseViewModel.ID, () => new ToggleSwitchShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TabControlShowCaseViewModel.ID, () => new TabControlShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TagShowCaseViewModel.ID, () => new TagShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TimelineShowCaseViewModel.ID, () => new TimelineShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TimePickerShowCaseViewModel.ID, () => new TimePickerShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TooltipShowCaseViewModel.ID, () => new TooltipShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TreeViewShowCaseViewModel.ID, () => new TreeViewShowCaseViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(WatermarkShowCaseViewModel.ID, () => new WatermarkShowCaseViewModel(HostScreen));
+        RegisterGeneralViewModels();
+        RegisterDataDisplayViewModels();
+        RegisterDataEntryViewModels();
+        RegisterFeedbackViewModels();
+        RegisterNavigationViewModels();
+    }
+
+    private void RegisterGeneralViewModels()
+    {
+        _showCaseViewModelFactories.Add(ButtonViewModel.ID, () => new ButtonViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(IconViewModel.ID, () => new IconViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(PaletteViewModel.ID, () => new PaletteViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(SeparatorViewModel.ID, () => new SeparatorViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(SplitButtonViewModel.ID, () => new SplitButtonViewModel(HostScreen));
+    }
+
+    private void RegisterDataDisplayViewModels()
+    {
+        _showCaseViewModelFactories.Add(BadgeViewModel.ID, () => new BadgeViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(CalendarViewModel.ID, () => new CalendarViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(CollapseViewModel.ID, () => new CollapseViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(EmptyViewModel.ID, () => new EmptyViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ExpanderViewModel.ID, () => new ExpanderViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(GroupBoxViewModel.ID, () => new GroupBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(InfoFlyoutViewModel.ID, () => new InfoFlyoutViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ListBoxViewModel.ID, () => new ListBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(SegmentedViewModel.ID, () => new SegmentedViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TabControlViewModel.ID, () => new TabControlViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TagViewModel.ID, () => new TagViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TimelineViewModel.ID, () => new TimelineViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TooltipViewModel.ID, () => new TooltipViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TreeViewViewModel.ID, () => new TreeViewViewModel(HostScreen));
+    }
+
+    private void RegisterDataEntryViewModels()
+    {
+        _showCaseViewModelFactories.Add(CheckBoxViewModel.ID, () => new CheckBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(DatePickerViewModel.ID, () => new DatePickerViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(LineEditViewModel.ID, () => new LineEditViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(NumberUpDownViewModel.ID, () => new NumberUpDownViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(RadioButtonViewModel.ID, () => new RadioButtonViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(SliderViewModel.ID, () => new SliderViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TimePickerViewModel.ID, () => new TimePickerViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ToggleSwitchViewModel.ID, () => new ToggleSwitchViewModel(HostScreen));
+    }
+
+    private void RegisterFeedbackViewModels()
+    {
+        _showCaseViewModelFactories.Add(AlertViewModel.ID, () => new AlertViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(DrawerViewModel.ID, () => new DrawerViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(LoadingIndicatorViewModel.ID, () => new LoadingIndicatorViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(MessageViewModel.ID, () => new MessageViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(NotificationViewModel.ID, () => new NotificationViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(PopupConfirmViewModel.ID, () => new PopupConfirmViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ProgressBarViewModel.ID, () => new ProgressBarViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(WatermarkViewModel.ID, () => new WatermarkViewModel(HostScreen));
+    }
+
+    private void RegisterNavigationViewModels()
+    {
+        _showCaseViewModelFactories.Add(ButtonSpinnerViewModel.ID, () => new ButtonSpinnerViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ComboBoxViewModel.ID, () => new ComboBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(DropdownButtonViewModel.ID, () => new DropdownButtonViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(MenuViewModel.ID, () => new MenuViewModel(HostScreen));
     }
 
     public void NavigateTo(string showCaseId)
@@ -71,7 +96,7 @@ public class CaseNavigationViewModel : ReactiveObject
 
         _currentShowCase = showCaseId;
         IRoutableViewModel? viewModel = null;
-        
+
         if (_showCaseViewModels.ContainsKey(showCaseId))
         {
             viewModel = _showCaseViewModels[showCaseId];
@@ -82,11 +107,12 @@ public class CaseNavigationViewModel : ReactiveObject
             {
                 // TODO 应该写日志或者抛出异常？
                 return;
-            } 
+            }
+
             viewModel = _showCaseViewModelFactories[showCaseId]();
             _showCaseViewModels.Add(showCaseId, viewModel);
         }
-        
+
         HostScreen.Router.Navigate.Execute(viewModel);
     }
 }

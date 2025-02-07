@@ -8,7 +8,7 @@ using ButtonSpinner = AtomUI.Controls.ButtonSpinner;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class ButtonSpinnerShowCase : ReactiveUserControl<ButtonSpinnerShowCaseViewModel>
+public partial class ButtonSpinnerShowCase : ReactiveUserControl<ButtonSpinnerViewModel>
 {
     public ButtonSpinnerShowCase()
     {
@@ -23,7 +23,7 @@ public partial class ButtonSpinnerShowCase : ReactiveUserControl<ButtonSpinnerSh
     {
         if (control is ButtonSpinner spinner)
         {
-            if (DataContext is ButtonSpinnerShowCaseViewModel viewModel)
+            if (DataContext is ButtonSpinnerViewModel viewModel)
             {
                 spinner.Spin += viewModel.HandleSpin;
             }

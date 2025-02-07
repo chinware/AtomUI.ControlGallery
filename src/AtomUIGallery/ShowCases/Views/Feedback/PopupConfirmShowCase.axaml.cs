@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class PopupConfirmShowCase : ReactiveUserControl<PopupConfirmShowCaseViewModel>
+public partial class PopupConfirmShowCase : ReactiveUserControl<PopupConfirmViewModel>
 {
     public PopupConfirmShowCase()
     {

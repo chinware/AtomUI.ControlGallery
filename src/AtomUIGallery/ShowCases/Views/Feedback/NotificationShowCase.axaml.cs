@@ -9,7 +9,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class NotificationShowCase : ReactiveUserControl<NotificationShowCaseViewModel>
+public partial class NotificationShowCase : ReactiveUserControl<NotificationViewModel>
 {
     private WindowNotificationManager? _basicManager;
     private WindowNotificationManager? _topLeftManager;

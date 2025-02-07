@@ -7,7 +7,7 @@ using ToggleSwitch = AtomUI.Controls.ToggleSwitch;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class ToggleSwitchShowCase : ReactiveUserControl<ToggleSwitchShowCaseViewModel>
+public partial class ToggleSwitchShowCase : ReactiveUserControl<ToggleSwitchViewModel>
 {
     public ToggleSwitchShowCase()
     {

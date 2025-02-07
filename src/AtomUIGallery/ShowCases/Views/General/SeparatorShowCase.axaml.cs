@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class SeparatorShowCase : ReactiveUserControl<SeparatorShowCaseViewModel>
+public partial class SeparatorShowCase : ReactiveUserControl<SeparatorViewModel>
 {
     public SeparatorShowCase()
     {

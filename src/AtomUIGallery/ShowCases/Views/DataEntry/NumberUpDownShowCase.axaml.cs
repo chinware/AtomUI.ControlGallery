@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class NumberUpDownShowCase : ReactiveUserControl<NumberUpDownShowCaseViewModel>
+public partial class NumberUpDownShowCase : ReactiveUserControl<NumberUpDownViewModel>
 {
     public NumberUpDownShowCase()
     {

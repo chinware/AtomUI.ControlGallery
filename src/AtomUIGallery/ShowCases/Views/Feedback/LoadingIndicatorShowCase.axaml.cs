@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class LoadingIndicatorShowCase : ReactiveUserControl<LoadingIndicatorShowCaseViewModel>
+public partial class LoadingIndicatorShowCase : ReactiveUserControl<LoadingIndicatorViewModel>
 {
  
     public LoadingIndicatorShowCase()

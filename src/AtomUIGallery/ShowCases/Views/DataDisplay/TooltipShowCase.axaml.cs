@@ -4,13 +4,13 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class TooltipShowCase : ReactiveUserControl<TooltipShowCaseViewModel>
+public partial class TooltipShowCase : ReactiveUserControl<TooltipViewModel>
 {
     public TooltipShowCase()
     {
         this.WhenActivated(disposables =>
         {
-            if (DataContext is TooltipShowCaseViewModel viewModel)
+            if (DataContext is TooltipViewModel viewModel)
             {
                 ArrowSegmented.SelectionChanged += viewModel.HandleSelectionChanged;
             }

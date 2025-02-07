@@ -7,7 +7,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class DrawerShowCase : ReactiveUserControl<DrawerShowCaseViewModel>
+public partial class DrawerShowCase : ReactiveUserControl<DrawerViewModel>
 {
     public DrawerShowCase()
     {

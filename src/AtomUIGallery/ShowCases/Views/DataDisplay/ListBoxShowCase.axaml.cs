@@ -4,7 +4,7 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class ListBoxShowCase : ReactiveUserControl<ListBoxShowCaseViewModel>
+public partial class ListBoxShowCase : ReactiveUserControl<ListBoxViewModel>
 {
     public ListBoxShowCase()
     {
