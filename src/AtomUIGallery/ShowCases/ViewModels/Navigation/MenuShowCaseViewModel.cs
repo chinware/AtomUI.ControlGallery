@@ -7,11 +7,11 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 public class MenuShowCaseViewModel : ReactiveObject, IRoutableViewModel
 {
     public const string ID = "MenuShowCase";
-    
+
     public IScreen HostScreen { get; }
-    
+
     public string UrlPathSegment { get; } = ID;
-    
+
     private bool _isDark;
 
     public bool IsDark
@@ -32,7 +32,7 @@ public class MenuShowCaseViewModel : ReactiveObject, IRoutableViewModel
     {
         HostScreen = screen;
     }
-    
+
     public void HandleChangeModeCheckChanged(object? sender, RoutedEventArgs? args)
     {
         if (sender is ToggleSwitch changeModeSwitch)
@@ -53,9 +53,8 @@ public class MenuShowCaseViewModel : ReactiveObject, IRoutableViewModel
                 Mode = NavMenuMode.Inline;
             }
         }
-        
     }
-    
+
     public void HandleChangeStyleCheckChanged(object? sender, RoutedEventArgs? args)
     {
         if (sender is ToggleSwitch changeModeSwitch)
@@ -69,6 +68,5 @@ public class MenuShowCaseViewModel : ReactiveObject, IRoutableViewModel
                 IsDark = false;
             }
         }
-       
     }
 }

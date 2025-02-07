@@ -31,8 +31,6 @@
         <atom:NavMenuItem Header="Data Entry" Icon="{atom:IconProvider Kind=FormOutlined}">
             <atom:NavMenuItem Header="CheckBox"
                               ItemKey="{x:Static viewmodels:CheckBoxShowCaseViewModel.ID}" />
-            <atom:NavMenuItem Header="Menu"
-                              ItemKey="{x:Static viewmodels:MenuShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="LineEdit"
                               ItemKey="{x:Static viewmodels:LineEditShowCaseViewModel.ID}" />
             <atom:NavMenuItem Header="NumberUpDown"

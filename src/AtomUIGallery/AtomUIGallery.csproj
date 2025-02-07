@@ -42,4 +42,205 @@
         <ProjectReference Include="..\AtomUIGallery.Icon.Application\AtomUIGallery.Icon.Application.csproj"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Compile Update="ShowCases\Views\General\PaletteShowCase.axaml.cs">
+        <DependentUpon>PaletteShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\General\IconShowCase.axaml.cs">
+        <DependentUpon>IconShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\General\ButtonShowCase.axaml.cs">
+        <DependentUpon>ButtonShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\General\SplitButtonShowCase.axaml.cs">
+        <DependentUpon>SplitButtonShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\General\SeparatorShowCase.axaml.cs">
+        <DependentUpon>SeparatorShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Navigation\ComboBoxShowCase.axaml.cs">
+        <DependentUpon>ComboBoxShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Navigation\DropdownButtonShowCase.axaml.cs">
+        <DependentUpon>DropdownButtonShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Navigation\ButtonSpinnerShowCase.axaml.cs">
+        <DependentUpon>ButtonSpinnerShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Navigation\MenuShowCase.axaml.cs">
+        <DependentUpon>MenuShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\CheckBoxShowCase.axaml.cs">
+        <DependentUpon>CheckBoxShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\LineEditShowCase.axaml.cs">
+        <DependentUpon>LineEditShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\NumberUpDownShowCase.axaml.cs">
+        <DependentUpon>NumberUpDownShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\RadioButtonShowCase.axaml.cs">
+        <DependentUpon>RadioButtonShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\ToggleSwitchShowCase.axaml.cs">
+        <DependentUpon>ToggleSwitchShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\SliderShowCase.axaml.cs">
+        <DependentUpon>SliderShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\DatePickerShowCase.axaml.cs">
+        <DependentUpon>DatePickerShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataEntry\TimePickerShowCase.axaml.cs">
+        <DependentUpon>TimePickerShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\BadgeShowCase.axaml.cs">
+        <DependentUpon>BadgeShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\CalendarShowCase.axaml.cs">
+        <DependentUpon>CalendarShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\CollapseShowCase.axaml.cs">
+        <DependentUpon>CollapseShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\ExpanderShowCase.axaml.cs">
+        <DependentUpon>ExpanderShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\EmptyShowCase.axaml.cs">
+        <DependentUpon>EmptyShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\GroupBoxShowCase.axaml.cs">
+        <DependentUpon>GroupBoxShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\InfoFlyoutShowCase.axaml.cs">
+        <DependentUpon>InfoFlyoutShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\ListBoxShowCase.axaml.cs">
+        <DependentUpon>ListBoxShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\SegmentedShowCase.axaml.cs">
+        <DependentUpon>SegmentedShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\TabControlShowCase.axaml.cs">
+        <DependentUpon>TabControlShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\TimelineShowCase.axaml.cs">
+        <DependentUpon>TimelineShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\TreeViewShowCase.axaml.cs">
+        <DependentUpon>TreeViewShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\TooltipShowCase.axaml.cs">
+        <DependentUpon>TooltipShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\DataDisplay\TagShowCase.axaml.cs">
+        <DependentUpon>TagShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\AlertShowCase.axaml.cs">
+        <DependentUpon>AlertShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\DrawerShowCase.axaml.cs">
+        <DependentUpon>DrawerShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\MessageShowCase.axaml.cs">
+        <DependentUpon>MessageShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\LoadingIndicatorShowCase.axaml.cs">
+        <DependentUpon>LoadingIndicatorShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\NotificationShowCase.axaml.cs">
+        <DependentUpon>NotificationShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\PopupConfirmShowCase.axaml.cs">
+        <DependentUpon>PopupConfirmShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\ProgressBarShowCase.axaml.cs">
+        <DependentUpon>ProgressBarShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+      <Compile Update="ShowCases\Views\Feedback\WatermarkShowCase.axaml.cs">
+        <DependentUpon>WatermarkShowCase.axaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\BadgeShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\CalendarShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\CollapseShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\EmptyShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\ExpanderShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\GroupBoxShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\InfoFlyoutShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\ListBoxShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\SegmentedShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\TabControlShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\TagShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\TimelineShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\TooltipShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataDisplay\TreeViewShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\CheckBoxShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\DatePickerShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\LineEditShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\NumberUpDownShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\RadioButtonShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\SliderShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\TimePickerShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\DataEntry\ToggleSwitchShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\AlertShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\DrawerShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\LoadingIndicatorShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\MessageShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\NotificationShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\PopupConfirmShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\ProgressBarShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Feedback\WatermarkShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\General\ButtonShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\General\IconShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\General\PaletteShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\General\SeparatorShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\General\SplitButtonShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Navigation\ButtonSpinnerShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Navigation\ComboBoxShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Navigation\DropdownButtonShowCase.axaml" />
+      <AdditionalFiles Include="ShowCases\Views\Navigation\MenuShowCase.axaml" />
+    </ItemGroup>
+
 </Project>
