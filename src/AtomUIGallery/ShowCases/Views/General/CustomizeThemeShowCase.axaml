@@ -4,6 +4,34 @@
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
-
+        <gallerycontrols:ShowCasePanel.Styles>
+            <Style Selector="atom|Button">
+                <Setter Property="Margin" Value="5" />
+            </Style>
+        </gallerycontrols:ShowCasePanel.Styles>
+        <gallerycontrols:ShowCaseItem
+            Title="Customize Design Token"
+            Description="By modifying token property of theme, we can modify Design Token globally. Some tokens will affect other tokens. We call these tokens Seed Token.">
+            <StackPanel Orientation="Vertical">
+                <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                    <atom:Button ButtonType="Primary">Primary Button</atom:Button>
+                    <atom:Button>Default Button</atom:Button>
+                    <atom:Button ButtonType="Text">Text Button</atom:Button>
+                    <atom:Button ButtonType="Link">Link Button</atom:Button>
+                </WrapPanel>
+                <atom:ThemeConfigProvider>
+                    <atom:ThemeConfigProvider.SharedTokenSetters>
+                        <atom:TokenSetter Key="PrimaryColor" Value="red"/>
+                        <atom:TokenSetter Key="TextColor" Value="blue"/>
+                    </atom:ThemeConfigProvider.SharedTokenSetters>
+                    <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                        <atom:Button ButtonType="Primary">Primary Button</atom:Button>
+                        <atom:Button>Default Button</atom:Button>
+                        <atom:Button ButtonType="Text">Text Button</atom:Button>
+                        <atom:Button ButtonType="Link">Link Button</atom:Button>
+                    </WrapPanel>
+                </atom:ThemeConfigProvider>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>

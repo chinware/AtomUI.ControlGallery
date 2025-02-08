@@ -35,6 +35,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(PaletteViewModel.ID, () => new PaletteViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SeparatorViewModel.ID, () => new SeparatorViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SplitButtonViewModel.ID, () => new SplitButtonViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(CustomizeThemeViewModel.ID, () => new CustomizeThemeViewModel(HostScreen));
     }
 
     private void RegisterDataDisplayViewModels()
