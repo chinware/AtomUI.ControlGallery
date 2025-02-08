@@ -1,7 +1,6 @@
-﻿using AtomUIGallery.ShowCases;
-using AtomUIGallery.Workspace.ViewModes;
+﻿using AtomUI;
+using AtomUIGallery.ShowCases;
 using AtomUIGallery.Workspace.Views;
-using Avalonia;
 
 namespace AtomUIGallery;
 
