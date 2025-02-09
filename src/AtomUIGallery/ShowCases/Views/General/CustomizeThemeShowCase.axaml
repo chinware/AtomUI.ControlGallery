@@ -20,6 +20,9 @@
                     <atom:Button ButtonType="Link">Link Button</atom:Button>
                 </WrapPanel>
                 <atom:ThemeConfigProvider>
+                    <atom:ThemeConfigProvider.Algorithms>
+                        <x:String>DefaultAlgorithm</x:String>
+                    </atom:ThemeConfigProvider.Algorithms>
                     <atom:ThemeConfigProvider.SharedTokenSetters>
                         <atom:TokenSetter Key="PrimaryColor" Value="red"/>
                         <atom:TokenSetter Key="TextColor" Value="blue"/>
