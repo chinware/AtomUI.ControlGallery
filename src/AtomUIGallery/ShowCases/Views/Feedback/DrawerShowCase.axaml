@@ -56,7 +56,7 @@
                 <atom:ToggleSwitch Content="Open" />
                 <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}"
                              OpenOn="{atom:TopLevel}">
-                    <TextBlock Margin="50" Text="Some contents..." />
+                    <atom:TextBlock Margin="50" Text="Some contents..." />
                 </atom:Drawer>
             </Panel>
         </gallerycontrols:ShowCaseItem>
@@ -69,7 +69,7 @@
                              OpenOn="{atom:TopLevel}"
                              ShowMask="False">
                     <StackPanel Margin="50" Spacing="8">
-                        <TextBlock Text="Some contents..." />
+                        <atom:TextBlock Text="Some contents..." />
                         <atom:Button Command="{atom:CloseDrawer}" Text="Close" />
                     </StackPanel>
                 </atom:Drawer>
@@ -91,7 +91,7 @@
                     IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
                     OpenOn="{atom:TopLevel}"
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <TextBlock Margin="50" Text="Some contents..." />
+                    <atom:TextBlock Margin="50" Text="Some contents..." />
                 </atom:Drawer>
             </Panel>
         </gallerycontrols:ShowCaseItem>
@@ -114,7 +114,7 @@
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <atom:ConfirmDrawerFrame ConfirmCommand="{atom:Toast Text=Drawer Confirmed!, Header=Tips}"
                                              Header="Drawer with extra actions">
-                        <TextBlock Margin="50" Text="Some contents..." />
+                        <atom:TextBlock Margin="50" Text="Some contents..." />
                     </atom:ConfirmDrawerFrame>
                 </atom:Drawer>
 
@@ -124,7 +124,7 @@
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <atom:SubmitDrawerFrame ConfirmCommand="{atom:Toast Text=Drawer Confirmed!, Header=Tips}"
                                             Header="Drawer with extra actions">
-                        <TextBlock Margin="50" Text="Some contents..." />
+                        <atom:TextBlock Margin="50" Text="Some contents..." />
                     </atom:SubmitDrawerFrame>
                 </atom:Drawer>
             </Panel>
@@ -144,7 +144,7 @@
                     IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
                     OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <TextBlock Margin="50" Text=" Some contents... " />
+                    <atom:TextBlock Margin="50" Text=" Some contents... " />
                 </atom:Drawer>
             </Panel>
         </gallerycontrols:ShowCaseItem>
@@ -165,7 +165,7 @@
                     OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <StackPanel MinWidth="220" Margin="50">
-                        <TextBlock Foreground="Green" Text=" Some contents #1... " />
+                        <atom:TextBlock Foreground="Green" Text=" Some contents #1... " />
                         <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer2" Content="Open #2" />
                     </StackPanel>
                 </atom:Drawer>
@@ -173,14 +173,14 @@
                              OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <StackPanel MinWidth="160" Margin="50">
-                        <TextBlock Foreground="Yellow" Text=" Some contents #2... " />
+                        <atom:TextBlock Foreground="Yellow" Text=" Some contents #2... " />
                         <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer3" Content="Open #3" />
                     </StackPanel>
                 </atom:Drawer>
                 <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer3.IsChecked}"
                              OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <TextBlock MinWidth="300"
+                    <atom:TextBlock MinWidth="300"
                                Margin="50"
                                Foreground="DodgerBlue"
                                Text=" Some contents #3... " />
@@ -204,7 +204,7 @@
                     OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                     Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <StackPanel Margin="50">
-                        <TextBlock Foreground="Green" Text="Drawer with Overlay OpenMode #1... " />
+                        <atom:TextBlock Foreground="Green" Text="Drawer with Overlay OpenMode #1... " />
                         <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer4" Content="Open #2" />
                     </StackPanel>
                 </atom:Drawer>
@@ -214,7 +214,7 @@
                              OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <StackPanel Margin="50">
-                        <TextBlock Foreground="Red" Text="Drawer with Push OpenMode #2... " />
+                        <atom:TextBlock Foreground="Red" Text="Drawer with Push OpenMode #2... " />
                         <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer5" Content="Open #3" />
                     </StackPanel>
                 </atom:Drawer>
@@ -224,7 +224,7 @@
                              OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
                     <StackPanel Margin="50">
-                        <TextBlock Foreground="DeepPink" Text="Drawer with Overlay OpenMode #2... " />
+                        <atom:TextBlock Foreground="DeepPink" Text="Drawer with Overlay OpenMode #2... " />
                         <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer6" Content="Open #3" />
                     </StackPanel>
                 </atom:Drawer>
@@ -233,7 +233,7 @@
                              OpenMode="Push"
                              OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <TextBlock Margin="50"
+                    <atom:TextBlock Margin="50"
                                Foreground="DodgerBlue"
                                Text="Drawer with Push Push #4... " />
                 </atom:Drawer>

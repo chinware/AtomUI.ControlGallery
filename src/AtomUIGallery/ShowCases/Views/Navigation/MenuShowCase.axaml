@@ -146,7 +146,7 @@
                         </atom:MenuItem>
                     </atom:ContextMenu>
                 </Border.ContextMenu>
-                <TextBlock Text="Right Click to show Context Menu" />
+                <atom:TextBlock Text="Right Click to show Context Menu" />
             </Border>
         </gallerycontrols:ShowCaseItem>
 
@@ -178,7 +178,7 @@
                         </atom:MenuItem>
                     </atom:MenuFlyout>
                 </Border.ContextFlyout>
-                <TextBlock Text="Right Click to show Context Flyout" />
+                <atom:TextBlock Text="Right Click to show Context Flyout" />
             </Border>
 
         </gallerycontrols:ShowCaseItem>
@@ -255,9 +255,9 @@
             <StackPanel Orientation="Vertical" Spacing="10">
                 <StackPanel Orientation="Horizontal" Spacing="5">
                     <atom:ToggleSwitch Name="ChangeModeSwitch" />
-                    <TextBlock>Change Mode</TextBlock>
+                    <atom:TextBlock>Change Mode</atom:TextBlock>
                     <atom:ToggleSwitch Margin="10, 0, 0, 0" Name="ChangeStyleSwitch" />
-                    <TextBlock>Change Style</TextBlock>
+                    <atom:TextBlock>Change Style</atom:TextBlock>
                 </StackPanel>
                 <atom:NavMenu Mode="{Binding Mode}" Width="256" Margin="0, 0, 0, 20" IsDarkStyle="{Binding IsDark}">
                     <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" />

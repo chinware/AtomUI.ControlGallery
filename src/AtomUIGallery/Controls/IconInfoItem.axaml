@@ -21,7 +21,7 @@
                             IconInfo="{TemplateBinding IconInfo}"
                             Width="48"
                             Height="48" />
-                        <TextBlock
+                        <atom:TextBlock
                             Margin="0,20, 0, 0"
                             Padding="8"
                             FontSize="13"

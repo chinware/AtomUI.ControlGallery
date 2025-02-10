@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+                    xmlns:atom="https://atomui.net"
                     x:CompileBindings="True">
 
     <ControlTheme x:Key="{x:Type gallerycontrols:ColorItemControl}" TargetType="gallerycontrols:ColorItemControl">
@@ -11,12 +12,12 @@
                         Height="{TemplateBinding Height}"
                         Background="{TemplateBinding Background}">
                     <Panel>
-                        <TextBlock Padding="8"
+                        <atom:TextBlock Padding="8"
                                    FontSize="12"
                                    FontWeight="600"
                                    Foreground="{TemplateBinding Foreground}"
                                    Text="{TemplateBinding ColorName}" />
-                        <TextBlock Name="PART_HexTextBlock"
+                        <atom:TextBlock Name="PART_HexTextBlock"
                                    Padding="8"
                                    HorizontalAlignment="Right"
                                    VerticalAlignment="Center"
@@ -30,7 +31,7 @@
                 </Border>
             </ControlTemplate>
         </Setter>
-        <Style Selector="^:pointerover /template/ TextBlock#PART_HexTextBlock">
+        <Style Selector="^:pointerover /template/ atom|TextBlock#PART_HexTextBlock">
             <Setter Property="IsVisible" Value="True" />
         </Style>
     </ControlTheme>

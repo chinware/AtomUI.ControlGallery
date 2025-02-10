@@ -9,9 +9,9 @@
             Description="Basic usage of the GroupBox control.">
             <atom:GroupBox HeaderTitle="Title Info">
                 <Panel Height="100">
-                    <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                         Content of group box
-                    </TextBlock>
+                    </atom:TextBlock>
                 </Panel>
             </atom:GroupBox>
         </gallerycontrols:ShowCaseItem>
@@ -22,23 +22,23 @@
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:GroupBox HeaderTitle="Title Info">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
                 <atom:GroupBox HeaderTitle="Title Info" HeaderTitlePosition="Center">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
                 <atom:GroupBox HeaderTitle="Title Info" HeaderTitlePosition="Right">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
             </StackPanel>
@@ -50,31 +50,31 @@
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:GroupBox HeaderTitle="Title Info" HeaderFontStyle="Italic">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
                 <atom:GroupBox HeaderTitle="Title Info" HeaderTitlePosition="Center" HeaderFontWeight="Bold">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
                 <atom:GroupBox HeaderTitle="Title Info" HeaderTitlePosition="Right" HeaderFontStyle="Oblique">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
                 <atom:GroupBox HeaderTitle="Title Info" HeaderTitlePosition="Center" HeaderFontStyle="Oblique"
                                HeaderTitleColor="Coral" HeaderFontWeight="Medium">
                     <Panel Height="40">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <atom:TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
                             Content of group box
-                        </TextBlock>
+                        </atom:TextBlock>
                     </Panel>
                 </atom:GroupBox>
             </StackPanel>

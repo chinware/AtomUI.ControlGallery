@@ -32,7 +32,7 @@
                     RangeValue="20, 80" />
 
                 <StackPanel Orientation="Horizontal" Spacing="2">
-                    <TextBlock VerticalAlignment="Center">Enabled:</TextBlock>
+                    <atom:TextBlock VerticalAlignment="Center">Enabled:</atom:TextBlock>
                     <atom:ToggleSwitch VerticalAlignment="Center" SizeType="Small" IsChecked="{Binding NormalEnabled, Mode=TwoWay}" />
                 </StackPanel>
             </StackPanel>
@@ -97,7 +97,7 @@
             Description="Using marks property to mark a graduated slider, use value or defaultValue to specify the position of thumb.
             When included is false, means that different thumbs are coordinative. when step is null, users can only slide the thumbs onto marks.">
             <StackPanel Orientation="Vertical" Spacing="20">
-                <TextBlock FontWeight="Bold">included=true</TextBlock>
+                <atom:TextBlock FontWeight="Bold">included=true</atom:TextBlock>
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"
@@ -113,7 +113,7 @@
                     Marks="{Binding SliderMarks}"
                     RangeValue="20, 80" />
         
-                <TextBlock FontWeight="Bold">included=false</TextBlock>
+                <atom:TextBlock FontWeight="Bold">included=false</atom:TextBlock>
                 <atom:Slider
                     Maximum="100"
                     Minimum="0"

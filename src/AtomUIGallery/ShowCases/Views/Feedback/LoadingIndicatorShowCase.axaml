@@ -79,7 +79,7 @@
                                 Type="Info" />
                 </atom:LoadingMaskHost>
                 <StackPanel Orientation="Horizontal" Spacing="10">
-                    <TextBlock>Loading state：</TextBlock>
+                    <atom:TextBlock>Loading state：</atom:TextBlock>
                     <atom:ToggleSwitch IsChecked="{Binding IsLoadingSwitchChecked}" />
                 </StackPanel>
             </StackPanel>

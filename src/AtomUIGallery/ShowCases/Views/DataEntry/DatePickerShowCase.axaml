@@ -63,7 +63,7 @@
         
             <DockPanel Margin="0, 0, 0, 0">
                 <StackPanel Orientation="Horizontal" Spacing="5" DockPanel.Dock="Top">
-                    <TextBlock VerticalAlignment="Center">Expand direction:</TextBlock>
+                    <atom:TextBlock VerticalAlignment="Center">Expand direction:</atom:TextBlock>
                     <atom:OptionButtonGroup ButtonStyle="Outline" Name="PickerSizeTypeOptionGroup">
                         <atom:OptionButton>Large</atom:OptionButton>
                         <atom:OptionButton IsChecked="True">Default</atom:OptionButton>
@@ -170,7 +170,7 @@
         
             <DockPanel Margin="0, 0, 0, 0">
                 <StackPanel Orientation="Horizontal" Spacing="5" DockPanel.Dock="Top">
-                    <TextBlock VerticalAlignment="Center">Expand direction:</TextBlock>
+                    <atom:TextBlock VerticalAlignment="Center">Expand direction:</atom:TextBlock>
                     <atom:OptionButtonGroup ButtonStyle="Outline" Name="PickerPlacementOptionGroup">
                         <atom:OptionButton>TopLeft</atom:OptionButton>
                         <atom:OptionButton>TopRight</atom:OptionButton>

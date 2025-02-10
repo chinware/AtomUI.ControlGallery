@@ -27,7 +27,7 @@
             Title="Colorful Tag"
             Description="We preset a series of colorful tag styles for use in different situations. You can also set it to a hex color string for custom color.">
             <StackPanel Orientation="Vertical">
-                <TextBlock FontWeight="Bold" FontSize="14" Margin="0, 0, 0, 10">Presets</TextBlock>
+                <atom:TextBlock FontWeight="Bold" FontSize="14" Margin="0, 0, 0, 10">Presets</atom:TextBlock>
                 <WrapPanel HorizontalAlignment="Left">
                     <atom:Tag TagColor="magenta">magenta</atom:Tag>
                     <atom:Tag TagColor="red">red</atom:Tag>
@@ -42,7 +42,7 @@
                     <atom:Tag TagColor="purple">purple</atom:Tag>
                 </WrapPanel>
 
-                <TextBlock FontWeight="Bold" FontSize="14" Margin="0, 20, 0, 10">Custom</TextBlock>
+                <atom:TextBlock FontWeight="Bold" FontSize="14" Margin="0, 20, 0, 10">Custom</atom:TextBlock>
                 <WrapPanel HorizontalAlignment="Left">
                     <atom:Tag TagColor="#f50">#f50</atom:Tag>
                     <atom:Tag TagColor="#2db7f5" IsClosable="True">#2db7f5</atom:Tag>
@@ -57,7 +57,7 @@
             Title="Status Tag"
             Description="We preset five different colors, you can set color property such as success,processing,error,default and warning to indicate specific status.">
             <StackPanel Orientation="Vertical">
-                <TextBlock FontWeight="Bold" FontSize="14" Margin="0, 0, 0, 10">Without icon</TextBlock>
+                <atom:TextBlock FontWeight="Bold" FontSize="14" Margin="0, 0, 0, 10">Without icon</atom:TextBlock>
                 <WrapPanel HorizontalAlignment="Left">
                     <atom:Tag TagColor="success">success</atom:Tag>
                     <atom:Tag TagColor="info">processing</atom:Tag>
@@ -66,7 +66,7 @@
                     <atom:Tag TagColor="default">default</atom:Tag>
                 </WrapPanel>
 
-                <TextBlock FontWeight="Bold" FontSize="14" Margin="0, 20, 0, 10">Custom</TextBlock>
+                <atom:TextBlock FontWeight="Bold" FontSize="14" Margin="0, 20, 0, 10">Custom</atom:TextBlock>
                 <WrapPanel HorizontalAlignment="Left">
                     <atom:Tag TagColor="success"
                               Icon="{atom:IconProvider Kind=CheckCircleOutlined}">

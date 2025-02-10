@@ -172,13 +172,13 @@
                             BorderThickness="1"
                             CornerRadius="6">
                         <StackPanel Orientation="Vertical">
-                            <TextBlock Height="38"
+                            <atom:TextBlock Height="38"
                                        FontWeight="Bold"
                                        LineHeight="38">
                                 Pushes open the window
-                            </TextBlock>
+                            </atom:TextBlock>
                             <atom:Separator LineColor="#d9d9d9" Orientation="Horizontal" />
-                            <TextBlock Margin="0,10,0,0">and raises the spyglass.</TextBlock>
+                            <atom:TextBlock Margin="0,10,0,0">and raises the spyglass.</atom:TextBlock>
                         </StackPanel>
                     </Border>
                 </atom:RibbonBadge>
