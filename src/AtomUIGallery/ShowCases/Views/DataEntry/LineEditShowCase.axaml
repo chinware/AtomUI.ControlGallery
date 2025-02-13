@@ -61,12 +61,14 @@
                 <atom:LineEdit Watermark="input password"
                                Width="400"
                                RevealPassword="False"
+                               PasswordChar="•"
                                HorizontalAlignment="Left"
                                IsEnableRevealButton="True" />
                 <atom:LineEdit Watermark="input password"
                                Width="400"
                                RevealPassword="False"
                                HorizontalAlignment="Left"
+                               PasswordChar="•"
                                IsEnableRevealButton="True"
                                IsEnableClearButton="True" />
             </StackPanel>
