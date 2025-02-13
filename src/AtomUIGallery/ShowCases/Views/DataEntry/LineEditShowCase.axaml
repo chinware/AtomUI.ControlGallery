@@ -115,7 +115,7 @@
             Title="Search box"
             Description="Example of creating a search box by grouping a standard input with a search button.">
             <StackPanel Orientation="Vertical" Spacing="10" Margin="0, 0, 20, 0">
-                <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left" />
+                <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left" SizeType="Large"/>
                 <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left"
                                  SearchButtonText="Search" />
 
