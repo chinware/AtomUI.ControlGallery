@@ -35,7 +35,7 @@ public class ShowCasePanel : TemplatedControl
                 {
                     _rightPanel?.Children.Add(control);
                 }
-                //LogicalChildren.Add(control);
+                LogicalChildren.Add(control);
             }
             
             _initialized = true;

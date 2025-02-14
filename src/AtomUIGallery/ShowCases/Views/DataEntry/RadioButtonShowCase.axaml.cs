@@ -14,7 +14,7 @@ public partial class RadioButtonShowCase : ReactiveUserControl<RadioButtonViewMo
     
     public void ToggleDisabledStatus(object arg)
     {
-        // ToggleDisabledRadioUnChecked.IsEnabled = !ToggleDisabledRadioUnChecked.IsEnabled;
-        // ToggleDisabledRadioChecked.IsEnabled   = !ToggleDisabledRadioChecked.IsEnabled;
+        ToggleDisabledRadioUnChecked.IsEnabled = !ToggleDisabledRadioUnChecked.IsEnabled;
+        ToggleDisabledRadioChecked.IsEnabled   = !ToggleDisabledRadioChecked.IsEnabled;
     }
 }
