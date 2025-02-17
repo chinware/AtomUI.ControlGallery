@@ -1,5 +1,6 @@
 ﻿using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Styling;
+using Avalonia.Threading;
 
 namespace AtomUIGallery.Desktop;
 
