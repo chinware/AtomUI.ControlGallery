@@ -11,7 +11,9 @@
                 Title="Delete the task"
                 ConfirmContent="Are you sure to delete this task?"
                 OkText="Ok"
-                CancelText="Cancel">
+                CancelText="Cancel"
+                Placement="Top"
+                IsShowArrow="True">
                 <atom:Button ButtonType="Default" IsDanger="True">Delete</atom:Button>
             </atom:PopupConfirm>
         </gallerycontrols:ShowCaseItem>
