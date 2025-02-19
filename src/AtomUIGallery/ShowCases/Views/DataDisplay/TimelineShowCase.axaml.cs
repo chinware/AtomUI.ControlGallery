@@ -24,22 +24,22 @@ public partial class TimelineShowCase : ReactiveUserControl<TimelineViewModel>
     
     private void ReverseButtonClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
-        ReverseTimeline.Reverse = !ReverseTimeline.Reverse;
+        ReverseTimeline.IsReverse = !ReverseTimeline.IsReverse;
     }
     
     private void ModeChecked(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
         if (sender is RadioButton radioButton)
         {
-            if (radioButton.Content?.ToString() == "Left")
+            if (radioButton == ModeLeft && ModeLeft.IsChecked.HasValue && ModeLeft.IsChecked.Value)
             {
                 LabelTimeline.Mode = TimeLineMode.Left;
             }
-            else if (radioButton.Content?.ToString() == "Right")
+            else if (radioButton == ModeRight && ModeRight.IsChecked.HasValue && ModeRight.IsChecked.Value)
             {
                 LabelTimeline.Mode = TimeLineMode.Right;
             }
-            else if (radioButton.Content?.ToString() == "Alternate")
+            else if (radioButton == ModeAlternate && ModeAlternate.IsChecked.HasValue && ModeAlternate.IsChecked.Value)
             {
                 LabelTimeline.Mode = TimeLineMode.Alternate;
             }
