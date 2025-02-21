@@ -3,14 +3,15 @@
              x:Class="AtomUIGallery.ShowCases.Views.DrawerShowCase"
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
-             xmlns:utils="clr-namespace:AtomUIGallery.Utils">
+             xmlns:utils="clr-namespace:AtomUIGallery.Utils"
+             xmlns:views="clr-namespace:AtomUIGallery.ShowCases.Views">
     <UserControl.Styles>
         <!-- ListBox -->
         <Style Selector="ListBox">
             <Setter Property="Background" Value="Transparent" />
             <Setter Property="ItemsPanel">
                 <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal" />
+                    <StackPanel Orientation="Horizontal" Spacing="10"/>
                 </ItemsPanelTemplate>
             </Setter>
         </Style>
@@ -19,12 +20,9 @@
         <Style Selector="ListBoxItem">
             <Setter Property="Template">
                 <ControlTemplate TargetType="ListBoxItem">
-                    <ContentPresenter Margin="{TemplateBinding Padding}"
-                                      HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                      VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                      Background="Transparent"
-                                      Content="{TemplateBinding Content}"
-                                      ContentTemplate="{TemplateBinding ContentTemplate}" />
+                    <atom:RadioButton Content="{TemplateBinding Content, Converter={x:Static views:DrawerShowCase.PlacementTextConverter}}"
+                                      GroupName="{Binding $parent[ListBox].Name}" 
+                                      IsChecked="{TemplateBinding IsSelected, Mode=TwoWay}"></atom:RadioButton>
                 </ControlTemplate>
             </Setter>
         </Style>
@@ -49,248 +47,333 @@
     </UserControl.Styles>
 
     <gallerycontrols:ShowCasePanel>
-
-        <!-- Basic -->
-        <gallerycontrols:ShowCaseItem Title="Basic" Description="Basic drawer.">
-            <Panel>
-                <atom:ToggleSwitch Content="Open" />
-                <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}"
-                             OpenOn="{atom:TopLevel}">
-                    <atom:TextBlock Margin="50" Text="Some contents..." />
-                </atom:Drawer>
-            </Panel>
-        </gallerycontrols:ShowCaseItem>
-
+        
+        <!-- ~1~ Basic @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Basic X" Description="Basic drawer."> -->
+        <!--     <Panel> -->
+        <!--         <atom:ToggleSwitch Content="Open1" /> -->
+        <!--         <atom:DrawerX IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}" -->
+        <!--                      Title="Basic Drawer"> -->
+        <!--             <StackPanel Orientation="Vertical" Spacing="5"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:DrawerX> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Extra and Footer" Description="Set the header extra area and footer area."> -->
+        <!--     <Panel> -->
+        <!--         <StackPanel Classes="ControllerPanel"> -->
+        <!--             <ListBox Classes="PlacementList" -->
+        <!--                      Name="ExtraAndFooter" -->
+        <!--                      ItemsSource="{utils:Enum atom:DrawerPlacement}" -->
+        <!--                      SelectedIndex="2" /> -->
+        <!--             <atom:ToggleSwitch Content="Open" /> -->
+        <!--         </StackPanel> -->
+        <!--         <atom:DrawerX -->
+        <!--             IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}" -->
+        <!--             Title="Basic Drawer" -->
+        <!--             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <atom:DrawerX.Extra> -->
+        <!--                 <StackPanel Orientation="Horizontal" Spacing="10"> -->
+        <!--                     <atom:Button>Cancel</atom:Button> -->
+        <!--                     <atom:Button ButtonType="Primary">Ok</atom:Button> -->
+        <!--                 </StackPanel> -->
+        <!--             </atom:DrawerX.Extra> -->
+        <!--             <atom:DrawerX.Footer> -->
+        <!--                 <StackPanel Orientation="Horizontal" Spacing="10"> -->
+        <!--                     <atom:Button>Edit</atom:Button> -->
+        <!--                     <atom:Button ButtonType="Primary">Upload</atom:Button> -->
+        <!--                     <atom:Button ButtonType="Primary" IsDanger="True">Upload</atom:Button> -->
+        <!--                 </StackPanel> -->
+        <!--             </atom:DrawerX.Footer> -->
+        <!--             <StackPanel Orientation="Vertical" Spacing="5"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:DrawerX> -->
+        <!--     </Panel> -->
+        <!--      -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
         <!-- No Mask -->
-        <gallerycontrols:ShowCaseItem Title="No Mask" Description="Without a mask.">
+        <!-- <gallerycontrols:ShowCaseItem Title="No Mask" Description="Without a mask."> -->
+        <!--     <Panel> -->
+        <!--         <atom:ToggleSwitch Content="Open" /> -->
+        <!--         <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}" -->
+        <!--                      OpenOn="{atom:TopLevel}" -->
+        <!--                      ShowMask="False"> -->
+        <!--             <StackPanel Margin="50" Spacing="8"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:Button Command="{atom:CloseDrawer}" Text="Close" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        
+        <!-- ~1~ No Mask @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="No Mask X" Description="Without a mask."> -->
+        <!--     <Panel> -->
+        <!--         <atom:ToggleSwitch Content="Open" /> -->
+        <!--         <atom:DrawerX IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}" -->
+        <!--                       Title="Basic Drawer" -->
+        <!--                       IsShowMask="False"> -->
+        <!--             <StackPanel Orientation="Vertical" Spacing="5"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:DrawerX> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Custom Placement" -->
+        <!--                               Description="The Drawer can appear from any edge of the screen."> -->
+        <!--     <Panel> -->
+        <!--         <StackPanel Classes="ControllerPanel"> -->
+        <!--             <ListBox Classes="PlacementList" -->
+        <!--                      Name="CustomPlacement" -->
+        <!--                      ItemsSource="{utils:Enum atom:DrawerPlacement}" -->
+        <!--                      SelectedIndex="2" /> -->
+        <!--             <atom:ToggleSwitch Content="Open" /> -->
+        <!--         </StackPanel> -->
+        <!--      -->
+        <!--         <atom:DrawerX -->
+        <!--             IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}" -->
+        <!--             Title="Basic Drawer" -->
+        <!--             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel Orientation="Vertical" Spacing="5"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:DrawerX> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
+        <!-- ~1~ Render in current area @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Render in current area" Description="Render in current area."> -->
+        <!--     <Panel> -->
+        <!--         <StackPanel Height="300" Orientation="Vertical" Spacing="10"> -->
+        <!--             <atom:TextBlock>Render in this</atom:TextBlock> -->
+        <!--             <atom:ToggleSwitch/> -->
+        <!--         </StackPanel> -->
+        <!--          -->
+        <!--         <atom:DrawerX IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}" -->
+        <!--                       Title="Basic Drawer" -->
+        <!--                       OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"> -->
+        <!--             <StackPanel Orientation="Vertical" Spacing="5"> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--                 <atom:TextBlock Text="Some contents..." /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:DrawerX> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
+        <gallerycontrols:ShowCaseItem Title="Preset size" Description="The default width (or height) of Drawer is 378px, and there is a preset large size 736px.">
             <Panel>
-                <atom:ToggleSwitch Content="Open" />
-                <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}"
-                             OpenOn="{atom:TopLevel}"
-                             ShowMask="False">
-                    <StackPanel Margin="50" Spacing="8">
+                <WrapPanel>
+                    <WrapPanel.Styles>
+                        <Style Selector="atom|Button">
+                            <Setter Property="Margin" Value="5"></Setter>
+                        </Style>
+                    </WrapPanel.Styles>
+                    <atom:Button ButtonType="Primary"
+                                 Click="HandleOpenDefaultSizeDrawer">Open Default Size (378px)</atom:Button>
+                    <atom:Button ButtonType="Primary"
+                                 Click="HandleOpenLargeSizeDrawer">Open Large Size (736px)</atom:Button>
+                </WrapPanel>
+        
+                <atom:DrawerX Title="Basic Drawer"
+                              Name="PresetSizeDrawer">
+                    <StackPanel Orientation="Vertical" Spacing="5">
                         <atom:TextBlock Text="Some contents..." />
-                        <atom:Button Command="{atom:CloseDrawer}" Text="Close" />
+                        <atom:TextBlock Text="Some contents..." />
+                        <atom:TextBlock Text="Some contents..." />
                     </StackPanel>
-                </atom:Drawer>
+                </atom:DrawerX>
             </Panel>
         </gallerycontrols:ShowCaseItem>
-
-        <!-- Custom Placement -->
-        <gallerycontrols:ShowCaseItem Title="Custom Placement"
-                                      Description="The Drawer can appear from any edge of the screen.">
-            <Panel>
-                <StackPanel Classes="ControllerPanel">
-                    <ListBox Classes="PlacementList"
-                             ItemsSource="{utils:Enum atom:DrawerPlacement}"
-                             SelectedIndex="2" />
-                    <atom:ToggleSwitch Content="Open" />
-                </StackPanel>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
-                    OpenOn="{atom:TopLevel}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:TextBlock Margin="50" Text="Some contents..." />
-                </atom:Drawer>
-            </Panel>
-        </gallerycontrols:ShowCaseItem>
-
-        <!-- Extra Actions -->
-        <gallerycontrols:ShowCaseItem Title="Extra Actions"
-                                      Description="Extra actions should be placed at corner of drawer in Ant Design, you can use extra prop for that.">
-            <Panel>
-                <StackPanel Classes="ControllerPanel">
-                    <ListBox Classes="PlacementList"
-                             ItemsSource="{utils:Enum atom:DrawerPlacement}"
-                             SelectedIndex="2" />
-                    <atom:ToggleSwitch Content="Open Confirm Drawer" />
-                    <atom:ToggleSwitch Content="Open Submit Drawer" />
-                </StackPanel>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
-                    OpenOn="{atom:TopLevel}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:ConfirmDrawerFrame ConfirmCommand="{atom:Toast Text=Drawer Confirmed!, Header=Tips}"
-                                             Header="Drawer with extra actions">
-                        <atom:TextBlock Margin="50" Text="Some contents..." />
-                    </atom:ConfirmDrawerFrame>
-                </atom:Drawer>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[2]).IsChecked}"
-                    OpenOn="{atom:TopLevel}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:SubmitDrawerFrame ConfirmCommand="{atom:Toast Text=Drawer Confirmed!, Header=Tips}"
-                                            Header="Drawer with extra actions">
-                        <atom:TextBlock Margin="50" Text="Some contents..." />
-                    </atom:SubmitDrawerFrame>
-                </atom:Drawer>
-            </Panel>
-        </gallerycontrols:ShowCaseItem>
-
-        <!-- Render in current area -->
-        <gallerycontrols:ShowCaseItem Title="Render in current area" Description="Render in current area.">
-            <Panel>
-                <StackPanel Height="120" Classes="ControllerPanel">
-                    <ListBox Classes="PlacementList"
-                             ItemsSource="{utils:Enum atom:DrawerPlacement}"
-                             SelectedIndex="2" />
-                    <atom:ToggleSwitch Content="Open" />
-                </StackPanel>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
-                    OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:TextBlock Margin="50" Text=" Some contents... " />
-                </atom:Drawer>
-            </Panel>
-        </gallerycontrols:ShowCaseItem>
-
+        <!-- -->
+        <!-- ~1~ Multi-level drawer - Overlay @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Multi-level drawer - Overlay" -->
+        <!--                               Description="Open a new drawer on top of an existing drawer to handle multi branch tasks."> -->
+        <!--     <Panel> -->
+        <!--         <StackPanel Height="120" Classes="ControllerPanel"> -->
+        <!--             <ListBox Classes="PlacementList" -->
+        <!--                      ItemsSource="{utils:Enum atom:DrawerPlacement}" -->
+        <!--                      SelectedIndex="2" /> -->
+        <!--             <atom:ToggleSwitch Content="Open #1" /> -->
+        <!--         </StackPanel> -->
+        <!-- -->
+        <!--         <atom:Drawer -->
+        <!--             IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}" -->
+        <!--             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel MinWidth="220" Margin="50"> -->
+        <!--                 <atom:TextBlock Foreground="Green" Text=" Some contents #1... " /> -->
+        <!--                 <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer2" Content="Open #2" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!--         <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer2.IsChecked}" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel MinWidth="160" Margin="50"> -->
+        <!--                 <atom:TextBlock Foreground="Yellow" Text=" Some contents #2... " /> -->
+        <!--                 <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer3" Content="Open #3" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!--         <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer3.IsChecked}" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <atom:TextBlock MinWidth="300" -->
+        <!--                        Margin="50" -->
+        <!--                        Foreground="DodgerBlue" -->
+        <!--                        Text=" Some contents #3... " /> -->
+        <!--         </atom:Drawer> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        
         <!-- Multi-level drawer - Overlay -->
-        <gallerycontrols:ShowCaseItem Title="Multi-level drawer - Overlay"
+        <gallerycontrols:ShowCaseItem Title="Multi-level drawer"
                                       Description="Open a new drawer on top of an existing drawer to handle multi branch tasks.">
             <Panel>
                 <StackPanel Height="120" Classes="ControllerPanel">
                     <ListBox Classes="PlacementList"
                              ItemsSource="{utils:Enum atom:DrawerPlacement}"
                              SelectedIndex="2" />
-                    <atom:ToggleSwitch Content="Open #1" />
+                    <atom:ToggleSwitch/>
                 </StackPanel>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
-                    OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <StackPanel MinWidth="220" Margin="50">
-                        <atom:TextBlock Foreground="Green" Text=" Some contents #1... " />
-                        <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer2" Content="Open #2" />
+        
+                <atom:DrawerX Title="Basic Drawer"
+                              IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
+                              Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
+                    <StackPanel Orientation="Vertical" Spacing="5">
+                        <atom:TextBlock Text="Some contents..." />
+                        <atom:TextBlock Text="Some contents..." />
+                        <atom:TextBlock Text="Some contents..." />
+                        <atom:Button ButtonType="Primary"
+                                     Click="HandleOpenMultilevelLevelTwoDrawer">Two-level drawer</atom:Button>
+                        <atom:DrawerX Title="Two-level Drawer"
+                                      Name="MultiLevelDrawerLevelTwo">
+                            <StackPanel Orientation="Vertical" Spacing="5">
+                                <atom:TextBlock Text="Some contents..." />
+                                <atom:TextBlock Text="Some contents..." />
+                                <atom:TextBlock Text="Some contents..." />
+                            </StackPanel>
+                        </atom:DrawerX>
                     </StackPanel>
-                </atom:Drawer>
-                <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer2.IsChecked}"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <StackPanel MinWidth="160" Margin="50">
-                        <atom:TextBlock Foreground="Yellow" Text=" Some contents #2... " />
-                        <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer3" Content="Open #3" />
-                    </StackPanel>
-                </atom:Drawer>
-                <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer3.IsChecked}"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:TextBlock MinWidth="300"
-                               Margin="50"
-                               Foreground="DodgerBlue"
-                               Text=" Some contents #3... " />
-                </atom:Drawer>
+                </atom:DrawerX>
             </Panel>
         </gallerycontrols:ShowCaseItem>
-
-        <!-- Multi-level drawer - Push -->
-        <gallerycontrols:ShowCaseItem Title="Multi-level drawer - Push"
-                                      Description="Open a new drawer on top of an existing drawer to handle multi branch tasks.">
-            <Panel>
-                <StackPanel Height="120" Classes="ControllerPanel">
-                    <ListBox Classes="PlacementList"
-                             ItemsSource="{utils:Enum atom:DrawerPlacement}"
-                             SelectedIndex="2" />
-                    <atom:ToggleSwitch Content="Open #1" />
-                </StackPanel>
-
-                <atom:Drawer
-                    IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}"
-                    OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                    Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <StackPanel Margin="50">
-                        <atom:TextBlock Foreground="Green" Text="Drawer with Overlay OpenMode #1... " />
-                        <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer4" Content="Open #2" />
-                    </StackPanel>
-                </atom:Drawer>
-
-                <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer4.IsChecked}"
-                             OpenMode="Push"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <StackPanel Margin="50">
-                        <atom:TextBlock Foreground="Red" Text="Drawer with Push OpenMode #2... " />
-                        <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer5" Content="Open #3" />
-                    </StackPanel>
-                </atom:Drawer>
-
-                <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer5.IsChecked}"
-                             OpenMode="Overlay"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <StackPanel Margin="50">
-                        <atom:TextBlock Foreground="DeepPink" Text="Drawer with Overlay OpenMode #2... " />
-                        <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer6" Content="Open #3" />
-                    </StackPanel>
-                </atom:Drawer>
-
-                <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer6.IsChecked}"
-                             OpenMode="Push"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}">
-                    <atom:TextBlock Margin="50"
-                               Foreground="DodgerBlue"
-                               Text="Drawer with Push Push #4... " />
-                </atom:Drawer>
-            </Panel>
-        </gallerycontrols:ShowCaseItem>
-
-        <!-- Open on a target element -->
-        <gallerycontrols:ShowCaseItem Title="Open on a target element"
-                                      Description="Drawer can be opened on a special target element by property OpenOn.">
-            <Grid ColumnDefinitions="Auto,*">
-                <Border Grid.ColumnSpan="2" Height="300" />
-                <StackPanel Grid.Column="0" Spacing="8">
-                    <atom:CheckBox x:Name="ToggleButton1"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Top"
-                                   Content="Open Drawer #1" />
-                    <atom:CheckBox x:Name="ToggleButton2"
-                                   HorizontalAlignment="Right"
-                                   VerticalAlignment="Top"
-                                   Content="Open Drawer #2" />
-                    <ListBox x:Name="CbxHorizontalAlignment"
-                             Classes="PlacementList"
-                             ItemsSource="{utils:Enum atom:DrawerPlacement}"
-                             SelectedIndex="2" />
-                    <atom:Button Click="HandleButtonOpenOnCurrentParentOnClick" Content="Open On Current's Parent" />
-                </StackPanel>
-
-                <atom:Drawer x:Name="Drawer1"
-                             Grid.Column="1"
-                             Background="Gray"
-                             IsOpen="{Binding #ToggleButton1.IsChecked}"
-                             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}"
-                             Placement="{Binding #CbxHorizontalAlignment.SelectedItem}"
-                             ShowMask="True">
-                    <atom:Button Margin="16"
-                                 HorizontalAlignment="Right"
-                                 VerticalAlignment="Top"
-                                 ButtonType="Primary"
-                                 Click="HandleButtonClick"
-                                 Text="Button #1" />
-                </atom:Drawer>
-
-                <atom:Drawer x:Name="Drawer2"
-                             Grid.Column="1"
-                             Background="Gray"
-                             IsOpen="{Binding #ToggleButton2.IsChecked}"
-                             Placement="{Binding #CbxHorizontalAlignment.SelectedItem}"
-                             ShowMask="True">
-                    <atom:Button Margin="16"
-                                 HorizontalAlignment="Right"
-                                 VerticalAlignment="Top"
-                                 ButtonType="Text"
-                                 Click="HandleButtonClick"
-                                 Text="Button #2" />
-                </atom:Drawer>
-            </Grid>
-        </gallerycontrols:ShowCaseItem>
+        
+        <!-- ~1~ Multi-level drawer - Push @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Multi-level drawer - Push" -->
+        <!--                               Description="Open a new drawer on top of an existing drawer to handle multi branch tasks."> -->
+        <!--     <Panel> -->
+        <!--         <StackPanel Height="120" Classes="ControllerPanel"> -->
+        <!--             <ListBox Classes="PlacementList" -->
+        <!--                      ItemsSource="{utils:Enum atom:DrawerPlacement}" -->
+        <!--                      SelectedIndex="2" /> -->
+        <!--             <atom:ToggleSwitch Content="Open #1" /> -->
+        <!--         </StackPanel> -->
+        <!-- -->
+        <!--         <atom:Drawer -->
+        <!--             IsOpen="{Binding $parent[Panel].((Panel)Children[0]).((atom:ToggleSwitch)Children[1]).IsChecked}" -->
+        <!--             OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--             Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel Margin="50"> -->
+        <!--                 <atom:TextBlock Foreground="Green" Text="Drawer with Overlay OpenMode #1... " /> -->
+        <!--                 <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer4" Content="Open #2" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!-- -->
+        <!--         <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer4.IsChecked}" -->
+        <!--                      OpenMode="Push" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel Margin="50"> -->
+        <!--                 <atom:TextBlock Foreground="Red" Text="Drawer with Push OpenMode #2... " /> -->
+        <!--                 <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer5" Content="Open #3" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!-- -->
+        <!--         <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer5.IsChecked}" -->
+        <!--                      OpenMode="Overlay" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <StackPanel Margin="50"> -->
+        <!--                 <atom:TextBlock Foreground="DeepPink" Text="Drawer with Overlay OpenMode #2... " /> -->
+        <!--                 <atom:ToggleSwitch x:Name="ToggleSwitchOpenDrawer6" Content="Open #3" /> -->
+        <!--             </StackPanel> -->
+        <!--         </atom:Drawer> -->
+        <!-- -->
+        <!--         <atom:Drawer IsOpen="{Binding #ToggleSwitchOpenDrawer6.IsChecked}" -->
+        <!--                      OpenMode="Push" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding $parent[Panel].((Panel)Children[0]).((ListBox)Children[0]).SelectedItem}"> -->
+        <!--             <atom:TextBlock Margin="50" -->
+        <!--                        Foreground="DodgerBlue" -->
+        <!--                        Text="Drawer with Push Push #4... " /> -->
+        <!--         </atom:Drawer> -->
+        <!--     </Panel> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
+        <!-- -->
+        <!-- ~1~ Open on a target element @1@ -->
+        <!-- <gallerycontrols:ShowCaseItem Title="Open on a target element" -->
+        <!--                               Description="Drawer can be opened on a special target element by property OpenOn."> -->
+        <!--     <Grid ColumnDefinitions="Auto,*"> -->
+        <!--         <Border Grid.ColumnSpan="2" Height="300" /> -->
+        <!--         <StackPanel Grid.Column="0" Spacing="8"> -->
+        <!--             <atom:CheckBox x:Name="ToggleButton1" -->
+        <!--                            HorizontalAlignment="Right" -->
+        <!--                            VerticalAlignment="Top" -->
+        <!--                            Content="Open Drawer #1" /> -->
+        <!--             <atom:CheckBox x:Name="ToggleButton2" -->
+        <!--                            HorizontalAlignment="Right" -->
+        <!--                            VerticalAlignment="Top" -->
+        <!--                            Content="Open Drawer #2" /> -->
+        <!--             <ListBox x:Name="CbxHorizontalAlignment" -->
+        <!--                      Classes="PlacementList" -->
+        <!--                      ItemsSource="{utils:Enum atom:DrawerPlacement}" -->
+        <!--                      SelectedIndex="2" /> -->
+        <!--             <atom:Button Click="HandleButtonOpenOnCurrentParentOnClick" Content="Open On Current's Parent" /> -->
+        <!--         </StackPanel> -->
+        <!-- -->
+        <!--         <atom:Drawer x:Name="Drawer1" -->
+        <!--                      Grid.Column="1" -->
+        <!--                      Background="Gray" -->
+        <!--                      IsOpen="{Binding #ToggleButton1.IsChecked}" -->
+        <!--                      OpenOn="{Binding $parent[gallerycontrols:ShowCaseItem]}" -->
+        <!--                      Placement="{Binding #CbxHorizontalAlignment.SelectedItem}" -->
+        <!--                      ShowMask="True"> -->
+        <!--             <atom:Button Margin="16" -->
+        <!--                          HorizontalAlignment="Right" -->
+        <!--                          VerticalAlignment="Top" -->
+        <!--                          ButtonType="Primary" -->
+        <!--                          Click="HandleButtonClick" -->
+        <!--                          Text="Button #1" /> -->
+        <!--         </atom:Drawer> -->
+        <!-- -->
+        <!--         <atom:Drawer x:Name="Drawer2" -->
+        <!--                      Grid.Column="1" -->
+        <!--                      Background="Gray" -->
+        <!--                      IsOpen="{Binding #ToggleButton2.IsChecked}" -->
+        <!--                      Placement="{Binding #CbxHorizontalAlignment.SelectedItem}" -->
+        <!--                      ShowMask="True"> -->
+        <!--             <atom:Button Margin="16" -->
+        <!--                          HorizontalAlignment="Right" -->
+        <!--                          VerticalAlignment="Top" -->
+        <!--                          ButtonType="Text" -->
+        <!--                          Click="HandleButtonClick" -->
+        <!--                          Text="Button #2" /> -->
+        <!--         </atom:Drawer> -->
+        <!--     </Grid> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
 
     </gallerycontrols:ShowCasePanel>
 </UserControl>
