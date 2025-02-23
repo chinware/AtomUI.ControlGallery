@@ -1,7 +1,6 @@
 ﻿using AtomUI;
 using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
-using Avalonia;
 using Avalonia.Data.Converters;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
@@ -22,6 +21,7 @@ public partial class DrawerShowCase : ReactiveUserControl<DrawerViewModel>
 
             return x;
         });
+
     public DrawerShowCase()
     {
         this.WhenActivated(disposables =>
@@ -35,38 +35,18 @@ public partial class DrawerShowCase : ReactiveUserControl<DrawerViewModel>
 
     private void HandleOpenLargeSizeDrawer(object sender, RoutedEventArgs e)
     {
-        // PresetSizeDrawer.SizeType = SizeType.Large;
-        // PresetSizeDrawer.IsOpen = true;
+        PresetSizeDrawer.DialogSizeType = SizeType.Large;
+        PresetSizeDrawer.IsOpen         = true;
     }
-    
+
     private void HandleOpenDefaultSizeDrawer(object sender, RoutedEventArgs e)
     {
-        // PresetSizeDrawer.SizeType = SizeType.Small;
-        // PresetSizeDrawer.IsOpen   = true;
+        PresetSizeDrawer.DialogSizeType = SizeType.Small;
+        PresetSizeDrawer.IsOpen         = true;
     }
-    
+
     private void HandleOpenMultilevelLevelTwoDrawer(object sender, RoutedEventArgs e)
     {
         MultiLevelDrawerLevelTwo.IsOpen = true;
-    }
-    
-    private void HandleButtonClick(object? sender, RoutedEventArgs e)
-    {
-        if (sender is not Button button)
-        {
-            return;
-        }
-
-        if (Drawer.GetDrawer(button) is not { } drawer)
-        {
-            return;
-        }
-
-        drawer.IsOpen = false;
-    }
-
-    private void HandleButtonOpenOnCurrentParentOnClick(object? sender, RoutedEventArgs e)
-    {
-        // Drawer1.OpenOn = Drawer1.OpenOn?.Parent as Visual;
     }
 }
