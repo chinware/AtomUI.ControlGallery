@@ -51,7 +51,7 @@
     <gallerycontrols:ShowCasePanel>
 
         <!-- Basic -->
-        <gallerycontrols:ShowCaseItem Title="Basic X" Description="Basic drawer.">
+        <gallerycontrols:ShowCaseItem Title="Basic" Description="Basic drawer.">
             <Panel>
                 <atom:ToggleSwitch />
                 <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}"
@@ -137,7 +137,7 @@
         </gallerycontrols:ShowCaseItem>
         
         <!-- No Mask -->
-        <gallerycontrols:ShowCaseItem Title="No Mask X" Description="Without a mask.">
+        <gallerycontrols:ShowCaseItem Title="No Mask" Description="Without a mask.">
             <Panel>
                 <atom:ToggleSwitch Content="Open" />
                 <atom:Drawer IsOpen="{Binding $parent[Panel].((atom:ToggleSwitch)Children[0]).IsChecked}"
