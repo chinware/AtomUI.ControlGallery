@@ -7,15 +7,15 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Click DatePicker, and then we could select or input a date in panel.">
-            <atom:DatePicker Watermark="Select date" />
+            <atom:DatePicker Watermark="Select date"/>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
             Title="Range Picker"
             Description="Set range picker type by picker prop.">
             <StackPanel Orientation="Vertical" Spacing="10">
-                <atom:RangeDatePicker IsShowTime="true" Watermark="Select date" />
-                <atom:RangeDatePicker IsShowTime="False" Watermark="Select date" />
+                <atom:RangeDatePicker IsShowTime="true" Watermark="Select date" SecondaryWatermark="End date"/>
+                <atom:RangeDatePicker IsShowTime="False" Watermark="Select date" SecondaryWatermark="End date"/>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
@@ -24,7 +24,7 @@
             Description="DatePicker will automatically determine whether to show a confirm button according to the picker property. You can also set the needConfirm property to determine whether to show a confirm button. When needConfirm is set, the user must click the confirm button to complete the selection. Otherwise, the selection will be submitted when the picker loses focus or selects a date.">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:DatePicker IsNeedConfirm="True" Watermark="Select date" />
-                <atom:RangeDatePicker IsNeedConfirm="True" IsShowTime="False" Watermark="Select date" />
+                <atom:RangeDatePicker IsNeedConfirm="True" IsShowTime="False" Watermark="Select date" SecondaryWatermark="End date" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
@@ -33,7 +33,7 @@
             Description="This property provides an additional time selection. When showTime is an Object, its properties will be passed on to the built-in TimePicker.">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:DatePicker IsNeedConfirm="True" IsShowTime="True" Watermark="Select date" />
-                <atom:RangeDatePicker IsNeedConfirm="True" IsShowTime="True" Watermark="Select date" />
+                <atom:RangeDatePicker IsNeedConfirm="True" IsShowTime="True" Watermark="Select date" SecondaryWatermark="End date" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
@@ -45,12 +45,23 @@
                                  IsEnabled="False" />
                 <atom:DatePicker IsNeedConfirm="True" Watermark="Select date" IsShowTime="True"
                                  SelectedDateTime="2024-01-20 12:22:23 AM" IsEnabled="False" />
-                <atom:RangeDatePicker IsNeedConfirm="True" Watermark="Select date" RangeStartDefaultDate="2024-01-20"
-                                      RangeEndDefaultDate="2024-03-20" IsEnabled="False" />
-                <atom:RangeDatePicker IsNeedConfirm="True" Watermark="Select date" IsShowTime="True"
+                <atom:RangeDatePicker IsNeedConfirm="True" 
+                                      Watermark="Select date" 
+                                      SecondaryWatermark="End date"
+                                      RangeStartDefaultDate="2024-01-20"
+                                      RangeEndDefaultDate="2024-03-20" 
+                                      IsEnabled="False" />
+                <atom:RangeDatePicker IsNeedConfirm="True" 
+                                      Watermark="Select date" 
+                                      SecondaryWatermark="End date"
+                                      IsShowTime="True"
                                       RangeStartDefaultDate="2024-01-20 12:22:23 AM"
-                                      RangeEndDefaultDate="2024-02-20 07:22:23 AM" IsEnabled="False" />
-                <atom:RangeDatePicker IsNeedConfirm="True" Watermark="Select date" IsShowTime="True"
+                                      RangeEndDefaultDate="2024-02-20 07:22:23 AM"
+                                      IsEnabled="False" />
+                <atom:RangeDatePicker IsNeedConfirm="True"
+                                      Watermark="Select date"
+                                      SecondaryWatermark="End date"
+                                      IsShowTime="True"
                                       RangeStartDefaultDate="2024-01-20 12:22:23 AM"
                                       RangeEndDefaultDate="2024-02-20 07:22:23 AM" />
                 <atom:DatePicker IsNeedConfirm="True" Watermark="Select date" SelectedDateTime="2024-01-20" />
@@ -74,7 +85,10 @@
                 <StackPanel Orientation="Vertical" Margin="0, 20, 0, 0" Spacing="10">
                     <atom:DatePicker IsNeedConfirm="True" Watermark="Select date" SelectedDateTime="2024-01-20"
                                      SizeType="{Binding PickerSizeType}" />
-                    <atom:RangeDatePicker IsNeedConfirm="True" Watermark="Select date" IsShowTime="True"
+                    <atom:RangeDatePicker IsNeedConfirm="True" 
+                                          Watermark="Select date" 
+                                          SecondaryWatermark="End date"
+                                          IsShowTime="True"
                                           RangeStartDefaultDate="2024-01-20 12:22:23 AM"
                                           RangeEndDefaultDate="2024-02-20 07:22:23 AM"
                                           SizeType="{Binding PickerSizeType}" />
