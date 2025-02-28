@@ -121,20 +121,27 @@ public class CaseNavigationViewModel : ReactiveObject
 
         HostScreen.Router.Navigate.Execute(viewModel);
     }
+    
+    private static int _currentShowCaseIdx = 0;
 
     private void RandomNavigateToTimerHandler(object? sender, EventArgs e)
     {
         var    caseIds      = _showCaseViewModelFactories.Keys.ToList();
-        Random random       = new Random();
-        var    nextKeyIndex = random.Next(caseIds.Count);
-        var id = caseIds[nextKeyIndex];
+        // Random random       = new Random();
+        // var    nextKeyIndex = random.Next(caseIds.Count);
+        var id = caseIds[_currentShowCaseIdx++ % caseIds.Count];
         NavigateTo(id);
     }
 
-    public void RandomNavigateToPage(TimeSpan interval)
+    public void TestNavigatePages(TimeSpan interval)
     {
         _dispatcherTimer.Stop();
         _dispatcherTimer.Interval = interval;
         _dispatcherTimer.Start();
+    }
+
+    public void StopTestNavigatePages()
+    {
+        _dispatcherTimer.Stop();
     }
 }
