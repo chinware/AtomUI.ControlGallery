@@ -1,4 +1,6 @@
 ﻿using AtomUIGallery.ShowCases.ViewModels;
+using Avalonia.Interactivity;
+using Avalonia.Threading;
 using ReactiveUI;
 
 namespace AtomUIGallery.Workspace.ViewModes;
@@ -8,6 +10,7 @@ public class CaseNavigationViewModel : ReactiveObject
     private Dictionary<string, Func<IRoutableViewModel>> _showCaseViewModelFactories;
     private Dictionary<string, IRoutableViewModel> _showCaseViewModels;
     private string? _currentShowCase;
+    private DispatcherTimer _dispatcherTimer;
 
     public IScreen HostScreen { get; }
 
@@ -17,6 +20,8 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModels         = new Dictionary<string, IRoutableViewModel>();
         HostScreen                  = hostScreen;
         RegisterShowCaseViewModels();
+        _dispatcherTimer      =  new DispatcherTimer();
+        _dispatcherTimer.Tick += RandomNavigateToTimerHandler;
     }
 
     private void RegisterShowCaseViewModels()
@@ -115,5 +120,21 @@ public class CaseNavigationViewModel : ReactiveObject
         }
 
         HostScreen.Router.Navigate.Execute(viewModel);
+    }
+
+    private void RandomNavigateToTimerHandler(object? sender, EventArgs e)
+    {
+        var    caseIds      = _showCaseViewModelFactories.Keys.ToList();
+        Random random       = new Random();
+        var    nextKeyIndex = random.Next(caseIds.Count);
+        var id = caseIds[nextKeyIndex];
+        NavigateTo(id);
+    }
+
+    public void RandomNavigateToPage(TimeSpan interval)
+    {
+        _dispatcherTimer.Stop();
+        _dispatcherTimer.Interval = interval;
+        _dispatcherTimer.Start();
     }
 }
