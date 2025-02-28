@@ -12,8 +12,8 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
         {
             if (DataContext is MenuViewModel viewModel)
             {
-                ChangeModeSwitch.IsCheckedChanged  += viewModel.HandleChangeModeCheckChanged;
-                ChangeStyleSwitch.IsCheckedChanged += viewModel.HandleChangeStyleCheckChanged;
+                // ChangeModeSwitch.IsCheckedChanged  += viewModel.HandleChangeModeCheckChanged;
+                // ChangeStyleSwitch.IsCheckedChanged += viewModel.HandleChangeStyleCheckChanged;
             }
         });
         InitializeComponent();
