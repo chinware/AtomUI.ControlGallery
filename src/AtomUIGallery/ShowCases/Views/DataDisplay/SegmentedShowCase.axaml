@@ -105,7 +105,7 @@
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=BarsOutlined}">
                         Ava 牛逼
                     </atom:SegmentedItem>
-                    <atom:SegmentedItem Content="群主牛逼" Icon="{atom:IconProvider Kind=WechatOutlined}" />
+                    <atom:SegmentedItem Content="群主牛逼" Icon="{atom:IconProvider Kind=WechatOutlined}" IsEnabled="False"/>
 
                     <atom:SegmentedItem Content="微软牛逼"
                                         Icon="{atom:IconProvider Kind=WindowsOutlined}" />
