@@ -35,14 +35,14 @@ public partial class DrawerShowCase : ReactiveUserControl<DrawerViewModel>
 
     private void HandleOpenLargeSizeDrawer(object sender, RoutedEventArgs e)
     {
-        PresetSizeDrawer.DialogSizeType = SizeType.Large;
-        PresetSizeDrawer.IsOpen         = true;
+        PresetSizeDrawer.SizeType = SizeType.Large;
+        PresetSizeDrawer.IsOpen   = true;
     }
 
     private void HandleOpenDefaultSizeDrawer(object sender, RoutedEventArgs e)
     {
-        PresetSizeDrawer.DialogSizeType = SizeType.Small;
-        PresetSizeDrawer.IsOpen         = true;
+        PresetSizeDrawer.SizeType = SizeType.Small;
+        PresetSizeDrawer.IsOpen   = true;
     }
 
     private void HandleOpenMultilevelLevelTwoDrawer(object sender, RoutedEventArgs e)
