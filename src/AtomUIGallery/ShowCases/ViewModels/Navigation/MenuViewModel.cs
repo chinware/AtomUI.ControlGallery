@@ -20,7 +20,7 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _isDark, value);
     }
 
-    private NavMenuMode _mode;
+    private NavMenuMode _mode = NavMenuMode.Inline;
 
     public NavMenuMode Mode
     {
