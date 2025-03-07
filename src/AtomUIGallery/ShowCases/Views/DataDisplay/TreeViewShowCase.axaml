@@ -52,7 +52,8 @@
 
                 <atom:TreeView IsShowLine="{Binding ShowLineSwitchChecked}"
                                IsShowIcon="{Binding ShowIconSwitchChecked}"
-                               IsShowLeafIcon="{Binding ShowLeafIconSwitchChecked}">
+                               IsShowLeafIcon="{Binding ShowLeafIconSwitchChecked}"
+                               IsSwitcherRotation="False">
                     <atom:TreeViewItem Header="parent 1" Icon="{atom:IconProvider Kind=CarryOutOutlined}"
                                        IsExpanded="True">
                         <atom:TreeViewItem Header="parent 1-0" Icon="{atom:IconProvider Kind=CarryOutOutlined}"
