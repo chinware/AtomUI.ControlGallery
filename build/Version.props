@@ -3,7 +3,7 @@
 
         <NoWarn>$(NoWarn);CS7035</NoWarn>
 
-        <AvaloniaVersion>11.2.4</AvaloniaVersion>
+        <AvaloniaVersion>11.2.5</AvaloniaVersion>
         <AtomUIGalleryVersion>0.0.1</AtomUIGalleryVersion>
         <NugetPackageVersion>$(AtomUIGalleryVersion)</NugetPackageVersion>
         <AssemblyVersion>$(AtomUIGalleryVersion)</AssemblyVersion>
