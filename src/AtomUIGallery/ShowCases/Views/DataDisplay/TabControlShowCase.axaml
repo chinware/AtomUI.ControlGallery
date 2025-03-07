@@ -383,6 +383,16 @@
                                 <atom:TabStripItem Icon="{atom:IconProvider Kind=AndroidOutlined}">Tab 2</atom:TabStripItem>
                                 <atom:TabStripItem>Tab 3</atom:TabStripItem>
                                 <atom:TabStripItem Icon="{atom:IconProvider Kind=GithubOutlined}" IsClosable="True">Tab 4</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 5</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 6</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 7</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 8</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 9</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 10</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 11</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 12</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 13</atom:TabStripItem>
+                                <atom:TabStripItem>Tab 14</atom:TabStripItem>
                             </atom:TabStrip>
                             <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Background="rgb(241, 243, 246)">
