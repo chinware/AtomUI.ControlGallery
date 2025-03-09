@@ -118,7 +118,7 @@
                 </atom:MenuItem>
             </atom:Menu>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Context menu"
             Description="Right click to bring up the context menu.">
@@ -149,7 +149,7 @@
                 <atom:TextBlock Text="Right Click to show Context Menu" />
             </Border>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Menu Flyout"
             Description="Right Click to show Context Flyout">
