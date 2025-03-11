@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <TrimmerRootDescriptor Include="Roots.xml" />
+        <TrimmerRootDescriptor Include="Roots.xml"/>
     </ItemGroup>
 
     <PropertyGroup Condition="'$(Configuration)' == 'Release'">
@@ -22,15 +22,15 @@
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
         <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
-    
+
     <ItemGroup>
-        <ProjectReference Include="../AtomUIGallery/AtomUIGallery.csproj" />
+        <ProjectReference Include="../AtomUIGallery/AtomUIGallery.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <None Include="../AtomUIGallery/Assets/ATOMUI-LOGO.ico">
-        <Link>ATOMUI-LOGO.ico</Link>
-      </None>
+        <None Include="../AtomUIGallery/Assets/ATOMUI-LOGO.ico">
+            <Link>ATOMUI-LOGO.ico</Link>
+        </None>
     </ItemGroup>
-    
+
 </Project>

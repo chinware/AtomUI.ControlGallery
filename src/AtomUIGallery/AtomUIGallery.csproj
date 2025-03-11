@@ -9,11 +9,6 @@
     <ItemGroup>
         <AvaloniaResource Include="Assets/**"/>
     </ItemGroup>
-
-    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
-    </ItemGroup>
-
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
         <PackageReference Include="AtomUI"/>
     </ItemGroup>
@@ -41,5 +36,4 @@
         <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
     </ItemGroup>
     
-
 </Project>
