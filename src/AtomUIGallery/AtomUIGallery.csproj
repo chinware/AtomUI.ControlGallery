@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="Assets\**"/>
+        <AvaloniaResource Include="Assets/**"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\..\packages\AtomUI\packages\AtomUI\AtomUI.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -27,10 +27,10 @@
     </ItemGroup>
 
     <ItemGroup>
-        <AvaloniaResource Include="Assets\ATOMUI-LOGO.png"/>
-        <AvaloniaResource Include="Assets\avalonia-logo.ico"/>
-        <AvaloniaResource Include="Assets\EmptyShowCase\empty.svg"/>
-        <AvaloniaResource Include="Assets\watermark-sample.png"/>
+        <AvaloniaResource Include="Assets/ATOMUI-LOGO.png"/>
+        <AvaloniaResource Include="Assets/avalonia-logo.ico"/>
+        <AvaloniaResource Include="Assets/EmptyShowCase/empty.svg"/>
+        <AvaloniaResource Include="Assets/watermark-sample.png"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -38,7 +38,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\AtomUIGallery.Icon.Application\AtomUIGallery.Icon.Application.csproj"/>
+        <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
     </ItemGroup>
     
 

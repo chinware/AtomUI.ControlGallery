@@ -9,11 +9,7 @@
         <TargetFramework Condition="'$(Configuration)' != 'Debug'">$(AtomUIProductionTargetFramework)</TargetFramework>
         <TrimMode>copyused</TrimMode>
         <BuiltInComInteropSupport>false</BuiltInComInteropSupport>
-
-        <!-- 'bin/ref/' https://learn.microsoft.com/zh-cn/dotnet/csharp/language-reference/compiler-options/output#producereferenceassembly -->
-        <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
-        <!-- 'net6.0' https://learn.microsoft.com/zh-cn/dotnet/core/project-sdk/msbuild-props#appendtargetframeworktooutputpath -->
-        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        
         <!-- 'win-x64' https://learn.microsoft.com/zh-cn/dotnet/core/project-sdk/msbuild-props#appendruntimeidentifiertooutputpath -->
         <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
 

@@ -1,6 +1,9 @@
 <Project>
     <PropertyGroup>
-        <OutputPath>$(MSBuildThisFileDirectory)..\output\$(Configuration)\$(MSBuildProjectName)\</OutputPath>
-        <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)..\output\obj\$(Configuration)\$(TargetFramework)\$(MSBuildProjectName)\</BaseIntermediateOutputPath>
+        <OutputPathWithoutFramework>$(MSBuildThisFileDirectory)../output/bin/$(Configuration)</OutputPathWithoutFramework>
+        <OutputPath>$(OutputPathWithoutFramework)</OutputPath>
+        <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)../output/$(MSBuildProjectName)/obj</BaseIntermediateOutputPath>
+        <IntermediateOutputPathWithoutFramework>$(BaseIntermediateOutputPath)</IntermediateOutputPathWithoutFramework>
+        <IntermediateOutputPath>$(BaseIntermediateOutputPath)/$(Configuration)</IntermediateOutputPath>
     </PropertyGroup>
 </Project>
