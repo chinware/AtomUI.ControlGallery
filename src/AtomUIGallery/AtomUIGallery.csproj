@@ -13,6 +13,11 @@
         <PackageReference Include="AtomUI"/>
     </ItemGroup>
 
+    <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+        <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Native/AtomUI.Native.csproj"/>
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Avalonia"/>
         <PackageReference Include="Avalonia.Desktop"/>
