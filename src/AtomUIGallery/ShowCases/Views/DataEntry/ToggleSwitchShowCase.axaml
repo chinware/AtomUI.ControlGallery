@@ -19,8 +19,9 @@
             <StackPanel HorizontalAlignment="Left" Spacing="10" Orientation="Vertical">
                 <atom:ToggleSwitch x:Name="ToggleDisabledSwitch" />
                 <atom:Button ButtonType="Primary"
-                             Command="{Binding $parent[showCase:ToggleSwitchShowCase].ToggleDisabledStatus}"
-                             CommandParameter="{Binding ElementName=ToggleDisabledSwitch}">
+                             Command="{Binding $parent[showCase:ToggleSwitchShowCase].ToggleSwitchCommand}"
+                             CommandParameter="{Binding ElementName=ToggleDisabledSwitch}"
+                             >
                     toggle disabled
                 </atom:Button>
             </StackPanel>

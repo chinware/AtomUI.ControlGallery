@@ -1,4 +1,5 @@
-﻿using AtomUIGallery.ShowCases.ViewModels;
+﻿using System.Reactive;
+using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Controls;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
@@ -9,9 +10,16 @@ namespace AtomUIGallery.ShowCases.Views;
 
 public partial class ToggleSwitchShowCase : ReactiveUserControl<ToggleSwitchViewModel>
 {
+    public ReactiveCommand<object, Unit> ToggleSwitchCommand { get; private set; }
+    
     public ToggleSwitchShowCase()
     {
         this.WhenActivated(disposables => { });
+        ToggleSwitchCommand = ReactiveCommand.Create<object, Unit>(o =>
+        {
+            ToggleDisabledStatus(o);
+            return Unit.Default;
+        });
         InitializeComponent();
     }
     
@@ -20,7 +28,7 @@ public partial class ToggleSwitchShowCase : ReactiveUserControl<ToggleSwitchView
         var switchBtn = (arg as ToggleSwitch)!;
         switchBtn.IsEnabled = !switchBtn.IsEnabled;
     }
-
+    
     public static void ToggleLoadingStatus(object arg)
     {
         var btn                 = (arg as Button)!;
