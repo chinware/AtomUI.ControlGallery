@@ -36,6 +36,7 @@ stages:
                      git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
                      cd AtomUITools/scripts
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir)
+                     $(AtomUIToolsBinDir)/AtomUITools.Mac create-icns --version
                      
                   displayName: "Build"
 #               -  task: PublishPipelineArtifact@1
