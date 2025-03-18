@@ -1,31 +1,69 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+trigger: none
+pr: none
 
-trigger:
-- develop
-
-pool:
-  vmImage: ubuntu-latest
-
-steps:
-   - task: DownloadSecureFile@1
-     name: caCertificate
-     displayName: 'Download CA certificate'
-     inputs:
-         secureFile: 'atomuitools'
-   - script: |
-        echo Hello, world!
-        echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
-        cat $(caCertificate.secureFilePath)
-        chmod 0600 $(caCertificate.secureFilePath)
-        git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
+variables:
+   SourceDir: $(Build.SourcesDirectory)
+   BuildDir: $(Build.BinariesDirectory)
+   AtomUIToolsBinDir: '$(BuildDir)/atomuitools'
+   BaseOutputDir: '$(Build.ArtifactStagingDirectory)/output'
    
-     displayName: 'Run a one-line script'
+parameters:
+   -  name: IsNightlyBuild
+      displayName: 'Is it a nightly build:'
+      type: boolean
+      default: false
+   -  name: BuildConfiguration
+      displayName: 'Build configuration:'
+      type: string
+      default: "Release"
+      
+stages:
+   -  stage:
+      jobs:
+         -  job: BuildAtomUITools
+            displayName: "Build AtomUITools"
+            pool:
+               vmImage: 'macOS-latest'
+            steps:
+               -  task: DownloadSecureFile@1
+                  name: caCertificate
+                  displayName: 'Download CA certificate'
+                  inputs:
+                     secureFile: 'atomuitools'
+               -  pwsh: |
+                     cd $(BuildDir)
+                     chmod 0600 $(caCertificate.secureFilePath)
+                     git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
+                     cd AtomUITools/scripts
+                     pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir)
+                     
+                  displayName: "Build"
+#               -  task: PublishPipelineArtifact@1
+#                  inputs:
+#                     targetPath: $(macOutputDir)
+#                     artifactName: AtomUINativeMac
+#                  displayName: "Push libAtomUINative.dylib to pipeline"
 
-   - pwsh: |
-       pwd
-       ls -al
-       git -v
-     displayName: 'Run a multi-line script'
+#pool:
+#  vmImage: ubuntu-latest
+#
+#steps:
+#   - task: DownloadSecureFile@1
+#     name: caCertificate
+#     displayName: 'Download CA certificate'
+#     inputs:
+#         secureFile: 'atomuitools'
+#   - script: |
+#        echo Hello, world!
+#        echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
+#        cat $(caCertificate.secureFilePath)
+#        chmod 0600 $(caCertificate.secureFilePath)
+#        git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
+#   
+#     displayName: 'Run a one-line script'
+#
+#   - pwsh: |
+#       pwd
+#       ls -al
+#       git -v
+#     displayName: 'Run a multi-line script'
