@@ -14,5 +14,7 @@ steps:
   displayName: 'Run a one-line script'
 
 - pwsh: |
+    pwd
+    git clone https://github.com/chinware/AtomUITools.git
     git -v
   displayName: 'Run a multi-line script'
