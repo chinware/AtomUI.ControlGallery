@@ -22,7 +22,8 @@ steps:
 
    - pwsh: |
        pwd
-       ssh-add $(atomuitools)
+       ssh-add $(caCertificate.secureFilePath)
+       git clone git@github.com:chinware/AtomUITools.git
        cd AtomUITools
        ls -al
        git -v
