@@ -1,18 +1,9 @@
 <Project>
     <PropertyGroup>
-
         <NoWarn>$(NoWarn);CS7035</NoWarn>
-
         <AvaloniaVersion>11.2.5</AvaloniaVersion>
         <AtomUIVersion>0.0.2-build.202503120846</AtomUIVersion>
         <AtomUIGalleryVersion>0.0.2</AtomUIGalleryVersion>
-        <NugetPackageVersion>$(AtomUIGalleryVersion)</NugetPackageVersion>
         <AssemblyVersion>$(AtomUIGalleryVersion)</AssemblyVersion>
-
-    </PropertyGroup>
-
-    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
-        <FileVersion>$([System.DateTime]::Now.ToString("yyyy.MM.dd HH:mm:ss"))</FileVersion>
-        <NugetPackageVersion>$(NugetPackageVersion)+build.$([System.DateTime]::Now.ToString("yyyyMMdd"))</NugetPackageVersion>
     </PropertyGroup>
 </Project>

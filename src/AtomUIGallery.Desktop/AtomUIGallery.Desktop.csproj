@@ -12,11 +12,12 @@
         <TrimmerRootDescriptor Include="Roots.xml"/>
     </ItemGroup>
 
-<!--    <PropertyGroup Condition="'$(Configuration)' == 'Release'">-->
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
 <!--        <IsTrimmable>true</IsTrimmable>-->
 <!--        <PublishTrimmed>true</PublishTrimmed>-->
 <!--        <PublishAot>true</PublishAot>-->
-<!--    </PropertyGroup>-->
+        <UseAppHost>true</UseAppHost>
+    </PropertyGroup>
 
     <PropertyGroup>
         <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
