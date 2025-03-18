@@ -34,6 +34,7 @@ stages:
                   inputs:
                      secureFile: 'atomuitools'
                -  pwsh: |
+                     brew install create-dmg
                      cd $(BuildDir)
                      chmod 0600 $(caCertificate.secureFilePath)
                      git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
@@ -43,7 +44,6 @@ stages:
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      pwsh ./PublishToLocal.ps1 -publishRootPath $(GalleryPublishDir) -runtime osx-x64
-                     $(AtomUIToolsBin) create-dmg --version
                      $(AtomUIToolsBin) create-dmg --config $(GalleryPublishDir)/config/InstallerConfig.xml --packages $(GalleryPublishDir)/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                   displayName: "Build dmg for osx-x64"
 
