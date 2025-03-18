@@ -6,6 +6,7 @@ variables:
    BuildDir: $(Build.BinariesDirectory)
    AtomUIToolsBinDir: '$(BuildDir)/atomuitools'
    BaseOutputDir: '$(Build.ArtifactStagingDirectory)/output'
+   GalleryPublishDir: '$(BuildDir)/gallery_published'
    
 parameters:
    -  name: IsNightlyBuild
@@ -21,7 +22,7 @@ stages:
    -  stage:
       jobs:
          -  job: BuildAtomUITools
-            displayName: "Build AtomUITools"
+            displayName: "Build macOS dmg installer"
             pool:
                vmImage: 'macOS-latest'
             steps:
@@ -36,14 +37,11 @@ stages:
                      git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
                      cd AtomUITools/scripts
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
-                     $(AtomUIToolsBinDir)/AtomUITools.Mac create-icns --version
-                     
-                  displayName: "Build"
-#               -  task: PublishPipelineArtifact@1
-#                  inputs:
-#                     targetPath: $(macOutputDir)
-#                     artifactName: AtomUINativeMac
-#                  displayName: "Push libAtomUINative.dylib to pipeline"
+                  displayName: "Build AtomUITools"
+               -  pwsh: |
+                     cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
+                     pwsh ./PublishToLocal.ps1 -publishRootPath $(GalleryPublishDir) -runtime osx-x64
+                  displayName: "Build dmg for osx-x64"
 
 #pool:
 #  vmImage: ubuntu-latest
