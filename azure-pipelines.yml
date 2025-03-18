@@ -8,6 +8,7 @@ variables:
    BaseOutputDir: '$(Build.ArtifactStagingDirectory)/output'
    GalleryPublishDir: '$(BuildDir)/gallery_published'
    GalleryDmgOutputDir: '$(BuildDir)/dmg_output'
+   AtomUIToolsBin: $(AtomUIToolsBinDir)/AtomUITools.Mac
    
 parameters:
    -  name: IsNightlyBuild
@@ -42,7 +43,8 @@ stages:
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      pwsh ./PublishToLocal.ps1 -publishRootPath $(GalleryPublishDir) -runtime osx-x64
-                     create-dmg --config $(GalleryPublishDir)/config/InstallerConfig.xml --packages $(GalleryPublishDir)/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
+                     $(AtomUIToolsBin) create-dmg --version
+                     $(AtomUIToolsBin) create-dmg --config $(GalleryPublishDir)/config/InstallerConfig.xml --packages $(GalleryPublishDir)/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                   displayName: "Build dmg for osx-x64"
 
 #pool:
