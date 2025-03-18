@@ -18,14 +18,12 @@ steps:
    - script: |
         echo Hello, world!
         echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
-        $(ssh-add $(caCertificate.secureFilePath);git clone git@github.com:chinware/AtomUITools.git)
+        cat $(caCertificate.secureFilePath)
+   
      displayName: 'Run a one-line script'
 
    - pwsh: |
        pwd
-       $(ssh-add $(caCertificate.secureFilePath);git clone git@github.com:chinware/AtomUITools.git)
-       
-       cd AtomUITools
        ls -al
        git -v
      displayName: 'Run a multi-line script'
