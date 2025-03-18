@@ -10,13 +10,20 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+   - task: DownloadSecureFile@1
+     name: caCertificate
+     displayName: 'Download CA certificate'
+     inputs:
+         secureFile: 'atomuitools'
+   - script: |
+        echo Hello, world!
+        echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
+     displayName: 'Run a one-line script'
 
-- pwsh: |
-    pwd
-    ssh-add $(atomuitools)
-    cd AtomUITools
-    ls -al
-    git -v
-  displayName: 'Run a multi-line script'
+   - pwsh: |
+       pwd
+       ssh-add $(atomuitools)
+       cd AtomUITools
+       ls -al
+       git -v
+     displayName: 'Run a multi-line script'
