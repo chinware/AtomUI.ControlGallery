@@ -15,7 +15,7 @@ steps:
 
 - pwsh: |
     pwd
-    $(ssh-add $(atomuitools); git clone git@github.com:chinware/AtomUITools.git)
+    ssh-add $(atomuitools)
     cd AtomUITools
     ls -al
     git -v
