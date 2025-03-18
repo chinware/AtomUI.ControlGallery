@@ -19,6 +19,7 @@ steps:
         echo Hello, world!
         echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
         cat $(caCertificate.secureFilePath)
+        git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
    
      displayName: 'Run a one-line script'
 
