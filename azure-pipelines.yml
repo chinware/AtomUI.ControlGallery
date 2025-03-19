@@ -33,6 +33,7 @@ stages:
                   displayName: "Download SSH private key"
                   inputs:
                      secureFile: "atomuitools"
+                     
                -  pwsh: |
                      brew install create-dmg
                      cd $(BuildDir)
@@ -41,19 +42,25 @@ stages:
                      cd AtomUITools/scripts
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
                   displayName: "Build AtomUITools"
-               -  task: InstallAppleCertificate@2
+                     
+               -  task: DownloadSecureFile@1
                   name: codeSignCert
-                  displayName: "Install code sign cert"
+                  displayName: "Download code sign cert"
                   inputs:
-                     certSecureFile: ChinwareCodeSignCert.cer
-                     keychain: temp
-                  
+                     secureFile: ChinwareCodeSignCert.cer
+                     
+               -  pwsh: |
+                     security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
+                     security find-identity -v -p codesigning
+                  displayName: "Install code sign cert" 
+               
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64
                      $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                   displayName: "Build dmg for osx-x64"
+                  
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
