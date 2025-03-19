@@ -45,7 +45,7 @@ stages:
                   name: codeSignCert
                   displayName: "Install code sign cert"
                   inputs:
-                     certSecureFile: ChinwareCodeSignCert
+                     certSecureFile: ChinwareCodeSignCert.cer
                      keychain: temp
                   
                -  pwsh: |
