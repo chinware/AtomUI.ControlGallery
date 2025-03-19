@@ -40,6 +40,7 @@ stages:
                      keychain: "temp"
                -  pwsh: |
                      security find-identity -v -p codesigning
+                     echo ${env:CERTIDENTITY}
                   displayName: "Install code sign cert"
                   
                -  pwsh: |
