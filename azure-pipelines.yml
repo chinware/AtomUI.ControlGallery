@@ -52,6 +52,7 @@ stages:
                   displayName: "Build AtomUITools"
                
                -  pwsh: |
+                     ls -al $(SourceDir)
                      if (Test-Path -Path "$(SourceDir)/out") {
                         Remove-Item -Path "$(SourceDir)/out" -Recurse -Force
                      }
