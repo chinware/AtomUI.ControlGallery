@@ -56,7 +56,7 @@ stages:
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
-                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --certIdentity "$(CertIdentity)" --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
+                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)"
                   displayName: "Build dmg for osx-x64"
                   
                -  pwsh: |
