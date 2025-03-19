@@ -47,9 +47,10 @@ stages:
                   name: codeSignCert
                   displayName: "Download code sign cert"
                   inputs:
-                     secureFile: ChinwareCodeSignCert.cer
+                     secureFile: "ChinwareCodeSignCert"
                      
                -  pwsh: |
+                     cat $(codeSignCert.secureFilePath)
                      security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
                      security find-identity -v -p codesigning
                   displayName: "Install code sign cert" 
