@@ -30,7 +30,7 @@ stages:
             steps:
                -  task: DownloadSecureFile@1
                   name: caCertificate
-                  displayName: "Download CA certificate"
+                  displayName: "Download SSH private key"
                   inputs:
                      secureFile: "atomuitools"
                -  pwsh: |
@@ -41,6 +41,13 @@ stages:
                      cd AtomUITools/scripts
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
                   displayName: "Build AtomUITools"
+               -  task: InstallAppleCertificate@2
+                  name: codeSignCert
+                  displayName: "Install code sign cert"
+                  inputs:
+                     certSecureFile: $(ChinwareCodeSignCert)
+                     keychain: temp
+                  
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
@@ -54,27 +61,3 @@ stages:
                      $(AtomUIToolsBin) create-dmg --runtime osx-arm64 --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                      ls -alh $(GalleryDmgOutputDir)
                   displayName: "Build dmg for osx-arm64"
-
-#pool:
-#  vmImage: ubuntu-latest
-#
-#steps:
-#   - task: DownloadSecureFile@1
-#     name: caCertificate
-#     displayName: 'Download CA certificate'
-#     inputs:
-#         secureFile: 'atomuitools'
-#   - script: |
-#        echo Hello, world!
-#        echo Installing $(caCertificate.secureFilePath) to the trusted CA directory...
-#        cat $(caCertificate.secureFilePath)
-#        chmod 0600 $(caCertificate.secureFilePath)
-#        git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
-#   
-#     displayName: 'Run a one-line script'
-#
-#   - pwsh: |
-#       pwd
-#       ls -al
-#       git -v
-#     displayName: 'Run a multi-line script'
