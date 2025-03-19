@@ -37,7 +37,18 @@ stages:
                   displayName: "Download SSH private key"
                   inputs:
                      secureFile: "atomuitools"
-                     
+               -  task: DownloadSecureFile@1
+                  name: codeSignCert
+                  displayName: "Download code sign cert"
+                  inputs:
+                     secureFile: "ChinwareCodeSign.cer"
+
+               -  pwsh: |
+                     ls -alh $(codeSignCert.secureFilePath)
+                     security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
+                     security find-identity -v -p codesigning
+                  displayName: "Install code sign cert"
+                  
                -  pwsh: |
                      brew install create-dmg
                      cd $(BuildDir)
@@ -46,18 +57,6 @@ stages:
                      cd AtomUITools/scripts
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
                   displayName: "Build AtomUITools"
-                     
-               -  task: DownloadSecureFile@1
-                  name: codeSignCert
-                  displayName: "Download code sign cert"
-                  inputs:
-                     secureFile: "ChinwareCodeSign.cer"
-                     
-               -  pwsh: |
-                     ls -alh $(codeSignCert.secureFilePath)
-                     security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
-                     security find-identity -v -p codesigning
-                  displayName: "Install code sign cert" 
                
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
