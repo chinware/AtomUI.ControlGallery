@@ -19,8 +19,8 @@ parameters:
       displayName: "Build configuration:"
       type: string
       default: "Release"
-   -  name:
-      displayName: "CertIdentity"
+   -  name: CertIdentity
+      displayName: "CodeSign Cert Identity:"
       type: string
       default: "Developer ID Application: mi chun (V9BGRMZ9W4)"
       
