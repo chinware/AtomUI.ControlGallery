@@ -26,7 +26,7 @@ stages:
          -  job: BuildAtomUITools
             displayName: "Build macOS dmg installer"
             pool:
-               vmImage: "macOS-15"
+               vmImage: "macOS-latest"
             steps:
                -  task: DownloadSecureFile@1
                   name: caCertificate
@@ -44,10 +44,6 @@ stages:
                   
                -  pwsh: |
                      brew install create-dmg
-                     brew install wget
-                     wget https://dot.net/v1/dotnet-install.sh
-                     chmod +x dotnet-install.sh
-                     ./dotnet-install.sh --version 9.0.202
                      cd $(BuildDir)
                      chmod 0600 $(caCertificate.secureFilePath)
                      git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
