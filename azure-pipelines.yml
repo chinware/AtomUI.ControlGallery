@@ -52,7 +52,6 @@ stages:
                   displayName: "Build AtomUITools"
                
                -  pwsh: |
-                     Write-Host "$(CertIdentity)"
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
