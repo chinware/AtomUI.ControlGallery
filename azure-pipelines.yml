@@ -19,6 +19,10 @@ parameters:
       displayName: "Build configuration:"
       type: string
       default: "Release"
+   -  name:
+      displayName: "CertIdentity"
+      type: string
+      default: "Developer ID Application: mi chun (V9BGRMZ9W4)"
       
 stages:
    -  stage:
@@ -50,7 +54,6 @@ stages:
                      secureFile: "ChinwareCodeSignCert"
                      
                -  pwsh: |
-                     cat $(codeSignCert.secureFilePath)
                      security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
                      security find-identity -v -p codesigning
                   displayName: "Install code sign cert" 
