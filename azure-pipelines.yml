@@ -51,7 +51,7 @@ stages:
                   name: codeSignCert
                   displayName: "Download code sign cert"
                   inputs:
-                     secureFile: "ChinwareCodeSignCert"
+                     secureFile: "ChinwareCodeSign.cer"
                      
                -  pwsh: |
                      ls -alh $(codeSignCert.secureFilePath)
