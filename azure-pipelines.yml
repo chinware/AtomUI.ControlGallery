@@ -51,15 +51,15 @@ stages:
                      pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
                   displayName: "Build AtomUITools"
                
-               -  pwsh: |
-                     if (Test-Path -Path "$(SourceDir)/out") {
-                        Remove-Item -Path "$(SourceDir)/out" -Force
-                     }
-                     cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
-                     $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
-                     pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
-                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
-                  displayName: "Build dmg for osx-x64"
+#               -  pwsh: |
+#                     if (Test-Path -Path "$(SourceDir)/out") {
+#                        Remove-Item -Path "$(SourceDir)/out" -Force
+#                     }
+#                     cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
+#                     $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
+#                     pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
+#                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
+#                  displayName: "Build dmg for osx-x64"
                   
                -  pwsh: |
                      if (Test-Path -Path "$(SourceDir)/out") {
