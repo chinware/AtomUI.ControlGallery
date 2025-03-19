@@ -65,3 +65,8 @@ stages:
                      $(AtomUIToolsBin) create-dmg --runtime osx-arm64 --certIdentity "$(CertIdentity)" --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                      ls -alh $(GalleryDmgOutputDir)
                   displayName: "Build dmg for osx-arm64"
+               -  task: PublishPipelineArtifact@1
+                  inputs:
+                     targetPath: $(GalleryDmgOutputDir)
+                     artifactName: DmgPackages
+                  displayName: "Publish dmg packages"
