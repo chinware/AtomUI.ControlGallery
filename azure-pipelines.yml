@@ -62,13 +62,13 @@ stages:
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64
-                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
+                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --certIdentity "$(CertIdentity)" --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                   displayName: "Build dmg for osx-x64"
                   
                -  pwsh: |
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirArm64 -runtime osx-arm64
-                     $(AtomUIToolsBin) create-dmg --runtime osx-arm64 --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
+                     $(AtomUIToolsBin) create-dmg --runtime osx-arm64 --certIdentity "$(CertIdentity)" --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed
                      ls -alh $(GalleryDmgOutputDir)
                   displayName: "Build dmg for osx-arm64"
