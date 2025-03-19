@@ -65,6 +65,7 @@ stages:
                      if (Test-Path -Path "$(SourceDir)/out") {
                         Remove-Item -Path "$(SourceDir)/out" -Force
                      }
+                     ls -al $(SourceDir)
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirArm64 -runtime osx-arm64
