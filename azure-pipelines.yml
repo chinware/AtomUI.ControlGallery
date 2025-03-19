@@ -45,7 +45,10 @@ stages:
 
                -  pwsh: |
                      ls -alh $(codeSignCert.secureFilePath)
+                     security find-identity -v -p codesigning
                      security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
+                     security add-certificates -k ~/Library/Keychains/login.keychain $(codeSignCert.secureFilePath)
+                     echo $?
                      security find-identity -v -p codesigning
                   displayName: "Install code sign cert"
                   
