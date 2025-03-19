@@ -5,14 +5,14 @@
     <Version>0.0.2</Version>
     <AppBundleIdentifier>net.atomui.gallery</AppBundleIdentifier>
     <Title>AtomUIGallery Installer</Title>
-    <AppIcon>AtomUIGallery</AppIcon>
+    <AppIcon>Assets/Images/AtomUIGallery</AppIcon>
     <Company>Qinware Technology Co., Ltd.</Company>
     <CompanyUrl>https://www.qinware.com</CompanyUrl>
     <Copyright>Copyright Qinware Technology Co., Ltd.</Copyright>
     <InstallerWindowIcon>AtomUIGallery</InstallerWindowIcon>
     <InstallerApplicationIcon>AtomUIGallery</InstallerApplicationIcon>
     <Watermark>watermark.png</Watermark>
-    <Background>DmgInstallerBg.png</Background>
+    <Background>Assets/Images/DmgInstallerBg@2x.png</Background>
     <Logo>AtomUIGallery.png</Logo>
     <StartMenuDir>AtomUIGallery</StartMenuDir>
     <TargetDir>@HomeDir@/AtomUIGallery</TargetDir>

@@ -24,5 +24,4 @@ New-Item -Path $packagesPath -ItemType Directory -Force | Out-Null
 dotnet publish --output $packagesPath --self-contained --framework $framework --runtime $runtime --configuration $buildType -p:PublishSingleFile=true ../AtomUIGallery.Desktop.csproj
 if ($IsMacOS) {
     Copy-Item -Path ../configs/InstallerConfig.dmg.xml -Destination $configPath/InstallerConfig.xml -Force
-    Copy-Item -Path ../Assets/Images/DmgInstallerBg.png -Destination $packagesPath/DmgInstallerBg.png -Force
 }
