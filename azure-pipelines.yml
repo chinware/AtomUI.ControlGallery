@@ -53,7 +53,7 @@ stages:
                
                -  pwsh: |
                      if (Test-Path -Path "$(SourceDir)/out") {
-                        Remove-Item -Path "$(SourceDir)/out" -Force
+                        Remove-Item -Path "$(SourceDir)/out" -Recurse -Force
                      }
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
@@ -63,7 +63,7 @@ stages:
                   
                -  pwsh: |
                      if (Test-Path -Path "$(SourceDir)/out") {
-                        Remove-Item -Path "$(SourceDir)/out" -Force
+                        Remove-Item -Path "$(SourceDir)/out" -Recurse -Force
                      }
                      ls -al $(SourceDir)
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
