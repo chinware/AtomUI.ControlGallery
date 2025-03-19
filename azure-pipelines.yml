@@ -40,7 +40,9 @@ stages:
                      keychain: "temp"
                -  pwsh: |
                      security find-identity -v -p codesigning
-                     echo ${env:CERTIDENTITY}
+                     Write-Host ${env:CERTIDENTITY}
+                     Write-Host $(CertIdentity)
+                     Write-Host "xxxx"
                   displayName: "Install code sign cert"
                   
                -  pwsh: |
