@@ -56,6 +56,9 @@ stages:
                   displayName: "Build AtomUITools"
                
                -  pwsh: |
+                     if (Test-Path -Path "$(SourceDir)/out") {
+                        Remove-Item -Path "$(SourceDir)/out" -Recurse -Force
+                     }
                      ls -al $(AtomUIToolsBin)
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
@@ -64,6 +67,9 @@ stages:
                   displayName: "Build dmg for osx-x64"
                   
                -  pwsh: |
+                     if (Test-Path -Path "$(SourceDir)/out") {
+                        Remove-Item -Path "$(SourceDir)/out" -Recurse -Force
+                     }
                      cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
                      $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
                      pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirArm64 -runtime osx-arm64
