@@ -47,7 +47,7 @@ stages:
                      brew install wget
                      wget https://dot.net/v1/dotnet-install.sh
                      chmod +x dotnet-install.sh
-                     ./dotnet-install.sh
+                     ./dotnet-install.sh --version 9.0.202
                      cd $(BuildDir)
                      chmod 0600 $(caCertificate.secureFilePath)
                      git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
