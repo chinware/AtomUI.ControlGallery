@@ -33,5 +33,16 @@
             <Link>ATOMUI-LOGO.ico</Link>
         </None>
     </ItemGroup>
-
+    <Choose>
+        <When Condition="$([MSBuild]::IsOSPlatform('OSX'))">
+            <ItemGroup Condition="'$(Configuration)' == 'Release'">
+                <None Include="Assets/Images/AtomUIGallery.icns">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+                <None Include="Assets/Images/DmgInstallerBg@2x.png">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+    </Choose>
 </Project>
