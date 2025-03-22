@@ -2,77 +2,115 @@ trigger: none
 pr: none
 
 variables:
-   SourceDir: $(Build.SourcesDirectory)
-   BuildDir: $(Build.BinariesDirectory)
-   AtomUIToolsBinDir: '$(BuildDir)/atomuitools'
-   BaseOutputDir: '$(Build.ArtifactStagingDirectory)/output'
-   GalleryPublishDir: '$(BuildDir)/gallery_published'
-   GalleryDmgOutputDir: '$(BuildDir)/dmg_output'
-   AtomUIToolsBin: $(AtomUIToolsBinDir)/AtomUITools.Mac
-   
+  SourceDir: $(Build.SourcesDirectory)
+  BuildDir: $(Build.BinariesDirectory)
+  AtomUIToolsBinDir: '$(BuildDir)/atomuitools'
+  BaseOutputDir: '$(Build.ArtifactStagingDirectory)/output'
+  GalleryPublishDir: '$(BuildDir)/gallery_published'
+  GalleryArtifactsOutputDir: '$(BuildDir)/artifacts_output'
+  AtomUIToolsMacBin: $(AtomUIToolsBinDir)/AtomUITools.Mac
+  AtomUIToolsWinBin: $(AtomUIToolsBinDir)/AtomUITools.Windows
+
 parameters:
-   -  name: IsNightlyBuild
-      displayName: "Is it a nightly build:"
-      type: boolean
-      default: false
-   -  name: BuildConfiguration
-      displayName: "Build configuration:"
-      type: string
-      default: "Release"
-      
+  - name: IsNightlyBuild
+    displayName: "Is it a nightly build:"
+    type: boolean
+    default: false
+  - name: BuildConfiguration
+    displayName: "Build configuration:"
+    type: string
+    default: "Release"
+
 stages:
-   -  stage:
-      jobs:
-         -  job: BuildAtomUITools
-            displayName: "Build macOS dmg installer"
-            pool:
-               vmImage: "macOS-latest"
-            steps:
-               -  task: DownloadSecureFile@1
-                  name: caCertificate
-                  displayName: "Download SSH private key"
-                  inputs:
-                     secureFile: "atomuitools"
-               - task: InstallAppleCertificate@2
-                 inputs:
-                     certSecureFile: "ChinwareCodeSign.p12"
-                     certPwd: $(CodeSignCertPwd)
-                     keychain: "temp"
-               -  pwsh: |
-                     security find-identity -v -p codesigning
-                  displayName: "Check code sign cert"
-                  
-               -  pwsh: |
-                     brew install create-dmg
-                     cd $(BuildDir)
-                     chmod 0600 $(caCertificate.secureFilePath)
-                     git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
-                     cd AtomUITools/scripts
-                     pwsh ./PublishMacToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
-                  displayName: "Build AtomUITools"
-               
-               -  pwsh: |
-                     if (Test-Path -Path "$(SourceDir)/output") {
-                        Remove-Item -Path "$(SourceDir)/output" -Recurse -Force
-                     }
-                     cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
-                     $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
-                     pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
-                     $(AtomUIToolsBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
-                  displayName: "Build dmg for osx-x64"
-                  
-               -  pwsh: |
-                     if (Test-Path -Path "$(SourceDir)/output") {
-                        Remove-Item -Path "$(SourceDir)/output" -Recurse -Force
-                     }
-                     cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
-                     $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
-                     pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirArm64 -runtime osx-arm64
-                     $(AtomUIToolsBin) create-dmg --runtime osx-arm64 --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryDmgOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
-                     ls -alh $(GalleryDmgOutputDir)
-                  displayName: "Build dmg for osx-arm64"
-               -  task: PublishPipelineArtifact@1
-                  inputs:
-                     targetPath: $(GalleryDmgOutputDir)
-                     artifactName: DmgPackages
-                  displayName: "Publish dmg packages"
+  - stage:
+    jobs:
+      - job: BuildAtomUIGalleryDmgInstallers
+        displayName: "Build macOS dmg installer"
+        pool:
+          vmImage: "macOS-latest"
+        steps:
+          - task: DownloadSecureFile@1
+            name: caCertificate
+            displayName: "Download SSH private key"
+            inputs:
+              secureFile: "atomuitools"
+          - task: InstallAppleCertificate@2
+            inputs:
+              certSecureFile: "ChinwareCodeSign.p12"
+              certPwd: $(CodeSignCertPwd)
+              keychain: "temp"
+          - pwsh: |
+              security find-identity -v -p codesigning
+            displayName: "Check code sign cert"
+
+          - pwsh: |
+              brew install create-dmg
+              cd $(BuildDir)
+              chmod 0600 $(caCertificate.secureFilePath)
+              git -c core.sshCommand="ssh -i $(caCertificate.secureFilePath)" clone git@github.com:chinware/AtomUITools.git
+              cd AtomUITools/scripts
+              pwsh ./PublishAtomUIToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime osx-x64
+            displayName: "Build AtomUITools"
+
+          - pwsh: |
+              if (Test-Path -Path "$(SourceDir)/output") {
+                 Remove-Item -Path "$(SourceDir)/output" -Recurse -Force
+              }
+              cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
+              $GalleryPublishDirX64 = "$(GalleryPublishDir)/osx-x64"
+              pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime osx-x64 -buildType ${{ parameters.BuildConfiguration }}
+              $(AtomUIToolsMacBin) create-dmg --runtime osx-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryArtifactsOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
+            displayName: "Build dmg for osx-x64"
+
+          - pwsh: |
+              if (Test-Path -Path "$(SourceDir)/output") {
+                 Remove-Item -Path "$(SourceDir)/output" -Recurse -Force
+              }
+              cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
+              $GalleryPublishDirArm64 = "$(GalleryPublishDir)/osx-arm64"
+              pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirArm64 -runtime osx-arm64
+              $(AtomUIToolsMacBin) create-dmg --runtime osx-arm64 --config $GalleryPublishDirArm64/config/InstallerConfig.xml --packages $GalleryPublishDirArm64/packages --output $(GalleryArtifactsOutputDir) --verbosity Detailed --certIdentity "$(CertIdentity)" --cleanupBundleOption true
+              ls -alh $(GalleryArtifactsOutputDir)
+            displayName: "Build dmg for osx-arm64"
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: $(GalleryArtifactsOutputDir)
+              artifactName: DmgPackages
+            displayName: "Publish dmg packages"
+      - job: BuildAtomUIGalleryMsiInstallers
+        displayName: "Build Windows msi installer"
+        pool:
+          vmImage: "windows-latest"
+        steps:
+          - task: DownloadSecureFile@1
+            name: caCertificate
+            displayName: "Download SSH private key"
+            inputs:
+              secureFile: "atomuitools"
+          - pwsh: |
+              dotnet tool install --global wix
+              cd $(BuildDir)
+              Icacls $(caCertificate.secureFilePath) /c /t /Inheritance:d
+              Icacls $(caCertificate.secureFilePath) /remove "BUILTIN\Users" /C
+              Icacls $(caCertificate.secureFilePath)
+              ssh -o StrictHostKeyChecking=no git@github.com
+              git -c core.sshCommand="ssh -i '$(caCertificate.secureFilePath)'" clone git@github.com:chinware/AtomUITools.git
+              cd AtomUITools/scripts
+              pwsh ./PublishAtomUIToolsLocal.ps1 -publishRootPath $(AtomUIToolsBinDir) -runtime win-x64
+            displayName: "Build AtomUITools"
+            
+          - pwsh: |
+              if (Test-Path -Path "$(SourceDir)/output") {
+                 Remove-Item -Path "$(SourceDir)/output" -Recurse -Force
+              }
+              cd $(SourceDir)/src/AtomUIGallery.Desktop/scripts
+              $GalleryPublishDirX64 = "$(GalleryPublishDir)/win-x64"
+              pwsh ./PublishToLocal.ps1 -publishRootPath $GalleryPublishDirX64 -runtime win-x64 -buildType ${{ parameters.BuildConfiguration }}
+              $(AtomUIToolsWinBin) create-msi --runtime win-x64 --config $GalleryPublishDirX64/config/InstallerConfig.xml --packages $GalleryPublishDirX64/packages --output $(GalleryArtifactsOutputDir) --verbosity Detailed --cleanupBundleOption true
+              Get-ChildItem -Path $(GalleryArtifactsOutputDir) -Recurse -Filter *.wixpdb | Remove-Item
+            displayName: "Build msi for win-x64"
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: $(GalleryArtifactsOutputDir)
+              artifactName: MsiPackages
+            displayName: "Publish msi packages"
