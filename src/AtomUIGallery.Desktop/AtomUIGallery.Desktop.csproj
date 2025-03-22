@@ -5,7 +5,7 @@
         <RootNamespace>AtomUIGallery.Desktop</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <ApplicationIcon>../AtomUIGallery/Assets/ATOMUI-LOGO.ico</ApplicationIcon>
+        <ApplicationIcon>../AtomUIGallery/Assets/AtomUIGallery.ico</ApplicationIcon>
     </PropertyGroup>
 
     <ItemGroup>
@@ -29,9 +29,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="../AtomUIGallery/Assets/ATOMUI-LOGO.ico">
-            <Link>ATOMUI-LOGO.ico</Link>
+        <None Include="Assets/Images/AtomUIGallery.ico">
+            <Link>AtomUIGallery.ico</Link>
         </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AvaloniaResource Remove="Assets\Images\AtomUIGallery.ico" />
     </ItemGroup>
     <Choose>
         <When Condition="$([MSBuild]::IsOSPlatform('OSX'))">
@@ -40,6 +44,28 @@
                     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
                 </None>
                 <None Include="Assets/Images/DmgInstallerBg@2x.png">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+            </ItemGroup>
+        </When>
+        <When Condition="$([MSBuild]::IsOSPlatform('Windows'))">
+            <ItemGroup Condition="'$(Configuration)' == 'Release'">
+                <None Include="Assets/Images/Wix/InstallerBanner.bmp">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                    <TargetPath>Assets/Images/%(Filename)%(Extension)</TargetPath>
+                </None>
+                <None Include="Assets/Images/Wix/InstallerWizard.bmp">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                    <TargetPath>Assets/Images/%(Filename)%(Extension)</TargetPath>
+                </None>
+                <None Include="../AtomUIGallery/Assets/AtomUIGallery.ico">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                    <TargetPath>Assets/Images/%(Filename)%(Extension)</TargetPath>
+                </None>
+                <None Include="Assets/Images/AtomUIGalleryInstaller.ico">
+                    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+                </None>
+                <None Include="Assets/License.rtf">
                     <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
                 </None>
             </ItemGroup>
