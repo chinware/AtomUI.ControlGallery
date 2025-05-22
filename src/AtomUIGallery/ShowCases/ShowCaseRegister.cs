@@ -74,5 +74,6 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new ComboBoxShowCase(), typeof(IViewFor<ComboBoxViewModel>));
         Locator.CurrentMutable.Register(() => new DropdownButtonShowCase(), typeof(IViewFor<DropdownButtonViewModel>));
         Locator.CurrentMutable.Register(() => new MenuShowCase(), typeof(IViewFor<MenuViewModel>));
+        Locator.CurrentMutable.Register(() => new PaginationShowCase(), typeof(IViewFor<PaginationViewModel>));
     }
 }

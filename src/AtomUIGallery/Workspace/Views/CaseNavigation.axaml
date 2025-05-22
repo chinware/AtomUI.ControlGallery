@@ -28,6 +28,8 @@
                               ItemKey="{x:Static viewmodels:ButtonSpinnerViewModel.ID}" />
             <atom:NavMenuItem Header="Menu"
                               ItemKey="{x:Static viewmodels:MenuViewModel.ID}" />
+            <atom:NavMenuItem Header="Pagination"
+                              ItemKey="{x:Static viewmodels:PaginationViewModel.ID}" />
         </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="Data Entry" Icon="{atom:IconProvider Kind=FormOutlined}">

@@ -91,6 +91,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(ComboBoxViewModel.ID, () => new ComboBoxViewModel(HostScreen));
         _showCaseViewModelFactories.Add(DropdownButtonViewModel.ID, () => new DropdownButtonViewModel(HostScreen));
         _showCaseViewModelFactories.Add(MenuViewModel.ID, () => new MenuViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(PaginationViewModel.ID, () => new PaginationViewModel(HostScreen));
     }
 
     public void NavigateTo(string showCaseId)
