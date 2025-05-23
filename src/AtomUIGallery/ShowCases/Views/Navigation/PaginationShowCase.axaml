@@ -7,7 +7,7 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic pagination.">
-            <atom:Pagination Total="50"/>
+            <atom:Pagination Total="50" CurrentPage="1"/>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
