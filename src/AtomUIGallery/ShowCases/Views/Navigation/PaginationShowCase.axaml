@@ -7,9 +7,22 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic pagination."
-            OccupyEntireRow="False"
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Pagination Total="50" CurrentPage="1" />
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
+            Title="Align"
+            Description="Support three alignment modes: left alignment, center alignment, right alignment."
+            OccupyEntireRow="True"
+            MinHeight="300"
             >
-            <atom:Pagination Total="50" CurrentPage="1"/>
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Pagination Total="50" CurrentPage="1" Align="Start"/>
+                <atom:Pagination Total="50" CurrentPage="1" Align="Center"/>
+                <atom:Pagination Total="50" CurrentPage="1" Align="End"/>
+            </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>

@@ -14,7 +14,6 @@ public class ShowCasePanel : TemplatedControl
 
     [Content]
     public AvaloniaControlList Children { get; } = new();
-    
 
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
@@ -31,10 +30,14 @@ public class ShowCasePanel : TemplatedControl
                 {
                     if (item.OccupyEntireRow)
                     {
-                        Grid.SetRow(item, row);
+                        if (column != 0)
+                        {
+                            row++;
+                        }
+                        Grid.SetRow(item, row++);
+                        
                         Grid.SetColumn(item, 0);
                         Grid.SetColumnSpan(item, 2);
-                        row++;
                     }
                     else
                     {
@@ -54,7 +57,7 @@ public class ShowCasePanel : TemplatedControl
             var rowDefinitions = new RowDefinitions();
             for (var i = 0; i < row; ++i)
             {
-                rowDefinitions.Add(new RowDefinition(GridLength.Star));
+                rowDefinitions.Add(new RowDefinition(GridLength.Auto));
             }
             _layoutPanel.RowDefinitions = rowDefinitions;
             _initialized                = true;
