@@ -6,7 +6,9 @@
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
-            Description="Basic pagination.">
+            Description="Basic pagination."
+            OccupyEntireRow="False"
+            >
             <atom:Pagination Total="50" CurrentPage="1"/>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>

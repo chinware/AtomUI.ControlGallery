@@ -7,15 +7,12 @@
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCasePanel}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto">
-                    <UniformGrid Rows="1" Columns="2" Margin="0">
-                        <StackPanel Name="PART_LeftPanel"
-                                    Orientation="Vertical"
-                                    Spacing="10"
-                                    Margin="0, 0, 10, 0" />
-                        <StackPanel Name="PART_RightPanel"
-                                    Orientation="Vertical"
-                                    Spacing="10" />
-                    </UniformGrid>
+                    <Grid Margin="0" Name="PART_MainPanel" RowSpacing="15" ColumnSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
                 </ScrollViewer>
             </ControlTemplate>
         </Setter>
