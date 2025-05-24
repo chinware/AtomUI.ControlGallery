@@ -11,7 +11,7 @@
             MinHeight="200">
             <atom:Pagination Total="50" CurrentPage="1" />
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Align"
             Description="Support three alignment modes: left alignment, center alignment, right alignment."
@@ -24,5 +24,59 @@
                 <atom:Pagination Total="50" CurrentPage="1" Align="End"/>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="More"
+            Description="More pages."
+            OccupyEntireRow="True"
+            MinHeight="300"
+        >
+            <atom:Pagination Total="500" CurrentPage="6" ShowSizeChanger="True" />
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="More"
+            Description="More pages."
+            OccupyEntireRow="True"
+            MinHeight="300"
+        >
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Pagination Total="500" CurrentPage="3" ShowSizeChanger="True" ShowQuickJumper="True"/>
+                <atom:Pagination Total="500" CurrentPage="3" ShowSizeChanger="True" IsEnabled="False" ShowQuickJumper="True"/>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Mini size"
+            Description="Mini size pagination."
+            OccupyEntireRow="True"
+            MinHeight="300"
+        >
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Pagination Total="50" CurrentPage="1" SizeType="Small"/>
+                <atom:Pagination Total="50" CurrentPage="1" SizeType="Small" ShowSizeChanger="True" ShowQuickJumper="True"/>
+                
+                <atom:Pagination Total="50" ShowTotalInfo="True" CurrentPage="1" SizeType="Small"/>
+                <atom:Pagination Total="50" ShowTotalInfo="True" CurrentPage="1" SizeType="Small" ShowSizeChanger="True" ShowQuickJumper="True" IsEnabled="False"/>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Total number"
+            Description="You can show the total number of data by setting showTotal."
+            OccupyEntireRow="True"
+            MinHeight="300"
+        >
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Pagination Total="85" CurrentPage="1" PageSize="20" ShowSizeChanger="True" ShowTotalInfo="True"/>
+                <atom:Pagination Total="85" 
+                                 CurrentPage="1"
+                                 PageSize="20" 
+                                 ShowSizeChanger="True" 
+                                 ShowTotalInfo="True" 
+                                 TotalInfoTemplate="${RangeStart}-${RangeEnd} of ${Total} items"/>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
     </gallerycontrols:ShowCasePanel>
 </UserControl>
