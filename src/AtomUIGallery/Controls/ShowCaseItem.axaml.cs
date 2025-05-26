@@ -14,6 +14,9 @@ public class ShowCaseItem : ContentControl
     public static readonly StyledProperty<bool> OccupyEntireRowProperty =
         AvaloniaProperty.Register<ShowCaseItem, bool>(nameof(OccupyEntireRow));
     
+    internal static readonly StyledProperty<bool> IsFakeProperty =
+        AvaloniaProperty.Register<ShowCaseItem, bool>(nameof(IsFake), false);
+    
     public string Title
     {
         get => GetValue(TitleProperty);
@@ -32,4 +35,10 @@ public class ShowCaseItem : ContentControl
         set => SetValue(OccupyEntireRowProperty, value);
     }
     
+    public bool IsFake
+    {
+        get => GetValue(IsFakeProperty);
+        set => SetValue(IsFakeProperty, value);
+    }
+
 }

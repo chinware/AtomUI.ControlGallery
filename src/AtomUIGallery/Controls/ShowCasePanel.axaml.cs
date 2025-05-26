@@ -17,6 +17,14 @@ public class ShowCasePanel : TemplatedControl
 
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
+        if (Children.Count % 2 != 0)
+        {
+            var extra = new ShowCaseItem()
+            {
+                IsFake = true
+            };
+            Children.Add(extra);
+        }
         base.OnApplyTemplate(e);
         _layoutPanel = e.NameScope.Get<Grid>(MainPanelPart);
         if (_layoutPanel != null && !_initialized)
