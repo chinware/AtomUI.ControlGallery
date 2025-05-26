@@ -3,12 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:atom="https://atomui.net"
     xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    
     <ControlTheme x:Key="{x:Type gallerycontrols:ShowCaseItem}"
                   TargetType="{x:Type gallerycontrols:ShowCaseItem}">
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCaseItem}">
-                <Border BorderBrush="rgb(245, 245, 245)"
-                        BorderThickness="1"
+                <Border x:Name="PART_RootBorder" 
                         Padding="20"
                         CornerRadius="8">
                     <StackPanel Orientation="Vertical">
@@ -26,5 +26,14 @@
                 </Border>
             </ControlTemplate>
         </Setter>
+        
+        <Style Selector="^[IsFake=False] /template/ Border#PART_RootBorder">
+            <Setter Property="BorderBrush" Value="#F5F5F5" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+        <Style Selector="^[IsFake=True] /template/ Border#PART_RootBorder">
+            <Setter Property="BorderBrush" Value="Transparent" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
     </ControlTheme>
 </ResourceDictionary>
