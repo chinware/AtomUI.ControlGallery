@@ -1,4 +1,7 @@
-﻿using AtomUI.Theme;
+﻿using System.Globalization;
+using AtomUI.Controls;
+using AtomUI.Theme;
+using AtomUI.Utils;
 using Avalonia;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
@@ -35,15 +38,23 @@ internal class Program
     }
 
     public static AppBuilder BuildAvaloniaApp()
-        => AppBuilder.Configure<GalleryApplication>()
-            .AfterSetup(builder =>
-            {
-                builder.Instance!.Name = "AtomUIGallery";
-            })
-            .UseReactiveUI()
-            .ConfigureAtomUI()
-            .UsePlatformDetect()
-            .UseAtomUI()
-            .With(new Win32PlatformOptions())
-            .LogToTrace();
+    {
+        var builder = AppBuilder.Configure<GalleryApplication>()
+                                .AfterSetup(builder =>
+                                {
+                                    builder.Instance!.Name = "AtomUIGallery";
+                                })
+                                .UseReactiveUI()
+                                .UsePlatformDetect()
+                                .With(new Win32PlatformOptions())
+                                .LogToTrace();
+        
+        var themeBuilder = builder.CreateThemeManagerBuilder();
+        themeBuilder.UseCultureInfo(new CultureInfo(LanguageCode.en_US));
+        themeBuilder.UseTheme(ThemeManager.DEFAULT_THEME_ID);
+        themeBuilder.UseOSSControls();
+        themeBuilder.UseOSSDataGrid();
+        
+        return builder.UseAtomUI(themeBuilder);
+    }
 }

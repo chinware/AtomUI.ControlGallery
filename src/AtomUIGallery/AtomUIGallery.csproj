@@ -39,6 +39,7 @@
 
     <ItemGroup>
         <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
     
 </Project>

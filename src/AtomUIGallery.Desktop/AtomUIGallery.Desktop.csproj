@@ -35,7 +35,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <AvaloniaResource Remove="Assets\Images\AtomUIGallery.ico" />
+      <AvaloniaResource Remove="Assets/Images/AtomUIGallery.ico" />
     </ItemGroup>
     <Choose>
         <When Condition="$([MSBuild]::IsOSPlatform('OSX'))">

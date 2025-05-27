@@ -55,9 +55,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUIGallery.Icon.Applicat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Native", "packages\AtomUI\src\AtomUI.Native\AtomUI.Native.csproj", "{F025D333-0590-4611-91CB-B5C9C5C5E9D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.DataGrid", "packages\AtomUI\src\AtomUI.Controls.DataGrid\AtomUI.Controls.DataGrid.csproj", "{237A6E73-0966-4C3C-985C-9B50942BB005}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.XDataGrid", "packages\AtomUI\src\AtomUI.Controls.XDataGrid\AtomUI.Controls.XDataGrid.csproj", "{DBC14FEB-576F-42EC-8488-19B18D4DF437}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.DataGrid", "packages\AtomUI\src\AtomUI.Controls.DataGrid\AtomUI.Controls.DataGrid.csproj", "{DBC14FEB-576F-42EC-8488-19B18D4DF437}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,10 +111,6 @@ Global
 		{F025D333-0590-4611-91CB-B5C9C5C5E9D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F025D333-0590-4611-91CB-B5C9C5C5E9D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F025D333-0590-4611-91CB-B5C9C5C5E9D9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{237A6E73-0966-4C3C-985C-9B50942BB005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{237A6E73-0966-4C3C-985C-9B50942BB005}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{237A6E73-0966-4C3C-985C-9B50942BB005}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{237A6E73-0966-4C3C-985C-9B50942BB005}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -136,6 +130,5 @@ Global
 		{D38105E7-A207-42C9-8551-5291DC7B2B62} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
 		{01FE0D59-9A44-4079-AA82-09152C8ED94F} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
 		{F025D333-0590-4611-91CB-B5C9C5C5E9D9} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
-		{237A6E73-0966-4C3C-985C-9B50942BB005} = {AB05E310-C053-41CD-884F-CF7BAC5D394A}
 	EndGlobalSection
 EndGlobal
