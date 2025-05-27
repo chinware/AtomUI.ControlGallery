@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Native", "packages\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.DataGrid", "packages\AtomUI\src\AtomUI.Controls.DataGrid\AtomUI.Controls.DataGrid.csproj", "{237A6E73-0966-4C3C-985C-9B50942BB005}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.XDataGrid", "packages\AtomUI\src\AtomUI.Controls.XDataGrid\AtomUI.Controls.XDataGrid.csproj", "{DBC14FEB-576F-42EC-8488-19B18D4DF437}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,10 @@ Global
 		{237A6E73-0966-4C3C-985C-9B50942BB005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{237A6E73-0966-4C3C-985C-9B50942BB005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{237A6E73-0966-4C3C-985C-9B50942BB005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBC14FEB-576F-42EC-8488-19B18D4DF437}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB05E310-C053-41CD-884F-CF7BAC5D394A} = {E3103E91-AEAE-482A-8008-1489058B0814}
