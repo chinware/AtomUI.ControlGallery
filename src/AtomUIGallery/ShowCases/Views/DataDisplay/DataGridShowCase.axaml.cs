@@ -8,7 +8,13 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 {
     public DataGridShowCase()
     {
-        this.WhenActivated(disposables => { });
+        this.WhenActivated(disposables =>
+        {
+            if (DataContext is DataGridViewModel viewModel)
+            {
+                BasicCaseGrid.ItemsSource = viewModel.BasicCaseDataSource;
+            }
+        });
         InitializeComponent();
     }
 }
