@@ -58,6 +58,8 @@
                               ItemKey="{x:Static viewmodels:CalendarViewModel.ID}" />
             <atom:NavMenuItem Header="Collapse"
                               ItemKey="{x:Static viewmodels:CollapseViewModel.ID}" />
+            <atom:NavMenuItem Header="DataGrid"
+                              ItemKey="{x:Static viewmodels:DataGridViewModel.ID}" />
             <atom:NavMenuItem Header="Expander"
                               ItemKey="{x:Static viewmodels:ExpanderViewModel.ID}" />
             <atom:NavMenuItem Header="Empty"
