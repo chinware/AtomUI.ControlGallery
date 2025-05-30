@@ -5,7 +5,13 @@
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." >
-            <atom:DataGrid x:Name="BasicCaseGrid"></atom:DataGrid>
+            <atom:DataGrid x:Name="BasicCaseGrid">
+                <atom:DataGrid.Columns>
+                    <atom:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Age}" />
+                </atom:DataGrid.Columns>
+            </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
