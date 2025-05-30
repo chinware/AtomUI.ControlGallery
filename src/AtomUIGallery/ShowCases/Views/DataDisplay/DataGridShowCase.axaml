@@ -7,9 +7,9 @@
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." >
             <atom:DataGrid x:Name="BasicCaseGrid">
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    <atom:DataGridTextColumn CanUserSort="True" Header="Name"  Binding="{Binding Name}"/>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Age}" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
