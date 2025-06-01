@@ -14,7 +14,7 @@
         <!--     </atom:DataGrid> -->
         <!-- </gallerycontrols:ShowCaseItem> -->
         
-        <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="True">
+        <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="true">
             <atom:DataGrid>
                 <atom:DataGrid.ColumnGroups>
                     <atom:DataGridTextColumn Header="Name"/>
