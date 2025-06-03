@@ -14,8 +14,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True"/>
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True"/>
                     <atom:DataGridTemplateColumn Header="Tags">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
