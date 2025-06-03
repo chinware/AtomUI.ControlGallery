@@ -7,7 +7,13 @@
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True">
             <atom:DataGrid x:Name="BasicCaseGrid">
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    <atom:DataGridTemplateColumn Header="Name">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <atom:HyperLinkTextBlock Text="{Binding Name}"/>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
                     <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
                 </atom:DataGrid.Columns>
