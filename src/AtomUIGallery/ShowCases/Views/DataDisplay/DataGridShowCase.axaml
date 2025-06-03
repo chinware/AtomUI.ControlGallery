@@ -10,16 +10,45 @@
                     <atom:DataGridTemplateColumn Header="Name">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <atom:HyperLinkTextBlock Text="{Binding Name}"/>
+                                <atom:HyperLinkTextBlock Text="{Binding Name}" />
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
                     <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                    <atom:DataGridTemplateColumn Header="Tags">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ItemsControl ItemsSource="{Binding Tags}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" Spacing="5" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <atom:Tag TagText="{Binding Name}" TagColor="{Binding Color}"></atom:Tag>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                    <atom:DataGridTemplateColumn Header="Action">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="15">
+                                    <atom:HyperLinkTextBlock Text="Invite" />
+                                    <atom:HyperLinkTextBlock Text="Modify" />
+                                    <atom:HyperLinkTextBlock Text="Delete" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-        
+
         <!-- <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="true"> -->
         <!--     <atom:DataGrid> -->
         <!--         <atom:DataGrid.ColumnGroups> -->
