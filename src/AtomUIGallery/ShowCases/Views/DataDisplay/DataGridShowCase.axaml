@@ -4,37 +4,37 @@
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
-        <!-- <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True"> -->
-        <!--     <atom:DataGrid x:Name="BasicCaseGrid"> -->
-        <!--         <atom:DataGrid.Columns> -->
-        <!--             <atom:DataGridTextColumn CanUserSort="True" Header="Name"  Binding="{Binding Name}"/> -->
-        <!--             <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" /> -->
-        <!--             <atom:DataGridTextColumn CanUserSort="True" SupportedDirections="Ascending" Header="Address" Binding="{Binding Address}" /> -->
-        <!--         </atom:DataGrid.Columns> -->
-        <!--     </atom:DataGrid> -->
-        <!-- </gallerycontrols:ShowCaseItem> -->
-        
-        <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="true">
-            <atom:DataGrid>
-                <atom:DataGrid.ColumnGroups>
-                    <atom:DataGridTextColumn Header="Name"/>
-                    <atom:DataGridColumnGroupItem Header="Other">
-                        <atom:DataGridTextColumn Header="Age"/>
-                        <atom:DataGridColumnGroupItem Header="Address">
-                            <atom:DataGridTextColumn Header="Street"/>
-                            <atom:DataGridColumnGroupItem Header="Block">
-                                <atom:DataGridTextColumn Header="Building"/>
-                                <atom:DataGridTextColumn Header="Door No."/>
-                            </atom:DataGridColumnGroupItem>
-                        </atom:DataGridColumnGroupItem>
-                    </atom:DataGridColumnGroupItem>
-                    <atom:DataGridColumnGroupItem Header="Company">
-                        <atom:DataGridTextColumn Header="Company Address"/>
-                        <atom:DataGridTextColumn Header="Company Name"/>
-                    </atom:DataGridColumnGroupItem>
-                    <atom:DataGridTextColumn Header="Gender"/>
-                </atom:DataGrid.ColumnGroups>
+        <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True">
+            <atom:DataGrid x:Name="BasicCaseGrid">
+                <atom:DataGrid.Columns>
+                    <atom:DataGridTextColumn Header="Name"  Binding="{Binding Name}"/>
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
+        
+        <!-- <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="true"> -->
+        <!--     <atom:DataGrid> -->
+        <!--         <atom:DataGrid.ColumnGroups> -->
+        <!--             <atom:DataGridTextColumn Header="Name"/> -->
+        <!--             <atom:DataGridColumnGroupItem Header="Other"> -->
+        <!--                 <atom:DataGridTextColumn Header="Age"/> -->
+        <!--                 <atom:DataGridColumnGroupItem Header="Address"> -->
+        <!--                     <atom:DataGridTextColumn Header="Street"/> -->
+        <!--                     <atom:DataGridColumnGroupItem Header="Block"> -->
+        <!--                         <atom:DataGridTextColumn Header="Building"/> -->
+        <!--                         <atom:DataGridTextColumn Header="Door No."/> -->
+        <!--                     </atom:DataGridColumnGroupItem> -->
+        <!--                 </atom:DataGridColumnGroupItem> -->
+        <!--             </atom:DataGridColumnGroupItem> -->
+        <!--             <atom:DataGridColumnGroupItem Header="Company"> -->
+        <!--                 <atom:DataGridTextColumn Header="Company Address"/> -->
+        <!--                 <atom:DataGridTextColumn Header="Company Name"/> -->
+        <!--             </atom:DataGridColumnGroupItem> -->
+        <!--             <atom:DataGridTextColumn Header="Gender"/> -->
+        <!--         </atom:DataGrid.ColumnGroups> -->
+        <!--     </atom:DataGrid> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
     </gallerycontrols:ShowCasePanel>
 </UserControl>

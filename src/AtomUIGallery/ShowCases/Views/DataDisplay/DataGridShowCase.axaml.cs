@@ -12,7 +12,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                //BasicCaseGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                BasicCaseGrid.ItemsSource = viewModel.BasicCaseDataSource;
             }
         });
         InitializeComponent();
