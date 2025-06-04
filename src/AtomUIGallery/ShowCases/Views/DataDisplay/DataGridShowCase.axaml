@@ -7,6 +7,7 @@
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True">
             <atom:DataGrid x:Name="BasicCaseGrid">
                 <atom:DataGrid.Columns>
+                    <atom:DataGridSelectionColumn />
                     <atom:DataGridTemplateColumn Header="Name">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -14,8 +15,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True"/>
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True"/>
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
                     <atom:DataGridTemplateColumn Header="Tags">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -71,5 +72,59 @@
         <!--         </atom:DataGrid.ColumnGroups> -->
         <!--     </atom:DataGrid> -->
         <!-- </gallerycontrols:ShowCaseItem> -->
+
+        <gallerycontrols:ShowCaseItem Title="Selection"
+                                      Description="Rows can be selectable by making first column as a selectable column. You can use rowSelection.type to set selection type. Default is checkbox."
+                                      OccupyEntireRow="True">
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <atom:RadioButton x:Name="ExtendedSelection" IsChecked="True">Extended</atom:RadioButton>
+                    <atom:RadioButton x:Name="SingleSelection">Single</atom:RadioButton>
+                </StackPanel>
+                <atom:DataGrid x:Name="SelectionDataGrid">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridSelectionColumn />
+                        <atom:DataGridTemplateColumn Header="Name">
+                            <atom:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <atom:HyperLinkTextBlock Text="{Binding Name}" />
+                                </DataTemplate>
+                            </atom:DataGridTemplateColumn.CellTemplate>
+                        </atom:DataGridTemplateColumn>
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                        <atom:DataGridTemplateColumn Header="Tags">
+                            <atom:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding Tags}">
+                                        <ItemsControl.ItemsPanel>
+                                            <ItemsPanelTemplate>
+                                                <StackPanel Orientation="Horizontal" Spacing="5" />
+                                            </ItemsPanelTemplate>
+                                        </ItemsControl.ItemsPanel>
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <atom:Tag TagText="{Binding Name}" TagColor="{Binding Color}"></atom:Tag>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </atom:DataGridTemplateColumn.CellTemplate>
+                        </atom:DataGridTemplateColumn>
+                        <atom:DataGridTemplateColumn Header="Action">
+                            <atom:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Spacing="15">
+                                        <atom:HyperLinkTextBlock Text="Invite" />
+                                        <atom:HyperLinkTextBlock Text="Modify" />
+                                        <atom:HyperLinkTextBlock Text="Delete" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </atom:DataGridTemplateColumn.CellTemplate>
+                        </atom:DataGridTemplateColumn>
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>

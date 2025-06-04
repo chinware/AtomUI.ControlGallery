@@ -2,6 +2,7 @@
 using Avalonia.ReactiveUI;
 using ReactiveUI;
 using AtomUI.Controls;
+using Avalonia.Interactivity;
 using RadioButton = Avalonia.Controls.RadioButton;
 
 namespace AtomUIGallery.ShowCases.Views;
@@ -22,12 +23,12 @@ public partial class TimelineShowCase : ReactiveUserControl<TimelineViewModel>
         ReverseButton.Click += ReverseButtonClick;
     }
     
-    private void ReverseButtonClick(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void ReverseButtonClick(object? sender, RoutedEventArgs e)
     {
         ReverseTimeline.IsReverse = !ReverseTimeline.IsReverse;
     }
     
-    private void ModeChecked(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void ModeChecked(object? sender, RoutedEventArgs e)
     {
         if (sender is RadioButton radioButton)
         {
