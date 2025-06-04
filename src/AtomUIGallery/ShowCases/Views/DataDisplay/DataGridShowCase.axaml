@@ -133,6 +133,14 @@
             <atom:DataGrid x:Name="FilterAndSortGrid">
                 <atom:DataGrid.Columns>
                     <atom:DataGridTemplateColumn Header="Name">
+                        <atom:DataGridTemplateColumn.Filters>
+                            <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
+                            <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
+                            <atom:DataGridFilterItem Text="Submenu" Value="Submenu">
+                                <atom:DataGridFilterItem Text="Green" Value="Green"/>
+                                <atom:DataGridFilterItem Text="Black" Value="Black"/>
+                            </atom:DataGridFilterItem>
+                        </atom:DataGridTemplateColumn.Filters>
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <atom:HyperLinkTextBlock Text="{Binding Name}" />
