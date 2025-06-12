@@ -2,7 +2,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.CollapseShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+             xmlns:gallerycontrols="using:AtomUIGallery.Controls">
 
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem

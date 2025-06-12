@@ -1,9 +1,9 @@
 <ResourceDictionary
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+    xmlns:gallerycontrols="using:AtomUIGallery.Controls"
     xmlns:atom="https://atomui.net"
-    xmlns:models="clr-namespace:AtomUIGallery.Models">
+    xmlns:models="using:AtomUIGallery.Models">
 
     <ControlTheme x:Key="{x:Type gallerycontrols:IconGallery}" TargetType="gallerycontrols:IconGallery">
         <Setter Property="gallerycontrols:IconGallery.Template">

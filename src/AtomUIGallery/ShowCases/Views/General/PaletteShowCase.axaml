@@ -2,8 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.PaletteShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
-             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
+             xmlns:gallerycontrols="using:AtomUIGallery.Controls"
+             xmlns:viewModels="using:AtomUIGallery.ShowCases.ViewModels">
     <TabControl>
         <TabItem Header="Light">
             <ScrollViewer>

@@ -2,9 +2,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.DrawerShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
-             xmlns:utils="clr-namespace:AtomUIGallery.Utils"
-             xmlns:views="clr-namespace:AtomUIGallery.ShowCases.Views">
+             xmlns:gallerycontrols="using:AtomUIGallery.Controls"
+             xmlns:utils="using:AtomUIGallery.Utils"
+             xmlns:views="using:AtomUIGallery.ShowCases.Views">
     <UserControl.Styles>
         <!-- ListBox -->
         <Style Selector="ListBox">

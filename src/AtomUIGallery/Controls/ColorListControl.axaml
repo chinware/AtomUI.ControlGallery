@@ -1,7 +1,7 @@
 <ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
-                    xmlns:models="clr-namespace:AtomUIGallery.Models"
+                    xmlns:gallerycontrols="using:AtomUIGallery.Controls"
+                    xmlns:models="using:AtomUIGallery.Models"
                     x:CompileBindings="True">
     <ControlTheme x:Key="{x:Type gallerycontrols:ColorListControl}" TargetType="gallerycontrols:ColorListControl">
         <Setter Property="Template">

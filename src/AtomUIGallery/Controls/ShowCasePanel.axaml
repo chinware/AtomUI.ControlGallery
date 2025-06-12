@@ -1,7 +1,7 @@
 <ResourceDictionary
     xmlns="https://github.com/avaloniaui"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    xmlns:gallerycontrols="using:AtomUIGallery.Controls">
     <ControlTheme x:Key="{x:Type gallerycontrols:ShowCasePanel}"
                   TargetType="{x:Type gallerycontrols:ShowCasePanel}">
         <Setter Property="Template">
