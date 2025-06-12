@@ -40,12 +40,12 @@
                                  x:Name="CheckStatusBtn"
                                  Command="{Binding CheckStatusCommand}"
                                  CommandParameter="{Binding ElementName=CheckStatusBtn}"
-                                 Text="{Binding CheckStatusBtnText}" />
+                                 Content="{Binding CheckStatusBtnText}" />
                     <atom:Button SizeType="Small" ButtonType="Primary"
                                  x:Name="EnableStatusBtn"
                                  CommandParameter="{Binding ElementName=EnableStatusBtn}"
                                  Command="{Binding EnableStatusCommand}"
-                                 Text="{Binding EnableStatusBtnText}" />
+                                 Content="{Binding EnableStatusBtnText}" />
                 </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>

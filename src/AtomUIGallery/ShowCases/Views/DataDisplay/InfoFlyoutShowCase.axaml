@@ -73,7 +73,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="LT" />
+                    <atom:Button Content="LT" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="2" Grid.Column="0" Trigger="Hover" Placement="Left">
@@ -82,7 +82,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="Left" />
+                    <atom:Button Content="Left" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="3" Grid.Column="0" Trigger="Hover" Placement="LeftEdgeAlignedBottom">
@@ -91,7 +91,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="LB" />
+                    <atom:Button Content="LB" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="0" Grid.Column="1" Trigger="Hover" Placement="TopEdgeAlignedLeft">
@@ -100,7 +100,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="TL" />
+                    <atom:Button Content="TL" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="0" Grid.Column="2" Trigger="Hover" Placement="Top">
@@ -109,7 +109,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="Top" />
+                    <atom:Button Content="Top" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="0" Grid.Column="3" Trigger="Hover" Placement="TopEdgeAlignedRight">
@@ -118,7 +118,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="TR" />
+                    <atom:Button Content="TR" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="1" Grid.Column="4" Trigger="Hover" Placement="RightEdgeAlignedTop">
@@ -127,7 +127,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="RT" />
+                    <atom:Button Content="RT" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="2" Grid.Column="4" Trigger="Hover" Placement="Right">
@@ -136,7 +136,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="Right" />
+                    <atom:Button Content="Right" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="3" Grid.Column="4" Trigger="Hover" Placement="RightEdgeAlignedBottom">
@@ -145,7 +145,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="RB" />
+                    <atom:Button Content="RB" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="4" Grid.Column="1" Trigger="Hover" Placement="BottomEdgeAlignedLeft">
@@ -154,7 +154,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="BL" />
+                    <atom:Button Content="BL" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="4" Grid.Column="2" Trigger="Hover" Placement="Bottom">
@@ -163,7 +163,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="Bottom" />
+                    <atom:Button Content="Bottom" />
                 </atom:FlyoutHost>
 
                 <atom:FlyoutHost Grid.Row="4" Grid.Column="3" Trigger="Hover" Placement="BottomEdgeAlignedRight">
@@ -172,7 +172,7 @@
                             <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                         </atom:Flyout>
                     </atom:FlyoutHost.Flyout>
-                    <atom:Button Text="BR" />
+                    <atom:Button Content="BR" />
                 </atom:FlyoutHost>
 
             </Grid>
@@ -220,7 +220,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="LT" />
+                        <atom:Button Content="LT" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="2" Grid.Column="0"
@@ -233,7 +233,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="Left" />
+                        <atom:Button Content="Left" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="3" Grid.Column="0"
@@ -246,7 +246,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="LB" />
+                        <atom:Button Content="LB" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="0" Grid.Column="1"
@@ -259,7 +259,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="TL" />
+                        <atom:Button Content="TL" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="0" Grid.Column="2"
@@ -272,7 +272,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="Top" />
+                        <atom:Button Content="Top" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="0" Grid.Column="3"
@@ -285,7 +285,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="TR" />
+                        <atom:Button Content="TR" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="1" Grid.Column="4"
@@ -298,7 +298,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="RT" />
+                        <atom:Button Content="RT" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="2" Grid.Column="4"
@@ -311,7 +311,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="Right" />
+                        <atom:Button Content="Right" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="3" Grid.Column="4"
@@ -324,7 +324,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="RB" />
+                        <atom:Button Content="RB" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="4" Grid.Column="1"
@@ -337,7 +337,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="BL" />
+                        <atom:Button Content="BL" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="4" Grid.Column="2"
@@ -350,7 +350,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="Bottom" />
+                        <atom:Button Content="Bottom" />
                     </atom:FlyoutHost>
 
                     <atom:FlyoutHost Grid.Row="4" Grid.Column="3"
@@ -363,7 +363,7 @@
                                 <TextBlock Width="200" Height="100" Padding="20">The most basic example.</TextBlock>
                             </atom:Flyout>
                         </atom:FlyoutHost.Flyout>
-                        <atom:Button Text="BR" />
+                        <atom:Button Content="BR" />
                     </atom:FlyoutHost>
 
                 </Grid>

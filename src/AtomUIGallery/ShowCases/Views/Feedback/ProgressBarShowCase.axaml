@@ -368,7 +368,7 @@
                 </WrapPanel>
 
                 <atom:Button Margin="0, 10, 0, 0"
-                             Text="{Binding ToggleDisabledText}"
+                             Content="{Binding ToggleDisabledText}"
                              Command="{Binding ToggleEnabledStatus}" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>

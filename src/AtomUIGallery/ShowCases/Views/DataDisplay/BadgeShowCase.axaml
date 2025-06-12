@@ -136,7 +136,7 @@
                         <atom:Button ButtonType="Link" Icon="{atom:IconProvider Kind=NotificationOutlined}" />
                     </atom:DotBadge>
                     <atom:DotBadge Offset="-14,12">
-                        <atom:Button ButtonType="Link" Text="Link something" />
+                        <atom:Button ButtonType="Link" Content="Link something" />
                     </atom:DotBadge>
                 </StackPanel>
             </StackPanel>
