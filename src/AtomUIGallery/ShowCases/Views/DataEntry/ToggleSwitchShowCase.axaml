@@ -2,8 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.ToggleSwitchShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="using:AtomUIGallery.Controls"
-             xmlns:showCase="using:AtomUIGallery.ShowCases.Views">
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+             xmlns:showCase="clr-namespace:AtomUIGallery.ShowCases.Views">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
