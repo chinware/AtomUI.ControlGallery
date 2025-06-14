@@ -7,16 +7,23 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic button spinner.">
-            <gallerycontrols:ShowCaseItem
-                Title="Basic"
-                Description="Basic button spinner.">
-                <atom:ComboBox PlaceholderText="Please select" Width="300">
-                    <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
-                    <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
-                    <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
-                    <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
-                </atom:ComboBox>
-            </gallerycontrols:ShowCaseItem>
+            <atom:ComboBox PlaceholderText="Please select" Width="300">
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+            </atom:ComboBox>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Disabled"
+            Description="Disabled button spinner.">
+            <atom:ComboBox PlaceholderText="Please select" Width="300" IsEnabled="False">
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+            </atom:ComboBox>
         </gallerycontrols:ShowCaseItem>
 
         <gallerycontrols:ShowCaseItem

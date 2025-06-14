@@ -3,7 +3,7 @@
              x:Class="AtomUIGallery.ShowCases.Views.ButtonSpinnerShowCase"
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
-     <gallerycontrols:ShowCasePanel>
+    <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic button spinner.">
@@ -66,14 +66,39 @@
         </gallerycontrols:ShowCaseItem>
 
         <gallerycontrols:ShowCaseItem
+            Title="Disabled"
+            Description="Variants of disabled Input.">
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:ButtonSpinner StyleVariant="Outline" IsEnabled="False">
+                    <atom:TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Text="床前明月光" />
+                </atom:ButtonSpinner>
+                <atom:ButtonSpinner StyleVariant="Filled" IsEnabled="False">
+                    <atom:TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Text="床前明月光" />
+                </atom:ButtonSpinner>
+                <atom:ButtonSpinner StyleVariant="Borderless" IsEnabled="False">
+                    <atom:TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Text="床前明月光" />
+                </atom:ButtonSpinner>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
             Title="Pre / Post tab"
             Description="Using pre and post tabs example.">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:ButtonSpinner
-                                    LeftAddOn="http://"
-                                    RightAddOn=".com"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    LeftAddOn="http://"
+                    RightAddOn=".com"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -81,9 +106,9 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    RightAddOn="{atom:IconProvider Kind=SettingOutlined}"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    RightAddOn="{atom:IconProvider Kind=SettingOutlined}"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -91,10 +116,10 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    LeftAddOn="http://"
-                                    Width="400"
-                                    HorizontalAlignment="Left"
-                                    InnerRightContent=".com">
+                    LeftAddOn="http://"
+                    Width="400"
+                    HorizontalAlignment="Left"
+                    InnerRightContent=".com">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -109,10 +134,10 @@
             <StackPanel Orientation="Vertical" Spacing="10">
 
                 <atom:ButtonSpinner
-                                    InnerLeftContent="{atom:IconProvider Kind=UserOutlined, NormalFilledColor=#D7D7D7}"
-                                    InnerRightContent="{atom:IconProvider Kind=InfoCircleOutlined, NormalFilledColor=#8C8C8C}"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    InnerLeftContent="{atom:IconProvider Kind=UserOutlined, NormalFilledColor=#D7D7D7}"
+                    InnerRightContent="{atom:IconProvider Kind=InfoCircleOutlined, NormalFilledColor=#8C8C8C}"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -120,10 +145,10 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    InnerLeftContent="￥"
-                                    InnerRightContent="RMB"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    InnerLeftContent="￥"
+                    InnerRightContent="RMB"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -131,9 +156,9 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    InnerLeftContent="￥" InnerRightContent="RMB" IsEnabled="False"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    InnerLeftContent="￥" InnerRightContent="RMB" IsEnabled="False"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -148,29 +173,18 @@
             Description="Add status to Input with status, which could be error or warning.">
             <StackPanel Orientation="Vertical" Spacing="10" Margin="0, 0, 20, 0">
                 <atom:ButtonSpinner
-                                    Status="Error"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
+                    Status="Error"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         Text="床前明月光" />
                 </atom:ButtonSpinner>
                 <atom:ButtonSpinner
-                                    Status="Warning"
-                                    Width="400"
-                                    HorizontalAlignment="Left">
-                    <atom:TextBlock
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        Text="床前明月光" />
-                </atom:ButtonSpinner>
-
-                <atom:ButtonSpinner
-                                    Status="Error"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left">
+                    Status="Warning"
+                    Width="400"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -178,10 +192,10 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    Status="Warning"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left">
+                    Status="Error"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -189,11 +203,10 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    Status="Error"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left"
-                                    StyleVariant="Filled">
+                    Status="Warning"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left">
                     <atom:TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -201,11 +214,23 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    Status="Warning"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left"
-                                    StyleVariant="Filled">
+                    Status="Error"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left"
+                    StyleVariant="Filled">
+                    <atom:TextBlock
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        Text="床前明月光" />
+                </atom:ButtonSpinner>
+
+                <atom:ButtonSpinner
+                    Status="Warning"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left"
+                    StyleVariant="Filled">
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -214,11 +239,11 @@
 
 
                 <atom:ButtonSpinner
-                                    Status="Error"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left"
-                                    StyleVariant="Borderless">
+                    Status="Error"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left"
+                    StyleVariant="Borderless">
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
@@ -226,11 +251,11 @@
                 </atom:ButtonSpinner>
 
                 <atom:ButtonSpinner
-                                    Status="Warning"
-                                    Width="400"
-                                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
-                                    HorizontalAlignment="Left"
-                                    StyleVariant="Borderless">
+                    Status="Warning"
+                    Width="400"
+                    InnerLeftContent="{atom:IconProvider Kind=ClockCircleOutlined}"
+                    HorizontalAlignment="Left"
+                    StyleVariant="Borderless">
                     <TextBlock
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"

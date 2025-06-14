@@ -28,6 +28,17 @@
                 <atom:NumericUpDown Value="3" StyleVariant="Filled" />
                 <atom:NumericUpDown Value="3" StyleVariant="Borderless" />
             </StackPanel>
+            
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Disabled"
+            Description="Variants of NumberUpDown of disabled style.">
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:NumericUpDown Value="3" StyleVariant="Outline" IsEnabled="False"/>
+                <atom:NumericUpDown Value="3" StyleVariant="Filled" IsEnabled="False"/>
+                <atom:NumericUpDown Value="3" StyleVariant="Borderless" IsEnabled="False"/>
+            </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
         <gallerycontrols:ShowCaseItem
