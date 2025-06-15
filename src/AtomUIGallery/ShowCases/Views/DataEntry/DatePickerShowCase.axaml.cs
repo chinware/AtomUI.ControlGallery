@@ -12,8 +12,8 @@ public partial class DatePickerShowCase : ReactiveUserControl<DatePickerViewMode
         {
             if (DataContext is DatePickerViewModel viewModel)
             {
-                PickerSizeTypeOptionGroup.OptionCheckedChanged  += viewModel.HandlePickerSizeTypeOptionCheckedChanged;
-                PickerPlacementOptionGroup.OptionCheckedChanged += viewModel.HandlePickerPlacementCheckedChanged;
+                // PickerSizeTypeOptionGroup.OptionCheckedChanged  += viewModel.HandlePickerSizeTypeOptionCheckedChanged;
+                // PickerPlacementOptionGroup.OptionCheckedChanged += viewModel.HandlePickerPlacementCheckedChanged;
             }
         });
         InitializeComponent();
