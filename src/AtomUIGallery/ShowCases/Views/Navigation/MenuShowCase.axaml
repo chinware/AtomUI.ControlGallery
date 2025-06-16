@@ -165,7 +165,7 @@
         
             <Border Name="ContextFlyoutContainer">
                 <Border.ContextFlyout>
-                    <atom:MenuFlyout>
+                    <atom:MenuFlyout IsMotionEnabled="True">
                         <atom:MenuItem Header="Cut" InputGesture="Ctrl+X"
                                        Icon="{atom:IconProvider Kind=ScissorOutlined}" />
                         <atom:MenuItem Header="Copy" InputGesture="Ctrl+C" Icon="{atom:IconProvider Kind=CopyOutlined}" />
