@@ -1,0 +1,65 @@
+name: Build AtomUIGallery Installers
+on:
+   workflow_dispatch:
+      inputs:
+         IsNightlyBuild:
+            description: 'Is it a nightly build?'
+            type: boolean
+            default: false
+         TargetBranch:
+            description: 'Target branch to build'
+            type: string
+            default: 'develop'
+         BuildConfiguration:
+            description: 'Build configuration'
+            type: choice
+            options:
+               - Debug
+               - Release
+            default: 'Release'
+env:
+   SourceDir: ${{ github.workspace }}
+   BuildDir: ${{ github.workspace }}/binaries
+   AtomUIToolsBinDir: ${{ github.workspace }}/binaries/atomuitools
+   GalleryPublishDir: ${{ github.workspace }}/binaries/gallery_published
+   GalleryArtifactsOutputDir: ${{ github.workspace }}/binaries/artifacts_output
+   AtomUIToolsMacBin: ${{ github.workspace }}/binaries/atomuitools/AtomUITools.Mac
+   AtomUIToolsWinBin: ${{ github.workspace }}/binaries/atomuitools/AtomUITools.Windows
+
+jobs:
+   BuildAtomUIGalleryDmgInstallers:
+      name: Build macOS DMG Installer
+      runs-on: macos-latest
+      steps:
+         -  name: Checkout code
+            uses: actions/checkout@v4.2.2
+            with:
+               ref: ${{ inputs.TargetBranch }}
+         -  name: Setup SSH key
+            shell: pwsh
+            env:
+               SSH_PRIVATE_KEY: ${{ secrets.GITEE_ATOMUITOOLS_PRIVATE_KEY }}
+            run: |
+               New-Item -ItemType Directory -Path ~/.ssh -Force
+               $env:SSH_PRIVATE_KEY | Out-File -FilePath ~/.ssh/id_rsa -Encoding ascii
+               chmod 600 ~/.ssh/id_rsa
+               ssh-keyscan github.com >> ~/.ssh/known_hosts
+         -  name: Install Apple Certificate
+            shell: pwsh
+            env:
+               CERT_P12_BASE64: ${{ secrets.CERT_P12_BASE64 }}
+               CERT_PASSWORD: ${{ secrets.CERT_PASSWORD }}
+            run: |
+               $certPath = Join-Path $env:RUNNER_TEMP "ChinwareCodeSign.p12"
+               [System.Convert]::FromBase64String($env:CERT_P12_BASE64) | 
+                 Set-Content -Path $certPath -Encoding Byte -Force
+               
+               security create-keychain -p mysecretpassword build.keychain
+               security default-keychain -s build.keychain
+               security unlock-keychain -p mysecretpassword build.keychain
+               security import $certPath -k build.keychain -P $env:CERT_PASSWORD -T /usr/bin/codesign
+               security set-key-partition-list -S apple-tool:,apple: -s -k mysecretpassword build.keychain
+               Remove-Item $certPath -Force
+               
+               Write-Host "Installed certificates:"
+               security find-identity -v -p codesigning   
