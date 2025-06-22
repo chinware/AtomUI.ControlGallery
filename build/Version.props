@@ -3,7 +3,7 @@
         <NoWarn>$(NoWarn);CS7035</NoWarn>
         <AvaloniaVersion>11.3.1</AvaloniaVersion>
         <AtomUIVersion>0.0.3</AtomUIVersion>
-        <AtomUIGalleryVersion>0.0.2</AtomUIGalleryVersion>
+        <AtomUIGalleryVersion>0.0.3</AtomUIGalleryVersion>
         <AssemblyVersion>$(AtomUIGalleryVersion)</AssemblyVersion>
     </PropertyGroup>
 </Project>
