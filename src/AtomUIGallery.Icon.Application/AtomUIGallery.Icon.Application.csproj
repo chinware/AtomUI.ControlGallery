@@ -28,11 +28,11 @@
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
-        <ProjectReference Include="..\..\packages\AtomUI\src\AtomUI.IconPkg.Generator\AtomUI.IconPkg.Generator.csproj"
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.IconPkg.Generator/AtomUI.IconPkg.Generator.csproj"
                           OutputItemType="Analyzer" 
                           ReferenceOutputAssembly="false" 
                           PrivateAssets="all"/>
-        <ProjectReference Include="..\..\packages\AtomUI\src\AtomUI.IconPkg\AtomUI.IconPkg.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.IconPkg/AtomUI.IconPkg.csproj"/>
     </ItemGroup>
 
 </Project>

@@ -11,11 +11,13 @@
     </ItemGroup>
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
         <PackageReference Include="AtomUI"/>
+        <PackageReference Include="AtomUI.Controls.DataGrid"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Native/AtomUI.Native.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -39,7 +41,6 @@
 
     <ItemGroup>
         <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
-        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
     
 </Project>
