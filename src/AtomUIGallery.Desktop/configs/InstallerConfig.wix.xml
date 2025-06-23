@@ -2,7 +2,7 @@
 <Installer>
     <Name>AtomUIGallery</Name>
     <AssemblyName>AtomUIGallery.Desktop</AssemblyName>
-    <Version>0.0.3</Version>
+    <Version>0.0.4</Version>
     <AppBundleIdentifier>net.atomui.gallery</AppBundleIdentifier>
     <Title>AtomUIGallery Installer</Title>
     <AppIcon>Assets/Images/AtomUIGallery</AppIcon>
