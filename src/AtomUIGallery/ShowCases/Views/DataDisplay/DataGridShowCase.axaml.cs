@@ -14,9 +14,9 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                // BasicCaseGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                BasicCaseGrid.ItemsSource = viewModel.BasicCaseDataSource;
                 // SelectionDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
-                FilterAndSortGrid.ItemsSource = viewModel.FilterAndSorterDataSource;
+                // FilterAndSortGrid.ItemsSource = viewModel.FilterAndSorterDataSource;
             }
 
             // ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;

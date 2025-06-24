@@ -4,51 +4,50 @@
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
-        <!-- <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True"> -->
-        <!--     <atom:DataGrid x:Name="BasicCaseGrid"> -->
-        <!--         <atom:DataGrid.Columns> -->
-        <!--             <atom:DataGridSelectionColumn /> -->
-        <!--             <atom:DataGridTemplateColumn Header="Name"> -->
-        <!--                 <atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--                     <DataTemplate> -->
-        <!--                         <atom:HyperLinkTextBlock Text="{Binding Name}" /> -->
-        <!--                     </DataTemplate> -->
-        <!--                 </atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--             </atom:DataGridTemplateColumn> -->
-        <!--             <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" /> -->
-        <!--             <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" /> -->
-        <!--             <atom:DataGridTemplateColumn Header="Tags"> -->
-        <!--                 <atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--                     <DataTemplate> -->
-        <!--                         <ItemsControl ItemsSource="{Binding Tags}"> -->
-        <!--                             <ItemsControl.ItemsPanel> -->
-        <!--                                 <ItemsPanelTemplate> -->
-        <!--                                     <StackPanel Orientation="Horizontal" Spacing="5" /> -->
-        <!--                                 </ItemsPanelTemplate> -->
-        <!--                             </ItemsControl.ItemsPanel> -->
-        <!--                             <ItemsControl.ItemTemplate> -->
-        <!--                                 <DataTemplate> -->
-        <!--                                     <atom:Tag TagText="{Binding Name}" TagColor="{Binding Color}"></atom:Tag> -->
-        <!--                                 </DataTemplate> -->
-        <!--                             </ItemsControl.ItemTemplate> -->
-        <!--                         </ItemsControl> -->
-        <!--                     </DataTemplate> -->
-        <!--                 </atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--             </atom:DataGridTemplateColumn> -->
-        <!--             <atom:DataGridTemplateColumn Header="Action"> -->
-        <!--                 <atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--                     <DataTemplate> -->
-        <!--                         <StackPanel Orientation="Horizontal" Spacing="15"> -->
-        <!--                             <atom:HyperLinkTextBlock Text="Invite" /> -->
-        <!--                             <atom:HyperLinkTextBlock Text="Modify" /> -->
-        <!--                             <atom:HyperLinkTextBlock Text="Delete" /> -->
-        <!--                         </StackPanel> -->
-        <!--                     </DataTemplate> -->
-        <!--                 </atom:DataGridTemplateColumn.CellTemplate> -->
-        <!--             </atom:DataGridTemplateColumn> -->
-        <!--         </atom:DataGrid.Columns> -->
-        <!--     </atom:DataGrid> -->
-        <!-- </gallerycontrols:ShowCaseItem> -->
+        <gallerycontrols:ShowCaseItem Title="Basic" Description="Simple table with actions." OccupyEntireRow="True">
+            <atom:DataGrid x:Name="BasicCaseGrid">
+                <atom:DataGrid.Columns>
+                    <atom:DataGridTemplateColumn Header="Name">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <atom:HyperLinkTextBlock Text="{Binding Name}" />
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTemplateColumn Header="Tags">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ItemsControl ItemsSource="{Binding Tags}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" Spacing="5" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <atom:Tag TagText="{Binding Name}" TagColor="{Binding Color}"></atom:Tag>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                    <atom:DataGridTemplateColumn Header="Action">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="15">
+                                    <atom:HyperLinkTextBlock Text="Invite" />
+                                    <atom:HyperLinkTextBlock Text="Modify" />
+                                    <atom:HyperLinkTextBlock Text="Delete" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                </atom:DataGrid.Columns>
+            </atom:DataGrid>
+        </gallerycontrols:ShowCaseItem>
 
         <!-- <gallerycontrols:ShowCaseItem Title="Grouping table head" Description="Group table head with columns[n].children." OccupyEntireRow="true"> -->
         <!--     <atom:DataGrid> -->
@@ -128,38 +127,38 @@
         <!-- </gallerycontrols:ShowCaseItem> -->
 
 
-        <gallerycontrols:ShowCaseItem Title="Filter and sorter" Description="Use filters to generate filter menu in columns, onFilter to determine filtered result, and filterMultiple to indicate whether it's multiple or single selection, filterOnClose to specify whether to trigger filter when the filter menu closes.Use defaultFilteredValue to make a column filtered by default."
-                                      OccupyEntireRow="True">
-            <atom:DataGrid x:Name="FilterAndSortGrid" CanUserFilterColumns="True">
-                <atom:DataGrid.Columns>
-                    <atom:DataGridTemplateColumn Header="Name">
-                        <atom:DataGridTemplateColumn.Filters>
-                            <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
-                            <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
-                            <atom:DataGridFilterItem Text="Submenu" Value="Submenu">
-                                <atom:DataGridFilterItem Text="Green" Value="Green"/>
-                                <atom:DataGridFilterItem Text="Black" Value="Black"/>
-                            </atom:DataGridFilterItem>
-                        </atom:DataGridTemplateColumn.Filters>
-                        <atom:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <atom:HyperLinkTextBlock Text="{Binding Name}" />
-                            </DataTemplate>
-                        </atom:DataGridTemplateColumn.CellTemplate>
-                    </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" FilterMode="Tree">
-                        <atom:DataGridTextColumn.Filters>
-                            <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
-                            <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
-                            <atom:DataGridFilterItem Text="Submenu" Value="Submenu">
-                                <atom:DataGridFilterItem Text="Green" Value="Green"/>
-                                <atom:DataGridFilterItem Text="Black" Value="Black"/>
-                            </atom:DataGridFilterItem>
-                        </atom:DataGridTextColumn.Filters>
-                    </atom:DataGridTextColumn>
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
-                </atom:DataGrid.Columns>
-            </atom:DataGrid>
-        </gallerycontrols:ShowCaseItem>
+        <!-- <gallerycontrols:ShowCaseItem Title="Filter and sorter" Description="Use filters to generate filter menu in columns, onFilter to determine filtered result, and filterMultiple to indicate whether it's multiple or single selection, filterOnClose to specify whether to trigger filter when the filter menu closes.Use defaultFilteredValue to make a column filtered by default." -->
+        <!--                               OccupyEntireRow="True"> -->
+        <!--     <atom:DataGrid x:Name="FilterAndSortGrid" CanUserFilterColumns="True"> -->
+        <!--         <atom:DataGrid.Columns> -->
+        <!--             <atom:DataGridTemplateColumn Header="Name"> -->
+        <!--                 <atom:DataGridTemplateColumn.Filters> -->
+        <!--                     <atom:DataGridFilterItem Text="Joe" Value="Joe"/> -->
+        <!--                     <atom:DataGridFilterItem Text="Jim" Value="Jim"/> -->
+        <!--                     <atom:DataGridFilterItem Text="Submenu" Value="Submenu"> -->
+        <!--                         <atom:DataGridFilterItem Text="Green" Value="Green"/> -->
+        <!--                         <atom:DataGridFilterItem Text="Black" Value="Black"/> -->
+        <!--                     </atom:DataGridFilterItem> -->
+        <!--                 </atom:DataGridTemplateColumn.Filters> -->
+        <!--                 <atom:DataGridTemplateColumn.CellTemplate> -->
+        <!--                     <DataTemplate> -->
+        <!--                         <atom:HyperLinkTextBlock Text="{Binding Name}" /> -->
+        <!--                     </DataTemplate> -->
+        <!--                 </atom:DataGridTemplateColumn.CellTemplate> -->
+        <!--             </atom:DataGridTemplateColumn> -->
+        <!--             <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" FilterMode="Tree"> -->
+        <!--                 <atom:DataGridTextColumn.Filters> -->
+        <!--                     <atom:DataGridFilterItem Text="Joe" Value="Joe"/> -->
+        <!--                     <atom:DataGridFilterItem Text="Jim" Value="Jim"/> -->
+        <!--                     <atom:DataGridFilterItem Text="Submenu" Value="Submenu"> -->
+        <!--                         <atom:DataGridFilterItem Text="Green" Value="Green"/> -->
+        <!--                         <atom:DataGridFilterItem Text="Black" Value="Black"/> -->
+        <!--                     </atom:DataGridFilterItem> -->
+        <!--                 </atom:DataGridTextColumn.Filters> -->
+        <!--             </atom:DataGridTextColumn> -->
+        <!--             <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" /> -->
+        <!--         </atom:DataGrid.Columns> -->
+        <!--     </atom:DataGrid> -->
+        <!-- </gallerycontrols:ShowCaseItem> -->
     </gallerycontrols:ShowCasePanel>
 </UserControl>
