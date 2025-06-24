@@ -147,7 +147,16 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" FilterMode="Tree">
+                        <atom:DataGridTextColumn.Filters>
+                            <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
+                            <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
+                            <atom:DataGridFilterItem Text="Submenu" Value="Submenu">
+                                <atom:DataGridFilterItem Text="Green" Value="Green"/>
+                                <atom:DataGridFilterItem Text="Black" Value="Black"/>
+                            </atom:DataGridFilterItem>
+                        </atom:DataGridTextColumn.Filters>
+                    </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
