@@ -130,7 +130,7 @@
 
         <gallerycontrols:ShowCaseItem Title="Filter and sorter" Description="Use filters to generate filter menu in columns, onFilter to determine filtered result, and filterMultiple to indicate whether it's multiple or single selection, filterOnClose to specify whether to trigger filter when the filter menu closes.Use defaultFilteredValue to make a column filtered by default."
                                       OccupyEntireRow="True">
-            <atom:DataGrid x:Name="FilterAndSortGrid">
+            <atom:DataGrid x:Name="FilterAndSortGrid" CanUserFilterColumns="True">
                 <atom:DataGrid.Columns>
                     <atom:DataGridTemplateColumn Header="Name">
                         <atom:DataGridTemplateColumn.Filters>
