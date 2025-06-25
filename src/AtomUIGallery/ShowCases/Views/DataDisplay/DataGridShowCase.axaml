@@ -131,7 +131,9 @@
                                       OccupyEntireRow="True">
             <atom:DataGrid x:Name="FilterAndSortGrid" CanUserFilterColumns="True">
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTemplateColumn Header="Name">
+                    <atom:DataGridTemplateColumn Header="Name"
+                                                 CanUserSort="True"
+                                                 SupportedDirections="Descending">
                         <atom:DataGridTemplateColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
                             <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
@@ -146,7 +148,10 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" FilterMode="Tree">
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
+                                             IsReadOnly="True" 
+                                             FilterMode="Tree"
+                                             CanUserSort="True">
                         <atom:DataGridTextColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
                             <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
