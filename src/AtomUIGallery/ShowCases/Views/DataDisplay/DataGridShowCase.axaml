@@ -133,7 +133,7 @@
                 <atom:DataGrid.Columns>
                     <atom:DataGridTemplateColumn Header="Name"
                                                  CanUserSort="True"
-                                                 SupportedDirections="Descending">
+                                                 SupportedSortDirections="Descending">
                         <atom:DataGridTemplateColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
                             <atom:DataGridFilterItem Text="Jim" Value="Jim"/>
