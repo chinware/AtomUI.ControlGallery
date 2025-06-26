@@ -134,6 +134,7 @@
                     <atom:DataGridTemplateColumn Header="Name"
                                                  CanUserSort="True"
                                                  SupportedSortDirections="Descending"
+                                                 FilterMultiple="True"
                                                  SortMemberPath="Name">
                         <atom:DataGridTemplateColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
@@ -152,6 +153,7 @@
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
                                              IsReadOnly="True" 
                                              FilterMode="Tree"
+                                             FilterMultiple="False"
                                              CanUserSort="True">
                         <atom:DataGridTextColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
