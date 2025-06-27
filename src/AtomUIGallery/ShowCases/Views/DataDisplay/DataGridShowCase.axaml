@@ -168,8 +168,7 @@
                                              Binding="{Binding Address}" 
                                              IsReadOnly="True" 
                                              CanUserSort="True"
-                                             SupportedSortDirections="Ascending"
-                                             />
+                                             SupportedSortDirections="Ascending"/>
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
