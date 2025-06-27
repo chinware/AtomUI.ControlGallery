@@ -153,7 +153,7 @@
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
                                              IsReadOnly="True" 
                                              FilterMode="Tree"
-                                             FilterMultiple="False"
+                                             FilterMultiple="True"
                                              CanUserSort="True">
                         <atom:DataGridTextColumn.Filters>
                             <atom:DataGridFilterItem Text="Joe" Value="Joe"/>
