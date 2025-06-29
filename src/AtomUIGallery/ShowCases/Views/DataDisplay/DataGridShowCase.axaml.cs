@@ -14,14 +14,14 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                BasicCaseGrid.ItemsSource     = viewModel.BasicCaseDataSource;
-                SelectionDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                // BasicCaseGrid.ItemsSource     = viewModel.BasicCaseDataSource;
+                // SelectionDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
                 FilterAndSortGrid.ItemsSource = viewModel.FilterAndSorterDataSource;
-                FilterInTreeGrid.ItemsSource  = viewModel.FilterAndSorterDataSource;
+                // FilterInTreeGrid.ItemsSource  = viewModel.FilterAndSorterDataSource;
             }
 
-            ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
-            SingleSelection.IsCheckedChanged += SelectionModeCheckedChanged;
+            // ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
+            // SingleSelection.IsCheckedChanged += SelectionModeCheckedChanged;
         });
         InitializeComponent();
     }
@@ -30,14 +30,14 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
     {
         if (sender is RadioButton radioButton)
         {
-            if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
-            {
-                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
-            }
-            else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
-            {
-                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
-            }
+            // if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
+            // {
+            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
+            // }
+            // else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
+            // {
+            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
+            // }
         }
     }
 }
