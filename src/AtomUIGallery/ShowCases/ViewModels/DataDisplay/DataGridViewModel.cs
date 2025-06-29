@@ -73,6 +73,11 @@ public class DataGridBaseInfo
         Address = address;
         Tags    = tags;
     }
+
+    public override string ToString()
+    {
+        return $"{Key}-{Name}-{Age}-{Address}";
+    }
 }
 
 public class TagInfo
