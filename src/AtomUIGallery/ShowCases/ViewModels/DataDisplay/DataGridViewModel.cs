@@ -7,39 +7,43 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
 {
     public const string ID = "DataGridShowCase";
-    
+
     public IScreen HostScreen { get; }
-    
+
     public string UrlPathSegment { get; } = ID;
-    
+
     public ObservableCollection<DataGridBaseInfo> BasicCaseDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FilterAndSorterDataSource { get; }
+    public ObservableCollection<MultiSorterDataType> MultiSorterDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
         HostScreen                = screen;
         BasicCaseDataSource       = new ObservableCollection<DataGridBaseInfo>();
         FilterAndSorterDataSource = new ObservableCollection<DataGridBaseInfo>();
+        MultiSorterDataSource     = new ObservableCollection<MultiSorterDataType>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
+        InitMultiSorterDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
     {
-        List<DataGridBaseInfo> items = [
-            new ("1", "John Brown", 32, "New York No. 1 Lake Park", 
+        List<DataGridBaseInfo> items =
+        [
+            new("1", "John Brown", 32, "New York No. 1 Lake Park",
             [
-                new TagInfo { Name = "NICE", Color      = "green"},
-                new TagInfo { Name = "DEVELOPER", Color = "geekblue"}
+                new TagInfo { Name = "NICE", Color      = "green" },
+                new TagInfo { Name = "DEVELOPER", Color = "geekblue" }
             ]),
-            new ("2", "Jim Green", 42, "London No. 1 Lake Park", 
+            new("2", "Jim Green", 42, "London No. 1 Lake Park",
             [
-                new TagInfo { Name = "LOSER", Color = "volcano"}
+                new TagInfo { Name = "LOSER", Color = "volcano" }
             ]),
-            new ("3", "Joe Black", 32, "Sydney No. 1 Lake Park", 
+            new("3", "Joe Black", 32, "Sydney No. 1 Lake Park",
             [
-                new TagInfo { Name = "COOL", Color    = "green"},
-                new TagInfo { Name = "TEACHER", Color = "geekblue"}
+                new TagInfo { Name = "COOL", Color    = "green" },
+                new TagInfo { Name = "TEACHER", Color = "geekblue" }
             ])
         ];
         BasicCaseDataSource.AddRange(items);
@@ -47,13 +51,26 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
 
     private void InitFilterAndSorterDataSource()
     {
-        List<DataGridBaseInfo> items = [
-            new ("1", "John Brown", 32, "New York No. 1 Lake Park", []),
-            new ("2", "Jim Green", 42, "London No. 1 Lake Park", []),
-            new ("3", "Joe Black", 32, "Sydney No. 1 Lake Park", []),
-            new ("4", "Joe Red", 32, "London No. 2 Lake Park", [])
+        List<DataGridBaseInfo> items =
+        [
+            new("1", "John Brown", 32, "New York No. 1 Lake Park", []),
+            new("2", "Jim Green", 42, "London No. 1 Lake Park", []),
+            new("3", "Joe Black", 32, "Sydney No. 1 Lake Park", []),
+            new("4", "Joe Red", 32, "London No. 2 Lake Park", [])
         ];
         FilterAndSorterDataSource.AddRange(items);
+    }
+
+    private void InitMultiSorterDataSource()
+    {
+        List<MultiSorterDataType> items =
+        [
+            new MultiSorterDataType { Key = "1", Name = "John Brown", Chinese = 98, Math = 60, English = 70 },
+            new MultiSorterDataType { Key = "2", Name = "Jim Green", Chinese  = 98, Math = 66, English = 89 },
+            new MultiSorterDataType { Key = "3", Name = "Joe Black", Chinese  = 98, Math = 90, English = 70 },
+            new MultiSorterDataType { Key = "3", Name = "Jim Red", Chinese  = 88, Math = 99, English = 89 },
+        ];
+        MultiSorterDataSource.AddRange(items);
     }
 }
 
@@ -73,15 +90,19 @@ public class DataGridBaseInfo
         Address = address;
         Tags    = tags;
     }
-
-    public override string ToString()
-    {
-        return $"{Key}-{Name}-{Age}-{Address}";
-    }
 }
 
 public class TagInfo
 {
     public string Name { get; set; } = string.Empty;
     public string Color { get; set; } = string.Empty;
+}
+
+public class MultiSorterDataType
+{
+    public string Key { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public int Chinese { get; set; }
+    public int Math { get; set; }
+    public int English { get; set; }
 }
