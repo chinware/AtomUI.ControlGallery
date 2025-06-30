@@ -15,24 +15,24 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                // BasicCaseGrid.ItemsSource       = viewModel.BasicCaseDataSource;
-                // SelectionDataGrid.ItemsSource   = viewModel.BasicCaseDataSource;
-                // FilterAndSortGrid.ItemsSource   = viewModel.FilterAndSorterDataSource;
-                // FilterInTreeGrid.ItemsSource    = viewModel.FilterAndSorterDataSource;
-                // MultiSorterDataGrid.ItemsSource = viewModel.MultiSorterDataSource;
-                // ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource;
-                // LargeSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
-                // MiddleSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
-                // SmallSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                BasicCaseGrid.ItemsSource       = viewModel.BasicCaseDataSource;
+                SelectionDataGrid.ItemsSource   = viewModel.BasicCaseDataSource;
+                FilterAndSortGrid.ItemsSource   = viewModel.FilterAndSorterDataSource;
+                FilterInTreeGrid.ItemsSource    = viewModel.FilterAndSorterDataSource;
+                MultiSorterDataGrid.ItemsSource = viewModel.MultiSorterDataSource;
+                ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                LargeSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                MiddleSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                SmallSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
                 CustomHeaderAndFooterDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
             }
             
-            // ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
-            // SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
-            //
-            // SortAgeBtn.Click                += HandleSortAgeBtnClick;
-            // ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
-            // ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
+            ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
+            SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
+            
+            SortAgeBtn.Click                += HandleSortAgeBtnClick;
+            ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
+            ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
         });
         InitializeComponent();
     }
@@ -41,30 +41,30 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
     {
         if (sender is RadioButton radioButton)
         {
-            // if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
-            // {
-            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
-            // }
-            // else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
-            // {
-            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
-            // }
+            if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
+            {
+                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
+            }
+            else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
+            {
+                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
+            }
         }
     }
 
     private void HandleSortAgeBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        // ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
+        ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
     }
     
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        // ResetFilterAndSortGrid.ClearFilters();
+        ResetFilterAndSortGrid.ClearFilters();
     }
     
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        // ResetFilterAndSortGrid.ClearFilters();
-        // ResetFilterAndSortGrid.ClearSort();
+        ResetFilterAndSortGrid.ClearFilters();
+        ResetFilterAndSortGrid.ClearSort();
     }
 }
