@@ -280,5 +280,50 @@
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
+        <gallerycontrols:ShowCaseItem Title="Size"
+                                      Description="There are two compacted table sizes: middle and small. The small size is used in Modals only."
+                                      OccupyEntireRow="True">
+            <StackPanel Spacing="10">
+                <atom:DataGrid x:Name="LargeSizeDataGrid" SizeType="Large">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Name"
+                                                 Binding="{Binding Name}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Address"
+                                                 Binding="{Binding Address}"
+                                                 IsReadOnly="True" />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+
+                <atom:DataGrid x:Name="MiddleSizeDataGrid" SizeType="Middle">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Name"
+                                                 Binding="{Binding Name}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Address"
+                                                 Binding="{Binding Address}"
+                                                 IsReadOnly="True" />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+
+                <atom:DataGrid x:Name="SmallSizeDataGrid" SizeType="Small">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Name"
+                                                 Binding="{Binding Name}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
+                                                 IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Address"
+                                                 Binding="{Binding Address}"
+                                                 IsReadOnly="True" />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
     </gallerycontrols:ShowCasePanel>
 </UserControl>

@@ -21,11 +21,14 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 FilterInTreeGrid.ItemsSource    = viewModel.FilterAndSorterDataSource;
                 MultiSorterDataGrid.ItemsSource = viewModel.MultiSorterDataSource;
                 ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                LargeSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                MiddleSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
+                SmallSizeDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
             }
-
+            
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
             SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
-
+            
             SortAgeBtn.Click                += HandleSortAgeBtnClick;
             ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
             ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
