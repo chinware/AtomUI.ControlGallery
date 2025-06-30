@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
@@ -14,16 +15,16 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                // BasicCaseGrid.ItemsSource       = viewModel.BasicCaseDataSource;
-                // SelectionDataGrid.ItemsSource   = viewModel.BasicCaseDataSource;
-                // FilterAndSortGrid.ItemsSource   = viewModel.FilterAndSorterDataSource;
-                // FilterInTreeGrid.ItemsSource    = viewModel.FilterAndSorterDataSource;
-                // MultiSorterDataGrid.ItemsSource = viewModel.MultiSorterDataSource;
+                BasicCaseGrid.ItemsSource       = viewModel.BasicCaseDataSource;
+                SelectionDataGrid.ItemsSource   = viewModel.BasicCaseDataSource;
+                FilterAndSortGrid.ItemsSource   = viewModel.FilterAndSorterDataSource;
+                FilterInTreeGrid.ItemsSource    = viewModel.FilterAndSorterDataSource;
+                MultiSorterDataGrid.ItemsSource = viewModel.MultiSorterDataSource;
                 ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource;
             }
 
-            // ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
-            // SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
+            ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
+            SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
 
             SortAgeBtn.Click                += HandleSortAgeBtnClick;
             ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
@@ -36,29 +37,30 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
     {
         if (sender is RadioButton radioButton)
         {
-            // if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
-            // {
-            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
-            // }
-            // else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
-            // {
-            //     SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
-            // }
+            if (radioButton == ExtendedSelection && ExtendedSelection.IsChecked.HasValue && ExtendedSelection.IsChecked.Value)
+            {
+                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Extended;
+            }
+            else if (radioButton == SingleSelection && SingleSelection.IsChecked.HasValue && SingleSelection.IsChecked.Value)
+            {
+                SelectionDataGrid.SelectionMode = DataGridSelectionMode.Single;
+            }
         }
     }
 
     private void HandleSortAgeBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        Console.WriteLine("HandleSortAgeBtnClick");
+        ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
     }
     
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        Console.WriteLine("HandleClearFiltersBtnClick");
+        ResetFilterAndSortGrid.ClearFilters();
     }
     
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        Console.WriteLine("HandleClearFiltersAndSortersBtnClick");
+        ResetFilterAndSortGrid.ClearFilters();
+        ResetFilterAndSortGrid.ClearSort();
     }
 }
