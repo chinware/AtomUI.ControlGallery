@@ -16,6 +16,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> BasicCaseDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FilterAndSorterDataSource { get; }
     public ObservableCollection<MultiSorterDataType> MultiSorterDataSource { get; }
+    public ObservableCollection<ExpandableRowDataType> ExpandableRowDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -23,9 +24,11 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         BasicCaseDataSource       = new ObservableCollection<DataGridBaseInfo>();
         FilterAndSorterDataSource = new ObservableCollection<DataGridBaseInfo>();
         MultiSorterDataSource     = new ObservableCollection<MultiSorterDataType>();
+        ExpandableRowDataSource   = new ObservableCollection<ExpandableRowDataType>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
+        InitExpandableRowDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -34,7 +37,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         [
             new DataGridBaseInfo
             {
-                Key = "1", Name = "John Brown", Age = 32, Address = "New York No. 1 Lake Park", 
+                Key   = "1", Name = "John Brown", Age = 32, Address = "New York No. 1 Lake Park",
                 Money = "￥300,000.00",
                 Tags =
                 [
@@ -44,7 +47,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             },
             new DataGridBaseInfo
             {
-                Key   = "2", Name = "Jim Green", Age = 42, Address = "London No. 1 Lake Park", 
+                Key   = "2", Name = "Jim Green", Age = 42, Address = "London No. 1 Lake Park",
                 Money = "￥1,256,000.00",
                 Tags =
                 [
@@ -88,6 +91,39 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         ];
         MultiSorterDataSource.AddRange(items);
     }
+
+    private void InitExpandableRowDataSource()
+    {
+        List<ExpandableRowDataType> items =
+        [
+            new ExpandableRowDataType
+            {
+                Key = "1", Name = "John Brown", Age = 32, Address = "New York No. 1 Lake Park",
+                Description = "My name is John Brown, I am 32 years old, living in New York No. 1 Lake Park."
+            },
+            new ExpandableRowDataType
+            {
+                Key = "2", Name = "Jim Green", Age  = 42, Address = "London No. 1 Lake Park",
+                Description = "London No. 1 Lake Park"
+            },
+            new ExpandableRowDataType
+            {
+                Key = "3", Name = "Joe Black", Age  = 32, Address = "Sydney No. 1 Lake Park",
+                Description = "My name is Joe Black, I am 32 years old, living in Sydney No. 1 Lake Park."
+            },
+            new ExpandableRowDataType
+            {
+                Key = "4", Name = "Not Expandable", Age  = 29, Address = "Jiangsu No. 1 Lake Park",
+                Description = "Jiangsu No. 1 Lake Park"
+            },
+            new ExpandableRowDataType
+            {
+                Key = "5", Name = "Joe Red", Age    = 78, Address = "London No. 2 Lake Park",
+                Description = "My name is Joe Black, I am 78 years old, London No. 2 Lake Park"
+            }
+        ];
+        ExpandableRowDataSource.AddRange(items);
+    }
 }
 
 public class DataGridBaseInfo
@@ -113,4 +149,9 @@ public class MultiSorterDataType
     public int Chinese { get; set; }
     public int Math { get; set; }
     public int English { get; set; }
+}
+
+public class ExpandableRowDataType : DataGridBaseInfo
+{
+    public string Description { get; set; } = string.Empty;
 }
