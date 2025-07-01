@@ -113,11 +113,6 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             },
             new ExpandableRowDataType
             {
-                Key = "4", Name = "Not Expandable", Age  = 29, Address = "Jiangsu No. 1 Lake Park",
-                Description = "Jiangsu No. 1 Lake Park"
-            },
-            new ExpandableRowDataType
-            {
                 Key = "5", Name = "Joe Red", Age    = 78, Address = "London No. 2 Lake Park",
                 Description = "My name is Joe Black, I am 78 years old, London No. 2 Lake Park"
             }
