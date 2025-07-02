@@ -17,6 +17,8 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> FilterAndSorterDataSource { get; }
     public ObservableCollection<MultiSorterDataType> MultiSorterDataSource { get; }
     public ObservableCollection<ExpandableRowDataType> ExpandableRowDataSource { get; }
+    
+    public ObservableCollection<GroupHeaderDataType> GroupHeaderDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -25,10 +27,12 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         FilterAndSorterDataSource = new ObservableCollection<DataGridBaseInfo>();
         MultiSorterDataSource     = new ObservableCollection<MultiSorterDataType>();
         ExpandableRowDataSource   = new ObservableCollection<ExpandableRowDataType>();
+        GroupHeaderDataSource     = new ObservableCollection<GroupHeaderDataType>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
         InitExpandableRowDataSource();
+        InitGroupDataDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -119,6 +123,27 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         ];
         ExpandableRowDataSource.AddRange(items);
     }
+
+    public void InitGroupDataDataSource()
+    {
+        var items = new List<GroupHeaderDataType>();
+        for (var i = 0; i < 1; i++)
+        {
+            items.Add(new GroupHeaderDataType
+            {
+                Key = i.ToString(),
+                Name = "John Brown",
+                Age = i + 1,
+                Street = "Lake Park",
+                Building = "C",
+                Number = 2035,
+                CompanyAddress = "Lake Street 42",
+                CompanyName = "SoftLake Co",
+                Gender = "M"
+            });
+        }
+        GroupHeaderDataSource.AddRange(items);
+    }
 }
 
 public class DataGridBaseInfo
@@ -150,3 +175,17 @@ public class ExpandableRowDataType : DataGridBaseInfo
 {
     public string Description { get; set; } = string.Empty;
 }
+
+public class GroupHeaderDataType
+{
+    public string Key { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
+    public int Age { get; set; }
+    public string Street { get; set; } = string.Empty;
+    public string Building { get; set; } = string.Empty;
+    public string CompanyAddress { get; set; } = string.Empty;
+    public string CompanyName { get; set; } = string.Empty;
+    public string Gender { get; set; } = string.Empty;
+    public int Number { get; set; }
+}
+
