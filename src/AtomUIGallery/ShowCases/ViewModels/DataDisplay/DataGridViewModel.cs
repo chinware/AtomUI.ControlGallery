@@ -127,7 +127,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public void InitGroupDataDataSource()
     {
         var items = new List<GroupHeaderDataType>();
-        for (var i = 0; i < 1; i++)
+        for (var i = 0; i < 6; i++)
         {
             items.Add(new GroupHeaderDataType
             {
