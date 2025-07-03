@@ -18,6 +18,7 @@ internal static class ShowCaseRegister
 
     private static void RegisterGeneralCases()
     {
+        Locator.CurrentMutable.Register(() => new AboutUsShowCase(), typeof(IViewFor<AboutUsViewModel>));
         Locator.CurrentMutable.Register(() => new ButtonShowCase(), typeof(IViewFor<ButtonViewModel>));
         Locator.CurrentMutable.Register(() => new CustomizeThemeShowCase(), typeof(IViewFor<CustomizeThemeViewModel>));
         Locator.CurrentMutable.Register(() => new IconShowCase(), typeof(IViewFor<IconViewModel>));

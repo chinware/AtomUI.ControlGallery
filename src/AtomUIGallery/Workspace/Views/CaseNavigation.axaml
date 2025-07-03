@@ -5,6 +5,8 @@
              xmlns:viewmodels="using:AtomUIGallery.ShowCases.ViewModels">
     <atom:NavMenu Mode="Inline" Width="250" Name="ShowCaseNavMenu">
         <atom:NavMenuItem Header="General" Icon="{atom:IconProvider Kind=WindowsOutlined}">
+            <atom:NavMenuItem Header="AboutUS"
+                              ItemKey="{x:Static viewmodels:AboutUsViewModel.ID}" />
             <atom:NavMenuItem Header="Palette"
                               ItemKey="{x:Static viewmodels:PaletteViewModel.ID}" />
             <atom:NavMenuItem Header="Icons"

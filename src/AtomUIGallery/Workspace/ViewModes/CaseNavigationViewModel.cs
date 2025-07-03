@@ -1,4 +1,5 @@
 ﻿using AtomUIGallery.ShowCases.ViewModels;
+using AtomUIGallery.ShowCases.Views;
 using Avalonia.Interactivity;
 using Avalonia.Threading;
 using ReactiveUI;
@@ -35,6 +36,7 @@ public class CaseNavigationViewModel : ReactiveObject
 
     private void RegisterGeneralViewModels()
     {
+        _showCaseViewModelFactories.Add(AboutUsViewModel.ID, () => new AboutUsViewModel(HostScreen));
         _showCaseViewModelFactories.Add(ButtonViewModel.ID, () => new ButtonViewModel(HostScreen));
         _showCaseViewModelFactories.Add(IconViewModel.ID, () => new IconViewModel(HostScreen));
         _showCaseViewModelFactories.Add(PaletteViewModel.ID, () => new PaletteViewModel(HostScreen));

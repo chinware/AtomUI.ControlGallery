@@ -33,6 +33,11 @@
         <AvaloniaResource Include="Assets/avalonia-logo.ico"/>
         <AvaloniaResource Include="Assets/EmptyShowCase/empty.svg"/>
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
+        <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
+        <AvaloniaResource Include="Assets/qinware-logo.png"/>
+        <AvaloniaResource Include="Assets/qinware-wechatpress.png"/>
+        <AvaloniaResource Include="Assets/atomui-qq.png"/>
+        <AvaloniaResource Include="Assets/atomui-wechat.png"/>
     </ItemGroup>
 
     <ItemGroup>
