@@ -16,7 +16,6 @@
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
-        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Native/AtomUI.Native.csproj"/>
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
 
