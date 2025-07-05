@@ -467,5 +467,31 @@
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
+        <gallerycontrols:ShowCaseItem Title="Hidden Columns"
+                                      Description="Hide columns with hidden."
+                                      OccupyEntireRow="True">
+            <StackPanel Spacing="10">
+                <StackPanel Spacing="10" Orientation="Horizontal">
+                    <atom:CheckBox Name="ColumnCheckBox1">Column 1</atom:CheckBox>
+                    <atom:CheckBox Name="ColumnCheckBox2">Column 2</atom:CheckBox>
+                    <atom:CheckBox Name="ColumnCheckBox3">Column 3</atom:CheckBox>
+                    <atom:CheckBox Name="ColumnCheckBox4">Column 4</atom:CheckBox>
+                    <atom:CheckBox Name="ColumnCheckBox5">Column 5</atom:CheckBox>
+                    <atom:CheckBox Name="ColumnCheckBox6">Column 6</atom:CheckBox>
+                </StackPanel>
+                <atom:DataGrid x:Name="HideColumnDataGrid"
+                               RowDetailsVisibilityMode="Collapsed">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Name}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Name}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Name}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}" IsReadOnly="True" />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
     </gallerycontrols:ShowCasePanel>
 </UserControl>
