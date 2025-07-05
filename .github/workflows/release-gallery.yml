@@ -95,6 +95,7 @@ jobs:
                   --verbosity Detailed `
                   --certIdentity "${{ secrets.CERT_IDENTITY }}" `
                   --cleanupBundleOption true
+                  
          -  name: Upload x86_64 DMG artifacts
             uses: actions/upload-artifact@v4.6.2
             with:
