@@ -3,8 +3,8 @@
              x:Class="AtomUIGallery.ShowCases.Views.TabControlShowCase"
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
-    <TabControl>
-        <TabItem Header="TabControl">
+    <atom:TabControl SizeType="Large">
+        <atom:TabItem Header="TabControl">
             <gallerycontrols:ShowCasePanel>
                 <gallerycontrols:ShowCaseItem
                     Title="Basic"
@@ -251,8 +251,8 @@
 
             </gallerycontrols:ShowCasePanel>
 
-        </TabItem>
-        <TabItem Header="TabStrip">
+        </atom:TabItem>
+        <atom:TabItem Header="TabStrip">
             <gallerycontrols:ShowCasePanel>
                 <gallerycontrols:ShowCaseItem
                     Title="Basic"
@@ -481,6 +481,6 @@
                 </gallerycontrols:ShowCaseItem>
 
             </gallerycontrols:ShowCasePanel>
-        </TabItem>
-    </TabControl>
+        </atom:TabItem>
+    </atom:TabControl>
 </UserControl>

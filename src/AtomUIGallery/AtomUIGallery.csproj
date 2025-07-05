@@ -11,17 +11,17 @@
     </ItemGroup>
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
         <PackageReference Include="AtomUI"/>
+        <PackageReference Include="AtomUI.Controls.DataGrid"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
-        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Native/AtomUI.Native.csproj"/>
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
 
     <ItemGroup>
         <PackageReference Include="Avalonia"/>
         <PackageReference Include="Avalonia.Desktop"/>
-        <PackageReference Include="Avalonia.Themes.Fluent"/>
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics"/>
         <PackageReference Include="CommunityToolkit.Mvvm"/>
     </ItemGroup>
@@ -31,6 +31,11 @@
         <AvaloniaResource Include="Assets/avalonia-logo.ico"/>
         <AvaloniaResource Include="Assets/EmptyShowCase/empty.svg"/>
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
+        <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
+        <AvaloniaResource Include="Assets/qinware-logo.png"/>
+        <AvaloniaResource Include="Assets/qinware-wechatpress.png"/>
+        <AvaloniaResource Include="Assets/atomui-qq.png"/>
+        <AvaloniaResource Include="Assets/atomui-wechat.png"/>
     </ItemGroup>
 
     <ItemGroup>
@@ -39,7 +44,6 @@
 
     <ItemGroup>
         <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
-        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
     </ItemGroup>
     
 </Project>

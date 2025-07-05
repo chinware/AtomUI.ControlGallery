@@ -1,4 +1,5 @@
 ﻿using AtomUI.Controls;
+using AtomUIGallery.ShowCases.ViewModels;
 using AtomUIGallery.Workspace.ViewModes;
 using Avalonia;
 using Avalonia.Controls;
@@ -44,10 +45,8 @@ public partial class CaseNavigation : UserControl
             {
                 DataContext = new CaseNavigationViewModel(screen);
             }
-
             current = current.Parent;
         }
-
     }
 
     protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
@@ -57,6 +56,11 @@ public partial class CaseNavigation : UserControl
         if (topLevel is Window window)
         {
             window.AddHandler(InputElement.KeyDownEvent, OnGlobalKeyDown, RoutingStrategies.Tunnel);
+        }
+
+        if (DataContext is CaseNavigationViewModel caseNavigationViewModel)
+        {
+            caseNavigationViewModel.NavigateTo(AboutUsViewModel.ID);
         }
     }
     
@@ -74,7 +78,5 @@ public partial class CaseNavigation : UserControl
                 caseNavigationViewModel.StopTestNavigatePages();
             }
         }
-        
-        
     }
 }
