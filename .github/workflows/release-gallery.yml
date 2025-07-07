@@ -253,8 +253,8 @@ jobs:
          -  name: Upload x86_64 AppImage artifacts
             uses: actions/upload-artifact@v4.6.2
             with:
-               name: linux-appimage-x84_64
-               path: ${{ env.GalleryArtifactsOutputDir }}/appimage/x64
+               name: linux-appimage-x86_64
+               path: ${{ env.GalleryArtifactsOutputDir }}/appimage/x64/*.AppImage
    BuildAtomUIGalleryMsiInstallers:
       name: Build Windows MSI Installer
       if: ${{ false }}
@@ -310,5 +310,5 @@ jobs:
          -  name: Upload x86_64 msi artifacts
             uses: actions/upload-artifact@v4.6.2
             with:
-               name: windows-msi-x84_64
+               name: windows-msi-x86_64
                path: ${{ env.GalleryArtifactsOutputDir }}/msi/x64
