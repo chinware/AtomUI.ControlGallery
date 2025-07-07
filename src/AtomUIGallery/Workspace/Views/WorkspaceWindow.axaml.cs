@@ -15,17 +15,12 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
 #endif
         DataContext = new WorkspaceWindowViewModel();
         InitializeComponent();
+    }
 
-        LayoutUpdated += (sender, args) =>
-        {
-            var screen = Screens.Primary;
-            if (screen != null)
-            {
-                Position = new PixelPoint(
-                    (int)((screen.Bounds.Width - DesiredSize.Width * RenderScaling) / 2),
-                    (int)((screen.Bounds.Height - DesiredSize.Width * RenderScaling) / 2)
-                );
-            }
-        };
+    public override void Show()
+    {
+        base.Show();
+        Height    = double.NaN;
+        Width     = double.NaN;
     }
 }

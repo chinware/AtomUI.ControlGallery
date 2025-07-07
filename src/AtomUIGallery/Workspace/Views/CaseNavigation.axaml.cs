@@ -47,6 +47,10 @@ public partial class CaseNavigation : UserControl
             }
             current = current.Parent;
         }
+        if (DataContext is CaseNavigationViewModel caseNavigationViewModel)
+        {
+            caseNavigationViewModel.NavigateTo(AboutUsViewModel.ID);
+        }
     }
 
     protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
@@ -56,11 +60,6 @@ public partial class CaseNavigation : UserControl
         if (topLevel is Window window)
         {
             window.AddHandler(InputElement.KeyDownEvent, OnGlobalKeyDown, RoutingStrategies.Tunnel);
-        }
-
-        if (DataContext is CaseNavigationViewModel caseNavigationViewModel)
-        {
-            caseNavigationViewModel.NavigateTo(AboutUsViewModel.ID);
         }
     }
     

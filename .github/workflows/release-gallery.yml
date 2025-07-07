@@ -25,7 +25,6 @@ env:
 jobs:
    BuildAtomUIGalleryDmgX64Installers:
       name: Build macOS x86_64 DMG Installer
-      if: ${{ false }}
       runs-on: macos-13
       steps:
          -  name: Checkout code
@@ -101,7 +100,6 @@ jobs:
                
    BuildAtomUIGalleryDmgArm64Installers:
       name: Build macOS arm64 DMG Installer
-      if: ${{ false }}
       runs-on: macos-latest
       steps:
          -  name: Checkout code

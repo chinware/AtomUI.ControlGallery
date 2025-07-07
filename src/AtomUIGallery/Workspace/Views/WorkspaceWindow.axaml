@@ -7,8 +7,9 @@
              Icon="/Assets/AtomUIGallery.ico"
              Title="AtomUI Gallery"
              WindowState="Normal"
-             SizeToContent="WidthAndHeight"
              WindowStartupLocation="CenterScreen"
+             Height="800"
+             Width="1200"
              >
     <DockPanel LastChildFill="True">
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
