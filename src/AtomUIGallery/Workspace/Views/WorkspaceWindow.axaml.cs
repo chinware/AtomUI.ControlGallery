@@ -1,8 +1,6 @@
 ﻿using AtomUI.ReactiveUI;
 using AtomUIGallery.Workspace.ViewModes;
 using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Layout;
 
 namespace AtomUIGallery.Workspace.Views;
 
