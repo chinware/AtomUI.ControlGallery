@@ -15,7 +15,6 @@
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
         <rxui:RoutedViewHost Router="{Binding Router}"
                              PageTransition="{x:Null}"
-                             Margin="10"
                              ClipToBounds="True"/>
     </DockPanel>
 </atom:Window>

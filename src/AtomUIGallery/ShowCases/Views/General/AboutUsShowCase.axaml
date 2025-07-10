@@ -3,7 +3,8 @@
              x:Class="AtomUIGallery.ShowCases.Views.AboutUsShowCase"
              xmlns:atom="https://atomui.net">
     <ScrollViewer HorizontalScrollBarVisibility="Auto"
-                  VerticalScrollBarVisibility="Auto">
+                  VerticalScrollBarVisibility="Auto"
+                  AllowAutoHide="False">
         <StackPanel MinWidth="800" MinHeight="600">
             <Image Source="/Assets/qinware-logo.png"
                    HorizontalAlignment="Center"
