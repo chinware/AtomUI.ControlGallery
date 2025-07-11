@@ -54,6 +54,8 @@
         </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="Data Display" Icon="{atom:IconProvider Kind=AreaChartOutlined}">
+            <atom:NavMenuItem Header="Avatar"
+                              ItemKey="{x:Static viewmodels:AvatarViewModel.ID}" />
             <atom:NavMenuItem Header="Badge"
                               ItemKey="{x:Static viewmodels:BadgeViewModel.ID}" />
             <atom:NavMenuItem Header="Calendar"
