@@ -34,7 +34,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
             SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
-
+            
             SortAgeBtn.Click                += HandleSortAgeBtnClick;
             ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
             ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
@@ -44,7 +44,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             ColumnCheckBox4.IsChecked       =  true;
             ColumnCheckBox5.IsChecked       =  true;
             ColumnCheckBox6.IsChecked       =  true;
-
+            
             ColumnCheckBox1.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox2.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox3.IsCheckedChanged += HandleColumnVisibleChanged;
@@ -103,7 +103,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             {
                 columnIndex = 5;
             }
-
+        
             if (columnIndex != -1)
             {
                 var column = columns[columnIndex];
