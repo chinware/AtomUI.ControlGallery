@@ -47,6 +47,7 @@ public class CaseNavigationViewModel : ReactiveObject
 
     private void RegisterDataDisplayViewModels()
     {
+        _showCaseViewModelFactories.Add(AvatarViewModel.ID, () => new AvatarViewModel(HostScreen));
         _showCaseViewModelFactories.Add(BadgeViewModel.ID, () => new BadgeViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CalendarViewModel.ID, () => new CalendarViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CollapseViewModel.ID, () => new CollapseViewModel(HostScreen));

@@ -29,6 +29,7 @@ internal static class ShowCaseRegister
     
     private static void RegisterDataDisplayCases()
     {
+        Locator.CurrentMutable.Register(() => new AvatarShowCase(), typeof(IViewFor<AvatarViewModel>));
         Locator.CurrentMutable.Register(() => new BadgeShowCase(), typeof(IViewFor<BadgeViewModel>));
         Locator.CurrentMutable.Register(() => new CalendarShowCase(), typeof(IViewFor<CalendarViewModel>));
         Locator.CurrentMutable.Register(() => new CollapseShowCase(), typeof(IViewFor<CollapseViewModel>));

@@ -30,6 +30,11 @@
         <AvaloniaResource Include="Assets/ATOMUI-LOGO.png"/>
         <AvaloniaResource Include="Assets/avalonia-logo.ico"/>
         <AvaloniaResource Include="Assets/EmptyShowCase/empty.svg"/>
+        <AvaloniaResource Include="Assets/AvatarShowCase/AntDesign.svg"/>
+        <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar1.svg"/>
+        <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar2.svg"/>
+        <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar3.svg"/>
+        <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar4.png"/>
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
         <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
         <AvaloniaResource Include="Assets/qinware-logo.png"/>

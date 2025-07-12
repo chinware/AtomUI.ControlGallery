@@ -3,25 +3,24 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.ViewModels;
 
-public class BadgeViewModel : ReactiveObject,
-                                      IRoutableViewModel,
-                                      IActivatableViewModel
+public class BadgeViewModel : ReactiveObject, IRoutableViewModel, IActivatableViewModel
 {
     public ViewModelActivator Activator { get; }
-    
+
     public const string ID = "BadgeShowCase";
-    
+
     public IScreen HostScreen { get; }
-    
+
     public string UrlPathSegment { get; } = ID;
 
     private double _dynamicBadgeCount = 5;
+
     public double DynamicBadgeCount
     {
         get => _dynamicBadgeCount;
         set => this.RaiseAndSetIfChanged(ref _dynamicBadgeCount, value);
     }
-    
+
     private bool _dynamicDotBadgeVisible = true;
 
     public bool DynamicDotBadgeVisible
@@ -45,7 +44,7 @@ public class BadgeViewModel : ReactiveObject,
         get => _standaloneBadgeCount1;
         set => this.RaiseAndSetIfChanged(ref _standaloneBadgeCount1, value);
     }
-    
+
     private double _standaloneBadgeCount2;
 
     public double StandaloneBadgeCount2
@@ -53,7 +52,7 @@ public class BadgeViewModel : ReactiveObject,
         get => _standaloneBadgeCount2;
         set => this.RaiseAndSetIfChanged(ref _standaloneBadgeCount2, value);
     }
-    
+
     private double _standaloneBadgeCount3;
 
     public double StandaloneBadgeCount3
@@ -89,12 +88,12 @@ public class BadgeViewModel : ReactiveObject,
             StandaloneBadgeCount3 = 0;
         }
     }
-    
+
     public void AddDynamicBadgeCount()
     {
         DynamicBadgeCount += 1;
     }
-    
+
     public void SubDynamicBadgeCount()
     {
         var value = DynamicBadgeCount;
@@ -102,7 +101,7 @@ public class BadgeViewModel : ReactiveObject,
         value             =  Math.Max(value, 0);
         DynamicBadgeCount =  value;
     }
-    
+
     public void RandomDynamicBadgeCount()
     {
         var random = new Random();
