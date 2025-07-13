@@ -510,7 +510,7 @@
                                       OccupyEntireRow="True">
         
             <atom:DataGrid x:Name="FixedColumnsDataGrid"
-                           FrozenColumnCount="2"
+                           LeftFrozenColumnCount="2"
                            HeadersVisibility="All">
                 <atom:DataGrid.RowHeaderContentTemplate>
                     <DataTemplate>
