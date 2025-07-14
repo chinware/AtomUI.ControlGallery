@@ -21,17 +21,19 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<GroupHeaderDataType> GroupHeaderDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedHeaderDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedColumnsDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> FixedColumnsAndHeadersDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
-        HostScreen                = screen;
-        BasicCaseDataSource       = new ObservableCollection<DataGridBaseInfo>();
-        FilterAndSorterDataSource = new ObservableCollection<DataGridBaseInfo>();
-        MultiSorterDataSource     = new ObservableCollection<MultiSorterDataType>();
-        ExpandableRowDataSource   = new ObservableCollection<ExpandableRowDataType>();
-        GroupHeaderDataSource     = new ObservableCollection<GroupHeaderDataType>();
-        FixedHeaderDataSource     = new ObservableCollection<DataGridBaseInfo>();
-        FixedColumnsDataSource    = new ObservableCollection<DataGridBaseInfo>();
+        HostScreen                       = screen;
+        BasicCaseDataSource              = new ObservableCollection<DataGridBaseInfo>();
+        FilterAndSorterDataSource        = new ObservableCollection<DataGridBaseInfo>();
+        MultiSorterDataSource            = new ObservableCollection<MultiSorterDataType>();
+        ExpandableRowDataSource          = new ObservableCollection<ExpandableRowDataType>();
+        GroupHeaderDataSource            = new ObservableCollection<GroupHeaderDataType>();
+        FixedHeaderDataSource            = new ObservableCollection<DataGridBaseInfo>();
+        FixedColumnsDataSource           = new ObservableCollection<DataGridBaseInfo>();
+        FixedColumnsAndHeadersDataSource = new ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -39,6 +41,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitGroupDataDataSource();
         InitFixedHeaderDataSource();
         InitFixedColumnsDataSource();
+        InitFixedColumnsAndHeadersDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -175,6 +178,22 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             new DataGridBaseInfo { Key = "2", Name = "Jim Green", Age  = 42, Address = "London No. 1 Lake Park" },
         };
         FixedColumnsDataSource.AddRange(items);
+    }
+    
+    private void InitFixedColumnsAndHeadersDataSource()
+    {
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
+        for (var i = 0; i < 30; i++)
+        {
+            items.Add(new DataGridBaseInfo()
+            {
+                Key     = i.ToString(),
+                Name    = $"Edward King {i}",
+                Age     = 32,
+                Address = $"London No. 1 Lake Park {i}",
+            });
+        }
+        FixedColumnsAndHeadersDataSource.AddRange(items);
     }
 }
 

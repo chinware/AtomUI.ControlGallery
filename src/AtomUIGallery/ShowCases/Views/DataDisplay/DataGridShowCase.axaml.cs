@@ -15,23 +15,24 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                BasicCaseGrid.ItemsSource                 = viewModel.BasicCaseDataSource;
-                SelectionDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
-                FilterAndSortGrid.ItemsSource             = viewModel.FilterAndSorterDataSource;
-                FilterInTreeGrid.ItemsSource              = viewModel.FilterAndSorterDataSource;
-                MultiSorterDataGrid.ItemsSource           = viewModel.MultiSorterDataSource;
-                ResetFilterAndSortGrid.ItemsSource        = viewModel.BasicCaseDataSource;
-                LargeSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
-                MiddleSizeDataGrid.ItemsSource            = viewModel.BasicCaseDataSource;
-                SmallSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
-                CustomHeaderAndFooterDataGrid.ItemsSource = viewModel.BasicCaseDataSource;
-                ExpandableDataGrid.ItemsSource            = viewModel.ExpandableRowDataSource;
-                OrderSpecificColumnDataGrid.ItemsSource   = viewModel.ExpandableRowDataSource;
-                RowAndColumnHeaderDataGrid.ItemsSource    = viewModel.ExpandableRowDataSource;
-                GroupHeaderDataGrid.ItemsSource           = viewModel.GroupHeaderDataSource;
-                HideColumnDataGrid.ItemsSource            = viewModel.BasicCaseDataSource;
-                FixedHeaderDataGrid.ItemsSource           = viewModel.FixedHeaderDataSource;
-                FixedColumnsDataGrid.ItemsSource          = viewModel.FixedColumnsDataSource;
+                BasicCaseGrid.ItemsSource                  = viewModel.BasicCaseDataSource;
+                SelectionDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
+                FilterAndSortGrid.ItemsSource              = viewModel.FilterAndSorterDataSource;
+                FilterInTreeGrid.ItemsSource               = viewModel.FilterAndSorterDataSource;
+                MultiSorterDataGrid.ItemsSource            = viewModel.MultiSorterDataSource;
+                ResetFilterAndSortGrid.ItemsSource         = viewModel.BasicCaseDataSource;
+                LargeSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
+                MiddleSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
+                SmallSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
+                CustomHeaderAndFooterDataGrid.ItemsSource  = viewModel.BasicCaseDataSource;
+                ExpandableDataGrid.ItemsSource             = viewModel.ExpandableRowDataSource;
+                OrderSpecificColumnDataGrid.ItemsSource    = viewModel.ExpandableRowDataSource;
+                RowAndColumnHeaderDataGrid.ItemsSource     = viewModel.ExpandableRowDataSource;
+                GroupHeaderDataGrid.ItemsSource            = viewModel.GroupHeaderDataSource;
+                HideColumnDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
+                FixedHeaderDataGrid.ItemsSource            = viewModel.FixedHeaderDataSource;
+                FixedColumnsDataGrid.ItemsSource           = viewModel.FixedColumnsDataSource;
+                FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
             }
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
