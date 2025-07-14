@@ -17,11 +17,11 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> FilterAndSorterDataSource { get; }
     public ObservableCollection<MultiSorterDataType> MultiSorterDataSource { get; }
     public ObservableCollection<ExpandableRowDataType> ExpandableRowDataSource { get; }
-    
     public ObservableCollection<GroupHeaderDataType> GroupHeaderDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedHeaderDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedColumnsDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedColumnsAndHeadersDataSource { get; }
+    public ObservableCollection<DragColumnDataType> DragColumnDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -34,6 +34,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         FixedHeaderDataSource            = new ObservableCollection<DataGridBaseInfo>();
         FixedColumnsDataSource           = new ObservableCollection<DataGridBaseInfo>();
         FixedColumnsAndHeadersDataSource = new ObservableCollection<DataGridBaseInfo>();
+        DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -42,6 +43,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitFixedHeaderDataSource();
         InitFixedColumnsDataSource();
         InitFixedColumnsAndHeadersDataSource();
+        InitDragColumnDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -195,6 +197,44 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         }
         FixedColumnsAndHeadersDataSource.AddRange(items);
     }
+
+    private void InitDragColumnDataSource()
+    {
+        List<DragColumnDataType> items = new List<DragColumnDataType>();
+        items.Add(new DragColumnDataType()
+        {
+            Name = "John Brown",
+            Gender = "male",
+            Age = 32,
+            Email = "John Brown@example.com",
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DragColumnDataType()
+        {
+            Name    = "Jim Green",
+            Gender  = "female",
+            Age     = 42,
+            Email   = "jimGreen@example.com",
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DragColumnDataType()
+        {
+            Name   = "Joe Black",
+            Gender = "female",
+            Age    = 32,
+            Email  = "JoeBlack@example.com",
+            Address = "Sidney No. 1 Lake Park"
+        });
+        items.Add(new DragColumnDataType()
+        {
+            Name    = "George Hcc",
+            Gender  = "male",
+            Age     = 20,
+            Email   = "george@example.com",
+            Address = "Sidney No. 1 Lake Park"
+        });
+        DragColumnDataSource.AddRange(items);
+    }
 }
 
 public class DataGridBaseInfo
@@ -238,4 +278,13 @@ public class GroupHeaderDataType
     public string CompanyName { get; set; } = string.Empty;
     public string Gender { get; set; } = string.Empty;
     public int Number { get; set; }
+}
+
+public class DragColumnDataType
+{
+    public string Name { get; set; } = string.Empty;
+    public int Age { get; set; }
+    public string Address { get; set; } = string.Empty;
+    public string Gender { get; set; } = string.Empty;
+    public string Email { get; set; } = string.Empty;
 }
