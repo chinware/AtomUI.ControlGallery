@@ -22,6 +22,8 @@
         </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="Navigation" Icon="{atom:IconProvider Kind=MenuOutlined}">
+            <atom:NavMenuItem Header="Breadcrumb"
+                              ItemKey="{x:Static viewmodels:BreadcrumbViewModel.ID}" />
             <atom:NavMenuItem Header="ComboBox"
                               ItemKey="{x:Static viewmodels:ComboBoxViewModel.ID}" />
             <atom:NavMenuItem Header="DropdownButton"

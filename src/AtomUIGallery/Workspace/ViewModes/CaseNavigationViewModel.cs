@@ -91,6 +91,7 @@ public class CaseNavigationViewModel : ReactiveObject
 
     private void RegisterNavigationViewModels()
     {
+        _showCaseViewModelFactories.Add(BreadcrumbViewModel.ID, () => new BreadcrumbViewModel(HostScreen));
         _showCaseViewModelFactories.Add(ButtonSpinnerViewModel.ID, () => new ButtonSpinnerViewModel(HostScreen));
         _showCaseViewModelFactories.Add(ComboBoxViewModel.ID, () => new ComboBoxViewModel(HostScreen));
         _showCaseViewModelFactories.Add(DropdownButtonViewModel.ID, () => new DropdownButtonViewModel(HostScreen));
