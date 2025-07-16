@@ -17,7 +17,19 @@ public class ShowCasePanel : TemplatedControl
 
     protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
     {
-        if (Children.Count % 2 != 0)
+        var effectCount = 0;
+        foreach (var child in Children)
+        {
+            if (child is ShowCaseItem showCaseItem)
+            {
+                effectCount++;
+                if (showCaseItem.OccupyEntireRow)
+                {
+                    effectCount++;
+                }
+            }
+        }
+        if (effectCount % 2 != 0)
         {
             var extra = new ShowCaseItem()
             {

@@ -185,7 +185,8 @@
         
         <gallerycontrols:ShowCaseItem
             Title="Top Navigation"
-            Description="Horizontal top navigation menu.">
+            Description="Horizontal top navigation menu."
+            OccupyEntireRow="True">
             <atom:NavMenu>
                 <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" />
                 <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
@@ -208,7 +209,7 @@
         <gallerycontrols:ShowCaseItem
             Title="Vertical menu"
             Description="Submenus open as pop-ups.">
-            <atom:NavMenu Mode="Vertical" Width="256" Margin="0, 0, 0, 20">
+            <atom:NavMenu Mode="Vertical" Width="300" Margin="0, 0, 0, 20">
                 <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" />
                 <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
                                   IsEnabled="False" />
@@ -230,7 +231,7 @@
         <gallerycontrols:ShowCaseItem
             Title="Inline menu"
             Description="Vertical menu with inline submenus.">
-            <atom:NavMenu Mode="Inline" Width="256" Margin="0, 0, 0, 20">
+            <atom:NavMenu Mode="Inline" Width="300" Margin="0, 0, 0, 20">
                 <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" />
                 <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
                                   IsEnabled="False" />
@@ -259,7 +260,7 @@
                     <atom:ToggleSwitch Margin="10, 0, 0, 0" Name="ChangeStyleSwitch" />
                     <atom:TextBlock>Change Style</atom:TextBlock>
                 </StackPanel>
-                <atom:NavMenu Mode="{Binding Mode}" Width="256" Margin="0, 0, 0, 20" IsDarkStyle="{Binding IsDark}">
+                <atom:NavMenu Mode="{Binding Mode}" Width="300" Margin="0, 0, 0, 20" IsDarkStyle="{Binding IsDark}">
                     <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" />
                     <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
                                       IsEnabled="False" />
@@ -280,6 +281,6 @@
             </StackPanel>
         
         </gallerycontrols:ShowCaseItem>
-
+        
     </gallerycontrols:ShowCasePanel>
 </UserControl>
