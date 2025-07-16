@@ -618,7 +618,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Drag sorting with handler"
                                       Description="You can drag the row indicator column to sort the rows."
                                       OccupyEntireRow="True">
@@ -644,6 +644,30 @@
                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
+                   </atom:DataGrid.Columns>
+               </atom:DataGrid>
+           </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem Title="Editable Cells"
+                                      Description="Table with editable cells."
+                                      OccupyEntireRow="True">
+           <StackPanel Spacing="10">
+               <atom:Button ButtonType="Primary" Click="HandleAddARowToCellsEditableGrid">Add a row</atom:Button>
+               <atom:DataGrid x:Name="EditableCellsDataGrid">
+                   <atom:DataGrid.Columns>
+                       <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                       <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"/>
+                       <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                       <atom:DataGridTemplateColumn Header="Action">
+                           <atom:DataGridTemplateColumn.CellTemplate>
+                               <DataTemplate>
+                                   <StackPanel Orientation="Horizontal" Spacing="15">
+                                       <atom:HyperLinkTextBlock Text="Delete" />
+                                   </StackPanel>
+                               </DataTemplate>
+                           </atom:DataGridTemplateColumn.CellTemplate>
+                       </atom:DataGridTemplateColumn>
                    </atom:DataGrid.Columns>
                </atom:DataGrid>
            </StackPanel>

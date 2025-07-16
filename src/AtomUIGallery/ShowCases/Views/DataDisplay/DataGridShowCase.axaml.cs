@@ -36,6 +36,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 DragColumnDataGrid.ItemsSource             = viewModel.DragColumnDataSource;
                 DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
                 CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
+                EditableCellsDataGrid.ItemsSource = viewModel.EditableCellsDataSource;
             }
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
@@ -147,5 +148,10 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
             }
         }
+    }
+
+    private void HandleAddARowToCellsEditableGrid(object? sender, RoutedEventArgs? eventArgs)
+    {
+        
     }
 }

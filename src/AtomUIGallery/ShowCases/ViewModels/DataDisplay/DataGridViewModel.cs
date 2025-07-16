@@ -24,6 +24,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DragColumnDataType> DragColumnDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> DragRowDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> CustomEmptyDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> EditableCellsDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -39,6 +40,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
         DragRowDataSource                = new ObservableCollection<DataGridBaseInfo>();
         CustomEmptyDataSource            = new ObservableCollection<DataGridBaseInfo>();
+        EditableCellsDataSource          = new  ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -50,6 +52,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitDragColumnDataSource();
         InitDragRowDataSource();
         InitCustomEmptyDataSource();
+        InitEditableCellsDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -315,6 +318,24 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             Address = "Sidney No. 2 Lake Park"
         });
         CustomEmptyDataSource.AddRange(items);
+    }
+
+    private void InitEditableCellsDataSource()
+    {
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "John Brown",
+            Age     = 32,
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Jim Green",
+            Age     = 42,
+            Address = "London No. 3 Lake Park"
+        });
+        EditableCellsDataSource.AddRange(items);
     }
 }
 
