@@ -22,6 +22,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> FixedColumnsDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> FixedColumnsAndHeadersDataSource { get; }
     public ObservableCollection<DragColumnDataType> DragColumnDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> DragRowDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -35,6 +36,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         FixedColumnsDataSource           = new ObservableCollection<DataGridBaseInfo>();
         FixedColumnsAndHeadersDataSource = new ObservableCollection<DataGridBaseInfo>();
         DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
+        DragRowDataSource                = new ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -44,6 +46,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitFixedColumnsDataSource();
         InitFixedColumnsAndHeadersDataSource();
         InitDragColumnDataSource();
+        InitDragRowDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -118,17 +121,17 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             },
             new ExpandableRowDataType
             {
-                Key         = "2", Name = "Jim Green", Age  = 42, Address = "London No. 1 Lake Park",
+                Key         = "2", Name = "Jim Green", Age = 42, Address = "London No. 1 Lake Park",
                 Description = "London No. 1 Lake Park"
             },
             new ExpandableRowDataType
             {
-                Key         = "3", Name = "Joe Black", Age  = 32, Address = "Sydney No. 1 Lake Park",
+                Key         = "3", Name = "Joe Black", Age = 32, Address = "Sydney No. 1 Lake Park",
                 Description = "My name is Joe Black, I am 32 years old, living in Sydney No. 1 Lake Park."
             },
             new ExpandableRowDataType
             {
-                Key         = "5", Name = "Joe Red", Age    = 78, Address = "London No. 2 Lake Park",
+                Key         = "5", Name = "Joe Red", Age = 78, Address = "London No. 2 Lake Park",
                 Description = "My name is Joe Black, I am 78 years old, London No. 2 Lake Park"
             }
         ];
@@ -153,12 +156,13 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
                 Gender         = "M"
             });
         }
+
         GroupHeaderDataSource.AddRange(items);
     }
 
     private void InitFixedHeaderDataSource()
     {
-        List<DataGridBaseInfo> items = new  List<DataGridBaseInfo>();
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
         for (var i = 0; i < 30; i++)
         {
             items.Add(new DataGridBaseInfo()
@@ -169,19 +173,20 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
                 Address = $"London No. 1 Lake Park {i}",
             });
         }
+
         FixedHeaderDataSource.AddRange(items);
     }
 
     private void InitFixedColumnsDataSource()
     {
-        List<DataGridBaseInfo> items = new  List<DataGridBaseInfo>()
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>()
         {
             new DataGridBaseInfo { Key = "1", Name = "John Brown", Age = 32, Address = "New York No. 1 Lake Park" },
             new DataGridBaseInfo { Key = "2", Name = "Jim Green", Age  = 42, Address = "London No. 1 Lake Park" },
         };
         FixedColumnsDataSource.AddRange(items);
     }
-    
+
     private void InitFixedColumnsAndHeadersDataSource()
     {
         List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
@@ -195,6 +200,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
                 Address = $"London No. 1 Lake Park {i}",
             });
         }
+
         FixedColumnsAndHeadersDataSource.AddRange(items);
     }
 
@@ -203,10 +209,10 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         List<DragColumnDataType> items = new List<DragColumnDataType>();
         items.Add(new DragColumnDataType()
         {
-            Name = "John Brown",
-            Gender = "male",
-            Age = 32,
-            Email = "John Brown@example.com",
+            Name    = "John Brown",
+            Gender  = "male",
+            Age     = 32,
+            Email   = "John Brown@example.com",
             Address = "London No. 1 Lake Park"
         });
         items.Add(new DragColumnDataType()
@@ -219,10 +225,10 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         });
         items.Add(new DragColumnDataType()
         {
-            Name   = "Joe Black",
-            Gender = "female",
-            Age    = 32,
-            Email  = "JoeBlack@example.com",
+            Name    = "Joe Black",
+            Gender  = "female",
+            Age     = 32,
+            Email   = "JoeBlack@example.com",
             Address = "Sidney No. 1 Lake Park"
         });
         items.Add(new DragColumnDataType()
@@ -234,6 +240,36 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             Address = "Sidney No. 1 Lake Park"
         });
         DragColumnDataSource.AddRange(items);
+    }
+
+    private void InitDragRowDataSource()
+    {
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "John Brown",
+            Age     = 32,
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Jim Green",
+            Age     = 42,
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Joe Black",
+            Age     = 32,
+            Address = "Sidney No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "George Hcc",
+            Age     = 20,
+            Address = "Sidney No. 1 Lake Park"
+        });
+        DragRowDataSource.AddRange(items);
     }
 }
 

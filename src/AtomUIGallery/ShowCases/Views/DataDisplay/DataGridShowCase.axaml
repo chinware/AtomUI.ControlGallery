@@ -619,5 +619,19 @@
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
 
+        <gallerycontrols:ShowCaseItem Title="Drag sorting with handler"
+                                      Description="You can drag the row indicator column to sort the rows."
+                                      OccupyEntireRow="True">
+            <atom:DataGrid x:Name="DragRowDataGrid"
+                           CanUserReorderRows="True">
+                <atom:DataGrid.Columns>
+                    <atom:DataGridRowReorderColumn />
+                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
+                </atom:DataGrid.Columns>
+            </atom:DataGrid>
+        </gallerycontrols:ShowCaseItem>
+
     </gallerycontrols:ShowCasePanel>
 </UserControl>

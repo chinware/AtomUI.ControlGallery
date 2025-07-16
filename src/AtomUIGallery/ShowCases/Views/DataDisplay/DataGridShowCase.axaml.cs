@@ -34,11 +34,12 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 FixedColumnsDataGrid.ItemsSource           = viewModel.FixedColumnsDataSource;
                 FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
                 DragColumnDataGrid.ItemsSource             = viewModel.DragColumnDataSource;
+                DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
             }
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
             SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
-            
+
             SortAgeBtn.Click                += HandleSortAgeBtnClick;
             ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
             ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
@@ -48,7 +49,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             ColumnCheckBox4.IsChecked       =  true;
             ColumnCheckBox5.IsChecked       =  true;
             ColumnCheckBox6.IsChecked       =  true;
-            
+
             ColumnCheckBox1.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox2.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox3.IsCheckedChanged += HandleColumnVisibleChanged;
@@ -107,7 +108,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             {
                 columnIndex = 5;
             }
-        
+
             if (columnIndex != -1)
             {
                 var column = columns[columnIndex];
@@ -128,7 +129,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        ResetFilterAndSortGrid.ClearFilters();
-        ResetFilterAndSortGrid.ClearSort();
+        // ResetFilterAndSortGrid.ClearFilters();
+        // ResetFilterAndSortGrid.ClearSort();
     }
 }
