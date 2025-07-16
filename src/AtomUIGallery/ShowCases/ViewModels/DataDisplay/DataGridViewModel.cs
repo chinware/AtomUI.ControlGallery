@@ -23,6 +23,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> FixedColumnsAndHeadersDataSource { get; }
     public ObservableCollection<DragColumnDataType> DragColumnDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> DragRowDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> CustomEmptyDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -37,6 +38,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         FixedColumnsAndHeadersDataSource = new ObservableCollection<DataGridBaseInfo>();
         DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
         DragRowDataSource                = new ObservableCollection<DataGridBaseInfo>();
+        CustomEmptyDataSource            = new ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -47,6 +49,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitFixedColumnsAndHeadersDataSource();
         InitDragColumnDataSource();
         InitDragRowDataSource();
+        InitCustomEmptyDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -270,6 +273,48 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             Address = "Sidney No. 1 Lake Park"
         });
         DragRowDataSource.AddRange(items);
+    }
+
+    private void InitCustomEmptyDataSource()
+    {
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "John Brown",
+            Age     = 32,
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Jim Green",
+            Age     = 42,
+            Address = "London No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Joe Black",
+            Age     = 32,
+            Address = "Sidney No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "George Hcc",
+            Age     = 18,
+            Address = "Sidney No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "Joe Black",
+            Age     = 32,
+            Address = "Sidney No. 1 Lake Park"
+        });
+        items.Add(new DataGridBaseInfo()
+        {
+            Name    = "George Hcc",
+            Age     = 44,
+            Address = "Sidney No. 2 Lake Park"
+        });
+        CustomEmptyDataSource.AddRange(items);
     }
 }
 

@@ -632,6 +632,22 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem Title="Custom empty"
+                                      Description="Custom empty status."
+                                      OccupyEntireRow="True">
+           <StackPanel Spacing="10">
+               <atom:Button ButtonType="Primary" Click="HandleToggleEmptyGridItemsSource">Toggle Data</atom:Button>
+               <atom:DataGrid x:Name="CustomEmptyDataGrid"
+                              CanUserReorderRows="True">
+                   <atom:DataGrid.Columns>
+                       <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
+                       <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
+                       <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
+                   </atom:DataGrid.Columns>
+               </atom:DataGrid>
+           </StackPanel>
+        </gallerycontrols:ShowCaseItem>
 
     </gallerycontrols:ShowCasePanel>
 </UserControl>

@@ -35,11 +35,12 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
                 DragColumnDataGrid.ItemsSource             = viewModel.DragColumnDataSource;
                 DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
+                CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
             }
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
             SingleSelection.IsCheckedChanged   += SelectionModeCheckedChanged;
-
+            
             SortAgeBtn.Click                += HandleSortAgeBtnClick;
             ClearFiltersBtn.Click           += HandleClearFiltersBtnClick;
             ClearFiltersAndSortersBtn.Click += HandleClearFiltersAndSortersBtnClick;
@@ -49,7 +50,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             ColumnCheckBox4.IsChecked       =  true;
             ColumnCheckBox5.IsChecked       =  true;
             ColumnCheckBox6.IsChecked       =  true;
-
+            
             ColumnCheckBox1.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox2.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox3.IsCheckedChanged += HandleColumnVisibleChanged;
@@ -108,7 +109,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             {
                 columnIndex = 5;
             }
-
+            
             if (columnIndex != -1)
             {
                 var column = columns[columnIndex];
@@ -124,12 +125,27 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        ResetFilterAndSortGrid.ClearFilters();
+       ResetFilterAndSortGrid.ClearFilters();
     }
 
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        // ResetFilterAndSortGrid.ClearFilters();
-        // ResetFilterAndSortGrid.ClearSort();
+        ResetFilterAndSortGrid.ClearFilters();
+        ResetFilterAndSortGrid.ClearSort();
+    }
+
+    private void HandleToggleEmptyGridItemsSource(object? sender, RoutedEventArgs? eventArgs)
+    {
+        if (CustomEmptyDataGrid.ItemsSource != null)
+        {
+            CustomEmptyDataGrid.ItemsSource = null;
+        }
+        else
+        {
+            if (DataContext is DataGridViewModel viewModel)
+            {
+                CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
+            }
+        }
     }
 }
