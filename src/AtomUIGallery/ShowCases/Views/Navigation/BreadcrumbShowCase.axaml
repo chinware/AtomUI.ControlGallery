@@ -5,12 +5,44 @@
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
-            Title="Basic"
-            Description="Basic breadcrumb.">
+            Title="Basic Usage"
+            Description="The simplest use.">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItems}"
-                                 Separator=">" />
+                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase1}" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="With an Icon"
+            Description="The icon should be placed in front of the text.">
+            <StackPanel>
+                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase2}" />
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="With Params"
+            Description="With route params.">
+            <StackPanel>
+                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase3}" />
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Configuring the Separator"
+            Description="The separator can be customized by setting the separator property: separator='>' ">
+            <StackPanel>
+                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase4}" Separator=">" />
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Configuring the Separator Independently"
+            Description="Customize separator for each other.">
+            <StackPanel>
+                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase5}" />
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
     </gallerycontrols:ShowCasePanel>
 </UserControl>
