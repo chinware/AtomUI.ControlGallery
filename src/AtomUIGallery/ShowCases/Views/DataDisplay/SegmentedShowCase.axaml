@@ -8,7 +8,7 @@
             Title="Basic"
             Description="The most basic usage.">
             <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Spacing="10">
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem>Daily</atom:SegmentedItem>
                     <atom:SegmentedItem>Weekly</atom:SegmentedItem>
                     <atom:SegmentedItem>Monthly</atom:SegmentedItem>
@@ -22,7 +22,7 @@
             Title="Block Segmented"
             Description="block property will make the Segmented fit to its parent width.">
             <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
-                <atom:Segmented IsExpanding="True">
+                <atom:Segmented IsExpanding="True" Margin="20">
                     <atom:SegmentedItem>123</atom:SegmentedItem>
                     <atom:SegmentedItem>456</atom:SegmentedItem>
                     <atom:SegmentedItem>longtext-longtext-longtext-longtext</atom:SegmentedItem>
@@ -34,7 +34,7 @@
             Title="Disabled"
             Description="Disabled Segmented.">
             <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical" Spacing="10">
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem IsEnabled="False">Map</atom:SegmentedItem>
                     <atom:SegmentedItem IsEnabled="False">Transit</atom:SegmentedItem>
                     <atom:SegmentedItem IsEnabled="False">Satellite</atom:SegmentedItem>
@@ -53,7 +53,7 @@
             Title="Three sizes of Segmented"
             Description="There are three sizes of an Segmented: large (40px), default (32px) and small (24px).">
             <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Spacing="10">
-                <atom:Segmented SizeType="Large">
+                <atom:Segmented SizeType="Large" Margin="20">
                     <atom:SegmentedItem>Daily</atom:SegmentedItem>
                     <atom:SegmentedItem>Weekly</atom:SegmentedItem>
                     <atom:SegmentedItem>Monthly</atom:SegmentedItem>
@@ -61,7 +61,7 @@
                     <atom:SegmentedItem>Yearly</atom:SegmentedItem>
                 </atom:Segmented>
 
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem>Daily</atom:SegmentedItem>
                     <atom:SegmentedItem>Weekly</atom:SegmentedItem>
                     <atom:SegmentedItem>Monthly</atom:SegmentedItem>
@@ -69,7 +69,7 @@
                     <atom:SegmentedItem>Yearly</atom:SegmentedItem>
                 </atom:Segmented>
 
-                <atom:Segmented SizeType="Small">
+                <atom:Segmented SizeType="Small" Margin="20">
                     <atom:SegmentedItem>Daily</atom:SegmentedItem>
                     <atom:SegmentedItem>Weekly</atom:SegmentedItem>
                     <atom:SegmentedItem>Monthly</atom:SegmentedItem>
@@ -83,7 +83,7 @@
             Title="With Icon only"
             Description="Set icon without label for Segmented Item.">
             <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Spacing="10">
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=BarsOutlined}" />
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=AppstoreOutlined}" />
                 </atom:Segmented>
@@ -94,14 +94,14 @@
             Title="With Icon"
             Description="Set icon for Segmented Item.">
             <StackPanel HorizontalAlignment="Left" Orientation="Vertical" Spacing="10">
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=BarsOutlined}">
                         List
                     </atom:SegmentedItem>
                     <atom:SegmentedItem Content="Kanban" Icon="{atom:IconProvider Kind=AppstoreOutlined}" />
                 </atom:Segmented>
 
-                <atom:Segmented>
+                <atom:Segmented Margin="20">
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=BarsOutlined}">
                         Ava 牛逼
                     </atom:SegmentedItem>
@@ -112,7 +112,7 @@
 
                 </atom:Segmented>
 
-                <atom:Segmented SizeType="Large">
+                <atom:Segmented SizeType="Large" Margin="20">
                     <atom:SegmentedItem Icon="{atom:IconProvider Kind=BarsOutlined}">
                         Ava 牛逼
                     </atom:SegmentedItem>
