@@ -1,5 +1,4 @@
 using System.Collections.ObjectModel;
-using AtomUI.Controls;
 using DynamicData;
 using ReactiveUI;
 
