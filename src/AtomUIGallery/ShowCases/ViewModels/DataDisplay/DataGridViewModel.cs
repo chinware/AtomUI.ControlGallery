@@ -24,6 +24,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> DragRowDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> CustomEmptyDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> EditableCellsDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> EditableRowsDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -39,7 +40,8 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
         DragRowDataSource                = new ObservableCollection<DataGridBaseInfo>();
         CustomEmptyDataSource            = new ObservableCollection<DataGridBaseInfo>();
-        EditableCellsDataSource          = new  ObservableCollection<DataGridBaseInfo>();
+        EditableCellsDataSource          = new ObservableCollection<DataGridBaseInfo>();
+        EditableRowsDataSource           = new ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -52,6 +54,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitDragRowDataSource();
         InitCustomEmptyDataSource();
         InitEditableCellsDataSource();
+        InitEditableRowsDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -335,6 +338,21 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             Address = "London No. 3 Lake Park"
         });
         EditableCellsDataSource.AddRange(items);
+    }
+
+    private void InitEditableRowsDataSource()
+    {
+        List<DataGridBaseInfo> items = new List<DataGridBaseInfo>();
+        for (int i = 0; i < 30; i++)
+        {
+            items.Add(new  DataGridBaseInfo
+            {
+                Name    = $"Edward {i + 1}",
+                Age    = 32,
+                Address = $"London Park no. {i + 1}"
+            });
+        }
+        EditableRowsDataSource.AddRange(items);
     }
 }
 
