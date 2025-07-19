@@ -684,8 +684,9 @@
             <atom:DataGrid x:Name="EditableRowsDataGrid" Height="400">
                 <atom:DataGrid.Columns>
                     <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True"/>
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                    <atom:DataGridOperationColumn Header="Operations"/>
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
