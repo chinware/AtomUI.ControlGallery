@@ -440,28 +440,25 @@
         <gallerycontrols:ShowCaseItem Title="Grouping table head"
                                       Description="Group table head with columns[n].children." OccupyEntireRow="true">
             <StackPanel>
-                <atom:DataGrid Name="GroupHeaderDataGrid">
+                <atom:DataGrid Name="GroupHeaderDataGrid" LeftFrozenColumnCount="2"
+                               RightFrozenColumnCount="2">
                     <atom:DataGrid.ColumnGroups>
-                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
                         <atom:DataGridColumnGroupItem Header="Other">
-                            <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                            <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
                             <atom:DataGridColumnGroupItem Header="Address">
-                                <atom:DataGridTextColumn Header="Street" Binding="{Binding Street}" IsReadOnly="True" />
+                                <atom:DataGridTextColumn Header="Street" Binding="{Binding Street}" />
                                 <atom:DataGridColumnGroupItem Header="Block">
-                                    <atom:DataGridTextColumn Header="Building" Binding="{Binding Building}"
-                                                             IsReadOnly="True" />
-                                    <atom:DataGridTextColumn Header="Door No." Binding="{Binding Number}"
-                                                             IsReadOnly="True" />
+                                    <atom:DataGridTextColumn Header="Building" Binding="{Binding Building}"/>
+                                    <atom:DataGridTextColumn Header="Door No." Binding="{Binding Number}"/>
                                 </atom:DataGridColumnGroupItem>
                             </atom:DataGridColumnGroupItem>
                         </atom:DataGridColumnGroupItem>
                         <atom:DataGridColumnGroupItem Header="Company">
-                            <atom:DataGridTextColumn Header="Company Address" Binding="{Binding CompanyAddress}"
-                                                     IsReadOnly="True" />
-                            <atom:DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}"
-                                                     IsReadOnly="True" />
+                            <atom:DataGridTextColumn Header="Company Address" Binding="{Binding CompanyAddress}"/>
+                            <atom:DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}"/>
                         </atom:DataGridColumnGroupItem>
-                        <atom:DataGridTextColumn Header="Gender" Binding="{Binding Gender}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Gender" Binding="{Binding Gender}"  />
                     </atom:DataGrid.ColumnGroups>
                 </atom:DataGrid>
             </StackPanel>
@@ -648,7 +645,7 @@
                </atom:DataGrid>
            </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Editable Cells"
                                       Description="Table with editable cells."
                                       OccupyEntireRow="True">
