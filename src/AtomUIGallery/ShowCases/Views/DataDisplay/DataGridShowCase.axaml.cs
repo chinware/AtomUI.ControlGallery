@@ -36,6 +36,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
                 DragColumnDataGrid1.ItemsSource = viewModel.DragColumnDataSource;
                 DragColumnDataGrid2.ItemsSource = viewModel.DragColumnDataSource;
+                DragColumnDataGrid3.ItemsSource = viewModel.DragColumnDataSource;
                 DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
                 CustomEmptyDataGrid.ItemsSource            = viewModel.CustomEmptyDataSource;
                 EditableCellsDataGrid.ItemsSource          = viewModel.EditableCellsDataSource;
@@ -128,7 +129,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-       ResetFilterAndSortGrid.ClearFilters();
+      ResetFilterAndSortGrid.ClearFilters();
     }
 
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
