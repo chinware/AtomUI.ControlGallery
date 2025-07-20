@@ -34,7 +34,8 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 FixedColumnsDataGrid1.ItemsSource = viewModel.FixedColumnsDataSource;
                 FixedColumnsDataGrid2.ItemsSource = viewModel.FixedColumnsDataSource;
                 FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
-                DragColumnDataGrid.ItemsSource             = viewModel.DragColumnDataSource;
+                DragColumnDataGrid1.ItemsSource = viewModel.DragColumnDataSource;
+                DragColumnDataGrid2.ItemsSource = viewModel.DragColumnDataSource;
                 DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
                 CustomEmptyDataGrid.ItemsSource            = viewModel.CustomEmptyDataSource;
                 EditableCellsDataGrid.ItemsSource          = viewModel.EditableCellsDataSource;
@@ -122,12 +123,12 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleSortAgeBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
+       ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
     }
 
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        ResetFilterAndSortGrid.ClearFilters();
+       ResetFilterAndSortGrid.ClearFilters();
     }
 
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
