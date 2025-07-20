@@ -14,8 +14,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                     <atom:DataGridTemplateColumn Header="Tags">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -67,8 +67,8 @@
                                 </DataTemplate>
                             </atom:DataGridTemplateColumn.CellTemplate>
                         </atom:DataGridTemplateColumn>
-                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                         <atom:DataGridTemplateColumn Header="Tags">
                             <atom:DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -127,12 +127,12 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True">
                     </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address"
                                              Binding="{Binding Address}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True"
                                              FilterMultiple="True"
                                              SupportedSortDirections="Ascending">
@@ -170,12 +170,12 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True">
                     </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address"
                                              Binding="{Binding Address}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True"
                                              FilterMultiple="True"
                                              SupportedSortDirections="Ascending">
@@ -195,19 +195,19 @@
                 <atom:DataGrid.Columns>
                     <atom:DataGridTextColumn Header="Name"
                                              Binding="{Binding Name}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="Chinese Score"
                                              Binding="{Binding Chinese}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="Math Score"
                                              Binding="{Binding Math}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="English Score"
                                              Binding="{Binding English}"
-                                             IsReadOnly="True"
+        
                                              CanUserSort="True" />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
@@ -226,7 +226,7 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-                                                 IsReadOnly="True"
+        
                                                  CanUserSort="True"
                                                  FilterMultiple="True">
                             <atom:DataGridTextColumn.Filters>
@@ -239,12 +239,12 @@
                             </atom:DataGridTextColumn.Filters>
                         </atom:DataGridTextColumn>
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                                 IsReadOnly="True"
+        
                                                  CanUserSort="True">
                         </atom:DataGridTextColumn>
                         <atom:DataGridTextColumn Header="Address"
                                                  Binding="{Binding Address}"
-                                                 IsReadOnly="True"
+        
                                                  CanUserSort="True"
                                                  FilterMultiple="True">
                             <atom:DataGridTextColumn.Filters>
@@ -265,12 +265,12 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Address"
                                                  Binding="{Binding Address}"
-                                                 IsReadOnly="True" />
+                                                  />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
         
@@ -278,12 +278,12 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Address"
                                                  Binding="{Binding Address}"
-                                                 IsReadOnly="True" />
+                                                  />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
         
@@ -291,12 +291,12 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-                                                 IsReadOnly="True" />
+                                                  />
                         <atom:DataGridTextColumn Header="Address"
                                                  Binding="{Binding Address}"
-                                                 IsReadOnly="True" />
+                                                  />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
             </StackPanel>
@@ -320,8 +320,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Cash Assets" Binding="{Binding Money}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Cash Assets" Binding="{Binding Money}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
@@ -340,8 +340,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                     <atom:DataGridTemplateColumn Header="Action">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -376,9 +376,9 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridDetailExpanderColumn/>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
                     <atom:DataGridSelectionColumn/>
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                     <atom:DataGridTemplateColumn Header="Action">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -416,8 +416,8 @@
                             </DataTemplate>
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}"  />
                     <atom:DataGridTemplateColumn Header="Action">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -479,12 +479,12 @@
                 <atom:DataGrid x:Name="HideColumnDataGrid"
                                RowDetailsVisibilityMode="Collapsed">
                     <atom:DataGrid.Columns>
-                        <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Name}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Name}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Name}" IsReadOnly="True" />
-                        <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}" IsReadOnly="True" />
+                        <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}"  />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
             </StackPanel>
@@ -495,62 +495,92 @@
                                       OccupyEntireRow="True">
             <atom:DataGrid x:Name="FixedHeaderDataGrid" Height="400">
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-        
+
         <gallerycontrols:ShowCaseItem Title="Fixed Columns"
                                       Description="When there are too many columns, we can make some columns fixed."
                                       OccupyEntireRow="True">
-        
-            <atom:DataGrid x:Name="FixedColumnsDataGrid"
-                           LeftFrozenColumnCount="2"
-                           RightFrozenColumnCount="1"
-                           HeadersVisibility="All">
-                <atom:DataGrid.RowHeaderContentTemplate>
-                    <DataTemplate>
-                        <atom:TextBlock Text="{Binding $parent[atom:DataGridRow].LogicIndex}"/>
-                    </DataTemplate>
-                </atom:DataGrid.RowHeaderContentTemplate>
-                <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 7" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 8" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 9" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 10" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 11" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 12" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 13" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 14" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 15" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 16" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 17" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 18" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 19" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 20" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTemplateColumn Header="Action">
-                        <atom:DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Horizontal" Spacing="15">
-                                    <atom:HyperLinkTextBlock Text="Modify" />
-                                </StackPanel>
-                            </DataTemplate>
-                        </atom:DataGridTemplateColumn.CellTemplate>
-                    </atom:DataGridTemplateColumn>
-                </atom:DataGrid.Columns>
-            </atom:DataGrid>
+
+            <StackPanel Orientation="Vertical" Spacing="20">
+                <atom:DataGrid x:Name="FixedColumnsDataGrid1"
+                               LeftFrozenColumnCount="2"
+                               RightFrozenColumnCount="1"
+                               HeadersVisibility="All">
+                    <atom:DataGrid.RowHeaderContentTemplate>
+                        <DataTemplate>
+                            <atom:TextBlock Text="{Binding $parent[atom:DataGridRow].LogicIndex}" />
+                        </DataTemplate>
+                    </atom:DataGrid.RowHeaderContentTemplate>
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                        <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 7" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 8" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 9" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 10" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 11" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 12" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 13" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 14" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 15" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 16" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 17" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 18" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 19" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 20" Binding="{Binding Address}"  />
+                        <atom:DataGridTemplateColumn Header="Action">
+                            <atom:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Spacing="15">
+                                        <atom:HyperLinkTextBlock Text="Modify" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </atom:DataGridTemplateColumn.CellTemplate>
+                        </atom:DataGridTemplateColumn>
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+
+                <atom:DataGrid x:Name="FixedColumnsDataGrid2"
+                               LeftFrozenColumnCount="2"
+                               RightFrozenColumnCount="1"
+                               HeadersVisibility="All">
+                    <atom:DataGrid.RowHeaderContentTemplate>
+                        <DataTemplate>
+                            <atom:TextBlock Text="{Binding $parent[atom:DataGridRow].LogicIndex}" />
+                        </DataTemplate>
+                    </atom:DataGrid.RowHeaderContentTemplate>
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                        <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Address}"  />
+                        <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}"  />
+                        <atom:DataGridTemplateColumn Header="Action">
+                            <atom:DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal" Spacing="15">
+                                        <atom:HyperLinkTextBlock Text="Modify" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </atom:DataGridTemplateColumn.CellTemplate>
+                        </atom:DataGridTemplateColumn>
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+            </StackPanel>
         </gallerycontrols:ShowCaseItem>
-        
+
         <gallerycontrols:ShowCaseItem Title="Fixed Columns"
                                       Description="When there are too many columns, we can make some columns fixed."
                                       OccupyEntireRow="True">
@@ -566,28 +596,28 @@
                     </DataTemplate>
                 </atom:DataGrid.RowHeaderContentTemplate>
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 7" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 8" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 9" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 10" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 11" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 12" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 13" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 14" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 15" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 16" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 17" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 18" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 19" Binding="{Binding Address}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Column 20" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"  />
+                    <atom:DataGridTextColumn Header="Column 1" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 2" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 3" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 4" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 5" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 6" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 7" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 8" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 9" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 10" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 11" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 12" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 13" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 14" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 15" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 16" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 17" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 18" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 19" Binding="{Binding Address}"  />
+                    <atom:DataGridTextColumn Header="Column 20" Binding="{Binding Address}"  />
                     <atom:DataGridTemplateColumn Header="Action">
                         <atom:DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
@@ -607,11 +637,11 @@
             <atom:DataGrid x:Name="DragColumnDataGrid"
                            CanUserReorderColumns="True">
                 <atom:DataGrid.Columns>
-                    <atom:DataGridTextColumn CanUserReorder="True" Header="Gender" Binding="{Binding Gender}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Email" Binding="{Binding Email}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn CanUserReorder="True" Header="Gender" Binding="{Binding Gender}"  />
+                    <atom:DataGridTextColumn Header="Email" Binding="{Binding Email}"  />
+                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
@@ -623,9 +653,9 @@
                            CanUserReorderRows="True">
                 <atom:DataGrid.Columns>
                     <atom:DataGridRowReorderColumn />
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
+                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
@@ -638,9 +668,9 @@
                <atom:DataGrid x:Name="CustomEmptyDataGrid"
                               CanUserReorderRows="True">
                    <atom:DataGrid.Columns>
-                       <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" />
-                       <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" IsReadOnly="True" />
-                       <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}" IsReadOnly="True" />
+                       <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                       <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
+                       <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
                    </atom:DataGrid.Columns>
                </atom:DataGrid>
            </StackPanel>
