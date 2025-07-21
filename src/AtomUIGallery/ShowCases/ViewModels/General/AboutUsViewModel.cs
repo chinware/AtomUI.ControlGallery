@@ -1,4 +1,3 @@
-using AtomUI;
 using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.ViewModels;
