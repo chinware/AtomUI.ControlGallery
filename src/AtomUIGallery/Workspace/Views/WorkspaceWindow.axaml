@@ -8,8 +8,8 @@
              Title="AtomUI Gallery"
              WindowState="Normal"
              WindowStartupLocation="CenterScreen"
-             Height="800"
-             Width="1200"
+             Height="900"
+             Width="1300"
              >
     <DockPanel LastChildFill="True">
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>

@@ -22,6 +22,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> FixedColumnsAndHeadersDataSource { get; }
     public ObservableCollection<DragColumnDataType> DragColumnDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> DragRowDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> DragRowManyDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> CustomEmptyDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> EditableCellsDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> EditableRowsDataSource { get; }
@@ -39,6 +40,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         FixedColumnsAndHeadersDataSource = new ObservableCollection<DataGridBaseInfo>();
         DragColumnDataSource             = new ObservableCollection<DragColumnDataType>();
         DragRowDataSource                = new ObservableCollection<DataGridBaseInfo>();
+        DragRowManyDataSource            = new ObservableCollection<DataGridBaseInfo>();
         CustomEmptyDataSource            = new ObservableCollection<DataGridBaseInfo>();
         EditableCellsDataSource          = new ObservableCollection<DataGridBaseInfo>();
         EditableRowsDataSource           = new ObservableCollection<DataGridBaseInfo>();
@@ -277,7 +279,20 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             Age     = 20,
             Address = "Sidney No. 1 Lake Park"
         });
+        
         DragRowDataSource.AddRange(items);
+
+        var items1 = new List<DataGridBaseInfo>();
+        for (var i = 0; i < 30; i++)
+        {
+            items1.Add(new DataGridBaseInfo()
+            {
+                Name    = "John Brown",
+                Age     = 32,
+                Address = $"London No. {i + 1} Lake Park"
+            });
+        }
+        DragRowManyDataSource.AddRange(items1);
     }
 
     private void InitCustomEmptyDataSource()

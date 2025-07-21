@@ -37,7 +37,8 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 DragColumnDataGrid1.ItemsSource = viewModel.DragColumnDataSource;
                 DragColumnDataGrid2.ItemsSource = viewModel.DragColumnDataSource;
                 DragColumnDataGrid3.ItemsSource = viewModel.DragColumnDataSource;
-                DragRowDataGrid.ItemsSource                = viewModel.DragRowDataSource;
+                DragRowDataGrid1.ItemsSource = viewModel.DragRowDataSource;
+                DragRowDataGrid2.ItemsSource = viewModel.DragRowManyDataSource;
                 CustomEmptyDataGrid.ItemsSource            = viewModel.CustomEmptyDataSource;
                 EditableCellsDataGrid.ItemsSource          = viewModel.EditableCellsDataSource;
             }
@@ -113,7 +114,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             {
                 columnIndex = 5;
             }
-        
+            
             if (columnIndex != -1)
             {
                 var column = columns[columnIndex];

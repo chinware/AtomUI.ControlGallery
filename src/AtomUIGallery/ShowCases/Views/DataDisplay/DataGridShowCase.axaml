@@ -630,7 +630,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Drag Column sorting"
                                       Description="Drag the Header to sort the columns."
                                       OccupyEntireRow="True">
@@ -647,7 +647,7 @@
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-                
+        
                 <atom:Separator Title="Many columns" TitlePosition="Left" Margin="0, 20, 0, 0"
                                 FontWeight="Bold" />
                 <atom:DataGrid x:Name="DragColumnDataGrid2"
@@ -669,7 +669,7 @@
                         <atom:DataGridTextColumn CanUserReorder="True" Header="Column9" Binding="{Binding Address}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:Separator Title="Drag reorder with frozen columns" TitlePosition="Left" Margin="0, 20, 0, 0"
                                 FontWeight="Bold" />
                 <atom:DataGrid x:Name="DragColumnDataGrid3"
@@ -699,15 +699,33 @@
         <gallerycontrols:ShowCaseItem Title="Drag sorting with handler"
                                       Description="You can drag the row indicator column to sort the rows."
                                       OccupyEntireRow="True">
-            <atom:DataGrid x:Name="DragRowDataGrid"
-                           CanUserReorderRows="True">
-                <atom:DataGrid.Columns>
-                    <atom:DataGridRowReorderColumn />
-                    <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
-                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
-                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
-                </atom:DataGrid.Columns>
-            </atom:DataGrid>
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Separator Title="Normal" TitlePosition="Left"
+                                FontWeight="Bold" />
+                <atom:DataGrid x:Name="DragRowDataGrid1"
+                               CanUserReorderRows="True">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridRowReorderColumn />
+                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+                
+                <atom:Separator Title="Normal" TitlePosition="Left"
+                                FontWeight="Bold" 
+                                Margin="0, 20, 0, 0"/>
+                <atom:DataGrid x:Name="DragRowDataGrid2"
+                               CanUserReorderRows="True"
+                               Height="400">
+                    <atom:DataGrid.Columns>
+                        <atom:DataGridRowReorderColumn />
+                        <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Address" Binding="{Binding Name}"  />
+                        <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}"  />
+                    </atom:DataGrid.Columns>
+                </atom:DataGrid>
+            </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem Title="Custom empty"
