@@ -253,10 +253,9 @@ jobs:
             with:
                name: linux-appimage-x86_64
                path: ${{ env.GalleryArtifactsOutputDir }}/appimage/x64/*.AppImage
-   BuildAtomUIGalleryMsiInstallers:
-      name: Build Windows MSI Installer
-      if: ${{ false }}
-      runs-on: windows-2025
+   BuildAtomUIGalleryWindowsX64Zip:
+      name: Build Windows X86_64 Zip Package
+      runs-on: windows-latest
       steps:
          -  name: Checkout code
             uses: actions/checkout@v4.2.2
@@ -269,8 +268,7 @@ jobs:
                New-Item -ItemType Directory -Path "${{ env.AtomUIToolsBinDir }}" -Force
                New-Item -ItemType Directory -Path "${{ env.GalleryPublishDir }}" -Force
                New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}" -Force
-               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}/msi/x64" -Force
-               dotnet tool install --global wix
+               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}/zip/x64" -Force
          -  name: Checkout AtomUITools code
             uses: actions/checkout@v4.2.2
             with:
@@ -283,7 +281,7 @@ jobs:
             run: |
                Set-Location ${{ env.BuildDir }}/AtomUITools/scripts
                pwsh ./PublishAtomUIToolsLocal.ps1 -publishRootPath "${{ env.AtomUIToolsBinDir }}" -runtime win-x64
-         -  name: Build MSI for win-x64
+         -  name: Build Zip package for win-x64
             shell: pwsh
             run: |
                $galleryScriptsPath = "${{ env.SourceDir }}/src/AtomUIGallery.Desktop/scripts"
@@ -297,16 +295,69 @@ jobs:
                pwsh ./PublishToLocal.ps1 -publishRootPath $galleryPublishDirX64 -runtime win-x64 -buildType ${{ inputs.BuildConfiguration }}
                Set-Location ${{ env.BuildDir }}
                Get-Location
-               ${{ env.AtomUIToolsWinBin }} create-msi `
+               ${{ env.AtomUIToolsWinBin }} create-zip `
                  --runtime win-x64 `
                  --config "$galleryPublishDirX64/config/InstallerConfig.xml" `
                  --packages "$galleryPublishDirX64/packages" `
-                 --output "${{ env.GalleryArtifactsOutputDir }}/msi/x64" `
+                 --output "${{ env.GalleryArtifactsOutputDir }}/zip/x64" `
                  --verbosity Detailed `
                  --cleanupBundleOption false
-               Get-ChildItem -Path "${{ env.GalleryArtifactsOutputDir }}" -Recurse -Filter *.wixpdb | Remove-Item
-         -  name: Upload x86_64 msi artifacts
+         -  name: Upload x86_64 zip artifacts
             uses: actions/upload-artifact@v4.6.2
             with:
-               name: windows-msi-x86_64
-               path: ${{ env.GalleryArtifactsOutputDir }}/msi/x64
+               name: windows-zip-x86_64
+               path: ${{ env.GalleryArtifactsOutputDir }}/zip/x64
+   BuildAtomUIGalleryWindowsArm64Zip:
+      name: Build Windows Arm64 Zip Package
+      runs-on: windows-11-arm
+      steps:
+         -  name: Checkout code
+            uses: actions/checkout@v4.2.2
+            with:
+               ref: ${{ inputs.TargetBranch }}
+         -  name: Prepare build environment
+            shell: pwsh
+            run: |
+               New-Item -ItemType Directory -Path "${{ env.BuildDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.AtomUIToolsBinDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryPublishDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}/zip/arm64" -Force
+         -  name: Checkout AtomUITools code
+            uses: actions/checkout@v4.2.2
+            with:
+               repository: chinware/AtomUITools
+               ref: develop
+               token: ${{ secrets.ACCESS_TOKEN }}
+               path: ${{ env.BuildDir }}/AtomUITools
+         -  name: Build AtomUITools (Windows Arm64)
+            shell: pwsh
+            run: |
+               Set-Location ${{ env.BuildDir }}/AtomUITools/scripts
+               pwsh ./PublishAtomUIToolsLocal.ps1 -publishRootPath "${{ env.AtomUIToolsBinDir }}" -runtime win-arm64
+         -  name: Build Zip package for win-arm64
+            shell: pwsh
+            run: |
+               $galleryScriptsPath = "${{ env.SourceDir }}/src/AtomUIGallery.Desktop/scripts"
+               $galleryPublishDirArm64 = "${{ env.GalleryPublishDir }}/win-arm64"
+
+               if (Test-Path "${{ env.SourceDir }}/output") {
+                 Remove-Item -Path "${{ env.SourceDir }}/output" -Recurse -Force
+               }
+
+               Set-Location $galleryScriptsPath
+               pwsh ./PublishToLocal.ps1 -publishRootPath $galleryPublishDirArm64 -runtime win-arm64 -buildType ${{ inputs.BuildConfiguration }}
+               Set-Location ${{ env.BuildDir }}
+               Get-Location
+               ${{ env.AtomUIToolsWinBin }} create-zip `
+                 --runtime win-arm64 `
+                 --config "$galleryPublishDirArm64/config/InstallerConfig.xml" `
+                 --packages "$galleryPublishDirArm64/packages" `
+                 --output "${{ env.GalleryArtifactsOutputDir }}/zip/arm64" `
+                 --verbosity Detailed `
+                 --cleanupBundleOption false
+         -  name: Upload arm64 zip artifacts
+            uses: actions/upload-artifact@v4.6.2
+            with:
+               name: windows-zip-arm64
+               path: ${{ env.GalleryArtifactsOutputDir }}/zip/arm64
