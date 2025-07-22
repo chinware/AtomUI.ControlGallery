@@ -198,12 +198,12 @@ jobs:
                sudo apt-get install -y libxcb1 libxcb-shape0 libxcb-shape0-dev
                
                $linuxdeployUrl = "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
-               Invoke-WebRequest -Uri $linuxdeployUrl -OutFile linuxdeploy-x86_64.AppImage
+               wget -nv "$linuxdeploy_url" -O linuxdeploy-x86_64.AppImage
                chmod +x linuxdeploy-x86_64.AppImage
                sudo mv linuxdeploy-x86_64.AppImage /usr/local/bin/linuxdeploy
                
                $appimagetoolUrl = "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
-               Invoke-WebRequest -Uri $appimagetoolUrl -OutFile appimagetool-x86_64.AppImage
+               wget -nv "$appimagetool_url" -O appimagetool-x86_64.AppImage
                chmod +x appimagetool-x86_64.AppImage
                sudo mv appimagetool-x86_64.AppImage /usr/local/bin/appimagetool
                
