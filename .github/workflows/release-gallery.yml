@@ -196,18 +196,21 @@ jobs:
                sudo apt-get update
                sudo apt-get install -y fuse libfuse2 patchelf desktop-file-utils file
                
-               $linuxdeployUrl = "https://github.com/linuxdeploy/linuxdeploy/releases/download/continuous/linuxdeploy-x86_64.AppImage"
+               $linuxdeployUrl = "https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20250213-2/linuxdeploy-x86_64.AppImage"
                wget -nv "$linuxdeploy_url" -O linuxdeploy-x86_64.AppImage
                chmod +x linuxdeploy-x86_64.AppImage
-
+               sudo mv linuxdeploy-x86_64.AppImage /usr/local/bin/linuxdeploy
                
-               $appimagetoolUrl = "https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage"
+               $appimagetoolUrl = "https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage"
                wget -nv "$appimagetool_url" -O appimagetool-x86_64.AppImage
                chmod +x appimagetool-x86_64.AppImage
-
+               sudo mv appimagetool-x86_64.AppImage /usr/local/bin/appimagetool
                
-               ./linuxdeploy-x86_64.AppImage --version
-               ./appimagetool-x86_64.AppImage --version
+               ls -al /usr/local/bin/linuxdeploy
+               ls -al /usr/local/bin/appimagetool
+               
+               linuxdeploy --version
+               appimagetool --version
                
          -  name: Setup .NET 9
             uses: actions/setup-dotnet@v4
