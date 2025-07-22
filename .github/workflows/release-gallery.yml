@@ -97,7 +97,7 @@ jobs:
             uses: actions/upload-artifact@v4.6.2
             with:
                name: dmg-packages-osx-x64
-               path: ${{ env.GalleryArtifactsOutputDir }}/dmg/x64
+               path: ${{ env.GalleryArtifactsOutputDir }}/dmg/x64/*.dmg
                
    BuildAtomUIGalleryDmgArm64Installers:
       name: Build macOS arm64 DMG Installer
@@ -174,7 +174,7 @@ jobs:
             uses: actions/upload-artifact@v4.6.2
             with:
                name: dmg-packages-osx-arm64
-               path: ${{ env.GalleryArtifactsOutputDir }}/dmg/arm64
+               path: ${{ env.GalleryArtifactsOutputDir }}/dmg/arm64/*.dmg
             
    BuildAtomUIGalleryAppImageInstallers:
       name: Build Linux AppImage Installer
@@ -203,10 +203,6 @@ jobs:
                wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-x86_64.AppImage
                chmod +x appimagetool-x86_64.AppImage
                sudo mv appimagetool-x86_64.AppImage /usr/local/bin/appimagetool
-               
-               ls -al ./
-               ls -al /usr/local/bin/linuxdeploy
-               ls -al /usr/local/bin/appimagetool
                
                linuxdeploy --version
                appimagetool --version
@@ -312,7 +308,7 @@ jobs:
             uses: actions/upload-artifact@v4.6.2
             with:
                name: windows-zip-x86_64
-               path: ${{ env.GalleryArtifactsOutputDir }}/zip/x64
+               path: ${{ env.GalleryArtifactsOutputDir }}/zip/x64/*.zip
    BuildAtomUIGalleryWindowsArm64Zip:
       name: Build Windows Arm64 Zip Package
       runs-on: windows-11-arm
@@ -367,4 +363,4 @@ jobs:
             uses: actions/upload-artifact@v4.6.2
             with:
                name: windows-zip-arm64
-               path: ${{ env.GalleryArtifactsOutputDir }}/zip/arm64
+               path: ${{ env.GalleryArtifactsOutputDir }}/zip/arm64/*.zip
