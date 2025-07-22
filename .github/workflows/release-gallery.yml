@@ -26,6 +26,7 @@ jobs:
    BuildAtomUIGalleryDmgX64Installers:
       name: Build macOS x86_64 DMG Installer
       runs-on: macos-13
+      if: ${{ false }}
       steps:
          -  name: Checkout code
             uses: actions/checkout@v4.2.2
@@ -101,6 +102,7 @@ jobs:
    BuildAtomUIGalleryDmgArm64Installers:
       name: Build macOS arm64 DMG Installer
       runs-on: macos-latest
+      if: ${{ false }}
       steps:
          -  name: Checkout code
             uses: actions/checkout@v4.2.2
@@ -233,7 +235,7 @@ jobs:
                $galleryPublishDirX64 = "${{ env.GalleryPublishDir }}/linux-x64"
 
                if (Test-Path "${{ env.SourceDir }}/output") {
-                 Remove-Item -Path "${{ env.SourceDir }}/output" -Recurse -Force
+                  Remove-Item -Path "${{ env.SourceDir }}/output" -Recurse -Force
                }
 
                Set-Location $galleryScriptsPath
@@ -256,6 +258,7 @@ jobs:
    BuildAtomUIGalleryWindowsX64Zip:
       name: Build Windows X86_64 Zip Package
       runs-on: windows-latest
+      if: ${{ false }}
       steps:
          -  name: Checkout code
             uses: actions/checkout@v4.2.2
@@ -310,6 +313,7 @@ jobs:
    BuildAtomUIGalleryWindowsArm64Zip:
       name: Build Windows Arm64 Zip Package
       runs-on: windows-11-arm
+      if: ${{ false }}
       steps:
          -  name: Checkout code
             uses: actions/checkout@v4.2.2
