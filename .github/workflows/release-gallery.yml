@@ -195,6 +195,7 @@ jobs:
                
                sudo apt-get update
                sudo apt-get install -y fuse libfuse2 patchelf desktop-file-utils file
+               sudo apt-get install -y libxcb1 libxcb-shape0 libxcb-shape0-dev
                
                wget https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20250213-2/linuxdeploy-x86_64.AppImage
                chmod +x linuxdeploy-x86_64.AppImage
