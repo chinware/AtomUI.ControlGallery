@@ -29,7 +29,7 @@
             Description="More pages."
             OccupyEntireRow="True"
             MinHeight="300">
-            <atom:Pagination Total="500" CurrentPage="6" ShowSizeChanger="True" />
+            <atom:Pagination Total="500" CurrentPage="6" IsShowSizeChanger="True" />
         </gallerycontrols:ShowCaseItem>
 
         <gallerycontrols:ShowCaseItem
@@ -38,9 +38,9 @@
             OccupyEntireRow="True"
             MinHeight="300">
             <StackPanel Orientation="Vertical" Spacing="10">
-                <atom:Pagination Total="500" CurrentPage="3" ShowSizeChanger="True" ShowQuickJumper="True" />
-                <atom:Pagination Total="500" CurrentPage="3" ShowSizeChanger="True" IsEnabled="False"
-                                 ShowQuickJumper="True" />
+                <atom:Pagination Total="500" CurrentPage="3" IsShowSizeChanger="True" IsShowQuickJumper="True" />
+                <atom:Pagination Total="500" CurrentPage="3" IsShowSizeChanger="True" IsEnabled="False"
+                                 IsShowQuickJumper="True" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
@@ -51,12 +51,12 @@
             MinHeight="300">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:Pagination Total="50" CurrentPage="1" SizeType="Small" />
-                <atom:Pagination Total="50" CurrentPage="1" SizeType="Small" ShowSizeChanger="True"
-                                 ShowQuickJumper="True" />
+                <atom:Pagination Total="50" CurrentPage="1" SizeType="Small" IsShowSizeChanger="True"
+                                 IsShowQuickJumper="True" />
 
-                <atom:Pagination Total="50" ShowTotalInfo="True" CurrentPage="1" SizeType="Small" />
-                <atom:Pagination Total="50" ShowTotalInfo="True" CurrentPage="1" SizeType="Small"
-                                 ShowSizeChanger="True" ShowQuickJumper="True" IsEnabled="False" />
+                <atom:Pagination Total="50" IsShowTotalInfo="True" CurrentPage="1" SizeType="Small" />
+                <atom:Pagination Total="50" IsShowTotalInfo="True" CurrentPage="1" SizeType="Small"
+                                 IsShowSizeChanger="True" IsShowQuickJumper="True" IsEnabled="False" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
@@ -66,12 +66,12 @@
             OccupyEntireRow="False"
             MinHeight="300">
             <StackPanel Orientation="Vertical" Spacing="10">
-                <atom:Pagination Total="85" CurrentPage="1" PageSize="20" ShowSizeChanger="True" ShowTotalInfo="True" />
+                <atom:Pagination Total="85" CurrentPage="1" PageSize="20" IsShowSizeChanger="True" IsShowTotalInfo="True" />
                 <atom:Pagination Total="85"
                                  CurrentPage="1"
                                  PageSize="20"
-                                 ShowSizeChanger="True"
-                                 ShowTotalInfo="True"
+                                 IsShowSizeChanger="True"
+                                 IsShowTotalInfo="True"
                                  TotalInfoTemplate="${RangeStart}-${RangeEnd} of ${Total} items" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>

@@ -26,6 +26,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
     public ObservableCollection<DataGridBaseInfo> CustomEmptyDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> EditableCellsDataSource { get; }
     public ObservableCollection<DataGridBaseInfo> EditableRowsDataSource { get; }
+    public ObservableCollection<DataGridBaseInfo> PagingGridDataSource { get; }
 
     public DataGridViewModel(IScreen screen)
     {
@@ -44,6 +45,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         CustomEmptyDataSource            = new ObservableCollection<DataGridBaseInfo>();
         EditableCellsDataSource          = new ObservableCollection<DataGridBaseInfo>();
         EditableRowsDataSource           = new ObservableCollection<DataGridBaseInfo>();
+        PagingGridDataSource             = new ObservableCollection<DataGridBaseInfo>();
         InitBasicShowCaseDataSource();
         InitFilterAndSorterDataSource();
         InitMultiSorterDataSource();
@@ -57,6 +59,7 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
         InitCustomEmptyDataSource();
         InitEditableCellsDataSource();
         InitEditableRowsDataSource();
+        InitPagingGridDataSource();
     }
 
     private void InitBasicShowCaseDataSource()
@@ -368,6 +371,45 @@ public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
             });
         }
         EditableRowsDataSource.AddRange(items);
+    }
+    
+    private void InitPagingGridDataSource()
+    {
+        PagingGridDataSource.AddRange(RandomDataGenerator.GenerateRandomData(100));
+    }
+}
+
+static class RandomDataGenerator
+{
+    private static readonly Random Random = new Random();
+    
+    private static readonly string[] FirstNames = { "James", "Mary", "John", "Patricia", "Robert", "Jennifer", "Michael", "Linda", "William", "Elizabeth" };
+    private static readonly string[] LastNames = { "Smith", "Johnson", "Williams", "Brown", "Jones", "Garcia", "Miller", "Davis", "Rodriguez", "Martinez" };
+    private static readonly string[] Cities = { "New York", "Los Angeles", "Chicago", "Houston", "Phoenix", "Philadelphia", "San Antonio", "San Diego", "Dallas", "San Jose" };
+    private static readonly string[] Streets = { "Main St", "Park Ave", "Elm St", "Oak St", "Pine Rd", "Maple Ave", "Cedar Ln", "Washington Blvd", "Lake Shore Dr", "Sunset Blvd" };
+    private static readonly string[] TagNames = { "VIP", "NEW", "STAFF", "MANAGER", "DEVELOPER", "DESIGNER", "ANALYST", "LEADER", "EXPERT", "TRAINEE", "VIP", "SPECIAL" };
+    private static readonly string[] Colors = { "red", "volcano", "orange", "gold", "yellow", "lime", "green", "cyan", "blue", "geekblue", "purple" };
+
+    public static List<DataGridBaseInfo> GenerateRandomData(int count = 10)
+    {
+        return Enumerable.Range(1, count).Select(i => new DataGridBaseInfo
+        {
+            Key = i.ToString(),
+            Name = $"{FirstNames[Random.Next(FirstNames.Length)]} {LastNames[Random.Next(LastNames.Length)]}",
+            Age = Random.Next(18, 66),
+            Address = $"{Random.Next(1, 10000)} {Streets[Random.Next(Streets.Length)]}, {Cities[Random.Next(Cities.Length)]}",
+            Money = $"￥{Random.Next(1000, 10000000):N2}",
+            Tags = GenerateRandomTags(Random.Next(1, 4))
+        }).ToList();
+    }
+
+    private static List<TagInfo> GenerateRandomTags(int count)
+    {
+        return Enumerable.Range(0, count).Select(_ => new TagInfo
+        {
+            Name  = TagNames[Random.Next(TagNames.Length)],
+            Color = Colors[Random.Next(Colors.Length)]
+        }).ToList();
     }
 }
 
