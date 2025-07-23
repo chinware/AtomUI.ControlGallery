@@ -63,7 +63,7 @@
         <gallerycontrols:ShowCaseItem
             Title="Total number"
             Description="You can show the total number of data by setting showTotal."
-            OccupyEntireRow="False"
+            OccupyEntireRow="True"
             MinHeight="300">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:Pagination Total="85" CurrentPage="1" PageSize="20" IsShowSizeChanger="True" IsShowTotalInfo="True" />
