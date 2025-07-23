@@ -8,7 +8,12 @@
             Title="Basic Usage"
             Description="The simplest use.">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase1}" />
+                <atom:Breadcrumb>
+                    <atom:BreadcrumbItem>HOME</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application Center</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application List</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>An Application</atom:BreadcrumbItem>
+                </atom:Breadcrumb>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
@@ -16,7 +21,11 @@
             Title="With an Icon"
             Description="The icon should be placed in front of the text.">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase2}" />
+                <atom:Breadcrumb>
+                    <atom:BreadcrumbItem Icon="{atom:IconProvider Kind=HomeOutlined}"></atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem Icon="{atom:IconProvider Kind=UserOutlined}">Application List</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application</atom:BreadcrumbItem>
+                </atom:Breadcrumb>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
@@ -24,15 +33,23 @@
             Title="With Params"
             Description="With route params.">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase3}" />
+                <atom:Breadcrumb>
+                    <atom:BreadcrumbItem>Users</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem Value="1">Param</atom:BreadcrumbItem>
+                </atom:Breadcrumb>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
             Title="Configuring the Separator"
-            Description="The separator can be customized by setting the separator property: separator='>' ">
+            Description="The separator can be customized by setting the separator property: separator equals >">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase4}" Separator=">" />
+                <atom:Breadcrumb Separator=">">
+                    <atom:BreadcrumbItem>HOME</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application Center</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application List</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>An Application</atom:BreadcrumbItem>
+                </atom:Breadcrumb>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
@@ -40,7 +57,12 @@
             Title="Configuring the Separator Independently"
             Description="Customize separator for each other.">
             <StackPanel>
-                <atom:Breadcrumb ItemsSource="{Binding BreadcrumbItemsCase5}" />
+                <atom:Breadcrumb>
+                    <atom:BreadcrumbItem Separator=":">Location</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application Center</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>Application List</atom:BreadcrumbItem>
+                    <atom:BreadcrumbItem>An Application</atom:BreadcrumbItem>
+                </atom:Breadcrumb>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
