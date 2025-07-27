@@ -41,6 +41,7 @@
         <AvaloniaResource Include="Assets/qinware-wechatpress.png"/>
         <AvaloniaResource Include="Assets/atomui-qq.png"/>
         <AvaloniaResource Include="Assets/atomui-wechat.png"/>
+        <AvaloniaResource Include="Assets/gallery-logo.png"/>
     </ItemGroup>
 
     <ItemGroup>
