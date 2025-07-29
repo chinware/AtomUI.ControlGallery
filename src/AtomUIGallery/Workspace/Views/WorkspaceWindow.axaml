@@ -6,6 +6,8 @@
              x:Class="AtomUIGallery.Workspace.Views.WorkspaceWindow"
              Icon="/Assets/AtomUIGallery.ico"
              Title="AtomUI Gallery"
+             IsPinEnabled="True"
+             IsFullScreenEnabled="True"
              WindowState="Normal"
              WindowStartupLocation="CenterScreen"
              Height="900"
