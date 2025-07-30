@@ -6,11 +6,15 @@
              x:Class="AtomUIGallery.Workspace.Views.WorkspaceWindow"
              Icon="/Assets/AtomUIGallery.ico"
              Title="AtomUI Gallery"
+             IsPinCaptionButtonEnabled="True"
              WindowState="Normal"
              WindowStartupLocation="CenterScreen"
              Height="900"
              Width="1300"
              >
+    <atom:Window.Logo>
+        <Image Source="/Assets/gallery-logo.png"/>
+    </atom:Window.Logo>
     <DockPanel LastChildFill="True">
         <workspaceviews:CaseNavigation DockPanel.Dock="Left"/>
         <rxui:RoutedViewHost Router="{Binding Router}"
