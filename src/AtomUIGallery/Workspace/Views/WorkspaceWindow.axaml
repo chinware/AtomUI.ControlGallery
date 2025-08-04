@@ -29,25 +29,29 @@
                     <atom:MenuItem Header="Enable Minimize" 
                                    ToggleType="CheckBox"
                                    IsChecked="True"
-                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Minimize}"/>/>
+                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Minimize}"/>
                     <atom:MenuItem Header="Enable Maximize"
                                    ToggleType="CheckBox"
                                    IsChecked="True"
-                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Maximize}"/>/>
+                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Maximize}"/>
                     <atom:MenuItem Header="Enable Move" 
                                    ToggleType="CheckBox"
                                    IsChecked="True"
-                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Move}"/>/>
+                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Move}"/>
                     <atom:MenuItem Header="Enable Resize"
                                    ToggleType="CheckBox"
                                    IsChecked="True"
-                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Resize}"/>/>
+                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Resize}"/>
                 </atom:MenuItem>
             </atom:MenuItem>
             <atom:MenuItem Header="Theme">
                 <atom:MenuItem Header="Dark Mode" 
                                ToggleType="CheckBox"
-                               Tag="{x:Static workspaceviews:WindowMenuItemKind.DarkMode}"/>/>
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.DarkMode}"/>
+                <atom:MenuItem Header="Enable Motion" 
+                               ToggleType="CheckBox"
+                               IsChecked="True"
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.DarkMode}"/>
             </atom:MenuItem>
         </atom:Menu>
         <workspaceviews:CaseNavigation DockPanel.Dock="Left" />
