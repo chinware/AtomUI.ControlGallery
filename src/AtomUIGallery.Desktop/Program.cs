@@ -46,7 +46,7 @@ internal class Program
                                 })
                                 .UseReactiveUI()
                                 .UsePlatformDetect()
-                                .With(new Win32PlatformOptions())
+                                .With(new Win32PlatformOptions() { RenderingMode = [Win32RenderingMode.Software] })
                                 .LogToTrace();
         
         var themeBuilder = builder.CreateThemeManagerBuilder();
