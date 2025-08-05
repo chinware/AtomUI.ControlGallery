@@ -5,7 +5,6 @@
              xmlns:workspaceviews="using:AtomUIGallery.Workspace.Views"
              x:Class="AtomUIGallery.Workspace.Views.WorkspaceWindow"
              Icon="/Assets/AtomUIGallery.ico"
-             Title="AtomUI Gallery"
              IsPinCaptionButtonEnabled="True"
              WindowState="Normal"
              WindowStartupLocation="CenterScreen"

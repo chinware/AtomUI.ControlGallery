@@ -1,6 +1,5 @@
 ﻿using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Styling;
-using Avalonia.Threading;
 
 namespace AtomUIGallery.Desktop;
 
@@ -9,6 +8,7 @@ public class GalleryApplication : BaseGalleryApplication
     public GalleryApplication()
     {
         RequestedThemeVariant = ThemeVariant.Light;
+        Name                  = "AtomUI Gallery";
     }
     
     public override void OnFrameworkInitializationCompleted()
@@ -16,7 +16,8 @@ public class GalleryApplication : BaseGalleryApplication
         switch (ApplicationLifetime)
         {
             case IClassicDesktopStyleApplicationLifetime desktop:
-                desktop.MainWindow = CreateWorkspaceWindow();
+                desktop.MainWindow       = CreateWorkspaceWindow();
+                desktop.MainWindow.Title = Name;
                 break;
             // case ISingleViewApplicationLifetime singleView:
             //     singleView.MainView = new MainView();

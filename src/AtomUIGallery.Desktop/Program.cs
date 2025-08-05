@@ -18,13 +18,10 @@ internal class Program
             BuildAvaloniaApp()
                 .With(new FontManagerOptions
                 {
-                    FontFallbacks = new[]
+                    FontFallbacks = [new FontFallback
                     {
-                        new FontFallback
-                        {
-                            FontFamily = new FontFamily("Microsoft YaHei")
-                        }
-                    }
+                        FontFamily = new FontFamily("Microsoft YaHei")
+                    }]
                 })
                 .StartWithClassicDesktopLifetime(args);
         }
@@ -39,22 +36,18 @@ internal class Program
 
     public static AppBuilder BuildAvaloniaApp()
     {
-        var builder = AppBuilder.Configure<GalleryApplication>()
-                                .AfterSetup(builder =>
-                                {
-                                    builder.Instance!.Name = "AtomUIGallery";
-                                })
+        return AppBuilder.Configure<GalleryApplication>()
                                 .UseReactiveUI()
                                 .UsePlatformDetect()
                                 .With(new Win32PlatformOptions())
+                                .UseAtomUI(builder =>
+                                {
+                                    builder.WithDefaultCultureInfo(new CultureInfo(LanguageCode.en_US));
+                                    builder.WithDefaultTheme(ThemeManager.DEFAULT_THEME_ID);
+                                    builder.UseOSSControls();
+                                    builder.UseOSSDataGrid();
+                                })
                                 .LogToTrace();
         
-        var themeBuilder = builder.CreateThemeManagerBuilder();
-        themeBuilder.UseCultureInfo(new CultureInfo(LanguageCode.en_US));
-        themeBuilder.UseTheme(ThemeManager.DEFAULT_THEME_ID);
-        themeBuilder.UseOSSControls();
-        themeBuilder.UseOSSDataGrid();
-        
-        return builder.UseAtomUI(themeBuilder);
     }
 }
