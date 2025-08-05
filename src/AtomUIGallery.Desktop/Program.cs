@@ -43,7 +43,7 @@ internal class Program
                                 .UseAtomUI(builder =>
                                 {
                                     builder.WithDefaultCultureInfo(new CultureInfo(LanguageCode.en_US));
-                                    builder.WithDefaultTheme(ThemeManager.DEFAULT_THEME_ID);
+                                    builder.WithDefaultTheme(IThemeManager.DEFAULT_THEME_ID);
                                     builder.UseOSSControls();
                                     builder.UseOSSDataGrid();
                                 })
