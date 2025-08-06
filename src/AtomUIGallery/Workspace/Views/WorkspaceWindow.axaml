@@ -47,10 +47,17 @@
                 <atom:MenuItem Header="Dark Mode" 
                                ToggleType="CheckBox"
                                Tag="{x:Static workspaceviews:WindowMenuItemKind.DarkMode}"/>
+                <atom:MenuItem Header="Compact Mode" 
+                               ToggleType="CheckBox"
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.Compact}"/>
                 <atom:MenuItem Header="Enable Motion" 
                                ToggleType="CheckBox"
                                IsChecked="True"
-                               Tag="{x:Static workspaceviews:WindowMenuItemKind.DarkMode}"/>
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.Motion}"/>
+                <atom:MenuItem Header="Enable WaveSpirit" 
+                               ToggleType="CheckBox"
+                               IsChecked="True"
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.WaveSpirit}"/>
             </atom:MenuItem>
         </atom:Menu>
         <workspaceviews:CaseNavigation DockPanel.Dock="Left" />

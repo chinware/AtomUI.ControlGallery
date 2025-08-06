@@ -1,10 +1,14 @@
-﻿using AtomUI.Controls;
+﻿using System.Diagnostics;
+using AtomUI.Controls;
 using AtomUI.ReactiveUI;
 using AtomUIGallery.Workspace.ViewModes;
 using Avalonia;
 using Avalonia.Interactivity;
+using Avalonia.Threading;
 
 namespace AtomUIGallery.Workspace.Views;
+
+using AtomUIApplication = AtomUI.Application;
 
 internal enum WindowMenuItemKind 
 {
@@ -13,9 +17,11 @@ internal enum WindowMenuItemKind
     Minimize,
     Maximize,
     Move,
-    Close,
     Resize,
-    DarkMode
+    DarkMode,
+    Compact,
+    Motion,
+    WaveSpirit,
 }
 
 public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
@@ -41,6 +47,8 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
     {
         if (e.Source is MenuItem menuItem && menuItem.Tag is WindowMenuItemKind kind)
         {
+            var application = Application.Current as AtomUIApplication;
+            Debug.Assert(application != null);
             if (kind == WindowMenuItemKind.FullScreen)
             {
                 IsFullScreenCaptionButtonEnabled = menuItem.IsChecked;
@@ -64,6 +72,44 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
             else if (kind == WindowMenuItemKind.Resize)
             {
                 IsResizeEnabled = menuItem.IsChecked;
+            }
+            else if (kind == WindowMenuItemKind.DarkMode)
+            {
+                Dispatcher.UIThread.Post(() =>
+                {
+                    application.IsDarkThemeMode = menuItem.IsChecked;
+                });
+            }
+            else if (kind == WindowMenuItemKind.Compact)
+            {
+                Dispatcher.UIThread.Post(() =>
+                {
+                    application.IsCompactThemeMode = menuItem.IsChecked;
+                });
+            }
+            else if (kind == WindowMenuItemKind.Motion)
+            {
+                if (menuItem.Parent is MenuItem themeMenuItem)
+                {
+                    foreach (var item in themeMenuItem.Items)
+                    {
+                        if (item is MenuItem themeMenuChildItem && themeMenuChildItem.Tag is WindowMenuItemKind themeMenuChildItemKind)
+                        {
+                            if (themeMenuChildItemKind == WindowMenuItemKind.WaveSpirit)
+                            {
+                                if (!menuItem.IsChecked)
+                                {
+                                    themeMenuChildItem.IsChecked = false;
+                                }
+                            }
+                        }
+                    }
+                }
+                application.IsMotionEnabled = menuItem.IsChecked;
+            }
+            else if (kind == WindowMenuItemKind.WaveSpirit)
+            {
+                application.IsWaveSpiritEnabled = menuItem.IsChecked;
             }
         }
     }
