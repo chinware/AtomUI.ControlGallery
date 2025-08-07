@@ -29,6 +29,7 @@ internal enum WindowMenuItemKind
 
 public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
 {
+    public const string LanguageId = nameof(WorkspaceWindow);
     public WorkspaceWindow()
     {
 #if DEBUG

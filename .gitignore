@@ -195,3 +195,5 @@ api/diff
 
 output/
 cmake-build-*/
+
+**/Avalonia.Generators/**/*.*

@@ -13,7 +13,8 @@ namespace AtomUIGallery.Workspace.Views;
 
 public partial class CaseNavigation : UserControl
 {
-
+    public const string LanguageId = nameof(CaseNavigation);
+    
     public CaseNavigation()
     {
         InitializeComponent();

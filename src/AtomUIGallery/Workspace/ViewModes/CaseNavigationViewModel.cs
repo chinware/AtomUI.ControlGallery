@@ -1,6 +1,4 @@
 ﻿using AtomUIGallery.ShowCases.ViewModels;
-using AtomUIGallery.ShowCases.Views;
-using Avalonia.Interactivity;
 using Avalonia.Threading;
 using ReactiveUI;
 

@@ -41,9 +41,10 @@ internal class Program
                                 .With(new Win32PlatformOptions())
                                 .UseAtomUI(builder =>
                                 {
-                                    builder.WithDefaultLanguageVariant(LanguageVariant.en_US);
+                                    builder.WithDefaultLanguageVariant(LanguageVariant.zh_CN);
                                     builder.WithDefaultTheme(IThemeManager.DEFAULT_THEME_ID);
                                     builder.UseOSSControls();
+                                    builder.UseGalleryControls();
                                     builder.UseOSSDataGrid();
                                 })
                                 .LogToTrace();

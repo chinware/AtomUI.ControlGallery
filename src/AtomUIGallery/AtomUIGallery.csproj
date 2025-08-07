@@ -4,19 +4,28 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <RootNamespace>AtomUIGallery</RootNamespace>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>GeneratedFiles</CompilerGeneratedFilesOutputPath>
     </PropertyGroup>
 
     <ItemGroup>
         <AvaloniaResource Include="Assets/**"/>
     </ItemGroup>
+    
+    <ItemGroup>
+        <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs"/>
+    </ItemGroup>
+    
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
         <PackageReference Include="AtomUI"/>
         <PackageReference Include="AtomUI.Controls.DataGrid"/>
+        <PackageReference Include="AtomUI.Generator"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Generator/AtomUI.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
