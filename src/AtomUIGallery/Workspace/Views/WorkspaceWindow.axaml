@@ -59,6 +59,16 @@
                                IsChecked="True"
                                Tag="{x:Static workspaceviews:WindowMenuItemKind.WaveSpirit}"/>
             </atom:MenuItem>
+            <atom:MenuItem Header="Language">
+                <atom:MenuItem Header="简体中文" 
+                               ToggleType="Radio"
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.LanguageZhCN}"
+                              />
+                <atom:MenuItem Header="English" 
+                               ToggleType="Radio"
+                               IsChecked="True"
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.LanguageEnUs}"/>
+            </atom:MenuItem>
         </atom:Menu>
         <workspaceviews:CaseNavigation DockPanel.Dock="Left" />
         <rxui:RoutedViewHost Router="{Binding Router}"

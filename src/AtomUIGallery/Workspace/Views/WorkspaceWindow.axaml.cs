@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using AtomUI.Controls;
 using AtomUI.ReactiveUI;
+using AtomUI.Theme.Language;
 using AtomUIGallery.Workspace.ViewModes;
 using Avalonia;
 using Avalonia.Interactivity;
@@ -22,6 +23,8 @@ internal enum WindowMenuItemKind
     Compact,
     Motion,
     WaveSpirit,
+    LanguageZhCN,
+    LanguageEnUs,
 }
 
 public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
@@ -110,6 +113,20 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
             else if (kind == WindowMenuItemKind.WaveSpirit)
             {
                 application.IsWaveSpiritEnabled = menuItem.IsChecked;
+            }
+            else if (kind == WindowMenuItemKind.LanguageZhCN)
+            {
+                Dispatcher.UIThread.Post(() =>
+                {
+                    application.RequestedLanguageVariant = LanguageVariant.zh_CN;
+                });
+            }
+            else if (kind == WindowMenuItemKind.LanguageEnUs)
+            {
+                Dispatcher.UIThread.Post(() =>
+                {
+                    application.RequestedLanguageVariant = LanguageVariant.en_US;
+                });
             }
         }
     }

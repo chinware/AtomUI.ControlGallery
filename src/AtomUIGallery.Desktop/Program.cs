@@ -1,7 +1,6 @@
-﻿using System.Globalization;
-using AtomUI.Controls;
+﻿using AtomUI.Controls;
 using AtomUI.Theme;
-using AtomUI.Utils;
+using AtomUI.Theme.Language;
 using Avalonia;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
@@ -42,7 +41,7 @@ internal class Program
                                 .With(new Win32PlatformOptions())
                                 .UseAtomUI(builder =>
                                 {
-                                    builder.WithDefaultCultureInfo(new CultureInfo(LanguageCode.en_US));
+                                    builder.WithDefaultLanguageVariant(LanguageVariant.en_US);
                                     builder.WithDefaultTheme(IThemeManager.DEFAULT_THEME_ID);
                                     builder.UseOSSControls();
                                     builder.UseOSSDataGrid();
