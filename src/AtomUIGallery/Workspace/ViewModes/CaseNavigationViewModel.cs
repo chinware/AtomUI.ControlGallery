@@ -121,8 +121,9 @@ public class CaseNavigationViewModel : ReactiveObject
             viewModel = _showCaseViewModelFactories[showCaseId]();
             _showCaseViewModels.Add(showCaseId, viewModel);
         }
-
-        HostScreen.Router.Navigate.Execute(viewModel);
+        Dispatcher.UIThread.RunJobs();
+        // TODO 这里会卡，导致左边菜单渲染受到影响
+        DispatcherTimer.RunOnce(() => HostScreen.Router.Navigate.Execute(viewModel), TimeSpan.FromMilliseconds(100));
     }
     
     private static int _currentShowCaseIdx = 0;
