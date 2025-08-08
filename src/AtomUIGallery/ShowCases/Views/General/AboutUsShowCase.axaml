@@ -1,15 +1,27 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.AboutUsShowCase"
-             xmlns:atom="https://atomui.net">
+             xmlns:atom="https://atomui.net"
+             xmlns:views="clr-namespace:AtomUIGallery.ShowCases.Views">
+    <UserControl.Styles>
+        <Style Selector="Image#QinwareLogo">
+            <Setter Property="Source" Value="/Assets/qinware-logo.png" />
+        </Style>
+        <Style Selector="views|AboutUsShowCase[IsDarkThemeMode=True]">
+            <Style Selector="^ Image#QinwareLogo">
+                <Setter Property="Source" Value="/Assets/qinware-logo-white.png" />
+            </Style>
+        </Style>
+    </UserControl.Styles>
     <ScrollViewer HorizontalScrollBarVisibility="Auto"
                   VerticalScrollBarVisibility="Auto"
                   AllowAutoHide="False">
         <StackPanel MinWidth="800" MinHeight="600">
-            <Image Source="/Assets/qinware-logo.png"
-                   HorizontalAlignment="Center"
-                   Width="300"
-                   Margin="0, 80, 0, 20" />
+            <Image
+                Name="QinwareLogo"
+                HorizontalAlignment="Center"
+                Width="300"
+                Margin="0, 80, 0, 20" />
             <StackPanel Spacing="10" HorizontalAlignment="Center">
                 <atom:TextBlock HorizontalAlignment="Center" FontWeight="Bold" FontSize="18">
                     <Run Text="愿景：" Foreground="Red" />

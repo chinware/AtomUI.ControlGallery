@@ -25,7 +25,10 @@
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
-        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Generator/AtomUI.Generator.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" PrivateAssets="all" />
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Generator/AtomUI.Generator.csproj" 
+                          OutputItemType="Analyzer" 
+                          ReferenceOutputAssembly="false" 
+                          PrivateAssets="all" />
     </ItemGroup>
 
     <ItemGroup>
@@ -47,6 +50,7 @@
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
         <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
         <AvaloniaResource Include="Assets/qinware-logo.png"/>
+        <AvaloniaResource Include="Assets/qinware-logo-white.png"/>
         <AvaloniaResource Include="Assets/qinware-wechatpress.png"/>
         <AvaloniaResource Include="Assets/atomui-qq.png"/>
         <AvaloniaResource Include="Assets/atomui-wechat.png"/>
