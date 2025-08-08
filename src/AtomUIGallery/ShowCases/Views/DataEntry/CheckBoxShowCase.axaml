@@ -72,7 +72,6 @@
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
         
-        
         <gallerycontrols:ShowCaseItem
             Title="Check all"
             Description="The indeterminate property can help you to achieve a 'check all' effect.">
@@ -86,17 +85,17 @@
                 <WrapPanel Margin="0, 20, 0, 0">
                     <atom:CheckBox x:Name="AppleCheckBox"
                                    IsChecked="{Binding AppleCheckedStatus}"
-                                   Command="{Binding CheckedItemStatusCommand}">
+                                   Command="{Binding CheckedItemStatusCommand1}">
                         Apple
                     </atom:CheckBox>
                     <atom:CheckBox x:Name="PearCheckBox"
                                    IsChecked="{Binding PearCheckedStatus}"
-                                   Command="{Binding CheckedItemStatusCommand}">
+                                   Command="{Binding CheckedItemStatusCommand2}">
                         Pear
                     </atom:CheckBox>
                     <atom:CheckBox x:Name="OrangeCheckBox"
                                    IsChecked="{Binding OrangeCheckedStatus}"
-                                   Command="{Binding CheckedItemStatusCommand}">
+                                   Command="{Binding CheckedItemStatusCommand3}">
                         Orange
                     </atom:CheckBox>
                 </WrapPanel>

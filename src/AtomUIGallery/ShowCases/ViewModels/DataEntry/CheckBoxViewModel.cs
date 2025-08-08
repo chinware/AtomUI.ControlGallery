@@ -1,5 +1,6 @@
 ﻿using System.Reactive;
 using System.Reactive.Disposables;
+using System.Reactive.Linq;
 using AtomUI.Controls;
 using ReactiveUI;
 
@@ -92,7 +93,9 @@ public class CheckBoxViewModel : ReactiveObject, IRoutableViewModel,
     public ReactiveCommand<Button, Unit> EnableStatusCommand { get; }
     public ReactiveCommand<Button, Unit> CheckBoxCommand { get; }
     public ReactiveCommand<CheckBox, Unit> CheckedAllStatusCommand { get; }
-    public ReactiveCommand<CheckBox, Unit> CheckedItemStatusCommand { get; }
+    public ReactiveCommand<CheckBox, Unit> CheckedItemStatusCommand1 { get; }
+    public ReactiveCommand<CheckBox, Unit> CheckedItemStatusCommand2 { get; }
+    public ReactiveCommand<CheckBox, Unit> CheckedItemStatusCommand3 { get; }
 
     public CheckBoxViewModel(IScreen screen)
     {
@@ -115,7 +118,9 @@ public class CheckBoxViewModel : ReactiveObject, IRoutableViewModel,
         CheckBoxCommand     = ReactiveCommand.Create<Button>(HandleCheckBox);
 
         CheckedAllStatusCommand  = ReactiveCommand.Create<CheckBox>(HandleCheckedAllStatus);
-        CheckedItemStatusCommand = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
+        CheckedItemStatusCommand1 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
+        CheckedItemStatusCommand2 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
+        CheckedItemStatusCommand3 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
     }
 
     private void HandleCheckStatus(Button sender)
