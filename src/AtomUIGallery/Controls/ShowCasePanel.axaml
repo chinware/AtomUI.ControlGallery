@@ -7,7 +7,7 @@
         <Setter Property="Template">
             <ControlTemplate TargetType="{x:Type gallerycontrols:ShowCasePanel}">
                 <ScrollViewer VerticalScrollBarVisibility="Auto" AllowAutoHide="False">
-                    <Grid Margin="0" Name="PART_MainPanel" RowSpacing="15" ColumnSpacing="15">
+                    <Grid Margin="5" Name="PART_MainPanel" RowSpacing="15" ColumnSpacing="15">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>

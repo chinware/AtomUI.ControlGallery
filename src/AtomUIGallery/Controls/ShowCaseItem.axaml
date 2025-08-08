@@ -28,7 +28,7 @@
         </Setter>
 
         <Style Selector="^[IsFake=False] /template/ Border#PART_RootBorder">
-            <Setter Property="BorderBrush" Value="#F5F5F5" />
+            <Setter Property="BorderBrush" Value="{DynamicResource {x:Static atom:SharedTokenKey.ColorBorder}}" />
             <Setter Property="BorderThickness" Value="1" />
         </Style>
         <Style Selector="^[IsFake=True] /template/ Border#PART_RootBorder">
