@@ -395,7 +395,7 @@
                                 <atom:TabStripItem>Tab 14</atom:TabStripItem>
                             </atom:TabStrip>
                             <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="rgb(241, 243, 246)">
+                                    Background="{DynamicResource {x:Static atom:SharedTokenKey.ColorBgElevated}}">
                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Tab Content</TextBlock>
                             </Border>
                         </DockPanel>
@@ -429,7 +429,7 @@
                                 <atom:TabStripItem Icon="{atom:IconProvider Kind=GithubOutlined}" IsClosable="True">Tab 4</atom:TabStripItem>
                             </atom:CardTabStrip>
                             <Border HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="rgb(241, 243, 246)">
+                                    Background="{DynamicResource {x:Static atom:SharedTokenKey.ColorBgElevated}}">
                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Tab Content</TextBlock>
                             </Border>
                         </DockPanel>

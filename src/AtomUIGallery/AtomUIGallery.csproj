@@ -14,6 +14,10 @@
     
     <ItemGroup>
         <Compile Remove="$(CompilerGeneratedFilesOutputPath)/**/*.cs"/>
+        <Compile Update="ShowCases\Views\Navigation\TabControlShowCase.axaml.cs">
+          <DependentUpon>TabControlShowCase.axaml</DependentUpon>
+          <SubType>Code</SubType>
+        </Compile>
     </ItemGroup>
     
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
@@ -63,6 +67,10 @@
 
     <ItemGroup>
         <ProjectReference Include="../AtomUIGallery.Icon.Application/AtomUIGallery.Icon.Application.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+      <AdditionalFiles Include="ShowCases\Views\Navigation\TabControlShowCase.axaml" />
     </ItemGroup>
     
 </Project>
