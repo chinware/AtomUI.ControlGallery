@@ -32,14 +32,14 @@
                 <atom:LineEdit Watermark="Borderless" StyleVariant="Borderless" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-        
+
         <gallerycontrols:ShowCaseItem
             Title="Disabled"
             Description="Variants of Input disabled style.">
             <StackPanel Orientation="Vertical" Spacing="10">
-                <atom:LineEdit Watermark="Outlined" StyleVariant="Outline" IsEnabled="False"/>
-                <atom:LineEdit Watermark="Filled" StyleVariant="Filled" IsEnabled="False"/>
-                <atom:LineEdit Watermark="Borderless" StyleVariant="Borderless" IsEnabled="False"/>
+                <atom:LineEdit Watermark="Outlined" StyleVariant="Outline" IsEnabled="False" />
+                <atom:LineEdit Watermark="Filled" StyleVariant="Filled" IsEnabled="False" />
+                <atom:LineEdit Watermark="Borderless" StyleVariant="Borderless" IsEnabled="False" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
@@ -150,34 +150,42 @@
                                  SizeType="Large" />
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-        
+
         <gallerycontrols:ShowCaseItem
             Title="Disabled search box"
             Description="Example of creating a search box by grouping a standard input with a search button.">
             <StackPanel Orientation="Vertical" Spacing="10" Margin="0, 0, 20, 0">
-                <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left" SizeType="Large" IsEnabled="False"/>
+                <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left" SizeType="Large"
+                                 IsEnabled="False" />
                 <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left"
-                                 SearchButtonText="Search" IsEnabled="False"/>
+                                 SearchButtonText="Search" IsEnabled="False" />
 
                 <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left"
-                                 SearchButtonStyle="Primary" SearchButtonText="Search" IsEnabled="False"/>
+                                 SearchButtonStyle="Primary" SearchButtonText="Search" IsEnabled="False" />
                 <atom:SearchEdit Watermark="input search text" Width="400" HorizontalAlignment="Left"
-                                 SearchButtonStyle="Primary" SearchButtonText="Search" IsEnabled="False"/>
+                                 SearchButtonStyle="Primary" SearchButtonText="Search" IsEnabled="False" />
 
                 <atom:SearchEdit Watermark="input search text"
                                  Width="400"
                                  HorizontalAlignment="Left"
                                  SearchButtonStyle="Primary"
                                  SearchButtonText="Search"
-                                 IsEnableClearButton="True" IsEnabled="False"/>
+                                 IsEnableClearButton="True" IsEnabled="False" />
                 <atom:SearchEdit Watermark="input search text"
                                  Width="400"
                                  HorizontalAlignment="Left"
                                  SearchButtonStyle="Primary"
                                  SearchButtonText="搜索一下"
-                                 InnerRightContent="{atom:IconProvider Kind=AudioOutlined, NormalFilledColor=#1677ff, Width=16, Height=16}"
                                  IsEnableClearButton="True"
-                                 SizeType="Large" IsEnabled="False"/>
+                                 SizeType="Large" IsEnabled="False">
+                    <atom:SearchEdit.InnerRightContent>
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=AudioOutlined}"
+                                   Width="16"
+                                   Height="16"
+                                   NormalFilledBrush="{DynamicResource {x:Static atom:SharedTokenKey.ColorPrimary}}"
+                                   DisabledFilledBrush="{DynamicResource {x:Static atom:SharedTokenKey.ColorTextDisabled}}" />
+                    </atom:SearchEdit.InnerRightContent>
+                </atom:SearchEdit>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
 
