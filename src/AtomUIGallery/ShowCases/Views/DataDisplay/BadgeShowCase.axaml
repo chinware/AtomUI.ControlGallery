@@ -138,6 +138,7 @@
                     <atom:DotBadge Offset="-14,12">
                         <atom:Button ButtonType="Link" Content="Link something" />
                     </atom:DotBadge>
+                    <atom:Button ButtonType="Link" Content="Link something" />
                 </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
