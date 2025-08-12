@@ -2,8 +2,7 @@
     <PropertyGroup>
         <NoWarn>$(NoWarn);CS7035</NoWarn>
         <AvaloniaVersion>11.3.3</AvaloniaVersion>
-        <AtomUIVersion>0.1.0</AtomUIVersion>
-        <AtomUIGalleryVersion>0.1.0</AtomUIGalleryVersion>
-        <AssemblyVersion>$(AtomUIGalleryVersion)</AssemblyVersion>
+        <AtomUIVersion>1.0.0-alpha</AtomUIVersion>
+        <AtomUIGalleryVersion>1.0.0-alpha</AtomUIGalleryVersion>
     </PropertyGroup>
 </Project>
