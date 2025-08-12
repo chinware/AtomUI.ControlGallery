@@ -4,7 +4,7 @@
              xmlns:atom="https://atomui.net"
              xmlns:viewmodels="using:AtomUIGallery.ShowCases.ViewModels"
              xmlns:lang="using:AtomUIGallery.Workspace.Localization.CaseNavigationLang">
-    <atom:NavMenu Mode="Inline" Width="250" Name="ShowCaseNavMenu">
+    <atom:NavMenu Mode="Inline" Width="260" Name="ShowCaseNavMenu">
         <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.General}}"
                           Icon="{atom:IconProvider Kind=WindowsOutlined}">
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.General_AboutUs}}"

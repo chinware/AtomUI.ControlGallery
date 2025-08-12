@@ -123,7 +123,7 @@ public class CaseNavigationViewModel : ReactiveObject
         }
         Dispatcher.UIThread.RunJobs();
         // TODO 这里会卡，导致左边菜单渲染受到影响
-        DispatcherTimer.RunOnce(() => HostScreen.Router.Navigate.Execute(viewModel), TimeSpan.FromMilliseconds(100));
+        HostScreen.Router.Navigate.Execute(viewModel);
     }
     
     private static int _currentShowCaseIdx = 0;
