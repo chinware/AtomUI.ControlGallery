@@ -68,6 +68,7 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new NotificationShowCase(), typeof(IViewFor<NotificationViewModel>));
         Locator.CurrentMutable.Register(() => new PopupConfirmShowCase(), typeof(IViewFor<PopupConfirmViewModel>));
         Locator.CurrentMutable.Register(() => new ProgressBarShowCase(), typeof(IViewFor<ProgressBarViewModel>));
+        Locator.CurrentMutable.Register(() => new SkeletonShowCase(), typeof(IViewFor<SkeletonViewModel>));
         Locator.CurrentMutable.Register(() => new WatermarkShowCase(), typeof(IViewFor<WatermarkViewModel>));
     }
     

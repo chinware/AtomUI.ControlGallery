@@ -57,6 +57,7 @@ internal class en_US : LanguageProvider
     public const string Feedback_Notification = "Notification";
     public const string Feedback_PopupConfirm = "PopupConfirm";
     public const string Feedback_ProgressBar = "ProgressBar";
+    public const string Feedback_Skeleton = "Skeleton";
     public const string Feedback_LoadingIndicator = "LoadingIndicator";
     public const string Feedback_Watermark = "Watermark";
 }

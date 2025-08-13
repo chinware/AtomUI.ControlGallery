@@ -58,6 +58,7 @@ internal class zh_CN : LanguageProvider
     public const string Feedback_Notification = "Notification 通知提醒框";
     public const string Feedback_PopupConfirm = "PopupConfirm 气泡确定框";
     public const string Feedback_ProgressBar = "ProgressBar 进度条";
+    public const string Feedback_Skeleton = "Skeleton 骨架屏";
     public const string Feedback_LoadingIndicator = "LoadingIndicator 加载提示";
     public const string Feedback_Watermark = "Watermark 水印";
 }

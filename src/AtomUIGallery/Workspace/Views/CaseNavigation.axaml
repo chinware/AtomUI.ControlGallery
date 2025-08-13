@@ -107,6 +107,8 @@
                               ItemKey="{x:Static viewmodels:PopupConfirmViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_ProgressBar}}"
                               ItemKey="{x:Static viewmodels:ProgressBarViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_Skeleton}}"
+                              ItemKey="{x:Static viewmodels:SkeletonViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_LoadingIndicator}}"
                               ItemKey="{x:Static viewmodels:LoadingIndicatorViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_Watermark}}"

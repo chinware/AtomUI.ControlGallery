@@ -38,6 +38,7 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
         public static readonly LanguageResourceKey Feedback_Notification = new LanguageResourceKey("CaseNavigation.Feedback_Notification", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_PopupConfirm = new LanguageResourceKey("CaseNavigation.Feedback_PopupConfirm", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_ProgressBar = new LanguageResourceKey("CaseNavigation.Feedback_ProgressBar", "AtomUIGallery");
+        public static readonly LanguageResourceKey Feedback_Skeleton = new LanguageResourceKey("CaseNavigation.Feedback_Skeleton", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Watermark = new LanguageResourceKey("CaseNavigation.Feedback_Watermark", "AtomUIGallery");
         public static readonly LanguageResourceKey General = new LanguageResourceKey("CaseNavigation.General", "AtomUIGallery");
         public static readonly LanguageResourceKey General_AboutUs = new LanguageResourceKey("CaseNavigation.General_AboutUs", "AtomUIGallery");
