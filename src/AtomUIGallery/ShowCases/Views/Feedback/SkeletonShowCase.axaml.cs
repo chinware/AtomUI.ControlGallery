@@ -1,7 +1,9 @@
 using AtomUI;
 using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
+using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
+using Avalonia.Threading;
 using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
@@ -64,6 +66,18 @@ public partial class SkeletonShowCase : ReactiveUserControl<SkeletonViewModel>
             {
                 viewModel.SkeletonAvatarShape = AvatarShape.Circle;
             }
+        }
+    }
+
+    private void HandleLoadingButtonClicked(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is SkeletonViewModel viewModel)
+        {
+            viewModel.SkeletonLoading = !viewModel.SkeletonLoading;
+            DispatcherTimer.RunOnce(() =>
+            {
+                viewModel.SkeletonLoading = !viewModel.SkeletonLoading;
+            }, TimeSpan.FromSeconds(3));
         }
     }
 }

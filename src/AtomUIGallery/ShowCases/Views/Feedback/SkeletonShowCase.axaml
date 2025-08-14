@@ -31,10 +31,10 @@
             OccupyEntireRow="True">
             <StackPanel Orientation="Vertical" Spacing="20">
                 <StackPanel Orientation="Horizontal" Spacing="10">
-                    <atom:SkeletonButton IsActive="{Binding IsSkeletonActive}" IsBlock="{Binding IsSkeletonBlock}" 
+                    <atom:SkeletonButton IsActive="{Binding IsSkeletonActive}" IsBlock="{Binding IsSkeletonBlock}"
                                          SizeType="{Binding SkeletonButtonAndInputSizeType}"
                                          Shape="{Binding SkeletonButtonShape}"/>
-                    <atom:SkeletonAvatar IsActive="{Binding IsSkeletonActive}" 
+                    <atom:SkeletonAvatar IsActive="{Binding IsSkeletonActive}"
                                          SizeType="{Binding SkeletonButtonAndInputSizeType}"
                                          Shape="{Binding SkeletonAvatarShape}"/>
                     <atom:SkeletonInput IsActive="{Binding IsSkeletonActive}"
@@ -45,29 +45,29 @@
                                      Shape="{Binding SkeletonButtonShape}"/>
                 <atom:SkeletonInput IsActive="{Binding IsSkeletonActive}" IsBlock="{Binding IsSkeletonBlock}"
                                     SizeType="{Binding SkeletonButtonAndInputSizeType}"/>
-                
+        
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <atom:SkeletonImage IsActive="{Binding IsSkeletonActive}"/>
                     <atom:SkeletonNode IsActive="{Binding IsSkeletonActive}" Width="160"/>
                     <atom:SkeletonNode IsActive="{Binding IsSkeletonActive}">
-                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=DotChartOutlined}" 
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=DotChartOutlined}"
                                    NormalFilledBrush="#bfbfbf"
                                    Width="40"
                                    Height="40"/>
                     </atom:SkeletonNode>
                 </StackPanel>
-                
+        
                 <WrapPanel Orientation="Horizontal" ItemSpacing="10" LineSpacing="20">
                     <StackPanel Orientation="Horizontal" Spacing="5">
                         <atom:TextBlock VerticalAlignment="Center">Active:</atom:TextBlock>
                         <atom:ToggleSwitch VerticalAlignment="Center" IsChecked="{Binding IsSkeletonActive, Mode=TwoWay}"/>
                     </StackPanel>
-                    
+        
                     <StackPanel Orientation="Horizontal" Spacing="5">
                         <atom:TextBlock VerticalAlignment="Center">Button and Input Block:</atom:TextBlock>
                         <atom:ToggleSwitch IsChecked="{Binding IsSkeletonBlock, Mode=TwoWay}" VerticalAlignment="Center"/>
                     </StackPanel>
-                    
+        
                     <StackPanel Orientation="Horizontal" Spacing="5">
                         <atom:TextBlock VerticalAlignment="Center">Size:</atom:TextBlock>
                         <atom:OptionButtonGroup ButtonStyle="Outline" OptionCheckedChanged="HandleSizeTypeChanged">
@@ -76,7 +76,7 @@
                             <atom:OptionButton>Small</atom:OptionButton>
                         </atom:OptionButtonGroup>
                     </StackPanel>
-                    
+        
                     <StackPanel Orientation="Horizontal" Spacing="5">
                         <atom:TextBlock VerticalAlignment="Center">Button Shape:</atom:TextBlock>
                         <atom:OptionButtonGroup ButtonStyle="Outline" OptionCheckedChanged="HandleButtonShapeChanged">
@@ -85,15 +85,31 @@
                             <atom:OptionButton>Circle</atom:OptionButton>
                         </atom:OptionButtonGroup>
                     </StackPanel>
-                    
+        
                     <StackPanel Orientation="Horizontal" Spacing="5">
                         <atom:TextBlock VerticalAlignment="Center">Avatar Shape:</atom:TextBlock>
                         <atom:OptionButtonGroup ButtonStyle="Outline" OptionCheckedChanged="HandleButtonAvatarChanged">
                             <atom:OptionButton>Square</atom:OptionButton>
                             <atom:OptionButton IsChecked="True">Circle</atom:OptionButton>
-                        </atom:OptionButtonGroup> 
+                        </atom:OptionButtonGroup>
                     </StackPanel>
                 </WrapPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Contains sub component"
+            Description="Skeleton contains sub component."
+            OccupyEntireRow="True">
+            <StackPanel Orientation="Vertical" Spacing="10">
+                <atom:Skeleton IsLoading="{Binding SkeletonLoading}">
+                    <StackPanel Orientation="Vertical" Spacing="20">
+                        <atom:TextBlock FontWeight="Bold">Ant Design, a design language</atom:TextBlock>
+                        <atom:TextBlock TextWrapping="Wrap">We supply a series of design principles, practical patterns and high quality design resources (Sketch and Axure), to help people create their product prototypes beautifully and efficiently.</atom:TextBlock>
+                    </StackPanel>
+                </atom:Skeleton>
+                <atom:Button IsEnabled="{Binding SkeletonLoading, Converter={x:Static BoolConverters.Not}}"
+                             Click="HandleLoadingButtonClicked">Show Skeleton</atom:Button>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>

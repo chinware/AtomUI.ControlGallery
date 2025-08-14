@@ -52,6 +52,14 @@ public class SkeletonViewModel : ReactiveObject, IRoutableViewModel
         get => _skeletonAvatarShape;
         set => this.RaiseAndSetIfChanged(ref _skeletonAvatarShape, value);
     }
+    
+    private bool _skeletonLoading;
+
+    public bool SkeletonLoading
+    {
+        get => _skeletonLoading;
+        set => this.RaiseAndSetIfChanged(ref _skeletonLoading, value);
+    }
 
     public SkeletonViewModel(IScreen screen)
     {
