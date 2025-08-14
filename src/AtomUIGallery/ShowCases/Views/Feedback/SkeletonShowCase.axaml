@@ -6,9 +6,34 @@
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
-            Description="Simplest Skeleton usage.">
-       
-            <atom:SkeletonTitle IsActive="True" IsRound="True"/>
+            Description="Simplest Skeleton usage."
+            OccupyEntireRow="True">
+            <atom:Skeleton/>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Complex combination"
+            Description="Complex combination with avatar and multiple paragraphs."
+            OccupyEntireRow="True">
+            <atom:Skeleton IsShowAvatar="True" ParagraphRows="4"/>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Active Animation"
+            Description="Display active animation."
+            OccupyEntireRow="True">
+            <atom:Skeleton IsActive="True"/>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Button/Avatar/Input/Image/Node"
+            Description="Skeleton Button, Avatar, Input, Image and Node."
+            OccupyEntireRow="True">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <atom:SkeletonAvatar/>
+                </StackPanel>
+            </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
