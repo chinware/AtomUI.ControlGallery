@@ -25,12 +25,14 @@
 
         <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation}}"
                           Icon="{atom:IconProvider Kind=MenuOutlined}">
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_Breadcrumb}}"
+                              ItemKey="{x:Static viewmodels:BreadcrumbViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_ButtonSpinner}}"
+                              ItemKey="{x:Static viewmodels:ButtonSpinnerViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_ComboBox}}"
                               ItemKey="{x:Static viewmodels:ComboBoxViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_DropdownButton}}"
                               ItemKey="{x:Static viewmodels:DropdownButtonViewModel.ID}" />
-            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_ButtonSpinner}}"
-                              ItemKey="{x:Static viewmodels:ButtonSpinnerViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_Menu}}"
                               ItemKey="{x:Static viewmodels:MenuViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_Pagination}}"

@@ -17,7 +17,7 @@ public partial class MessageShowCase : ReactiveUserControl<MessageViewModel>
         InitializeComponent();
     }
     
-      protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
     {
         base.OnAttachedToVisualTree(e);
         var topLevel = TopLevel.GetTopLevel(this);

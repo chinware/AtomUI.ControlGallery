@@ -16,6 +16,7 @@ internal class en_US : LanguageProvider
     public const string General_CustomizeTheme = "CustomizeTheme";
     
     public const string Navigation = "Navigation";
+    public const string Navigation_Breadcrumb = "Breadcrumb";
     public const string Navigation_ComboBox = "ComboBox";
     public const string Navigation_DropdownButton = "DropdownButton";
     public const string Navigation_ButtonSpinner = "ButtonSpinner";
