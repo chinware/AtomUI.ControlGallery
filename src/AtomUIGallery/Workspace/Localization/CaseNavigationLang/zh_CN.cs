@@ -16,6 +16,7 @@ internal class zh_CN : LanguageProvider
     public const string General_CustomizeTheme = "CustomizeTheme 主题";
     
     public const string Navigation = "导航";
+    public const string Navigation_Breadcrumb = "Breadcrumb 面包屑";
     public const string Navigation_ComboBox = "ComboBox 组合框";
     public const string Navigation_DropdownButton = "DropdownButton 下拉菜单";
     public const string Navigation_ButtonSpinner = "ButtonSpinner 选项按钮";
@@ -49,7 +50,6 @@ internal class zh_CN : LanguageProvider
     public const string DataDisplay_TreeView = "TreeView 树形控件";
     public const string DataDisplay_Tooltip = "Tooltip 文字提示";
     public const string DataDisplay_Tag = "Tag 标签";
-
     
     public const string Feedback = "反馈";
     public const string Feedback_Alert = "Alert 警告提示";
