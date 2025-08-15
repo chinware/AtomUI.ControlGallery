@@ -48,6 +48,7 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
         public static readonly LanguageResourceKey General_Separator = new LanguageResourceKey("CaseNavigation.General_Separator", "AtomUIGallery");
         public static readonly LanguageResourceKey General_SplitButton = new LanguageResourceKey("CaseNavigation.General_SplitButton", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation = new LanguageResourceKey("CaseNavigation.Navigation", "AtomUIGallery");
+        public static readonly LanguageResourceKey Navigation_Breadcrumb = new LanguageResourceKey("CaseNavigation.Navigation_Breadcrumb", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_ButtonSpinner = new LanguageResourceKey("CaseNavigation.Navigation_ButtonSpinner", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_ComboBox = new LanguageResourceKey("CaseNavigation.Navigation_ComboBox", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_DropdownButton = new LanguageResourceKey("CaseNavigation.Navigation_DropdownButton", "AtomUIGallery");

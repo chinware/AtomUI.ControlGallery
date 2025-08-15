@@ -19,6 +19,7 @@ internal class zh_CN : LanguageProvider
     public const string Navigation_ComboBox = "ComboBox 组合框";
     public const string Navigation_DropdownButton = "DropdownButton 下拉菜单";
     public const string Navigation_ButtonSpinner = "ButtonSpinner 选项按钮";
+    public const string Navigation_Breadcrumb = "Breadcrumb 面包屑";
     public const string Navigation_Menu = "Menu 菜单";
     public const string Navigation_Pagination = "Pagination 分页";
     public const string Navigation_TabControl = "TabControl 标签页";

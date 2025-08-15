@@ -19,6 +19,7 @@ internal class en_US : LanguageProvider
     public const string Navigation_ComboBox = "ComboBox";
     public const string Navigation_DropdownButton = "DropdownButton";
     public const string Navigation_ButtonSpinner = "ButtonSpinner";
+    public const string Navigation_Breadcrumb = "Breadcrumb";
     public const string Navigation_Menu = "Menu";
     public const string Navigation_Pagination = "Pagination";
     public const string Navigation_TabControl = "TabControl";

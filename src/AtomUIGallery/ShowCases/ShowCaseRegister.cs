@@ -74,6 +74,7 @@ internal static class ShowCaseRegister
     private static void RegisterNavigationCases()
     {
         Locator.CurrentMutable.Register(() => new ButtonSpinnerShowCase(), typeof(IViewFor<ButtonSpinnerViewModel>));
+        Locator.CurrentMutable.Register(() => new BreadcrumbShowCase(), typeof(IViewFor<BreadcrumbViewModel>));
         Locator.CurrentMutable.Register(() => new ComboBoxShowCase(), typeof(IViewFor<ComboBoxViewModel>));
         Locator.CurrentMutable.Register(() => new DropdownButtonShowCase(), typeof(IViewFor<DropdownButtonViewModel>));
         Locator.CurrentMutable.Register(() => new MenuShowCase(), typeof(IViewFor<MenuViewModel>));
