@@ -7,7 +7,7 @@ using ReactiveUI;
 namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class CheckBoxViewModel : ReactiveObject, IRoutableViewModel,
-                                         IActivatableViewModel
+                                 IActivatableViewModel
 {
     public const string ID = "CheckBoxShowCase";
 
@@ -117,7 +117,7 @@ public class CheckBoxViewModel : ReactiveObject, IRoutableViewModel,
         CheckStatusCommand  = ReactiveCommand.Create<Button>(HandleCheckStatus);
         CheckBoxCommand     = ReactiveCommand.Create<Button>(HandleCheckBox);
 
-        CheckedAllStatusCommand  = ReactiveCommand.Create<CheckBox>(HandleCheckedAllStatus);
+        CheckedAllStatusCommand   = ReactiveCommand.Create<CheckBox>(HandleCheckedAllStatus);
         CheckedItemStatusCommand1 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
         CheckedItemStatusCommand2 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);
         CheckedItemStatusCommand3 = ReactiveCommand.Create<CheckBox>(HandleCheckedItemStatus);

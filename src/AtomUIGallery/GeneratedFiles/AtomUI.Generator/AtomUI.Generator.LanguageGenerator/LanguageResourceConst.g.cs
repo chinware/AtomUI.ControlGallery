@@ -23,6 +23,7 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
         public static readonly LanguageResourceKey DataDisplay_TreeView = new LanguageResourceKey("CaseNavigation.DataDisplay_TreeView", "AtomUIGallery");
         public static readonly LanguageResourceKey DataEntry = new LanguageResourceKey("CaseNavigation.DataEntry", "AtomUIGallery");
         public static readonly LanguageResourceKey DataEntry_CheckBox = new LanguageResourceKey("CaseNavigation.DataEntry_CheckBox", "AtomUIGallery");
+        public static readonly LanguageResourceKey DataEntry_ColorPicker = new LanguageResourceKey("CaseNavigation.DataEntry_ColorPicker", "AtomUIGallery");
         public static readonly LanguageResourceKey DataEntry_DatePicker = new LanguageResourceKey("CaseNavigation.DataEntry_DatePicker", "AtomUIGallery");
         public static readonly LanguageResourceKey DataEntry_LineEdit = new LanguageResourceKey("CaseNavigation.DataEntry_LineEdit", "AtomUIGallery");
         public static readonly LanguageResourceKey DataEntry_NumberUpDown = new LanguageResourceKey("CaseNavigation.DataEntry_NumberUpDown", "AtomUIGallery");

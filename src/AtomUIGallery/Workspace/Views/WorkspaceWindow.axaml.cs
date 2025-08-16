@@ -5,6 +5,7 @@ using AtomUI.Theme.Language;
 using AtomUIGallery.Workspace.ViewModes;
 using Avalonia;
 using Avalonia.Interactivity;
+using Avalonia.Platform;
 using Avalonia.Threading;
 
 namespace AtomUIGallery.Workspace.Views;

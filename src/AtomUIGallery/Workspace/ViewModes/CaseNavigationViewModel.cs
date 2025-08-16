@@ -66,6 +66,7 @@ public class CaseNavigationViewModel : ReactiveObject
     private void RegisterDataEntryViewModels()
     {
         _showCaseViewModelFactories.Add(CheckBoxViewModel.ID, () => new CheckBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ColorPickerViewModel.ID, () => new ColorPickerViewModel(HostScreen));
         _showCaseViewModelFactories.Add(DatePickerViewModel.ID, () => new DatePickerViewModel(HostScreen));
         _showCaseViewModelFactories.Add(LineEditViewModel.ID, () => new LineEditViewModel(HostScreen));
         _showCaseViewModelFactories.Add(NumberUpDownViewModel.ID, () => new NumberUpDownViewModel(HostScreen));
