@@ -7,7 +7,8 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic Usage.">
-            <atom:ColorPicker Value="#1677ff"/>
+            <!-- <atom:ColorPicker Value="#1677ff"/> -->
+            <atom:ColorPickerView Value="#1677ff"/>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
