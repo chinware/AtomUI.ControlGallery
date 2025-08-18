@@ -36,10 +36,10 @@ public class PaletteViewModel : ReactiveObject, IRoutableViewModel
 
     public IScreen HostScreen { get; }
 
-    public string UrlPathSegment { get; } = ID;
+    public string? UrlPathSegment { get; } = ID;
 
     public ObservableCollection<PresetPaletteInfoPair> PresetPaletteInfos { get; set; }
-
+    
     public PaletteViewModel(IScreen screen)
     {
         HostScreen         = screen;

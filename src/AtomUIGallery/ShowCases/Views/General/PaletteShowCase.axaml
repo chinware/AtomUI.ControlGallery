@@ -3,7 +3,11 @@
              x:Class="AtomUIGallery.ShowCases.Views.PaletteShowCase"
              xmlns:atom="https://atomui.net"
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
-             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
+             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d">
+
     <atom:TabControl SizeType="Large">
         <atom:TabItem Header="Light">
             <ScrollViewer>
