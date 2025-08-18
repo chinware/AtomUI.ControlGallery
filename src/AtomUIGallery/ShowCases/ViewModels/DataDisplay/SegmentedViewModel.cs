@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class SegmentedViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "SegmentedShowCase";
+    public const string ID = "Segmented";
     
     public IScreen HostScreen { get; }
     

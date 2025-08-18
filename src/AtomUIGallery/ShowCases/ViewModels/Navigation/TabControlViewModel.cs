@@ -7,7 +7,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class TabControlViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "TabControlShowCase";
+    public const string ID = "TabControl";
 
     public IScreen HostScreen { get; }
 

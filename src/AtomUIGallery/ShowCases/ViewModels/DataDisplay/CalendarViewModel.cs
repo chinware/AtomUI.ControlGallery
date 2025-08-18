@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class CalendarViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "CalendarShowCase";
+    public const string ID = "Calendar";
 
     public IScreen HostScreen { get; }
 

@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class DropdownButtonViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "DropdownButtonShowCase";
+    public const string ID = "DropdownButton";
     
     public IScreen HostScreen { get; }
     

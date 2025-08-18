@@ -7,7 +7,7 @@ public class BadgeViewModel : ReactiveObject, IRoutableViewModel, IActivatableVi
 {
     public ViewModelActivator Activator { get; }
 
-    public const string ID = "BadgeShowCase";
+    public const string ID = "Badge";
 
     public IScreen HostScreen { get; }
 

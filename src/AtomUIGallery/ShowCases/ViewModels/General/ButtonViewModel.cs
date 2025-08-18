@@ -8,7 +8,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ButtonViewModel : ReactiveObject, IRoutableViewModel, IActivatableViewModel
 {
-    public const string ID = "ButtonShowCase";
+    public const string ID = "Button";
 
     public IScreen HostScreen { get; }
     public ViewModelActivator Activator { get; }

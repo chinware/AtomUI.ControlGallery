@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class SkeletonViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "SkeletonShowCase";
+    public const string ID = "Skeleton";
     
     public IScreen HostScreen { get; }
     

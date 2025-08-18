@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class SplitButtonViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "SplitButtonShowCase";
+    public const string ID = "SplitButton";
     
     public IScreen HostScreen { get; }
     

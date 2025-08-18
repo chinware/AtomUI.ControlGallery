@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ComboBoxViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ComboBoxShowCase";
+    public const string ID = "ComboBox";
     
     public IScreen HostScreen { get; }
     

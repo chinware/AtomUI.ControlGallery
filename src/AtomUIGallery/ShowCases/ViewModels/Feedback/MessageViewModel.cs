@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class MessageViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "MessageShowCase";
+    public const string ID = "Message";
     
     public IScreen HostScreen { get; }
     

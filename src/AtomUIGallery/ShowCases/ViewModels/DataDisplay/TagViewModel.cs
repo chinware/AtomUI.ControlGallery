@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class TagViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "TagShowCase";
+    public const string ID = "Tag";
     
     public IScreen HostScreen { get; }
     

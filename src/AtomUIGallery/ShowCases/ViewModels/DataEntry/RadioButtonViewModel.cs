@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class RadioButtonViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "RadioButtonShowCase";
+    public const string ID = "RadioButton";
     
     public IScreen HostScreen { get; }
     

@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class TimePickerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "TimePickerShowCase";
+    public const string ID = "TimePicker";
     
     public IScreen HostScreen { get; }
     

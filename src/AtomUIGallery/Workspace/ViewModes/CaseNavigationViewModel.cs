@@ -107,25 +107,21 @@ public class CaseNavigationViewModel : ReactiveObject
         }
 
         _currentShowCase = showCaseId;
-        IRoutableViewModel? viewModel = null;
 
-        if (_showCaseViewModels.ContainsKey(showCaseId))
+        if (_showCaseViewModels.TryGetValue(showCaseId, out var viewModel))
         {
             viewModel = _showCaseViewModels[showCaseId];
         }
         else
         {
-            if (!_showCaseViewModelFactories.ContainsKey(showCaseId))
+            if (!_showCaseViewModelFactories.TryGetValue(showCaseId,  out var viewModelFactory))
             {
-                // TODO 应该写日志或者抛出异常？
-                return;
+                throw new NotSupportedException($"unknown showcase id {showCaseId}");
             }
 
-            viewModel = _showCaseViewModelFactories[showCaseId]();
+            viewModel = viewModelFactory();
             _showCaseViewModels.Add(showCaseId, viewModel);
         }
-        Dispatcher.UIThread.RunJobs();
-        // TODO 这里会卡，导致左边菜单渲染受到影响
         HostScreen.Router.Navigate.Execute(viewModel);
     }
     

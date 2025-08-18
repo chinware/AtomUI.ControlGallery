@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class InfoFlyoutViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "InfoFlyoutShowCase";
+    public const string ID = "InfoFlyout";
     
     public IScreen HostScreen { get; }
     

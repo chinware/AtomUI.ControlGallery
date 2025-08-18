@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class AboutUsViewModel : ReactiveObject, IRoutableViewModel, IActivatableViewModel
 {
-    public const string ID = "AboutUsShowCase";
+    public const string ID = "AboutUs";
 
     public IScreen HostScreen { get; }
     public ViewModelActivator Activator { get; }

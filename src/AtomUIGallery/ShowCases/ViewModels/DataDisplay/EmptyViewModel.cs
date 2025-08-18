@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class EmptyViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "EmptyShowCase";
+    public const string ID = "Empty";
     
     public IScreen HostScreen { get; }
     

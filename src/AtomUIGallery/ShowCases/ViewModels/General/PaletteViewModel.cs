@@ -32,7 +32,7 @@ public class PresetPaletteInfoPair
 
 public class PaletteViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "PaletteShowCase";
+    public const string ID = "Palette";
 
     public IScreen HostScreen { get; }
 

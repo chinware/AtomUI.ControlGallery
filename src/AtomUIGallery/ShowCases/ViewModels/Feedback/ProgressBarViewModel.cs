@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ProgressBarViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ProgressBarShowCase";
+    public const string ID = "ProgressBar";
     
     public IScreen HostScreen { get; }
     

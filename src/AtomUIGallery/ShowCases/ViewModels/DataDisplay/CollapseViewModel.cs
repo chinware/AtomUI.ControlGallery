@@ -5,7 +5,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class CollapseViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "CollapseShowCase";
+    public const string ID = "Collapse";
     
     public IScreen HostScreen { get; }
     

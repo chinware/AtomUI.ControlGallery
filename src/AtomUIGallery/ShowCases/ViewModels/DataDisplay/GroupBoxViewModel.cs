@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class GroupBoxViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "GroupBoxShowCase";
+    public const string ID = "GroupBox";
     
     public IScreen HostScreen { get; }
     

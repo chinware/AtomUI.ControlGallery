@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class MenuViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "MenuShowCase";
+    public const string ID = "Menu";
 
     public IScreen HostScreen { get; }
 

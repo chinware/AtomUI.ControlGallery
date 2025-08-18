@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ExpanderViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ExpanderShowCase";
+    public const string ID = "Expander";
     
     public IScreen HostScreen { get; }
     

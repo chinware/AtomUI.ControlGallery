@@ -9,7 +9,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 public class CheckBoxViewModel : ReactiveObject, IRoutableViewModel,
                                  IActivatableViewModel
 {
-    public const string ID = "CheckBoxShowCase";
+    public const string ID = "CheckBox";
 
     public IScreen HostScreen { get; }
     public ViewModelActivator Activator { get; }

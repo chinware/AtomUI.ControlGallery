@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class CustomizeThemeViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "CustomizeThemeShowCase";
+    public const string ID = "CustomizeTheme";
 
     public IScreen HostScreen { get; }
 

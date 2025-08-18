@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class NotificationViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "NotificationShowCase";
+    public const string ID = "Notification";
     
     public IScreen HostScreen { get; }
     

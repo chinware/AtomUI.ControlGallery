@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class PaginationViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "PaginationShowCase";
+    public const string ID = "Pagination";
 
     public IScreen HostScreen { get; }
 

@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class NumberUpDownViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "NumberUpDownShowCase";
+    public const string ID = "NumberUpDown";
     
     public IScreen HostScreen { get; }
     

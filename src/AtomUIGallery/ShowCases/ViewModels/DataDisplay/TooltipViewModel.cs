@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class TooltipViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "TooltipShowCase";
+    public const string ID = "Tooltip";
     
     public IScreen HostScreen { get; }
     

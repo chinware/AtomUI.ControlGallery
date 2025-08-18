@@ -7,7 +7,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class DatePickerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "DatePickerShowCase";
+    public const string ID = "DatePicker";
     
     public IScreen HostScreen { get; }
     

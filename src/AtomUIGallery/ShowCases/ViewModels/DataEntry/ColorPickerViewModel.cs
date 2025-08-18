@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ColorPickerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ColorPickerShowCase";
+    public const string ID = "ColorPicker";
     
     public IScreen HostScreen { get; }
     
