@@ -1,8 +1,8 @@
-using System.ComponentModel;
 using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
+using Avalonia.Threading;
 using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
@@ -15,33 +15,33 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
         {
             if (DataContext is DataGridViewModel viewModel)
             {
-                BasicCaseGrid.ItemsSource                  = viewModel.BasicCaseDataSource;
-                SelectionDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
-                FilterAndSortGrid.ItemsSource              = viewModel.FilterAndSorterDataSource;
-                FilterInTreeGrid.ItemsSource               = viewModel.FilterAndSorterDataSource;
-                MultiSorterDataGrid.ItemsSource            = viewModel.MultiSorterDataSource;
-                ResetFilterAndSortGrid.ItemsSource         = viewModel.BasicCaseDataSource;
-                LargeSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
-                MiddleSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
-                SmallSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource;
-                CustomHeaderAndFooterDataGrid.ItemsSource  = viewModel.BasicCaseDataSource;
-                ExpandableDataGrid.ItemsSource             = viewModel.ExpandableRowDataSource;
-                OrderSpecificColumnDataGrid.ItemsSource    = viewModel.ExpandableRowDataSource;
-                RowAndColumnHeaderDataGrid.ItemsSource     = viewModel.ExpandableRowDataSource;
-                GroupHeaderDataGrid.ItemsSource            = viewModel.GroupHeaderDataSource;
-                HideColumnDataGrid.ItemsSource             = viewModel.BasicCaseDataSource;
-                FixedHeaderDataGrid.ItemsSource            = viewModel.FixedHeaderDataSource;
-                FixedColumnsDataGrid1.ItemsSource = viewModel.FixedColumnsDataSource;
-                FixedColumnsDataGrid2.ItemsSource = viewModel.FixedColumnsDataSource;
-                FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource;
-                DragColumnDataGrid1.ItemsSource = viewModel.DragColumnDataSource;
-                DragColumnDataGrid2.ItemsSource = viewModel.DragColumnDataSource;
-                DragColumnDataGrid3.ItemsSource = viewModel.DragColumnDataSource;
-                DragRowDataGrid1.ItemsSource = viewModel.DragRowDataSource;
-                DragRowDataGrid2.ItemsSource = viewModel.DragRowManyDataSource;
-                CustomEmptyDataGrid.ItemsSource            = viewModel.CustomEmptyDataSource;
-                EditableCellsDataGrid.ItemsSource          = viewModel.EditableCellsDataSource;
-                BasicPagingCaseGrid.ItemsSource = viewModel.PagingGridDataSource;
+                Dispatcher.UIThread.Post(() => BasicCaseGrid.ItemsSource         = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => SelectionDataGrid.ItemsSource     = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => FilterAndSortGrid.ItemsSource     = viewModel.FilterAndSorterDataSource);
+                Dispatcher.UIThread.Post(() => FilterInTreeGrid.ItemsSource      = viewModel.FilterAndSorterDataSource);
+                Dispatcher.UIThread.Post(() => MultiSorterDataGrid.ItemsSource   = viewModel.MultiSorterDataSource);
+                Dispatcher.UIThread.Post(() => ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => LargeSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => MiddleSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => SmallSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => CustomHeaderAndFooterDataGrid.ItemsSource  = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => ExpandableDataGrid.ItemsSource             = viewModel.ExpandableRowDataSource);
+                Dispatcher.UIThread.Post(() => OrderSpecificColumnDataGrid.ItemsSource    = viewModel.ExpandableRowDataSource);
+                Dispatcher.UIThread.Post(() => RowAndColumnHeaderDataGrid.ItemsSource     = viewModel.ExpandableRowDataSource);
+                Dispatcher.UIThread.Post(() => GroupHeaderDataGrid.ItemsSource            = viewModel.GroupHeaderDataSource);
+                Dispatcher.UIThread.Post(() => HideColumnDataGrid.ItemsSource             = viewModel.BasicCaseDataSource);
+                Dispatcher.UIThread.Post(() => FixedHeaderDataGrid.ItemsSource            = viewModel.FixedHeaderDataSource);
+                Dispatcher.UIThread.Post(() => FixedColumnsDataGrid1.ItemsSource = viewModel.FixedColumnsDataSource);
+                Dispatcher.UIThread.Post(() => FixedColumnsDataGrid2.ItemsSource = viewModel.FixedColumnsDataSource);
+                Dispatcher.UIThread.Post(() => FixedColumnsAndHeadersDataGrid.ItemsSource = viewModel.FixedColumnsAndHeadersDataSource);
+                Dispatcher.UIThread.Post(() => DragColumnDataGrid1.ItemsSource = viewModel.DragColumnDataSource);
+                Dispatcher.UIThread.Post(() => DragColumnDataGrid2.ItemsSource = viewModel.DragColumnDataSource);
+                Dispatcher.UIThread.Post(() => DragColumnDataGrid3.ItemsSource = viewModel.DragColumnDataSource);
+                Dispatcher.UIThread.Post(() => DragRowDataGrid1.ItemsSource = viewModel.DragRowDataSource);
+                Dispatcher.UIThread.Post(() => DragRowDataGrid2.ItemsSource = viewModel.DragRowManyDataSource);
+                Dispatcher.UIThread.Post(() => CustomEmptyDataGrid.ItemsSource            = viewModel.CustomEmptyDataSource);
+                Dispatcher.UIThread.Post(() => EditableCellsDataGrid.ItemsSource          = viewModel.EditableCellsDataSource);
+                Dispatcher.UIThread.Post(() => BasicPagingCaseGrid.ItemsSource = viewModel.PagingGridDataSource);
             }
 
             ExtendedSelection.IsCheckedChanged += SelectionModeCheckedChanged;
