@@ -7,7 +7,6 @@ namespace AtomUIGallery.Workspace.ViewModes;
 public class CaseNavigationViewModel : ReactiveObject
 {
     private Dictionary<string, Func<IRoutableViewModel>> _showCaseViewModelFactories;
-    private Dictionary<string, IRoutableViewModel> _showCaseViewModels;
     private string? _currentShowCase;
     private DispatcherTimer _dispatcherTimer;
 
@@ -16,7 +15,6 @@ public class CaseNavigationViewModel : ReactiveObject
     public CaseNavigationViewModel(IScreen hostScreen)
     {
         _showCaseViewModelFactories = new Dictionary<string, Func<IRoutableViewModel>>();
-        _showCaseViewModels         = new Dictionary<string, IRoutableViewModel>();
         HostScreen                  = hostScreen;
         RegisterShowCaseViewModels();
         _dispatcherTimer      =  new DispatcherTimer();
@@ -108,20 +106,12 @@ public class CaseNavigationViewModel : ReactiveObject
 
         _currentShowCase = showCaseId;
 
-        if (_showCaseViewModels.TryGetValue(showCaseId, out var viewModel))
+        if (!_showCaseViewModelFactories.TryGetValue(showCaseId,  out var viewModelFactory))
         {
-            viewModel = _showCaseViewModels[showCaseId];
+            throw new NotSupportedException($"unknown showcase id {showCaseId}");
         }
-        else
-        {
-            if (!_showCaseViewModelFactories.TryGetValue(showCaseId,  out var viewModelFactory))
-            {
-                throw new NotSupportedException($"unknown showcase id {showCaseId}");
-            }
 
-            viewModel = viewModelFactory();
-            _showCaseViewModels.Add(showCaseId, viewModel);
-        }
+        var viewModel = viewModelFactory();
         HostScreen.Router.Navigate.Execute(viewModel);
     }
     
