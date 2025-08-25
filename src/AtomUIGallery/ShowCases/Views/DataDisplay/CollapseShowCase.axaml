@@ -31,7 +31,7 @@
             Title="Size"
             Description="Ant Design supports a default collapse size as well as a large and small size.
 If a large or small collapse is desired, set the size property to either large or small respectively. Omit the size property for a collapse with the default size.">
-            <StackPanel Orientation="Vertical" Spacing="20" Margin="0, 0, 10, 0">
+            <StackPanel Orientation="Vertical" Spacing="20" >
                 <atom:Separator Title="Default Size" TitlePosition="Left" FontWeight="Bold" />
                 <atom:Collapse SizeType="Middle">
                     <atom:CollapseItem Header="This is default size panel header">
@@ -83,7 +83,7 @@ If a large or small collapse is desired, set the size property to either large o
 
         <gallerycontrols:ShowCaseItem
             Title="Nested panel"
-            Description="Collapse is nested inside the Collapse." Margin="0, 0, 10, 0">
+            Description="Collapse is nested inside the Collapse." >
             <atom:Collapse>
                 <atom:CollapseItem Header="This is panel header 1">
                     <atom:Collapse>
@@ -109,7 +109,7 @@ If a large or small collapse is desired, set the size property to either large o
 
         <gallerycontrols:ShowCaseItem
             Title="Borderless"
-            Description="A borderless style of Collapse." Margin="0, 0, 10, 0">
+            Description="A borderless style of Collapse." >
             <atom:Collapse IsBorderless="True">
                 <atom:CollapseItem Header="This is panel header 1">
                     <atom:TextBlock TextWrapping="Wrap">
@@ -132,7 +132,7 @@ If a large or small collapse is desired, set the size property to either large o
         <gallerycontrols:ShowCaseItem
             Title="No Arrow"
             Description="You can hide the arrow icon by passing IsShowExpandIcon={False} to CollapsePanel component."
-            Margin="0, 0, 10, 0">
+            >
             <atom:Collapse>
                 <atom:CollapseItem Header="This is panel header 1">
                     <atom:TextBlock TextWrapping="Wrap">
@@ -149,7 +149,7 @@ If a large or small collapse is desired, set the size property to either large o
 
         <gallerycontrols:ShowCaseItem
             Title="Expand icon location"
-            Description="The expand icon can be placed in front or in the back." Margin="0, 0, 10, 0">
+            Description="The expand icon can be placed in front or in the back." >
             <StackPanel Orientation="Vertical" Spacing="20">
                 <atom:Collapse ExpandIconPosition="{Binding CollapseExpandIconPosition}">
                     <atom:CollapseItem Header="This is panel header 1"
@@ -185,7 +185,7 @@ If a large or small collapse is desired, set the size property to either large o
 
         <gallerycontrols:ShowCaseItem
             Title="Ghost Collapse"
-            Description="Making collapse's background to transparent." Margin="0, 0, 10, 0">
+            Description="Making collapse's background to transparent." >
             <atom:Collapse IsGhostStyle="True">
                 <atom:CollapseItem Header="This is panel header 1">
                     <atom:TextBlock TextWrapping="Wrap">
@@ -207,7 +207,7 @@ If a large or small collapse is desired, set the size property to either large o
 
         <gallerycontrols:ShowCaseItem
             Title="Collapsible"
-            Description="Specify the trigger area of collapsible by collapsible." Margin="0, 0, 10, 0">
+            Description="Specify the trigger area of collapsible by collapsible." >
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:Collapse>
                     <atom:CollapseItem Header="This panel can only be collapsed by clicking text">

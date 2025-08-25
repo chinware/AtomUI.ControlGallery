@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ListBoxViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ListBoxShowCase";
+    public const string ID = "ListBox";
     
     public IScreen HostScreen { get; }
     

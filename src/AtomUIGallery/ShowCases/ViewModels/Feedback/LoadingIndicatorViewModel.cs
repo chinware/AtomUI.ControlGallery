@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class LoadingIndicatorViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "LoadingIndicatorShowCase";
+    public const string ID = "LoadingIndicator";
     
     public IScreen HostScreen { get; }
     

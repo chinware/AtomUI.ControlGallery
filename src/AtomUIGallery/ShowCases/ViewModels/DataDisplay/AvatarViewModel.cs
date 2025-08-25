@@ -5,7 +5,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class AvatarViewModel : ReactiveObject, IRoutableViewModel, IActivatableViewModel
 {
-    public const string ID = "AvatarShowCase";
+    public const string ID = "Avatar";
     public ViewModelActivator Activator { get; }
     public IScreen HostScreen { get; }
 

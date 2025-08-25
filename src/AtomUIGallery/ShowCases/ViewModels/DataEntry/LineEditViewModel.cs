@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class LineEditViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "LineEditShowCase";
+    public const string ID = "LineEdit";
     
     public IScreen HostScreen { get; }
     

@@ -54,7 +54,7 @@ If a large or small button is desired, set the size property to either large or 
                 <StackPanel Orientation="Horizontal" Spacing="5" DockPanel.Dock="Top">
                     <atom:TextBlock VerticalAlignment="Center">Expand direction:</atom:TextBlock>
                     <atom:OptionButtonGroup ButtonStyle="Outline"
-                                            Name="ButtonSizeTypeOptionGroup" >
+                                            OptionCheckedChanged="HandleButtonSizeTypeOptionCheckedChanged">
                         <atom:OptionButton IsChecked="True">Large</atom:OptionButton>
                         <atom:OptionButton>Default</atom:OptionButton>
                         <atom:OptionButton>Small</atom:OptionButton>
@@ -151,12 +151,14 @@ If a large or small button is desired, set the size property to either large or 
                     <atom:Button ButtonType="Primary" IsLoading="True" Icon="{atom:IconProvider Kind=PoweroffOutlined}" />
                 </WrapPanel>
                 <WrapPanel>
-                    <atom:Button ButtonType="Primary" Name="LoadingBtn1">Click me!</atom:Button>
-                    <atom:Button ButtonType="Primary" Name="LoadingBtn2"
+                    <atom:Button ButtonType="Primary" Click="HandleLoadingBtnClick">Click me!</atom:Button>
+                    <atom:Button ButtonType="Primary"
+                                 Click="HandleLoadingBtnClick"
                                  Icon="{atom:IconProvider Kind=PoweroffOutlined}">
                         Click me!
                     </atom:Button>
-                    <atom:Button ButtonType="Primary" Name="LoadingBtn3"
+                    <atom:Button ButtonType="Primary"
+                                 Click="HandleLoadingBtnClick"
                                  Icon="{atom:IconProvider Kind=PoweroffOutlined}" />
                 </WrapPanel>
 

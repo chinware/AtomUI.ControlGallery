@@ -7,7 +7,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class SliderViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "SliderShowCase";
+    public const string ID = "Slider";
     
     public IScreen HostScreen { get; }
     

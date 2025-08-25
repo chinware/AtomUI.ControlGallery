@@ -7,7 +7,6 @@ namespace AtomUIGallery.Workspace.ViewModes;
 public class CaseNavigationViewModel : ReactiveObject
 {
     private Dictionary<string, Func<IRoutableViewModel>> _showCaseViewModelFactories;
-    private Dictionary<string, IRoutableViewModel> _showCaseViewModels;
     private string? _currentShowCase;
     private DispatcherTimer _dispatcherTimer;
 
@@ -16,7 +15,6 @@ public class CaseNavigationViewModel : ReactiveObject
     public CaseNavigationViewModel(IScreen hostScreen)
     {
         _showCaseViewModelFactories = new Dictionary<string, Func<IRoutableViewModel>>();
-        _showCaseViewModels         = new Dictionary<string, IRoutableViewModel>();
         HostScreen                  = hostScreen;
         RegisterShowCaseViewModels();
         _dispatcherTimer      =  new DispatcherTimer();
@@ -66,6 +64,7 @@ public class CaseNavigationViewModel : ReactiveObject
     private void RegisterDataEntryViewModels()
     {
         _showCaseViewModelFactories.Add(CheckBoxViewModel.ID, () => new CheckBoxViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(ColorPickerViewModel.ID, () => new ColorPickerViewModel(HostScreen));
         _showCaseViewModelFactories.Add(DatePickerViewModel.ID, () => new DatePickerViewModel(HostScreen));
         _showCaseViewModelFactories.Add(LineEditViewModel.ID, () => new LineEditViewModel(HostScreen));
         _showCaseViewModelFactories.Add(NumberUpDownViewModel.ID, () => new NumberUpDownViewModel(HostScreen));
@@ -106,25 +105,13 @@ public class CaseNavigationViewModel : ReactiveObject
         }
 
         _currentShowCase = showCaseId;
-        IRoutableViewModel? viewModel = null;
 
-        if (_showCaseViewModels.ContainsKey(showCaseId))
+        if (!_showCaseViewModelFactories.TryGetValue(showCaseId,  out var viewModelFactory))
         {
-            viewModel = _showCaseViewModels[showCaseId];
+            throw new NotSupportedException($"unknown showcase id {showCaseId}");
         }
-        else
-        {
-            if (!_showCaseViewModelFactories.ContainsKey(showCaseId))
-            {
-                // TODO 应该写日志或者抛出异常？
-                return;
-            }
 
-            viewModel = _showCaseViewModelFactories[showCaseId]();
-            _showCaseViewModels.Add(showCaseId, viewModel);
-        }
-        Dispatcher.UIThread.RunJobs();
-        // TODO 这里会卡，导致左边菜单渲染受到影响
+        var viewModel = viewModelFactory();
         HostScreen.Router.Navigate.Execute(viewModel);
     }
     

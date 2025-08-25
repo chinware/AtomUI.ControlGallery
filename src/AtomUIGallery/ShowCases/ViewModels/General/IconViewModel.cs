@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class IconViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "IconShowCase";
+    public const string ID = "Icon";
     
     public IScreen HostScreen { get; }
     

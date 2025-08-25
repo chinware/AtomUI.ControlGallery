@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ButtonSpinnerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ButtonSpinnerShowCase";
+    public const string ID = "ButtonSpinner";
 
     public IScreen HostScreen { get; }
 

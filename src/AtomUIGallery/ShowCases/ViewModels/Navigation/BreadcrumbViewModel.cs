@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class BreadcrumbViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "BreadcrumbShowCase";
+    public const string ID = "Breadcrumb";
     
     public IScreen HostScreen { get; }
     

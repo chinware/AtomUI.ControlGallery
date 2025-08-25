@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class ToggleSwitchViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "ToggleSwitchShowCase";
+    public const string ID = "ToggleSwitch";
     
     public IScreen HostScreen { get; }
     

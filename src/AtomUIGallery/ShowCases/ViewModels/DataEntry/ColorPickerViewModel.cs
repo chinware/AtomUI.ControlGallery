@@ -1,16 +1,16 @@
-﻿using ReactiveUI;
+using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.ViewModels;
 
-public class GroupBoxViewModel : ReactiveObject, IRoutableViewModel
+public class ColorPickerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "GroupBox";
+    public const string ID = "ColorPicker";
     
     public IScreen HostScreen { get; }
     
     public string UrlPathSegment { get; } = ID;
 
-    public GroupBoxViewModel(IScreen screen)
+    public ColorPickerViewModel(IScreen screen)
     {
         HostScreen = screen;
     }

@@ -6,7 +6,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public partial class DataGridViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "DataGridShowCase";
+    public const string ID = "DataGrid";
 
     public IScreen HostScreen { get; }
 

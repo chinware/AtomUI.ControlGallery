@@ -45,6 +45,8 @@
                           Icon="{atom:IconProvider Kind=FormOutlined}">
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataEntry_CheckBox}}"
                               ItemKey="{x:Static viewmodels:CheckBoxViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataEntry_ColorPicker}}"
+                              ItemKey="{x:Static viewmodels:ColorPickerViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataEntry_LineEdit}}"
                               ItemKey="{x:Static viewmodels:LineEditViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataEntry_NumberUpDown}}"

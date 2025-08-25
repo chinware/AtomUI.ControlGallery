@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class TreeViewViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "TreeViewShowCase";
+    public const string ID = "TreeView";
     
     public IScreen HostScreen { get; }
     

@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class PopupConfirmViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "PopupConfirmShowCase";
+    public const string ID = "PopupConfirm";
     
     public IScreen HostScreen { get; }
     

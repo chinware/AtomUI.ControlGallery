@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class DrawerViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "DrawerShowCase";
+    public const string ID = "Drawer";
     
     public IScreen HostScreen { get; }
     

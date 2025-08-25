@@ -4,7 +4,7 @@ namespace AtomUIGallery.ShowCases.ViewModels;
 
 public class SeparatorViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "SeparatorShowCase";
+    public const string ID = "Separator";
     
     public IScreen HostScreen { get; }
     
