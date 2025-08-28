@@ -15,17 +15,17 @@ public partial class BoxPanelShowCase : ReactiveUserControl<BoxPanelViewModel>
         this.WhenActivated(disposables => { });
         InitializeComponent();
         
-        Vertical.Checked += ModeChecked;
+        Vertical.IsCheckedChanged += HandleModeChecked;
 
-        Horizontal.Checked += ModeChecked;
+        Horizontal.IsCheckedChanged += HandleModeChecked;
         
-        Vertical1.Checked += ModeChecked1;
+        Vertical1.IsCheckedChanged += HandleMode1Checked;
 
-        Horizontal1.Checked += ModeChecked1;
+        Horizontal1.IsCheckedChanged += HandleMode1Checked;
     }
     
     
-    private void ModeChecked1(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void HandleMode1Checked(object? sender, RoutedEventArgs e)
     {
         if (sender is RadioButton button)
         {
@@ -40,7 +40,7 @@ public partial class BoxPanelShowCase : ReactiveUserControl<BoxPanelViewModel>
         }
     }
     
-    private void ModeChecked(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void HandleModeChecked(object? sender, RoutedEventArgs e)
     {
         if (sender is RadioButton button)
         {
@@ -55,14 +55,14 @@ public partial class BoxPanelShowCase : ReactiveUserControl<BoxPanelViewModel>
         }
     }
 
-    private void SpaceSlider_OnValueChanged(object? sender, RangeBaseValueChangedEventArgs e)
+    private void HandleSpaceSliderValueChanged(object? sender, RangeBaseValueChangedEventArgs e)
     {
         ChangeSpaceBoxPanel.Spacing = e.NewValue;
     }
 
-    private void AddSpaceButton_OnClick(object? sender, RoutedEventArgs e)
+    private void HandleAddSpaceButtonClicked(object? sender, RoutedEventArgs e)
     {
-        if (e.Source is Button button && button.Content == "add a space of size 40")
+        if (e.Source is Button button && button.Content?.ToString() == "add a space of size 40")
         {
             ChangeSpaceBoxPanel.AddSpacing(40);
             AddSpaceButton.Content = "remove the space of size 40";
@@ -74,14 +74,14 @@ public partial class BoxPanelShowCase : ReactiveUserControl<BoxPanelViewModel>
         }
     }
 
-    private void ChangFlexButton_OnClick(object? sender, RoutedEventArgs e)
+    private void HandleChangFlexButtonClicked(object? sender, RoutedEventArgs e)
     {
             BoxPanel.SetFlex(ChangeSpaceBoxPanel.Children[3], BoxPanel.GetFlex(ChangeSpaceBoxPanel.Children[3]) == 1 ? 2 : 1);
     }
 
-    private void AddFlexButton_OnClick(object? sender, RoutedEventArgs e)
+    private void HandleAddFlexButtonClicked(object? sender, RoutedEventArgs e)
     {
-        if (e.Source is Button button && button.Content == "add a placeholder flex")
+        if (e.Source is Button button && button.Content?.ToString() == "add a placeholder flex")
         {
             AddPlaceholderBoxPanel.AddFlex(1);
             AddFlexButton.Content = "remove the placeholder flex";

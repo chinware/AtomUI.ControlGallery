@@ -15,6 +15,9 @@ internal class en_US : LanguageProvider
     public const string General_Separator = "Separator";
     public const string General_CustomizeTheme = "CustomizeTheme";
     
+    public const string Layout = "Layout";
+    public const string Layout_BoxPanel = "BoxPanel";
+    
     public const string Navigation = "Navigation";
     public const string Navigation_Breadcrumb = "Breadcrumb";
     public const string Navigation_ComboBox = "ComboBox";

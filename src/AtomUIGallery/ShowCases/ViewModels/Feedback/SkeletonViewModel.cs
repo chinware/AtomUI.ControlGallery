@@ -44,7 +44,6 @@ public class SkeletonViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _skeletonButtonShape, value);
     }
     
-    
     private AvatarShape _skeletonAvatarShape;
 
     public AvatarShape SkeletonAvatarShape

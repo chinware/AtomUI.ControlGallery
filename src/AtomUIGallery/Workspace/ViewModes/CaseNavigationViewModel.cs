@@ -24,6 +24,7 @@ public class CaseNavigationViewModel : ReactiveObject
     private void RegisterShowCaseViewModels()
     {
         RegisterGeneralViewModels();
+        RegisterLayoutViewModels();
         RegisterDataDisplayViewModels();
         RegisterDataEntryViewModels();
         RegisterFeedbackViewModels();
@@ -39,6 +40,11 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(SeparatorViewModel.ID, () => new SeparatorViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SplitButtonViewModel.ID, () => new SplitButtonViewModel(HostScreen));
         _showCaseViewModelFactories.Add(CustomizeThemeViewModel.ID, () => new CustomizeThemeViewModel(HostScreen));
+    }
+    
+    private void RegisterLayoutViewModels()
+    {
+        _showCaseViewModelFactories.Add(BoxPanelViewModel.ID, () => new BoxPanelViewModel(HostScreen));
     }
 
     private void RegisterDataDisplayViewModels()
@@ -59,7 +65,6 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(TimelineViewModel.ID, () => new TimelineViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TooltipViewModel.ID, () => new TooltipViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TreeViewViewModel.ID, () => new TreeViewViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(BoxPanelViewModel.ID, () => new BoxPanelViewModel(HostScreen));
     }
 
     private void RegisterDataEntryViewModels()

@@ -10,6 +10,7 @@ internal static class ShowCaseRegister
     public static void Register()
     {
         RegisterGeneralCases();
+        RegisterLayoutCases();
         RegisterDataDisplayCases();
         RegisterDataEntryCases();
         RegisterFeedbackCases();
@@ -25,6 +26,11 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new PaletteShowCase(), typeof(IViewFor<PaletteViewModel>));
         Locator.CurrentMutable.Register(() => new SeparatorShowCase(), typeof(IViewFor<SeparatorViewModel>));
         Locator.CurrentMutable.Register(() => new SplitButtonShowCase(), typeof(IViewFor<SplitButtonViewModel>));
+    }
+    
+    private static void RegisterLayoutCases()
+    {
+        Locator.CurrentMutable.Register(() => new BoxPanelShowCase(), typeof(IViewFor<BoxPanelViewModel>));
     }
     
     private static void RegisterDataDisplayCases()
@@ -45,7 +51,6 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new TimelineShowCase(), typeof(IViewFor<TimelineViewModel>));
         Locator.CurrentMutable.Register(() => new TooltipShowCase(), typeof(IViewFor<TooltipViewModel>));
         Locator.CurrentMutable.Register(() => new TreeViewShowCase(), typeof(IViewFor<TreeViewViewModel>));
-        Locator.CurrentMutable.Register(() => new BoxPanelShowCase(), typeof(IViewFor<BoxPanelViewModel>));
     }
     
     private static void RegisterDataEntryCases()

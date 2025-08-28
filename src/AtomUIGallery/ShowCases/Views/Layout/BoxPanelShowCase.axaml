@@ -11,7 +11,7 @@
                 Orientation="Vertical"
                 Spacing="20">
 
-                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal">
+                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal" Spacing="10">
                     <atom:RadioButton IsChecked="True" x:Name="Vertical">Vertical</atom:RadioButton>
                     <atom:RadioButton x:Name="Horizontal">Horizontal</atom:RadioButton>
                 </atom:BoxPanel>
@@ -36,7 +36,7 @@
                 Orientation="Vertical"
                 Spacing="20">
 
-                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal">
+                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal" Spacing="10">
                     <atom:RadioButton IsChecked="True" x:Name="Vertical1">Vertical</atom:RadioButton>
                     <atom:RadioButton x:Name="Horizontal1">Horizontal</atom:RadioButton>
                 </atom:BoxPanel>
@@ -110,11 +110,11 @@
                         Minimum="0"
                         TickFrequency="5"
                         Value="10"
-                        ValueChanged="SpaceSlider_OnValueChanged"
+                        ValueChanged="HandleSpaceSliderValueChanged"
                         x:Name="SpaceSlider" />
                     <atom:HBoxPanel Orientation="Horizontal" Spacing="20">
-                        <atom:Button Click="AddSpaceButton_OnClick" x:Name="AddSpaceButton">add a space of size 40</atom:Button>
-                        <atom:Button Click="ChangFlexButton_OnClick" x:Name="ChangFlexButton">change flex</atom:Button>
+                        <atom:Button Click="HandleAddSpaceButtonClicked" x:Name="AddSpaceButton">add a space of size 40</atom:Button>
+                        <atom:Button Click="HandleChangFlexButtonClicked" x:Name="ChangFlexButton">change flex</atom:Button>
                     </atom:HBoxPanel>
                 </atom:VBoxPanel>
                 <atom:BoxPanel
@@ -151,7 +151,7 @@
                 Spacing="20">
 
                 <WrapPanel>
-                    <atom:Button Click="AddFlexButton_OnClick" x:Name="AddFlexButton">add a placeholder flex</atom:Button>
+                    <atom:Button Click="HandleAddFlexButtonClicked" x:Name="AddFlexButton">add a placeholder flex</atom:Button>
                 </WrapPanel>
 
                 <atom:BoxPanel

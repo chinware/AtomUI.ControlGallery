@@ -22,6 +22,12 @@
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.General_CustomizeTheme}}"
                               ItemKey="{x:Static viewmodels:CustomizeThemeViewModel.ID}" />
         </atom:NavMenuItem>
+        
+        <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Layout}}"
+                          Icon="{atom:IconProvider Kind=LayoutOutlined}">
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Layout_BoxPanel}}"
+                              ItemKey="{x:Static viewmodels:BoxPanelViewModel.ID}" />
+        </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation}}"
                           Icon="{atom:IconProvider Kind=MenuOutlined}">
@@ -95,8 +101,6 @@
                               ItemKey="{x:Static viewmodels:TooltipViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Tag}}"
                               ItemKey="{x:Static viewmodels:TagViewModel.ID}" />
-            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_BoxPanel}}"
-                              ItemKey="{x:Static viewmodels:BoxPanelViewModel.ID}" />
         </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback}}"

@@ -15,6 +15,9 @@ internal class zh_CN : LanguageProvider
     public const string General_Separator = "Separator 分割线";
     public const string General_CustomizeTheme = "CustomizeTheme 主题";
     
+    public const string Layout = "布局";
+    public const string Layout_BoxPanel = "BoxPanel 盒子布局";
+    
     public const string Navigation = "导航";
     public const string Navigation_Breadcrumb = "Breadcrumb 面包屑";
     public const string Navigation_ComboBox = "ComboBox 组合框";
