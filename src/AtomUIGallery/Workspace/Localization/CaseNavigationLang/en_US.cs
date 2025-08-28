@@ -51,6 +51,7 @@ internal class en_US : LanguageProvider
     public const string DataDisplay_TreeView = "TreeView";
     public const string DataDisplay_Tooltip = "Tooltip";
     public const string DataDisplay_Tag = "Tag";
+    public const string DataDisplay_BoxPanel = "BoxPanel";
     
     public const string Feedback = "Feedback";
     public const string Feedback_Alert = "Alert";

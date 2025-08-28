@@ -59,6 +59,7 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(TimelineViewModel.ID, () => new TimelineViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TooltipViewModel.ID, () => new TooltipViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TreeViewViewModel.ID, () => new TreeViewViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(BoxPanelViewModel.ID, () => new BoxPanelViewModel(HostScreen));
     }
 
     private void RegisterDataEntryViewModels()

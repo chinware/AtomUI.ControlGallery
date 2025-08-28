@@ -95,6 +95,8 @@
                               ItemKey="{x:Static viewmodels:TooltipViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Tag}}"
                               ItemKey="{x:Static viewmodels:TagViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_BoxPanel}}"
+                              ItemKey="{x:Static viewmodels:BoxPanelViewModel.ID}" />
         </atom:NavMenuItem>
 
         <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback}}"

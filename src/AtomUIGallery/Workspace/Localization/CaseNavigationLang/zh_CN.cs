@@ -51,6 +51,7 @@ internal class zh_CN : LanguageProvider
     public const string DataDisplay_TreeView = "TreeView 树形控件";
     public const string DataDisplay_Tooltip = "Tooltip 文字提示";
     public const string DataDisplay_Tag = "Tag 标签";
+    public const string DataDisplay_BoxPanel = "BoxPanel 盒布局";
     
     public const string Feedback = "反馈";
     public const string Feedback_Alert = "Alert 警告提示";

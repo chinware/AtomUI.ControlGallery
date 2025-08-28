@@ -1,0 +1,176 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AtomUIGallery.ShowCases.Views.BoxPanelShowCase"
+             xmlns:atom="https://atomui.net"
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+
+    <gallerycontrols:ShowCasePanel>
+        <gallerycontrols:ShowCaseItem Description="The basic usage." Title="Basic">
+            <StackPanel
+                Margin="20"
+                Orientation="Vertical"
+                Spacing="20">
+
+                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <atom:RadioButton IsChecked="True" x:Name="Vertical">Vertical</atom:RadioButton>
+                    <atom:RadioButton x:Name="Horizontal">Horizontal</atom:RadioButton>
+                </atom:BoxPanel>
+
+                <Panel Height="200">
+                    <atom:BoxPanel
+                        Margin="0,0,0,10"
+                        Orientation="Vertical"
+                        Spacing="10"
+                        x:Name="BasicBoxPanel">
+                        <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1" />
+                        <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1" />
+                        <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1" />
+                        <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1" />
+                    </atom:BoxPanel>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        <gallerycontrols:ShowCaseItem Description="Use the flex property to control the width ratio of the child controls." Title="Flex">
+            <StackPanel
+                Margin="20"
+                Orientation="Vertical"
+                Spacing="20">
+
+                <atom:BoxPanel Margin="0,0,0,20" Orientation="Horizontal">
+                    <atom:RadioButton IsChecked="True" x:Name="Vertical1">Vertical</atom:RadioButton>
+                    <atom:RadioButton x:Name="Horizontal1">Horizontal</atom:RadioButton>
+                </atom:BoxPanel>
+
+                <atom:BoxPanel
+                    Height="200"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    x:Name="FlexBoxPanel">
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                            flex = 1
+                        </TextBlock>
+                    </Panel>
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                            flex = 1
+                        </TextBlock>
+                    </Panel>
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="2">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                            flex = 2
+                        </TextBlock>
+                    </Panel>
+                </atom:BoxPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem Description="Use VerticalAlignment or HorizontalAlignment property control child control position." Title="child alignment">
+            <StackPanel
+                Margin="20"
+                Orientation="Vertical"
+                Spacing="20">
+
+                <atom:BoxPanel
+                    Height="200"
+                    Orientation="Horizontal"
+                    Spacing="5">
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="50"
+                        VerticalAlignment="Top">
+                        <Border Width="30" />
+                    </Panel>
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="50"
+                        VerticalAlignment="Center">
+                        <Border Width="30" />
+                    </Panel>
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="100"
+                        VerticalAlignment="Bottom"
+                        atom:BoxPanel.Flex="1" />
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="2" />
+                </atom:BoxPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem Description="Modify the size of the control spacing, add a specific size of space ,or add a blank control placeholder that specifies flex" Title="Space and change Flex">
+            <StackPanel
+                Margin="20"
+                Orientation="Vertical"
+                Spacing="20">
+
+                <atom:VBoxPanel Orientation="Vertical">
+                    <atom:Slider
+                        IsEnabled="{Binding NormalEnabled}"
+                        Maximum="50"
+                        Minimum="0"
+                        TickFrequency="5"
+                        Value="10"
+                        ValueChanged="SpaceSlider_OnValueChanged"
+                        x:Name="SpaceSlider" />
+                    <atom:HBoxPanel Orientation="Horizontal" Spacing="20">
+                        <atom:Button Click="AddSpaceButton_OnClick" x:Name="AddSpaceButton">add a space of size 40</atom:Button>
+                        <atom:Button Click="ChangFlexButton_OnClick" x:Name="ChangFlexButton">change flex</atom:Button>
+                    </atom:HBoxPanel>
+                </atom:VBoxPanel>
+                <atom:BoxPanel
+                    Height="200"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    x:Name="ChangeSpaceBoxPanel">
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="50"
+                        VerticalAlignment="Top">
+                        <Border Width="30" />
+                    </Panel>
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="50"
+                        VerticalAlignment="Center">
+                        <Border Width="30" />
+                    </Panel>
+                    <Panel
+                        Background="DodgerBlue"
+                        Height="100"
+                        VerticalAlignment="Bottom"
+                        atom:BoxPanel.Flex="1" />
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="2" />
+                </atom:BoxPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem Description="Use the flex property to control the width ratio of the child controls." Title="Flex">
+            <StackPanel
+                Margin="20"
+                Orientation="Vertical"
+                Spacing="20">
+
+                <WrapPanel>
+                    <atom:Button Click="AddFlexButton_OnClick" x:Name="AddFlexButton">add a placeholder flex</atom:Button>
+                </WrapPanel>
+
+                <atom:BoxPanel
+                    Height="200"
+                    Orientation="Horizontal"
+                    Spacing="5"
+                    x:Name="AddPlaceholderBoxPanel">
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="1">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                            flex = 1
+                        </TextBlock>
+                    </Panel>
+                    <Panel Background="DodgerBlue" atom:BoxPanel.Flex="2">
+                        <TextBlock TextAlignment="Center" VerticalAlignment="Center">
+                            flex = 2
+                        </TextBlock>
+                    </Panel>
+                </atom:BoxPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+    </gallerycontrols:ShowCasePanel>
+</UserControl>
