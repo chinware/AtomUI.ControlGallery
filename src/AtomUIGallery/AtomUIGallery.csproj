@@ -19,12 +19,14 @@
     <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
         <PackageReference Include="AtomUI"/>
         <PackageReference Include="AtomUI.Controls.DataGrid"/>
+        <PackageReference Include="AtomUI.Controls.ColorPicker"/>
         <PackageReference Include="AtomUI.Generator"/>
     </ItemGroup>
 
     <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
         <ProjectReference Include="../../packages/AtomUI/packages/AtomUI/AtomUI.csproj"/>
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.DataGrid/AtomUI.Controls.DataGrid.csproj" />
+        <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Controls.ColorPicker/AtomUI.Controls.ColorPicker.csproj" />
         <ProjectReference Include="../../packages/AtomUI/src/AtomUI.Generator/AtomUI.Generator.csproj" 
                           OutputItemType="Analyzer" 
                           ReferenceOutputAssembly="false" 

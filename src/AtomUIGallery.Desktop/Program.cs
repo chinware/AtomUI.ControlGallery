@@ -46,6 +46,7 @@ internal class Program
                                     builder.UseOSSControls();
                                     builder.UseGalleryControls();
                                     builder.UseOSSDataGrid();
+                                    builder.UseColorPicker();
                                 })
                                 .LogToTrace();
         
