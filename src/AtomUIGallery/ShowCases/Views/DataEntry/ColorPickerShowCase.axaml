@@ -7,16 +7,16 @@
         <gallerycontrols:ShowCaseItem
             Title="Basic"
             Description="Basic Usage.">
-            <!-- <atom:ColorPicker Value="#1677ff"/> -->
+            <atom:ColorPicker DefaultValue="#1677ff"/>
             <!-- <atom:ColorPickerView Value="#1677ff" IsFormatEnabled="False" IsAlphaVisible="True"/> -->
-            <atom:GradientColorPickerView>
-                <atom:GradientColorPickerView.Value>
-                    <LinearGradientBrush>
-                        <GradientStop Color="#108ee9" Offset="0"/>
-                        <GradientStop Color="#87d068" Offset="1"/>
-                    </LinearGradientBrush>
-                </atom:GradientColorPickerView.Value>
-            </atom:GradientColorPickerView>
+            <!-- <atom:GradientColorPickerView> -->
+            <!--     <atom:GradientColorPickerView.Value> -->
+            <!--         <LinearGradientBrush> -->
+            <!--             <GradientStop Color="#108ee9" Offset="0"/> -->
+            <!--             <GradientStop Color="#87d068" Offset="1"/> -->
+            <!--         </LinearGradientBrush> -->
+            <!--     </atom:GradientColorPickerView.Value> -->
+            <!-- </atom:GradientColorPickerView> -->
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
