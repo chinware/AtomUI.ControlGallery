@@ -318,6 +318,18 @@ If a large or small button is desired, set the size property to either large or 
                         Danger Link(disabled)
                     </atom:Button>
                 </StackPanel>
+                
+                <Border Background="rgb(190, 200, 200)">
+                <StackPanel Orientation="Horizontal">
+                    <atom:Button IsGhost="True">
+                        Ghost
+                    </atom:Button>
+                    <atom:Button IsGhost="True" IsEnabled="False">
+                        Ghost(disabled)
+                    </atom:Button>
+                </StackPanel>
+            </Border>
+                
             </WrapPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
