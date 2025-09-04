@@ -123,7 +123,7 @@
                         <StackPanel Orientation="Horizontal" Spacing="10">
                             <atom:Button>Edit</atom:Button>
                             <atom:Button ButtonType="Primary">Upload</atom:Button>
-                            <atom:Button ButtonType="Primary" IsDanger="True">Upload</atom:Button>
+                            <atom:Button ButtonType="Primary" IsDanger="True">Delete</atom:Button>
                         </StackPanel>
                     </atom:Drawer.Footer>
                     <StackPanel Orientation="Vertical" Spacing="5">

@@ -13,11 +13,11 @@ public partial class ColorPickerShowCase: ReactiveUserControl<ColorPickerViewMod
     {
         this.WhenActivated(disposables =>
         {
-            // ColorPicker.SetColorTextFormatter(CustomRenderText, (color, format) =>
-            // {
-            //     var colorText = ColorToHexConverter.ToHexString(color, AlphaComponentPosition.Leading, false, true);
-            //     return $"Custom Text ({colorText})";
-            // });
+            ColorPicker.SetColorTextFormatter(CustomRenderText, (color, format) =>
+            {
+                var colorText = ColorToHexConverter.ToHexString(color, AlphaComponentPosition.Leading, false, true);
+                return $"Custom Text ({colorText})";
+            });
         });
         InitializeComponent();
     }
