@@ -49,6 +49,8 @@
         <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar2.svg"/>
         <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar3.svg"/>
         <AvaloniaResource Include="Assets/AvatarShowCase/PeopleAvatar4.png"/>
+        <AvaloniaResource Include="Assets/CardShowCase/Cover1.png"/>
+        <AvaloniaResource Include="Assets/CardShowCase/Cover2.png"/>
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
         <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
         <AvaloniaResource Include="Assets/qinware-logo.png"/>

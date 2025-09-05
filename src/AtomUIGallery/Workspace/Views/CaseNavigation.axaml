@@ -77,6 +77,8 @@
                               ItemKey="{x:Static viewmodels:BadgeViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Calendar}}"
                               ItemKey="{x:Static viewmodels:CalendarViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Card}}"
+                              ItemKey="{x:Static viewmodels:CardViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Collapse}}"
                               ItemKey="{x:Static viewmodels:CollapseViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_DataGrid}}"

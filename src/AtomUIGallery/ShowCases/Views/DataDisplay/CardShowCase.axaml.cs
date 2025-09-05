@@ -1,0 +1,55 @@
+using System.Reactive.Disposables;
+using AtomUI;
+using AtomUIGallery.ShowCases.ViewModels;
+using Avalonia.Controls.Primitives;
+using Avalonia.Media;
+using Avalonia.ReactiveUI;
+using ReactiveUI;
+
+namespace AtomUIGallery.ShowCases.Views;
+
+public partial class CardShowCase : ReactiveUserControl<CardViewModel>
+{
+    public CardShowCase()
+    {
+        this.WhenActivated(disposables =>
+        {
+            var application = AtomApplication.Current;
+            if (application != null)
+            {
+                application.ActualThemeVariantChanged += HandleActualThemeVariantChanged;
+                disposables.Add(Disposable.Create(() => application.ActualThemeVariantChanged -= HandleActualThemeVariantChanged ));
+            }
+        });
+        InitializeComponent();
+    }
+
+    private void HandleActualThemeVariantChanged(object? sender, EventArgs e)
+    {
+        ConfigureBorderlessBgFrame();
+    }
+
+    protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
+    {
+        base.OnApplyTemplate(e);
+        ConfigureBorderlessBgFrame();
+    }
+
+    private void ConfigureBorderlessBgFrame()
+    {
+        if (AtomApplication.Current is AtomApplication application)
+        {
+            if (DataContext is CardViewModel cardViewModel)
+            {
+                if (application.IsDarkThemeMode)
+                {
+                    cardViewModel.BorderlessFrameBg = new SolidColorBrush(Color.FromRgb(48, 48, 48));
+                }
+                else
+                {
+                    cardViewModel.BorderlessFrameBg = new SolidColorBrush(Color.FromRgb(240, 242, 245));
+                }
+            }
+        }
+    }
+}

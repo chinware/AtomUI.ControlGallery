@@ -2,9 +2,9 @@
 
 namespace AtomUIGallery.Desktop;
 
-public class GalleryApplication : BaseGalleryApplication
+public class GalleryAtomApplication : BaseGalleryAtomApplication
 {
-    public GalleryApplication()
+    public GalleryAtomApplication()
     {
         Name                  = "AtomUI Gallery";
     }

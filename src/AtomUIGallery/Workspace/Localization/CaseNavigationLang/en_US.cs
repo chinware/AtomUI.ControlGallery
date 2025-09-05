@@ -42,6 +42,7 @@ internal class en_US : LanguageProvider
     public const string DataDisplay_Avatar = "Avatar";
     public const string DataDisplay_Badge = "Badge";
     public const string DataDisplay_Calendar = "Calendar";
+    public const string DataDisplay_Card = "Card";
     public const string DataDisplay_Collapse = "Collapse";
     public const string DataDisplay_DataGrid = "DataGrid";
     public const string DataDisplay_Expander = "Expander";

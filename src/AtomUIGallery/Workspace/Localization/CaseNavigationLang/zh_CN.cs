@@ -42,6 +42,7 @@ internal class zh_CN : LanguageProvider
     public const string DataDisplay_Avatar = "Avatar 头像";
     public const string DataDisplay_Badge = "Badge 徽标数";
     public const string DataDisplay_Calendar = "Calendar 日历";
+    public const string DataDisplay_Card = "Card 卡片";
     public const string DataDisplay_Collapse = "Collapse 折叠面板";
     public const string DataDisplay_DataGrid = "DataGrid 数据表格";
     public const string DataDisplay_Expander = "Expander 展开面板";

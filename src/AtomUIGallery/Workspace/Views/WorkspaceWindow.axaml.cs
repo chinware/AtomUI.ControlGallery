@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using AtomUI;
 using AtomUI.Controls;
 using AtomUI.ReactiveUI;
 using AtomUI.Theme.Language;
@@ -9,8 +10,6 @@ using Avalonia.Platform;
 using Avalonia.Threading;
 
 namespace AtomUIGallery.Workspace.Views;
-
-using AtomUIApplication = AtomUI.Application;
 
 internal enum WindowMenuItemKind 
 {
@@ -52,7 +51,7 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
     {
         if (e.Source is MenuItem menuItem && menuItem.Tag is WindowMenuItemKind kind)
         {
-            var application = Application.Current as AtomUIApplication;
+            var application = Application.Current as AtomApplication;
             Debug.Assert(application != null);
             if (kind == WindowMenuItemKind.FullScreen)
             {

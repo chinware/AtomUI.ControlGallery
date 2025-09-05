@@ -35,7 +35,7 @@ internal class Program
 
     public static AppBuilder BuildAvaloniaApp()
     {
-        return AppBuilder.Configure<GalleryApplication>()
+        return AppBuilder.Configure<GalleryAtomApplication>()
                                 .UseReactiveUI()
                                 .UsePlatformDetect()
                                 .With(new Win32PlatformOptions())

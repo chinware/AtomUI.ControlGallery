@@ -4,7 +4,7 @@ using AtomUIGallery.Workspace.Views;
 
 namespace AtomUIGallery;
 
-public partial class BaseGalleryApplication : Application
+public partial class BaseGalleryAtomApplication : AtomApplication
 {
     protected WorkspaceWindow CreateWorkspaceWindow()
     {
