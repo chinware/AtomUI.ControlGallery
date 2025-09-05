@@ -18,6 +18,14 @@ public class CardViewModel : ReactiveObject, IRoutableViewModel
         get => _borderlessFrameBg;
         set => this.RaiseAndSetIfChanged(ref _borderlessFrameBg, value);
     }
+    
+    private bool _isLoading;
+
+    public bool IsLoading
+    {
+        get => _isLoading;
+        set => this.RaiseAndSetIfChanged(ref _isLoading, value);
+    }
 
     public CardViewModel(IScreen screen)
     {

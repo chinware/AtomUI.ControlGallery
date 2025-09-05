@@ -119,7 +119,8 @@
                                       Description="Shows a loading indicator while the contents of the card is being fetched."
                                       OccupyEntireRow="True">
            <StackPanel Orientation="Vertical" Spacing="20">
-               <atom:Card MinWidth="300">
+               <atom:ToggleSwitch IsChecked="{Binding IsLoading, Mode=TwoWay}"/>
+               <atom:Card MinWidth="300" IsLoading="{Binding IsLoading}">
                    <atom:CardMetaContent Header="Card title">
                        <atom:CardMetaContent.Avatar>
                            <atom:Avatar Src="avares://AtomUIGallery/Assets/AvatarShowCase/PeopleAvatar1.svg"/>
@@ -130,13 +131,13 @@
                        </StackPanel>
                    </atom:CardMetaContent>
                    <atom:Card.Actions>
-                       <atom:IconButton Icon="{atom:IconProvider Kind=SettingOutlined}"/>
                        <atom:IconButton Icon="{atom:IconProvider Kind=EditOutlined}"/>
+                       <atom:IconButton Icon="{atom:IconProvider Kind=SettingOutlined}"/>
                        <atom:IconButton Icon="{atom:IconProvider Kind=EllipsisOutlined}"/>
                    </atom:Card.Actions>
                </atom:Card>
             
-               <atom:Card MinWidth="300">
+               <atom:Card MinWidth="300" IsLoading="{Binding IsLoading}">
                    <atom:CardMetaContent Header="Card title">
                        <atom:CardMetaContent.Avatar>
                            <atom:Avatar Src="avares://AtomUIGallery/Assets/AvatarShowCase/PeopleAvatar2.svg"/>
@@ -147,8 +148,8 @@
                        </StackPanel>
                    </atom:CardMetaContent>
                    <atom:Card.Actions>
-                       <atom:IconButton Icon="{atom:IconProvider Kind=SettingOutlined}"/>
                        <atom:IconButton Icon="{atom:IconProvider Kind=EditOutlined}"/>
+                       <atom:IconButton Icon="{atom:IconProvider Kind=SettingOutlined}"/>
                        <atom:IconButton Icon="{atom:IconProvider Kind=EllipsisOutlined}"/>
                    </atom:Card.Actions>
                </atom:Card>
