@@ -136,7 +136,7 @@
                        <atom:IconButton Icon="{atom:IconProvider Kind=EllipsisOutlined}"/>
                    </atom:Card.Actions>
                </atom:Card>
-            
+        
                <atom:Card MinWidth="300" IsLoading="{Binding IsLoading}">
                    <atom:CardMetaContent Header="Card title">
                        <atom:CardMetaContent.Avatar>
@@ -154,6 +154,23 @@
                    </atom:Card.Actions>
                </atom:Card>
            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem Title="Grid card"
+                                      Description="Grid style card content.."
+                                      OccupyEntireRow="True">
+            <atom:Card HorizontalAlignment="Stretch" Header="Card Title" SizeType="Large">
+                <atom:CardGridContent ColumnDefinitions="*, *, *, *"
+                                      RowDefinitions="Auto, Auto">
+                    <atom:CardGridItem Row="0" Column="0">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="0" Column="1">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="0" Column="2">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="0" Column="3">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="1" Column="0">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="1" Column="1">Content</atom:CardGridItem>
+                    <atom:CardGridItem Row="1" Column="2">Content</atom:CardGridItem>
+                </atom:CardGridContent>
+            </atom:Card>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
 </UserControl>
