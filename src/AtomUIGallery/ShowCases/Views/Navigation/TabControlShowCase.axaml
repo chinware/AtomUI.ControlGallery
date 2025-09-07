@@ -17,17 +17,17 @@
                         </atom:TabControl>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Disabled"
                     Description="Disabled a tab.">
                     <StackPanel Orientation="Vertical" Spacing="20">
-                        <atom:CardTabControl>
+                        <atom:CardTabControl HeaderStartEdgePadding="">
                             <atom:TabItem Header="Tab 1">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" IsEnabled="False">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                         </atom:CardTabControl>
-
+                
                         <atom:TabControl>
                             <atom:TabItem Header="Tab 1">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" IsEnabled="False">Content of Tab Pane 2</atom:TabItem>
@@ -35,7 +35,7 @@
                         </atom:TabControl>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Centered"
                     Description="Centered tabs.">
@@ -45,16 +45,16 @@
                             <atom:TabItem Header="Tab 2">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                         </atom:TabControl>
-
+                
                         <atom:CardTabControl TabAlignmentCenter="True">
                             <atom:TabItem Header="Tab 1">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                         </atom:CardTabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Icon"
                     Description="The Tab with Icon.">
@@ -64,10 +64,10 @@
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 3</atom:TabItem>
                         </atom:TabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Slide"
                     Description="In order to fit in more tabs, they can slide left and right (or up and down).">
@@ -94,7 +94,7 @@
                             <atom:TabItem Header="Tab 19">Content of Tab Pane 19</atom:TabItem>
                             <atom:TabItem Header="Tab 20">Content of Tab Pane 20</atom:TabItem>
                         </atom:TabControl>
-
+                
                         <atom:CardTabControl>
                             <atom:TabItem Header="Tab 1">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2">Content of Tab Pane 2</atom:TabItem>
@@ -119,21 +119,21 @@
                         </atom:CardTabControl>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Card type tab"
                     Description="Another type of Tabs, which doesn't support vertical mode.">
                     <StackPanel Orientation="Vertical" Spacing="20">
-
+                
                         <atom:CardTabControl>
                             <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 3</atom:TabItem>
                         </atom:CardTabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Position"
                     Description="Tab's position: left, right, top or bottom. Will auto switch to top in mobile.">
@@ -147,14 +147,10 @@
                                 <atom:OptionButton>Right</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+                
                         <atom:TabControl Name="PositionTabControl"
                                          DockPanel.Dock="{Binding PositionTabControlPlacement}"
-                                         TabStripPlacement="{Binding PositionTabControlPlacement}"
-                                         Height="300"
-                                         Width="400"
-                                         HorizontalAlignment="Left"
-                                         VerticalAlignment="Top">
+                                         TabStripPlacement="{Binding PositionTabControlPlacement}">
                             <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
@@ -164,10 +160,10 @@
                             <atom:TabItem Header="Tab 7">Content of Tab Pane 7</atom:TabItem>
                             <atom:TabItem Header="Tab 8">Content of Tab Pane 8</atom:TabItem>
                         </atom:TabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Card Shape Position"
                     Description="Tab's position: left, right, top or bottom. Will auto switch to top in mobile."
@@ -182,15 +178,11 @@
                                 <atom:OptionButton>Right</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+                
                         <atom:CardTabControl Name="PositionCardTabControl"
                                              DockPanel.Dock="{Binding PositionCardTabControlPlacement}"
                                              TabStripPlacement="{Binding PositionCardTabControlPlacement}"
-                                             IsShowAddTabButton="True"
-                                             Height="300"
-                                             Width="500"
-                                             HorizontalAlignment="Left"
-                                             VerticalAlignment="Top">
+                                             IsShowAddTabButton="True">
                             <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
@@ -204,10 +196,10 @@
                             <atom:TabItem Header="Tab 11">Content of Tab Pane 11</atom:TabItem>
                             <atom:TabItem Header="Tab 12">Content of Tab Pane 12</atom:TabItem>
                         </atom:CardTabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Size"
                     Description="Large size tabs are usually used in page header, and small size could be used in Modal.">
@@ -220,24 +212,24 @@
                                 <atom:OptionButton>Large</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+                
                         <atom:TabControl SizeType="{Binding SizeTypeTabControl}">
                             <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                             <atom:TabItem Header="Tab 4" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 4</atom:TabItem>
                         </atom:TabControl>
-
+                
                         <atom:CardTabControl SizeType="{Binding SizeTypeTabControl}">
                             <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
                             <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
                             <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                             <atom:TabItem Header="Tab 4" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 4</atom:TabItem>
                         </atom:CardTabControl>
-
+                
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+                
                 <gallerycontrols:ShowCaseItem
                     Title="Add and close tab"
                     Description="Hide default plus icon, and bind event for customized trigger." Margin="0, 0, 30, 0">
@@ -247,6 +239,26 @@
                         <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
                         <atom:TabItem Header="Tab 4" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 4</atom:TabItem>
                     </atom:CardTabControl>
+                </gallerycontrols:ShowCaseItem>
+                
+                <gallerycontrols:ShowCaseItem
+                    Title="Extra content"
+                    Description="You can add extra actions to the right or left or even both side of Tabs."
+                    OccupyEntireRow="True">
+                    <StackPanel Orientation="Vertical" Spacing="20">
+                        <atom:TabControl TabStripPlacement="Top">
+                            <atom:TabControl.HeaderStartExtraContent>
+                                <atom:Button>Start extra action</atom:Button>
+                            </atom:TabControl.HeaderStartExtraContent>
+                            <atom:TabControl.HeaderEndExtraContent>
+                                <atom:Button>End extra action</atom:Button>
+                            </atom:TabControl.HeaderEndExtraContent>
+                            <atom:TabItem Header="Tab 1" Icon="{atom:IconProvider Kind=AppleOutlined}">Content of Tab Pane 1</atom:TabItem>
+                            <atom:TabItem Header="Tab 2" Icon="{atom:IconProvider Kind=AndroidOutlined}">Content of Tab Pane 2</atom:TabItem>
+                            <atom:TabItem Header="Tab 3">Content of Tab Pane 3</atom:TabItem>
+                            <atom:TabItem Header="Tab 4" Icon="{atom:IconProvider Kind=WechatOutlined}">Content of Tab Pane 4</atom:TabItem>
+                        </atom:TabControl>
+                    </StackPanel>
                 </gallerycontrols:ShowCaseItem>
 
             </gallerycontrols:ShowCasePanel>
