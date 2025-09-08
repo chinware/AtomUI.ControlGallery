@@ -113,6 +113,8 @@
                               ItemKey="{x:Static viewmodels:DrawerViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_Message}}"
                               ItemKey="{x:Static viewmodels:MessageViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_Modal}}"
+                              ItemKey="{x:Static viewmodels:ModalViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_Notification}}"
                               ItemKey="{x:Static viewmodels:NotificationViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Feedback_PopupConfirm}}"

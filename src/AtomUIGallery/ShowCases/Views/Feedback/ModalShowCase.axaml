@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AtomUIGallery.ShowCases.Views.ModalShowCase"
+             xmlns:atom="https://atomui.net"
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    <gallerycontrols:ShowCasePanel>
+        <gallerycontrols:ShowCaseItem
+            Title="Basic"
+            Description="Basic modal.">
+            <Panel>
+                <atom:Button ButtonType="Primary" Name="BasicOpenModalButton">
+                    Open Modal
+                </atom:Button>
+                <atom:Dialog PlacementTarget="BasicOpenModalButton" IsOpen="{Binding IsBasicModalOpened, Mode=TwoWay}"
+                             IsLightDismissEnabled="True"/>
+            </Panel>
+        </gallerycontrols:ShowCaseItem>
+    </gallerycontrols:ShowCasePanel>
+</UserControl>
