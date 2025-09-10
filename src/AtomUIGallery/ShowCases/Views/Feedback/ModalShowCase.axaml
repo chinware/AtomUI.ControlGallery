@@ -16,7 +16,8 @@
                              Title="Basic Modal"
                              IsModal="False"
                              IsResizable="True"
-                             IsMaximizable="True">
+                             IsDragMovable="False"
+                             IsMaximizable="False">
                     <atom:Dialog.Child>
                         <TextBlock Width="300">
                             Hello, AtomUI
