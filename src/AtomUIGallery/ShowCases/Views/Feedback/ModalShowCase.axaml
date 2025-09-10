@@ -14,12 +14,12 @@
                 <atom:Dialog PlacementTarget="BasicOpenModalButton" IsOpen="{Binding IsBasicModalOpened, Mode=TwoWay}"
                              IsLightDismissEnabled="False"
                              Title="Basic Modal"
-                             IsModal="False"
+                             IsModal="True"
                              IsResizable="True"
-                             IsDragMovable="False"
+                             IsDragMovable="True"
                              IsMaximizable="False">
                     <atom:Dialog.Child>
-                        <TextBlock Width="300">
+                        <TextBlock>
                             Hello, AtomUI
                         </TextBlock>
                     </atom:Dialog.Child>
