@@ -22,7 +22,7 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
     {
         if (DataContext is ModalViewModel viewModel)
         {
-            viewModel.IsBasicModalOpened = !viewModel.IsBasicModalOpened;
+            viewModel.IsBasicModalOpened = true;
         }
     }
 }
