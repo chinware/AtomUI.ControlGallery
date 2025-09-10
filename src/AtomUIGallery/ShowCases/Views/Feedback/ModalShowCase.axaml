@@ -12,7 +12,17 @@
                     Open Modal
                 </atom:Button>
                 <atom:Dialog PlacementTarget="BasicOpenModalButton" IsOpen="{Binding IsBasicModalOpened, Mode=TwoWay}"
-                             IsLightDismissEnabled="True"/>
+                             IsLightDismissEnabled="False"
+                             Title="Basic Modal"
+                             IsModal="False"
+                             IsResizable="True"
+                             IsMaximizable="True">
+                    <atom:Dialog.Child>
+                        <TextBlock Width="300">
+                            Hello, AtomUI
+                        </TextBlock>
+                    </atom:Dialog.Child>
+                </atom:Dialog>
             </Panel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
