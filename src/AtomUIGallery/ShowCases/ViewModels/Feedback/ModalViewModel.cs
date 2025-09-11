@@ -18,6 +18,14 @@ public class ModalViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _isBasicModalOpened, value);
     }
 
+    private bool _isBasicWindowModalOpened;
+
+    public bool IsBasicWindowModalOpened
+    {
+        get => _isBasicWindowModalOpened;
+        set => this.RaiseAndSetIfChanged(ref _isBasicWindowModalOpened, value);
+    }
+    
     public ModalViewModel(IScreen screen)
     {
         HostScreen = screen;

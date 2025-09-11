@@ -36,7 +36,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{5ECD4286
 		packages\AtomUI\Directory.Build.targets = packages\AtomUI\Directory.Build.targets
 		packages\AtomUI\Directory.Packages.props = packages\AtomUI\Directory.Packages.props
 		packages\AtomUI\build\Common.props = packages\AtomUI\build\Common.props
-		packages\AtomUI\build\Internal.Using.props = packages\AtomUI\build\Internal.Using.props
 		packages\AtomUI\build\Output.App.props = packages\AtomUI\build\Output.App.props
 		packages\AtomUI\build\Output.props = packages\AtomUI\build\Output.props
 		packages\AtomUI\build\Version.props = packages\AtomUI\build\Version.props

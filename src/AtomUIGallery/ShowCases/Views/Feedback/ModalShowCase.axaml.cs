@@ -12,8 +12,10 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
     {
         this.WhenActivated(disposables =>
         {
-            BasicOpenModalButton.Click += HandleBasicModalButtonClick;
-            disposables.Add(Disposable.Create(() => BasicOpenModalButton.Click -= HandleBasicModalButtonClick));
+            BasicOpenModalButton.Click       += HandleBasicModalButtonClick;
+            BasicWindowOpenModalButton.Click += HandleBasicWindowModalButtonClick;
+            disposables.Add(Disposable.Create(() => BasicOpenModalButton.Click       -= HandleBasicModalButtonClick));
+            disposables.Add(Disposable.Create(() => BasicWindowOpenModalButton.Click -= HandleBasicWindowModalButtonClick));
         });
         InitializeComponent();
     }
@@ -23,6 +25,14 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
         if (DataContext is ModalViewModel viewModel)
         {
             viewModel.IsBasicModalOpened = true;
+        }
+    }
+    
+    private void HandleBasicWindowModalButtonClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsBasicWindowModalOpened = true;
         }
     }
 }
