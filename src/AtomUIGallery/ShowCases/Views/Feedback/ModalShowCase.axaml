@@ -34,9 +34,11 @@
                                  IsLightDismissEnabled="False"
                                  Title="Basic Window Modal"
                                  IsModal="True"
-                                 IsResizable="False"
+                                 IsResizable="True"
+                                 IsClosable="True"
                                  IsDragMovable="True"
-                                 IsMaximizable="False"
+                                 IsMaximizable="True"
+                                 IsMinimizable="True"
                                  DialogHostType="Window">
                         <atom:Dialog.Child>
                             <TextBlock>
