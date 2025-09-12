@@ -18,7 +18,10 @@
                                  IsModal="True"
                                  IsResizable="False"
                                  IsDragMovable="True"
-                                 IsMaximizable="False">
+                                 IsMaximizable="False"
+                                 StandardButtons="Cancel,Ok, Help"
+                                 DefaultStandardButton="Ok"
+                                 MinWidth="300">
                         <atom:Dialog.Child>
                             <TextBlock>
                                 Hello, AtomUI
@@ -39,7 +42,10 @@
                                  IsDragMovable="True"
                                  IsMaximizable="True"
                                  IsMinimizable="True"
-                                 DialogHostType="Window">
+                                 DialogHostType="Window"
+                                 StandardButtons="Cancel,YesToAll, Help"
+                                 DefaultStandardButton="Ok"
+                                 MinWidth="300">
                         <atom:Dialog.Child>
                             <TextBlock>
                                 Hello, AtomUI
