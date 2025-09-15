@@ -1,4 +1,5 @@
 using System.Reactive.Disposables;
+using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
@@ -14,8 +15,26 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
         {
             BasicOpenModalButton.Click       += HandleBasicModalButtonClick;
             BasicWindowOpenModalButton.Click += HandleBasicWindowModalButtonClick;
+
+            InformationMsgBoxBtn.Click += HandleInformationMsgBoxBtnClick;
+            SuccessMsgBoxBtn.Click     += HandleSuccessMsgBoxBtnClick;
+            ErrorMsgBoxBtn.Click       += HandleErrorMsgBoxBtnClick;
+            WarningMsgBoxBtn.Click     += HandleWarningMsgBoxBtnClick;
+
+            StyleCaseHostTypeSwitch.IsCheckedChanged += HandleStyleCaseHostTypeSwitchChanged;
+            
             disposables.Add(Disposable.Create(() => BasicOpenModalButton.Click       -= HandleBasicModalButtonClick));
             disposables.Add(Disposable.Create(() => BasicWindowOpenModalButton.Click -= HandleBasicWindowModalButtonClick));
+            disposables.Add(Disposable.Create(() => InformationMsgBoxBtn.Click -= HandleInformationMsgBoxBtnClick));
+            disposables.Add(Disposable.Create(() => SuccessMsgBoxBtn.Click -= HandleSuccessMsgBoxBtnClick));
+            disposables.Add(Disposable.Create(() => ErrorMsgBoxBtn.Click -= HandleErrorMsgBoxBtnClick));
+            disposables.Add(Disposable.Create(() => WarningMsgBoxBtn.Click -= HandleWarningMsgBoxBtnClick));
+            disposables.Add(Disposable.Create(() => StyleCaseHostTypeSwitch.IsCheckedChanged -= HandleStyleCaseHostTypeSwitchChanged));
+
+            if (DataContext is ModalViewModel viewModel)
+            {
+                viewModel.MessageBoxStyleCaseHostType = DialogHostType.Overlay;
+            }
         });
         InitializeComponent();
     }
@@ -33,6 +52,49 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
         if (DataContext is ModalViewModel viewModel)
         {
             viewModel.IsBasicWindowModalOpened = true;
+        }
+    }
+    
+    private void HandleInformationMsgBoxBtnClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsInformationMsgBoxOpened = true;
+        }
+    }
+    
+    private void HandleSuccessMsgBoxBtnClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsSuccessMsgBoxOpened = true;
+        }
+    }
+    
+    private void HandleErrorMsgBoxBtnClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsErrorMsgBoxOpened = true;
+        }
+    }
+    
+    private void HandleWarningMsgBoxBtnClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsWarningMsgBoxOpened = true;
+        }
+    }
+
+    private void HandleStyleCaseHostTypeSwitchChanged(object? sender, RoutedEventArgs e)
+    {
+        if (sender is ToggleSwitch toggleSwitch)
+        {
+            if (DataContext is ModalViewModel viewModel)
+            {
+                viewModel.MessageBoxStyleCaseHostType = toggleSwitch.IsChecked == true ? DialogHostType.Window : DialogHostType.Overlay;
+            }
         }
     }
 }

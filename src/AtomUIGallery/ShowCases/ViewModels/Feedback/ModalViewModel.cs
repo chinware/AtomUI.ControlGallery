@@ -1,3 +1,4 @@
+using AtomUI.Controls;
 using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.ViewModels;
@@ -26,6 +27,46 @@ public class ModalViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _isBasicWindowModalOpened, value);
     }
     
+    private DialogHostType _messageBoxStyleCaseHostType;
+
+    public DialogHostType MessageBoxStyleCaseHostType
+    {
+        get => _messageBoxStyleCaseHostType;
+        set => this.RaiseAndSetIfChanged(ref _messageBoxStyleCaseHostType, value);
+    }
+    
+    private bool _isInformationMsgBoxOpened;
+
+    public bool IsInformationMsgBoxOpened
+    {
+        get => _isInformationMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isInformationMsgBoxOpened, value);
+    }
+    
+    private bool _isSuccessMsgBoxOpened;
+
+    public bool IsSuccessMsgBoxOpened
+    {
+        get => _isSuccessMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isSuccessMsgBoxOpened, value);
+    }
+        
+    private bool _isErrorMsgBoxOpened;
+
+    public bool IsErrorMsgBoxOpened
+    {
+        get => _isErrorMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isErrorMsgBoxOpened, value);
+    }
+    
+    private bool _isWarningMsgBoxOpened;
+
+    public bool IsWarningMsgBoxOpened
+    {
+        get => _isWarningMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isWarningMsgBoxOpened, value);
+    }
+
     public ModalViewModel(IScreen screen)
     {
         HostScreen = screen;

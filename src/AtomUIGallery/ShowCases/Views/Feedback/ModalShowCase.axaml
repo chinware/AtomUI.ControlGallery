@@ -12,7 +12,8 @@
                     <atom:Button ButtonType="Primary" Name="BasicOpenModalButton">
                         Open Modal Overlay
                     </atom:Button>
-                    <atom:Dialog PlacementTarget="BasicOpenModalButton" IsOpen="{Binding IsBasicModalOpened, Mode=TwoWay}"
+                    <atom:Dialog PlacementTarget="BasicOpenModalButton"
+                                 IsOpen="{Binding IsBasicModalOpened, Mode=TwoWay}"
                                  IsLightDismissEnabled="False"
                                  Title="Basic Modal"
                                  IsModal="True"
@@ -22,18 +23,17 @@
                                  StandardButtons="Cancel,Ok, Help"
                                  DefaultStandardButton="Ok"
                                  MinWidth="300">
-                        <atom:Dialog.Child>
-                            <TextBlock>
-                                Hello, AtomUI
-                            </TextBlock>
-                        </atom:Dialog.Child>
+                        <TextBlock>
+                            Hello, AtomUI
+                        </TextBlock>
                     </atom:Dialog>
                 </Panel>
                 <Panel>
                     <atom:Button ButtonType="Primary" Name="BasicWindowOpenModalButton">
                         Open Modal Window
                     </atom:Button>
-                    <atom:Dialog PlacementTarget="BasicWindowOpenModalButton" IsOpen="{Binding IsBasicWindowModalOpened, Mode=TwoWay}"
+                    <atom:Dialog PlacementTarget="BasicWindowOpenModalButton"
+                                 IsOpen="{Binding IsBasicWindowModalOpened, Mode=TwoWay}"
                                  IsLightDismissEnabled="False"
                                  Title="Basic Window Modal"
                                  IsModal="True"
@@ -46,13 +46,76 @@
                                  StandardButtons="Cancel,YesToAll, Help"
                                  DefaultStandardButton="Ok"
                                  MinWidth="300">
-                        <atom:Dialog.Child>
-                            <TextBlock>
-                                Hello, AtomUI
-                            </TextBlock>
-                        </atom:Dialog.Child>
+                        <TextBlock>
+                            Hello, AtomUI
+                        </TextBlock>
                     </atom:Dialog>
                 </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        <gallerycontrols:ShowCaseItem
+            Title="MessageBox Style"
+            Description="MessageBox supports Confirm, Information, Warning, and Error">
+
+            <StackPanel Orientation="Vertical" Spacing="20">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <TextBlock VerticalAlignment="Center">Native Window:</TextBlock>
+                    <atom:ToggleSwitch Name="StyleCaseHostTypeSwitch"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <Panel>
+                        <atom:MessageBox PlacementTarget="InformationMsgBoxBtn"
+                                         Title="This is a notification message"
+                                         IsOpen="{Binding IsInformationMsgBoxOpened, Mode=TwoWay}"
+                                         Style="Information"
+                                         HostType="{Binding MessageBoxStyleCaseHostType}">
+                            <StackPanel Orientation="Vertical" Spacing="10">
+                                <TextBlock>some messages...some messages...</TextBlock>
+                                <TextBlock>some messages...some messages...</TextBlock>
+                            </StackPanel>
+                        </atom:MessageBox>
+                        <atom:Button Name="InformationMsgBoxBtn">Information</atom:Button>
+                    </Panel>
+                    <Panel>
+                        <atom:MessageBox PlacementTarget="SuccessMsgBoxBtn"
+                                         Title="Operation successful"
+                                         Style="Success"
+                                         HostType="{Binding MessageBoxStyleCaseHostType}"
+                                         IsOpen="{Binding IsSuccessMsgBoxOpened, Mode=TwoWay}">
+                            <StackPanel Orientation="Vertical" Spacing="10">
+                                <TextBlock>some messages...some messages...</TextBlock>
+                                <TextBlock>some messages...some messages...</TextBlock>
+                            </StackPanel>
+                        </atom:MessageBox>
+                        <atom:Button Name="SuccessMsgBoxBtn">Success</atom:Button>
+                    </Panel>
+                    <Panel>
+                        <atom:MessageBox PlacementTarget="ErrorMsgBoxBtn"
+                                         Title="This is an error message"
+                                         Style="Error"
+                                         HostType="{Binding MessageBoxStyleCaseHostType}"
+                                         IsOpen="{Binding IsErrorMsgBoxOpened, Mode=TwoWay}">
+                            <StackPanel Orientation="Vertical" Spacing="10">
+                                <TextBlock>some messages...some messages...</TextBlock>
+                                <TextBlock>some messages...some messages...</TextBlock>
+                            </StackPanel>
+                        </atom:MessageBox>
+                        <atom:Button Name="ErrorMsgBoxBtn">Error</atom:Button>
+                    </Panel>
+                    <Panel>
+                        <atom:MessageBox PlacementTarget="WarningMsgBoxBtn"
+                                         Title="This is a warning message"
+                                         Style="Normal"
+                                         HostType="{Binding MessageBoxStyleCaseHostType}"
+                                         IsOpen="{Binding IsWarningMsgBoxOpened, Mode=TwoWay}">
+                            <StackPanel Orientation="Vertical" Spacing="10">
+                                <TextBlock>some messages...some messages...</TextBlock>
+                                <TextBlock>some messages...some messages...</TextBlock>
+                            </StackPanel>
+                        </atom:MessageBox>
+                        <atom:Button Name="WarningMsgBoxBtn">Warning</atom:Button>
+                    </Panel>
+                </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>
