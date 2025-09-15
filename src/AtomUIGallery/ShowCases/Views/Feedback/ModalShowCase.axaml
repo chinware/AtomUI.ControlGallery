@@ -64,6 +64,18 @@
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <Panel>
+                        <atom:MessageBox PlacementTarget="ConfirmMsgBoxBtn"
+                                         Title="Do you want to delete these items?"
+                                         IsOpen="{Binding IsConfirmMsgBoxOpened, Mode=TwoWay}"
+                                         Style="Confirm"
+                                         HostType="{Binding MessageBoxStyleCaseHostType}">
+                            <StackPanel Orientation="Vertical" Spacing="10">
+                                <TextBlock>Some descriptions</TextBlock>
+                            </StackPanel>
+                        </atom:MessageBox>
+                        <atom:Button Name="ConfirmMsgBoxBtn">Confirm</atom:Button>
+                    </Panel>
+                    <Panel>
                         <atom:MessageBox PlacementTarget="InformationMsgBoxBtn"
                                          Title="This is a notification message"
                                          IsOpen="{Binding IsInformationMsgBoxOpened, Mode=TwoWay}"
@@ -116,6 +128,32 @@
                         <atom:Button Name="WarningMsgBoxBtn">Warning</atom:Button>
                     </Panel>
                 </StackPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+          <gallerycontrols:ShowCaseItem
+            Title="Loading"
+            Description="Set the loading status of Modal.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="LoadingDialogOpenModalButton">
+                        Open Modal
+                    </atom:Button>
+                    <atom:Dialog PlacementTarget="LoadingDialogOpenModalButton"
+                                 IsOpen="{Binding IsLoadingModalOpened, Mode=TwoWay}"
+                                 IsLightDismissEnabled="False"
+                                 Title="Basic Modal"
+                                 IsModal="True"
+                                 IsResizable="False"
+                                 IsMaximizable="False"
+                                 StandardButtons="Ok"
+                                 DefaultStandardButton="Ok"
+                                 MinWidth="300">
+                        <TextBlock>
+                            Hello, AtomUI
+                        </TextBlock>
+                    </atom:Dialog>
+                </Panel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
     </gallerycontrols:ShowCasePanel>

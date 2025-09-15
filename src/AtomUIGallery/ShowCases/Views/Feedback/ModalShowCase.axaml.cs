@@ -16,6 +16,7 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
             BasicOpenModalButton.Click       += HandleBasicModalButtonClick;
             BasicWindowOpenModalButton.Click += HandleBasicWindowModalButtonClick;
 
+            ConfirmMsgBoxBtn.Click     += HandleConfirmMsgBoxBtnClick;
             InformationMsgBoxBtn.Click += HandleInformationMsgBoxBtnClick;
             SuccessMsgBoxBtn.Click     += HandleSuccessMsgBoxBtnClick;
             ErrorMsgBoxBtn.Click       += HandleErrorMsgBoxBtnClick;
@@ -25,6 +26,7 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
             
             disposables.Add(Disposable.Create(() => BasicOpenModalButton.Click       -= HandleBasicModalButtonClick));
             disposables.Add(Disposable.Create(() => BasicWindowOpenModalButton.Click -= HandleBasicWindowModalButtonClick));
+            disposables.Add(Disposable.Create(() => ConfirmMsgBoxBtn.Click -= HandleConfirmMsgBoxBtnClick));
             disposables.Add(Disposable.Create(() => InformationMsgBoxBtn.Click -= HandleInformationMsgBoxBtnClick));
             disposables.Add(Disposable.Create(() => SuccessMsgBoxBtn.Click -= HandleSuccessMsgBoxBtnClick));
             disposables.Add(Disposable.Create(() => ErrorMsgBoxBtn.Click -= HandleErrorMsgBoxBtnClick));
@@ -52,6 +54,14 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
         if (DataContext is ModalViewModel viewModel)
         {
             viewModel.IsBasicWindowModalOpened = true;
+        }
+    }
+    
+    private void HandleConfirmMsgBoxBtnClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsConfirmMsgBoxOpened = true;
         }
     }
     

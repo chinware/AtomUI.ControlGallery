@@ -34,6 +34,14 @@ public class ModalViewModel : ReactiveObject, IRoutableViewModel
         get => _messageBoxStyleCaseHostType;
         set => this.RaiseAndSetIfChanged(ref _messageBoxStyleCaseHostType, value);
     }
+   
+    private bool _isConfirmMsgBoxOpened;
+
+    public bool IsConfirmMsgBoxOpened
+    {
+        get => _isConfirmMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isConfirmMsgBoxOpened, value);
+    }
     
     private bool _isInformationMsgBoxOpened;
 
