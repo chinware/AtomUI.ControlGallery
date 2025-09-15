@@ -74,6 +74,14 @@ public class ModalViewModel : ReactiveObject, IRoutableViewModel
         get => _isWarningMsgBoxOpened;
         set => this.RaiseAndSetIfChanged(ref _isWarningMsgBoxOpened, value);
     }
+    
+    private bool _isLoadingMsgBoxOpened;
+
+    public bool IsLoadingMsgBoxOpened
+    {
+        get => _isLoadingMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isLoadingMsgBoxOpened, value);
+    }
 
     public ModalViewModel(IScreen screen)
     {

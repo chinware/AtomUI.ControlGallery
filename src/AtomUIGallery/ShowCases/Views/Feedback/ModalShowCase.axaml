@@ -60,7 +60,7 @@
             <StackPanel Orientation="Vertical" Spacing="20">
                 <StackPanel Orientation="Horizontal" Spacing="5">
                     <TextBlock VerticalAlignment="Center">Native Window:</TextBlock>
-                    <atom:ToggleSwitch Name="StyleCaseHostTypeSwitch"/>
+                    <atom:ToggleSwitch Name="StyleCaseHostTypeSwitch" />
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <Panel>
@@ -130,8 +130,8 @@
                 </StackPanel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-        
-          <gallerycontrols:ShowCaseItem
+
+        <gallerycontrols:ShowCaseItem
             Title="Loading"
             Description="Set the loading status of Modal.">
             <StackPanel Orientation="Horizontal" Spacing="10">
@@ -140,18 +140,26 @@
                         Open Modal
                     </atom:Button>
                     <atom:Dialog PlacementTarget="LoadingDialogOpenModalButton"
-                                 IsOpen="{Binding IsLoadingModalOpened, Mode=TwoWay}"
-                                 IsLightDismissEnabled="False"
-                                 Title="Basic Modal"
+                                 IsOpen="{Binding IsLoadingMsgBoxOpened, Mode=TwoWay}"
+                                 Title="Loading Modal"
                                  IsModal="True"
+                                 IsLoading="True"
+                                 IsDragMovable="True"
+                                 IsLightDismissEnabled="True"
                                  IsResizable="False"
                                  IsMaximizable="False"
-                                 StandardButtons="Ok"
-                                 DefaultStandardButton="Ok"
-                                 MinWidth="300">
-                        <TextBlock>
-                            Hello, AtomUI
-                        </TextBlock>
+                                 StandardButtons="Reload"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalStartupLocation="Center"
+                                 DefaultStandardButton="Reload"
+                                 Opened="HandleLoadingDialogOpened"
+                                 ButtonClicked="HandleLoadingDialogButtonClicked"
+                                 MinWidth="400">
+                        <StackPanel>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                        </StackPanel>
                     </atom:Dialog>
                 </Panel>
             </StackPanel>

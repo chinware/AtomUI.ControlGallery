@@ -3,6 +3,7 @@ using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
+using Avalonia.Threading;
 using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
@@ -16,13 +17,13 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
             BasicOpenModalButton.Click       += HandleBasicModalButtonClick;
             BasicWindowOpenModalButton.Click += HandleBasicWindowModalButtonClick;
 
-            ConfirmMsgBoxBtn.Click     += HandleConfirmMsgBoxBtnClick;
-            InformationMsgBoxBtn.Click += HandleInformationMsgBoxBtnClick;
-            SuccessMsgBoxBtn.Click     += HandleSuccessMsgBoxBtnClick;
-            ErrorMsgBoxBtn.Click       += HandleErrorMsgBoxBtnClick;
-            WarningMsgBoxBtn.Click     += HandleWarningMsgBoxBtnClick;
-
+            ConfirmMsgBoxBtn.Click                   += HandleConfirmMsgBoxBtnClick;
+            InformationMsgBoxBtn.Click               += HandleInformationMsgBoxBtnClick;
+            SuccessMsgBoxBtn.Click                   += HandleSuccessMsgBoxBtnClick;
+            ErrorMsgBoxBtn.Click                     += HandleErrorMsgBoxBtnClick;
+            WarningMsgBoxBtn.Click                   += HandleWarningMsgBoxBtnClick;
             StyleCaseHostTypeSwitch.IsCheckedChanged += HandleStyleCaseHostTypeSwitchChanged;
+            LoadingDialogOpenModalButton.Click       += HandleLoadingDialogOpenModalButtonClick;
             
             disposables.Add(Disposable.Create(() => BasicOpenModalButton.Click       -= HandleBasicModalButtonClick));
             disposables.Add(Disposable.Create(() => BasicWindowOpenModalButton.Click -= HandleBasicWindowModalButtonClick));
@@ -32,6 +33,7 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
             disposables.Add(Disposable.Create(() => ErrorMsgBoxBtn.Click -= HandleErrorMsgBoxBtnClick));
             disposables.Add(Disposable.Create(() => WarningMsgBoxBtn.Click -= HandleWarningMsgBoxBtnClick));
             disposables.Add(Disposable.Create(() => StyleCaseHostTypeSwitch.IsCheckedChanged -= HandleStyleCaseHostTypeSwitchChanged));
+            disposables.Add(Disposable.Create(() => LoadingDialogOpenModalButton.Click -= HandleLoadingDialogOpenModalButtonClick));
 
             if (DataContext is ModalViewModel viewModel)
             {
@@ -105,6 +107,37 @@ public partial class ModalShowCase : ReactiveUserControl<ModalViewModel>
             {
                 viewModel.MessageBoxStyleCaseHostType = toggleSwitch.IsChecked == true ? DialogHostType.Window : DialogHostType.Overlay;
             }
+        }
+    }
+    
+    private void HandleLoadingDialogOpenModalButtonClick(object? sender, RoutedEventArgs e)
+    {
+        if (DataContext is ModalViewModel viewModel)
+        {
+            viewModel.IsLoadingMsgBoxOpened = true;
+        }
+    }
+
+    private void HandleLoadingDialogOpened(object? sender, EventArgs e)
+    {
+        if (sender is Dialog dialog)
+        {
+            DispatcherTimer.RunOnce(() =>
+            {
+                dialog.IsLoading = false;
+            }, TimeSpan.FromMilliseconds(3000));
+        }
+    }
+
+    private void HandleLoadingDialogButtonClicked(object? sender, DialogButtonClickedEventArgs e)
+    {
+        if (sender is Dialog dialog)
+        {
+            dialog.IsLoading = true;
+            DispatcherTimer.RunOnce(() =>
+            {
+                dialog.IsLoading = false;
+            }, TimeSpan.FromMilliseconds(3000));
         }
     }
 }
