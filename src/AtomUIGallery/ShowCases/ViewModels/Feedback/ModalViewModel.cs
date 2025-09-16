@@ -82,7 +82,63 @@ public class ModalViewModel : ReactiveObject, IRoutableViewModel
         get => _isLoadingMsgBoxOpened;
         set => this.RaiseAndSetIfChanged(ref _isLoadingMsgBoxOpened, value);
     }
+    
+    private bool _isAsyncDialogOpened;
 
+    public bool IsAsyncDialogOpened
+    {
+        get => _isAsyncDialogOpened;
+        set => this.RaiseAndSetIfChanged(ref _isAsyncDialogOpened, value);
+    }
+    
+    private bool _isCustomFooterDialogOpened;
+
+    public bool IsCustomFooterDialogOpened
+    {
+        get => _isCustomFooterDialogOpened;
+        set => this.RaiseAndSetIfChanged(ref _isCustomFooterDialogOpened, value);
+    }
+    
+    private bool _isCustomFooterMsgBoxOpened;
+
+    public bool IsCustomFooterMsgBoxOpened
+    {
+        get => _isCustomFooterMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isCustomFooterMsgBoxOpened, value);
+    }
+    
+    private bool _isDraggableMsgBoxOpened;
+
+    public bool IsDraggableMsgBoxOpened
+    {
+        get => _isDraggableMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isDraggableMsgBoxOpened, value);
+    }
+    
+    private bool _isDelayedCloseMsgBoxOpened;
+
+    public bool IsDelayedCloseMsgBoxOpened
+    {
+        get => _isDelayedCloseMsgBoxOpened;
+        set => this.RaiseAndSetIfChanged(ref _isDelayedCloseMsgBoxOpened, value);
+    }
+    
+    private int _countdownSeconds;
+
+    public int CountdownSeconds
+    {
+        get => _countdownSeconds;
+        set => this.RaiseAndSetIfChanged(ref _countdownSeconds, value);
+    }
+    
+    private bool _isConfigureButtonsDialogOpened;
+
+    public bool IsConfigureButtonsDialogOpened
+    {
+        get => _isConfigureButtonsDialogOpened;
+        set => this.RaiseAndSetIfChanged(ref _isConfigureButtonsDialogOpened, value);
+    }
+    
     public ModalViewModel(IScreen screen)
     {
         HostScreen = screen;

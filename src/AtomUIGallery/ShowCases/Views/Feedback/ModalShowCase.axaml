@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.ModalShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+             xmlns:views="clr-namespace:AtomUIGallery.ShowCases.Views">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
@@ -20,12 +21,16 @@
                                  IsResizable="False"
                                  IsDragMovable="True"
                                  IsMaximizable="False"
-                                 StandardButtons="Cancel,Ok, Help"
+                                 StandardButtons="Cancel,Ok"
                                  DefaultStandardButton="Ok"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalOffset="30%"
                                  MinWidth="300">
-                        <TextBlock>
-                            Hello, AtomUI
-                        </TextBlock>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                        </StackPanel>
                     </atom:Dialog>
                 </Panel>
                 <Panel>
@@ -36,23 +41,58 @@
                                  IsOpen="{Binding IsBasicWindowModalOpened, Mode=TwoWay}"
                                  IsLightDismissEnabled="False"
                                  Title="Basic Window Modal"
-                                 IsModal="True"
+                                 IsModal="False"
                                  IsResizable="True"
                                  IsClosable="True"
                                  IsDragMovable="True"
                                  IsMaximizable="True"
                                  IsMinimizable="True"
                                  DialogHostType="Window"
-                                 StandardButtons="Cancel,YesToAll, Help"
-                                 DefaultStandardButton="Ok"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalOffset="30%"
+                                 StandardButtons="Yes"
+                                 DefaultStandardButton="Yes"
                                  MinWidth="300">
-                        <TextBlock>
-                            Hello, AtomUI
-                        </TextBlock>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                        </StackPanel>
                     </atom:Dialog>
                 </Panel>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
+            Title="Asynchronously close"
+            Description="Asynchronously close a modal dialog when the OK button is pressed. For example, you can use this pattern when you submit a form.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="AsyncDialogOpenModalButton">
+                        Open Modal with async logic
+                    </atom:Button>
+                    <atom:Dialog PlacementTarget="AsyncDialogOpenModalButton"
+                                 IsOpen="{Binding IsAsyncDialogOpened, Mode=TwoWay}"
+                                 Title="Asynchronously close Modal"
+                                 IsModal="True"
+                                 IsDragMovable="True"
+                                 IsLightDismissEnabled="True"
+                                 IsResizable="False"
+                                 IsMaximizable="False"
+                                 StandardButtons="Ok, Cancel"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalStartupLocation="Center"
+                                 DefaultStandardButton="Ok"
+                                 ButtonClicked="HandleAsyncDialogButtonClicked"
+                                 MinWidth="400">
+                        <StackPanel>
+                            <TextBlock>Content of the modal</TextBlock>
+                        </StackPanel>
+                    </atom:Dialog>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
         <gallerycontrols:ShowCaseItem
             Title="MessageBox Style"
             Description="MessageBox supports Confirm, Information, Warning, and Error">
@@ -156,6 +196,143 @@
                                  ButtonClicked="HandleLoadingDialogButtonClicked"
                                  MinWidth="400">
                         <StackPanel>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                        </StackPanel>
+                    </atom:Dialog>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
+            Title="Custom Footer Buttons"
+            Description="You can use standard buttons along with custom buttons.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="CustomFooterDialogOpenButton">
+                        Open Modal
+                    </atom:Button>
+                    <atom:Dialog PlacementTarget="CustomFooterDialogOpenButton"
+                                 IsOpen="{Binding IsCustomFooterDialogOpened, Mode=TwoWay}"
+                                 Title="Title"
+                                 IsModal="True"
+                                 IsLightDismissEnabled="True"
+                                 StandardButtons="Ok, Cancel"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalStartupLocation="Center"
+                                 DefaultStandardButton="Ok"
+                                 MinWidth="400">
+                        <atom:Dialog.CustomButtons>
+                            <atom:DialogButton Role="ActionRole">Custom Button</atom:DialogButton>
+                        </atom:Dialog.CustomButtons>
+                        <StackPanel Spacing="5">
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                            <TextBlock>Some contents...</TextBlock>
+                        </StackPanel>
+                    </atom:Dialog>
+                </Panel>
+
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="CustomFooterMsgBoxOpenButton">
+                        Open Modal
+                    </atom:Button>
+                    <atom:MessageBox PlacementTarget="CustomFooterMsgBoxOpenButton"
+                                     IsOpen="{Binding IsCustomFooterMsgBoxOpened, Mode=TwoWay}"
+                                     Title="Confirm"
+                                     IsModal="True"
+                                     IsLightDismissEnabled="True"
+                                     Style="Confirm"
+                                     MinWidth="400">
+                        <atom:MessageBox.CustomButtons>
+                            <atom:DialogButton Role="ActionRole">Custom Button</atom:DialogButton>
+                        </atom:MessageBox.CustomButtons>
+                        <StackPanel Spacing="5">
+                            <TextBlock>Bla bla ...</TextBlock>
+                        </StackPanel>
+                    </atom:MessageBox>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
+            Title="Open Draggable Modal"
+            Description="Custom modal content render and enable implements draggable.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="DraggableDialogOpenButton">
+                        Open Modal
+                    </atom:Button>
+                    <atom:Dialog PlacementTarget="DraggableDialogOpenButton"
+                                 IsOpen="{Binding IsDraggableMsgBoxOpened, Mode=TwoWay}"
+                                 Title="Draggable Modal"
+                                 IsModal="True"
+                                 IsDragMovable="True"
+                                 IsLightDismissEnabled="True"
+                                 StandardButtons="Ok, Cancel"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalStartupLocation="Center"
+                                 DefaultStandardButton="Ok"
+                                 Width="400">
+                        <StackPanel Spacing="10">
+                            <TextBlock TextWrapping="Wrap">Just don't learn physics at school and your life will be full of magic and miracles.</TextBlock>
+                            <TextBlock TextWrapping="Wrap">Day before yesterday I saw a rabbit, and yesterday a deer, and today, you.</TextBlock>
+                        </StackPanel>
+                    </atom:Dialog>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Manual to update destroy"
+            Description="Manually updating and destroying a modal through instance.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button Name="DelayedCloseMsgBoxOpenButton">
+                        Open modal to close in 5s
+                    </atom:Button>
+                    <atom:MessageBox PlacementTarget="DelayedCloseMsgBoxOpenButton"
+                                 IsOpen="{Binding IsDelayedCloseMsgBoxOpened, Mode=TwoWay}"
+                                 Title="This is a notification message"
+                                 IsModal="True"
+                                 IsDragMovable="True"
+                                 IsLightDismissEnabled="True"
+                                 IsCenterOnStartup="True"
+                                 Style="Success"
+                                 Opened="HandleDelayedCloseMsgBoxOpened"
+                                 Width="400">
+                        <StackPanel Spacing="10">
+                            <TextBlock TextWrapping="Wrap">This modal will be destroyed after <Run Text="{Binding CountdownSeconds}"/> second.</TextBlock>
+                        </StackPanel>
+                    </atom:MessageBox>
+                </Panel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Customize footer buttons props"
+            Description="Change dialog button properties by specifying a callback function.">
+            <StackPanel Orientation="Horizontal" Spacing="10">
+                <Panel>
+                    <atom:Button ButtonType="Primary" Name="ConfigureButtonsDialogOpenButton">
+                        Open Modal with customized button props
+                    </atom:Button>
+                    <atom:Dialog Name="ConfigureButtonPropertiesDialog"
+                                 PlacementTarget="ConfigureButtonsDialogOpenButton"
+                                 IsOpen="{Binding IsConfigureButtonsDialogOpened, Mode=TwoWay}"
+                                 Title="Basic Modal"
+                                 IsModal="True"
+                                 IsDragMovable="True"
+                                 IsLightDismissEnabled="True"
+                                 StandardButtons="Ok, Cancel"
+                                 HorizontalStartupLocation="Center"
+                                 VerticalStartupLocation="Center"
+                                 DefaultStandardButton="Ok"
+                                 Width="400">
+                        <StackPanel Orientation="Vertical">
                             <TextBlock>Some contents...</TextBlock>
                             <TextBlock>Some contents...</TextBlock>
                             <TextBlock>Some contents...</TextBlock>
