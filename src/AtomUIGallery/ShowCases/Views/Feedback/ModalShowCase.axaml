@@ -298,7 +298,7 @@
                                  IsOpen="{Binding IsDelayedCloseMsgBoxOpened, Mode=TwoWay}"
                                  Title="This is a notification message"
                                  IsModal="True"
-                                 IsDragMovable="True"
+                                 IsDragMovable="False"
                                  IsLightDismissEnabled="True"
                                  IsCenterOnStartup="True"
                                  Style="Success"
