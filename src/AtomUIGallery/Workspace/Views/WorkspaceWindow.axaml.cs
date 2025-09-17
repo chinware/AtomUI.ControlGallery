@@ -63,11 +63,11 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
             }
             else if (kind == WindowMenuItemKind.Minimize)
             {
-                IsMinimizeCaptionButtonEnabled = menuItem.IsChecked;
+                CanMinimize = menuItem.IsChecked;
             }
             else if (kind == WindowMenuItemKind.Maximize)
             {
-                IsMaximizeCaptionButtonEnabled = menuItem.IsChecked;
+                CanMaximize = menuItem.IsChecked;
             }
             else if (kind == WindowMenuItemKind.Move)
             {
@@ -75,7 +75,7 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
             }
             else if (kind == WindowMenuItemKind.Resize)
             {
-                IsResizeEnabled = menuItem.IsChecked;
+                CanResize = menuItem.IsChecked;
             }
             else if (kind == WindowMenuItemKind.DarkMode)
             {
