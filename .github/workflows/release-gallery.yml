@@ -174,8 +174,8 @@ jobs:
                name: dmg-packages-osx-arm64
                path: ${{ env.GalleryArtifactsOutputDir }}/dmg/arm64/*.dmg
             
-   BuildAtomUIGalleryAppImageInstallers:
-      name: Build Linux AppImage Installer
+   BuildAtomUIGalleryAppImageX64Installers:
+      name: Build Linux X64 AppImage Installer
       runs-on: qinware-ubuntu-latest
       steps:
          -  name: Checkout code
@@ -253,6 +253,87 @@ jobs:
             with:
                name: linux-appimage-x86_64
                path: ${{ env.GalleryArtifactsOutputDir }}/appimage/x64/*.AppImage
+               
+   BuildAtomUIGalleryAppImageArm64Installers:
+      name: Build Linux Arm64 AppImage Installer
+      runs-on: qinware-ubuntu-arm64-latest
+      steps:
+         -  name: Checkout code
+            uses: actions/checkout@v4.2.2
+            with:
+               ref: ${{ inputs.TargetBranch }}
+         -  name: Prepare build environment
+            shell: pwsh
+            run: |
+               New-Item -ItemType Directory -Path "${{ env.BuildDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.AtomUIToolsBinDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryPublishDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}" -Force
+               New-Item -ItemType Directory -Path "${{ env.GalleryArtifactsOutputDir }}/appimage/arm64" -Force
+
+               sudo apt-get update
+               sudo apt-get install -y fuse libfuse2 patchelf desktop-file-utils file
+               sudo apt-get install -y libxcb1 libxcb-shape0 libxcb-shape0-dev
+
+               wget https://github.com/linuxdeploy/linuxdeploy/releases/download/1-alpha-20250213-2/linuxdeploy-aarch64.AppImage
+               chmod +x linuxdeploy-aarch64.AppImage
+               sudo mv linuxdeploy-aarch64.AppImage /usr/local/bin/linuxdeploy
+
+               wget https://github.com/AppImage/appimagetool/releases/download/continuous/appimagetool-aarch64.AppImage
+               chmod +x appimagetool-aarch64.AppImage
+               sudo mv appimagetool-aarch64.AppImage /usr/local/bin/appimagetool
+
+               linuxdeploy --version
+               appimagetool --version
+
+         -  name: Setup .NET 9
+            uses: actions/setup-dotnet@v4
+            with:
+               dotnet-version: '9.0.x'
+
+         -  name: Checkout AtomUITools code
+            uses: actions/checkout@v4.2.2
+            with:
+               repository: chinware/AtomUITools
+               ref: develop
+               token: ${{ secrets.ACCESS_TOKEN }}
+               path: ${{ env.BuildDir }}/AtomUITools
+         -  name: Build AtomUITools (Linux)
+            shell: pwsh
+            run: |
+               Set-Location ${{ env.BuildDir }}/AtomUITools/scripts
+               ./PublishAtomUIToolsLocal.ps1 -publishRootPath "${{ env.AtomUIToolsBinDir }}" -runtime linux-arm64
+
+         -  name: Build AppImage for linux-arm64
+            shell: pwsh
+            run: |
+               $galleryScriptsPath = "${{ env.SourceDir }}/src/AtomUIGallery.Desktop/scripts"
+               $galleryPublishDirArm64 = "${{ env.GalleryPublishDir }}/linux-arm64"
+
+               if (Test-Path "${{ env.SourceDir }}/output") {
+                  Remove-Item -Path "${{ env.SourceDir }}/output" -Recurse -Force
+               }
+
+               Set-Location $galleryScriptsPath
+               pwsh ./PublishToLocal.ps1 -publishRootPath $galleryPublishDirArm64 -runtime linux-arm64 -buildType ${{ inputs.BuildConfiguration }}
+
+               Set-Location ${{ env.BuildDir }}
+               Get-Location
+               ${{ env.AtomUIToolsLinuxBin }} create-appimage `
+                 --runtime linux-arm64 `
+                 --config "$galleryPublishDirArm64/config/InstallerConfig.xml" `
+                 --packages "$galleryPublishDirArm64/packages" `
+                 --output "${{ env.GalleryArtifactsOutputDir }}/appimage/arm64" `
+                 --verbosity Detailed `
+                 --cleanupBundleOption false
+               ls -al $galleryPublishDirArm64/packages
+               ls -al ${{ env.GalleryArtifactsOutputDir }}/appimage/arm64
+         -  name: Upload arm64 AppImage artifacts
+            uses: actions/upload-artifact@v4.6.2
+            with:
+               name: linux-appimage-arm64
+               path: ${{ env.GalleryArtifactsOutputDir }}/appimage/arm64/*.AppImage
+               
    BuildAtomUIGalleryWindowsX64Zip:
       name: Build Windows X86_64 Zip Package
       runs-on: windows-latest
