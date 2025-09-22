@@ -27,36 +27,25 @@ internal class Program
         catch (Exception ex)
         {
             LogException(ex);
-#if DEBUG
             throw;
-#endif
         }
     }
 
     private static void LogException(Exception ex)
     {
-        try
-        {
-            var homeDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        var homeDirectory = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             
-            var logDirectory = Path.Combine(homeDirectory, Path.Combine("AtomUIGallery", "AppCrashLogs"));
-            Directory.CreateDirectory(logDirectory);
+        var logDirectory = Path.Combine(homeDirectory, Path.Combine("AtomUIGallery", "AppCrashLogs"));
+        Directory.CreateDirectory(logDirectory);
             
-            var logFileName = $"CrashLog_{DateTime.Now:yyyyMMdd_HHmmss}.log";
-            var logFilePath = Path.Combine(logDirectory, logFileName);
+        var logFileName = $"CrashLog_{DateTime.Now:yyyyMMdd_HHmmss}.log";
+        var logFilePath = Path.Combine(logDirectory, logFileName);
             
-            File.WriteAllText(logFilePath, 
-                $"CrashTime: {DateTime.Now}\r\n" +
-                $"Exception Type: {ex.GetType().Name}\r\n" +
-                $"Exception Message: {ex.Message}\r\n" +
-                $"Stack Info: \r\n{ex.StackTrace}");
-        }
-        catch
-        {
-#if DEBUG
-            throw;
-#endif
-        }
+        File.WriteAllText(logFilePath, 
+            $"CrashTime: {DateTime.Now}\r\n" +
+            $"Exception Type: {ex.GetType().Name}\r\n" +
+            $"Exception Message: {ex.Message}\r\n" +
+            $"Stack Info: \r\n{ex.StackTrace}");
     }
     
 
