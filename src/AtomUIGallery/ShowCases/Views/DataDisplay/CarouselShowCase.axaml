@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AtomUIGallery.ShowCases.Views.CarouselShowCase"
+             xmlns:atom="https://atomui.net"
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    <gallerycontrols:ShowCasePanel>
+        <gallerycontrols:ShowCasePanel.Styles>
+            <Style Selector="atom|CarouselPage">
+                <Setter Property="HorizontalContentAlignment" Value="Center" />
+                <Setter Property="VerticalContentAlignment" Value="Center" />
+                <Setter Property="Background" Value="#364d79" />
+            </Style>
+        </gallerycontrols:ShowCasePanel.Styles>
+        <gallerycontrols:ShowCaseItem Title="Basic" Description="Basic usage.">
+            <atom:Carousel Height="160">
+                <atom:CarouselPage>1</atom:CarouselPage>
+                <atom:CarouselPage>2</atom:CarouselPage>
+                <atom:CarouselPage>3</atom:CarouselPage>
+                <atom:CarouselPage>4</atom:CarouselPage>
+            </atom:Carousel>
+        </gallerycontrols:ShowCaseItem>
+    </gallerycontrols:ShowCasePanel>
+</UserControl>

@@ -40,6 +40,7 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new CalendarShowCase(), typeof(IViewFor<CalendarViewModel>));
         Locator.CurrentMutable.Register(() => new CollapseShowCase(), typeof(IViewFor<CollapseViewModel>));
         Locator.CurrentMutable.Register(() => new CardShowCase(), typeof(IViewFor<CardViewModel>));
+        Locator.CurrentMutable.Register(() => new CarouselShowCase(), typeof(IViewFor<CarouselViewModel>));
         Locator.CurrentMutable.Register(() => new DataGridShowCase(), typeof(IViewFor<DataGridViewModel>));
         Locator.CurrentMutable.Register(() => new EmptyShowCase(), typeof(IViewFor<EmptyViewModel>));
         Locator.CurrentMutable.Register(() => new ExpanderShowCase(), typeof(IViewFor<ExpanderViewModel>));

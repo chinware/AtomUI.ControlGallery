@@ -79,6 +79,8 @@
                               ItemKey="{x:Static viewmodels:CalendarViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Card}}"
                               ItemKey="{x:Static viewmodels:CardViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Carousel}}"
+                              ItemKey="{x:Static viewmodels:CarouselViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_Collapse}}"
                               ItemKey="{x:Static viewmodels:CollapseViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.DataDisplay_DataGrid}}"
