@@ -5,16 +5,18 @@
              xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCasePanel.Styles>
+            <Style Selector="atom|Carousel">
+                <Setter Property="Background" Value="#364d79" />
+                <Setter Property="Foreground" Value="#fff" />
+            </Style>
             <Style Selector="atom|CarouselPage">
                 <Setter Property="HorizontalContentAlignment" Value="Center" />
                 <Setter Property="VerticalContentAlignment" Value="Center" />
-                <Setter Property="Background" Value="#364d79" />
-                <Setter Property="Foreground" Value="#fff" />
                 <Setter Property="FontWeight" Value="Bold" />
             </Style>
         </gallerycontrols:ShowCasePanel.Styles>
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Basic usage.">
-            <atom:Carousel Height="160">
+            <atom:Carousel Height="160" SelectedIndex="2">
                 <atom:CarouselPage>1</atom:CarouselPage>
                 <atom:CarouselPage>2</atom:CarouselPage>
                 <atom:CarouselPage>3</atom:CarouselPage>
