@@ -23,5 +23,31 @@
                 <atom:CarouselPage>4</atom:CarouselPage>
             </atom:Carousel>
         </gallerycontrols:ShowCaseItem>
+
+        <gallerycontrols:ShowCaseItem
+            Title="Card Shape Position"
+            Description="Tab's position: left, right, top or bottom. Will auto switch to top in mobile."
+            Margin="0, 0, 5, 0">
+            <StackPanel Orientation="Vertical" Spacing="20">
+                <StackPanel Orientation="Horizontal" Spacing="5">
+                    <atom:TextBlock VerticalAlignment="Center">Pagination Position:</atom:TextBlock>
+                    <atom:OptionButtonGroup ButtonStyle="Outline" Name="PositionOptionGroup">
+                        <atom:OptionButton>Top</atom:OptionButton>
+                        <atom:OptionButton IsChecked="True">Bottom</atom:OptionButton>
+                        <atom:OptionButton>Left</atom:OptionButton>
+                        <atom:OptionButton>Right</atom:OptionButton>
+                    </atom:OptionButtonGroup>
+                </StackPanel>
+
+                <atom:Carousel Height="160" PaginationPosition="{Binding PaginationPosition}">
+                    <atom:CarouselPage>1</atom:CarouselPage>
+                    <atom:CarouselPage>2</atom:CarouselPage>
+                    <atom:CarouselPage>3</atom:CarouselPage>
+                    <atom:CarouselPage>4</atom:CarouselPage>
+                </atom:Carousel>
+
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+
     </gallerycontrols:ShowCasePanel>
 </UserControl>
