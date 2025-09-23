@@ -9,6 +9,8 @@
                 <Setter Property="HorizontalContentAlignment" Value="Center" />
                 <Setter Property="VerticalContentAlignment" Value="Center" />
                 <Setter Property="Background" Value="#364d79" />
+                <Setter Property="Foreground" Value="#fff" />
+                <Setter Property="FontWeight" Value="Bold" />
             </Style>
         </gallerycontrols:ShowCasePanel.Styles>
         <gallerycontrols:ShowCaseItem Title="Basic" Description="Basic usage.">
