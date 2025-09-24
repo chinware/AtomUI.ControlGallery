@@ -12,8 +12,8 @@ public partial class CarouselShowCase : ReactiveUserControl<CarouselViewModel>
     {
         this.WhenActivated(disposables =>
         {
-            PositionOptionGroup.OptionCheckedChanged += HandlePositionOptionChanged;
-            disposables.Add(Disposable.Create(() => PositionOptionGroup.OptionCheckedChanged -= HandlePositionOptionChanged));
+            // PositionOptionGroup.OptionCheckedChanged += HandlePositionOptionChanged;
+            // disposables.Add(Disposable.Create(() => PositionOptionGroup.OptionCheckedChanged -= HandlePositionOptionChanged));
         });
         InitializeComponent();
     }
