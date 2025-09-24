@@ -1,4 +1,5 @@
 ﻿using AtomUI.Controls;
+using AtomUI.Fonts.AlibabaSans;
 using AtomUI.Theme;
 using AtomUI.Theme.Language;
 using Avalonia;
@@ -47,24 +48,24 @@ internal class Program
             $"Exception Message: {ex.Message}\r\n" +
             $"Stack Info: \r\n{ex.StackTrace}");
     }
-    
 
     public static AppBuilder BuildAvaloniaApp()
     {
         return AppBuilder.Configure<GalleryAtomApplication>()
-                                .UseReactiveUI()
-                                .UsePlatformDetect()
-                                .With(new Win32PlatformOptions())
-                                .UseAtomUI(builder =>
-                                {
-                                    builder.WithDefaultLanguageVariant(LanguageVariant.zh_CN);
-                                    builder.WithDefaultTheme(IThemeManager.DEFAULT_THEME_ID);
-                                    builder.UseOSSControls();
-                                    builder.UseGalleryControls();
-                                    builder.UseOSSDataGrid();
-                                    builder.UseColorPicker();
-                                })
-                                .LogToTrace();
+                         .UseReactiveUI()
+                         .UsePlatformDetect()
+                         .WithAlibabaSansFont()
+                         .With(new Win32PlatformOptions())
+                         .UseAtomUI(builder =>
+                         {
+                             builder.WithDefaultLanguageVariant(LanguageVariant.zh_CN);
+                             builder.WithDefaultTheme(IThemeManager.DEFAULT_THEME_ID);
+                             builder.UseOSSControls();
+                             builder.UseGalleryControls();
+                             builder.UseOSSDataGrid();
+                             builder.UseColorPicker();
+                         })
+                         .LogToTrace();
         
     }
 }

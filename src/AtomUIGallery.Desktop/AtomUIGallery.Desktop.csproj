@@ -37,10 +37,7 @@
     <ItemGroup>
       <AvaloniaResource Remove="Assets/Images/AtomUIGallery.ico" />
     </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Assets\Themes\" />
-    </ItemGroup>
+    
     <Choose>
         <When Condition="$([MSBuild]::IsOSPlatform('OSX'))">
             <ItemGroup Condition="'$(Configuration)' == 'Release'">

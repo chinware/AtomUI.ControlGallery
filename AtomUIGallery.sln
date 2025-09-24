@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.ReactiveUI", "packag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Controls.ColorPicker", "packages\AtomUI\src\AtomUI.Controls.ColorPicker\AtomUI.Controls.ColorPicker.csproj", "{E10E932D-EECC-4F44-B08C-63256206D79B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtomUI.Fonts.AlibabaSans", "packages\AtomUI\src\AtomUI.Fonts.AlibabaSans\AtomUI.Fonts.AlibabaSans.csproj", "{59C40EC7-5CA9-4B02-A8C4-102DF393ADF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -119,6 +121,10 @@ Global
 		{E10E932D-EECC-4F44-B08C-63256206D79B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E10E932D-EECC-4F44-B08C-63256206D79B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E10E932D-EECC-4F44-B08C-63256206D79B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59C40EC7-5CA9-4B02-A8C4-102DF393ADF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59C40EC7-5CA9-4B02-A8C4-102DF393ADF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59C40EC7-5CA9-4B02-A8C4-102DF393ADF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59C40EC7-5CA9-4B02-A8C4-102DF393ADF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{AB05E310-C053-41CD-884F-CF7BAC5D394A} = {E3103E91-AEAE-482A-8008-1489058B0814}
