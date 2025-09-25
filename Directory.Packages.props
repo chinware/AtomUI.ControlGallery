@@ -13,7 +13,6 @@
         <PackageVersion Include="AtomUI" Version="$(AtomUIVersion)"/>
         <PackageVersion Include="AtomUI.Controls.DataGrid" Version="$(AtomUIVersion)"/>
         <PackageVersion Include="AtomUI.Controls.ColorPicker" Version="$(AtomUIVersion)"/>
-        <PackageVersion Include="AtomUI.Fonts.AlibabaSans" Version="$(AtomUIVersion)"/>
         <PackageVersion Include="AtomUI.IconPkg.Generator" Version="$(AtomUIVersion)"/>
         <PackageVersion Include="AtomUI.Generator" Version="$(AtomUIVersion)"/>
         <!-- TODO 版本是否跟随 AvaloniaVersion？-->
