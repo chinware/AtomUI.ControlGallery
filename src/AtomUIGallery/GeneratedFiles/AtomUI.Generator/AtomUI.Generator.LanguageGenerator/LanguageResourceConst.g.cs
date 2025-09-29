@@ -3,7 +3,7 @@ using AtomUI.Theme.Language;
 
 namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
 {
-    public static class CaseNavigationLangResourceKey
+    internal static class CaseNavigationLangResourceKey
     {
         public static readonly LanguageResourceKey DataDisplay = new LanguageResourceKey("CaseNavigation.DataDisplay", "AtomUIGallery");
         public static readonly LanguageResourceKey DataDisplay_Avatar = new LanguageResourceKey("CaseNavigation.DataDisplay_Avatar", "AtomUIGallery");
@@ -68,7 +68,7 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
 
 namespace AtomUIGallery.Workspace.Localization.WorkspaceWindowLang
 {
-    public static class WorkspaceWindowLangResourceKey
+    internal static class WorkspaceWindowLangResourceKey
     {
         public static readonly LanguageResourceKey MenuItemCompactMode = new LanguageResourceKey("WorkspaceWindow.MenuItemCompactMode", "AtomUIGallery");
         public static readonly LanguageResourceKey MenuItemDarkMode = new LanguageResourceKey("WorkspaceWindow.MenuItemDarkMode", "AtomUIGallery");
