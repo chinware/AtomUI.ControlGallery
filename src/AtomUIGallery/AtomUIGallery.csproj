@@ -52,7 +52,6 @@
         <AvaloniaResource Include="Assets/CardShowCase/Cover1.png"/>
         <AvaloniaResource Include="Assets/CardShowCase/Cover2.png"/>
         <AvaloniaResource Include="Assets/watermark-sample.png"/>
-        <AvaloniaResource Include="Assets/AtomUIOSS-release-banner.png"/>
         <AvaloniaResource Include="Assets/qinware-logo.png"/>
         <AvaloniaResource Include="Assets/qinware-logo-white.png"/>
         <AvaloniaResource Include="Assets/qinware-wechatpress.png"/>
