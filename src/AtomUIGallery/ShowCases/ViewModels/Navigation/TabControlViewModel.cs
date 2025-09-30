@@ -1,5 +1,6 @@
 ﻿using AtomUI;
 using AtomUI.Controls;
+using Avalonia.Collections;
 using Avalonia.Controls;
 using ReactiveUI;
 
@@ -38,6 +39,8 @@ public class TabControlViewModel : ReactiveObject, IRoutableViewModel
         get => _sizeTypeTabStrip;
         set => this.RaiseAndSetIfChanged(ref _sizeTypeTabStrip, value);
     }
+
+    public AvaloniaList<TabItemData> TabItemDataSource { get; set; } = new();
 
     #endregion
 
@@ -193,4 +196,10 @@ public class TabControlViewModel : ReactiveObject, IRoutableViewModel
     }
 
     #endregion
+}
+
+public class TabItemData : IHeadered
+{
+    public object? Header { get; set; }
+    public string? Content { get; set; }
 }

@@ -3,6 +3,7 @@ using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
+using TabItem = AtomUI.Controls.TabItem;
 
 namespace AtomUIGallery.ShowCases.Views;
 
@@ -23,6 +24,17 @@ public partial class TabControlShowCase : ReactiveUserControl<TabControlViewMode
                 PositionCardTabControlOptionGroup.OptionCheckedChanged += viewModel.HandleCardTabControlPlacementOptionCheckedChanged;
                 SizeTypeTabControlOptionGroup.OptionCheckedChanged     += viewModel.HandleTabControlSizeTypeOptionCheckedChanged;
                 AddTabDemoTabControl.AddTabRequest                     += HandleTabControlAddTabRequest;
+                
+                viewModel.TabItemDataSource.Add(new TabItemData()
+                {
+                    Header = "Tab 1",
+                    Content = "Tab Content 1"
+                });
+                viewModel.TabItemDataSource.Add(new TabItemData()
+                {
+                    Header  = "Tab 2",
+                    Content = "Tab Content 2"
+                });
             }
         });
         InitializeComponent();
