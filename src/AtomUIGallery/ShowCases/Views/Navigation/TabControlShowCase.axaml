@@ -17,7 +17,7 @@
                         </atom:TabControl>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-                
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Disabled"
                     Description="Disabled a tab.">
@@ -260,9 +260,9 @@
                         </atom:TabControl>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
             </gallerycontrols:ShowCasePanel>
-
+        
         </atom:TabItem>
         <atom:TabItem Header="TabStrip">
             <gallerycontrols:ShowCasePanel>
@@ -277,7 +277,7 @@
                         </atom:TabStrip>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Disabled"
                     Description="Disabled a tab.">
@@ -287,7 +287,7 @@
                             <atom:TabStripItem IsEnabled="False" IsClosable="True">Tab 2</atom:TabStripItem>
                             <atom:TabStripItem>Tab 3</atom:TabStripItem>
                         </atom:CardTabStrip>
-
+        
                         <atom:TabStrip>
                             <atom:TabStripItem>Tab 1</atom:TabStripItem>
                             <atom:TabStripItem IsEnabled="False">Tab 2</atom:TabStripItem>
@@ -295,7 +295,7 @@
                         </atom:TabStrip>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Centered"
                     Description="Centered tabs.">
@@ -305,16 +305,16 @@
                             <atom:TabStripItem>Tab 2</atom:TabStripItem>
                             <atom:TabStripItem>Tab 3</atom:TabStripItem>
                         </atom:TabStrip>
-
+        
                         <atom:CardTabStrip TabAlignmentCenter="True">
                             <atom:TabStripItem>Tab 1</atom:TabStripItem>
                             <atom:TabStripItem>Tab 2</atom:TabStripItem>
                             <atom:TabStripItem>Tab 3</atom:TabStripItem>
                         </atom:CardTabStrip>
-
+        
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Icon"
                     Description="The Tab with Icon.">
@@ -326,7 +326,7 @@
                         </atom:TabStrip>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Slide"
                     Description="In order to fit in more tabs, they can slide left and right (or up and down).">
@@ -358,7 +358,7 @@
                         </atom:TabStrip>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Card type tab"
                     Description="Another type of Tabs, which doesn't support vertical mode.">
@@ -369,10 +369,10 @@
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=WechatOutlined}">Tab 3</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=GithubOutlined}" IsClosable="True">Tab 4</atom:TabStripItem>
                         </atom:CardTabStrip>
-
+        
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Position"
                     Description="Tab's position: left, right, top or bottom. Will auto switch to top in mobile.">
@@ -386,7 +386,7 @@
                                 <atom:OptionButton>Right</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+        
                         <DockPanel Height="300">
                             <atom:TabStrip Name="PositionTabStrip"
                                            DockPanel.Dock="{Binding PositionTabStripPlacement}"
@@ -411,10 +411,10 @@
                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Tab Content</TextBlock>
                             </Border>
                         </DockPanel>
-
+        
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Card Shape Position"
                     Description="Tab's position: left, right, top or bottom. Will auto switch to top in mobile."
@@ -429,7 +429,7 @@
                                 <atom:OptionButton>Right</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+        
                         <DockPanel Height="300">
                             <atom:CardTabStrip Name="PositionCardTabStrip"
                                                DockPanel.Dock="{Binding PositionCardTabStripPlacement}"
@@ -445,10 +445,10 @@
                                 <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Tab Content</TextBlock>
                             </Border>
                         </DockPanel>
-
+        
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Size"
                     Description="Large size tabs are usually used in page header, and small size could be used in Modal.">
@@ -461,24 +461,24 @@
                                 <atom:OptionButton>Large</atom:OptionButton>
                             </atom:OptionButtonGroup>
                         </StackPanel>
-
+        
                         <atom:TabStrip SizeType="{Binding SizeTypeTabStrip}">
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=AppleOutlined}">Tab 1</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=AndroidOutlined}">Tab 2</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=WechatOutlined}">Tab 3</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=GithubOutlined}" IsClosable="True">Tab 4</atom:TabStripItem>
                         </atom:TabStrip>
-
+        
                         <atom:CardTabStrip SizeType="{Binding SizeTypeTabStrip}">
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=AppleOutlined}">Tab 1</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=AndroidOutlined}">Tab 2</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=WechatOutlined}">Tab 3</atom:TabStripItem>
                             <atom:TabStripItem Icon="{atom:IconProvider Kind=GithubOutlined}" IsClosable="True">Tab 4</atom:TabStripItem>
                         </atom:CardTabStrip>
-
+        
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
                 <gallerycontrols:ShowCaseItem
                     Title="Add and close tab"
                     Description="Hide default plus icon, and bind event for customized trigger." Margin="0, 0, 30, 0">
@@ -491,7 +491,7 @@
                         </atom:CardTabStrip>
                     </StackPanel>
                 </gallerycontrols:ShowCaseItem>
-
+        
             </gallerycontrols:ShowCasePanel>
         </atom:TabItem>
     </atom:TabControl>
