@@ -30,10 +30,20 @@ public partial class TabControlShowCase : ReactiveUserControl<TabControlViewMode
                     Header = "Tab 1",
                     Content = "Tab Content 1"
                 });
+                
                 viewModel.TabItemDataSource.Add(new TabItemData()
                 {
                     Header  = "Tab 2",
                     Content = "Tab Content 2"
+                });
+                
+                viewModel.TabStripItemDataSource.Add(new TabStripItemData()
+                {
+                    Content = "Tab 1"
+                });
+                viewModel.TabStripItemDataSource.Add(new TabStripItemData()
+                {
+                    Content = "Tab 2"
                 });
             }
         });

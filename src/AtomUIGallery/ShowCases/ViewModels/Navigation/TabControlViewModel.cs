@@ -40,7 +40,7 @@ public class TabControlViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _sizeTypeTabStrip, value);
     }
 
-    public AvaloniaList<TabItemData> TabItemDataSource { get; set; } = new();
+    public AvaloniaList<TabStripItemData> TabStripItemDataSource { get; set; } = new();
 
     #endregion
 
@@ -70,6 +70,7 @@ public class TabControlViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _sizeTypeControl, value);
     }
 
+    public AvaloniaList<TabItemData> TabItemDataSource { get; set; } = new();
     #endregion
 
     public TabControlViewModel(IScreen screen)
@@ -201,5 +202,10 @@ public class TabControlViewModel : ReactiveObject, IRoutableViewModel
 public class TabItemData : IHeadered
 {
     public object? Header { get; set; }
+    public string? Content { get; set; }
+}
+
+public class TabStripItemData
+{
     public string? Content { get; set; }
 }
