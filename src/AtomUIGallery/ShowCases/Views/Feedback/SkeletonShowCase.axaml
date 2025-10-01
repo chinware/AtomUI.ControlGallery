@@ -8,21 +8,21 @@
             Title="Basic"
             Description="Simplest Skeleton usage."
             OccupyEntireRow="True">
-            <atom:Skeleton/>
+            <atom:Skeleton IsLoading="True"/>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
             Title="Complex combination"
             Description="Complex combination with avatar and multiple paragraphs."
             OccupyEntireRow="True">
-            <atom:Skeleton IsShowAvatar="True" ParagraphRows="4"/>
+            <atom:Skeleton IsShowAvatar="True" ParagraphRows="4" IsLoading="True"/>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
             Title="Active Animation"
             Description="Display active animation."
             OccupyEntireRow="True">
-            <atom:Skeleton IsActive="True"/>
+            <atom:Skeleton IsActive="True" IsLoading="True"/>
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
