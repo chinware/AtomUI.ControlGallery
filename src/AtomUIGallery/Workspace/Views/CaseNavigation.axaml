@@ -43,6 +43,8 @@
                               ItemKey="{x:Static viewmodels:MenuViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_Pagination}}"
                               ItemKey="{x:Static viewmodels:PaginationViewModel.ID}" />
+            <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_Steps}}"
+                              ItemKey="{x:Static viewmodels:StepsViewModel.ID}" />
             <atom:NavMenuItem Header="{DynamicResource {x:Static lang:CaseNavigationLangResourceKey.Navigation_TabControl}}"
                               ItemKey="{x:Static viewmodels:TabControlViewModel.ID}" />
         </atom:NavMenuItem>

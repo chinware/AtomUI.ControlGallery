@@ -48,7 +48,6 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new InfoFlyoutShowCase(), typeof(IViewFor<InfoFlyoutViewModel>));
         Locator.CurrentMutable.Register(() => new ListBoxShowCase(), typeof(IViewFor<ListBoxViewModel>));
         Locator.CurrentMutable.Register(() => new SegmentedShowCase(), typeof(IViewFor<SegmentedViewModel>));
-        Locator.CurrentMutable.Register(() => new TabControlShowCase(), typeof(IViewFor<TabControlViewModel>));
         Locator.CurrentMutable.Register(() => new TagShowCase(), typeof(IViewFor<TagViewModel>));
         Locator.CurrentMutable.Register(() => new TimelineShowCase(), typeof(IViewFor<TimelineViewModel>));
         Locator.CurrentMutable.Register(() => new TooltipShowCase(), typeof(IViewFor<TooltipViewModel>));
@@ -90,5 +89,7 @@ internal static class ShowCaseRegister
         Locator.CurrentMutable.Register(() => new DropdownButtonShowCase(), typeof(IViewFor<DropdownButtonViewModel>));
         Locator.CurrentMutable.Register(() => new MenuShowCase(), typeof(IViewFor<MenuViewModel>));
         Locator.CurrentMutable.Register(() => new PaginationShowCase(), typeof(IViewFor<PaginationViewModel>));
+        Locator.CurrentMutable.Register(() => new StepsShowCase(), typeof(IViewFor<StepsViewModel>));
+        Locator.CurrentMutable.Register(() => new TabControlShowCase(), typeof(IViewFor<TabControlViewModel>));
     }
 }

@@ -1,6 +1,6 @@
 ﻿using ReactiveUI;
 
-namespace AtomUIGallery.Workspace.ViewModes;
+namespace AtomUIGallery.Workspace.ViewModels;
 
 public class WorkspaceWindowViewModel : ReactiveObject, IScreen
 {

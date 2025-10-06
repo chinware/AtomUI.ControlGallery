@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AtomUIGallery.ShowCases.Views.StepsShowCase"
+             xmlns:atom="https://atomui.net"
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+    <gallerycontrols:ShowCasePanel>
+        <gallerycontrols:ShowCaseItem
+            Title="Basic"
+            Description="The most basic step bar."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="0">
+                <atom:StepsItem Header="Finished" Description="This is a description."/>
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08"/>
+                <atom:StepsItem Header="Waiting" Description="This is a description."/>
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+    </gallerycontrols:ShowCasePanel>
+</UserControl>

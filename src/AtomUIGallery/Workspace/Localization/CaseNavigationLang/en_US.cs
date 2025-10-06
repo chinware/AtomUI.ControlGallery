@@ -25,6 +25,7 @@ internal class en_US : LanguageProvider
     public const string Navigation_ButtonSpinner = "ButtonSpinner";
     public const string Navigation_Menu = "Menu";
     public const string Navigation_Pagination = "Pagination";
+    public const string Navigation_Steps = "Steps";
     public const string Navigation_TabControl = "TabControl";
     
     public const string DataEntry = "Data Entry";

@@ -3,7 +3,7 @@ using AtomUI;
 using AtomUI.Controls;
 using AtomUI.ReactiveUI;
 using AtomUI.Theme.Language;
-using AtomUIGallery.Workspace.ViewModes;
+using AtomUIGallery.Workspace.ViewModels;
 using Avalonia;
 using Avalonia.Interactivity;
 using Avalonia.Media;
@@ -25,7 +25,7 @@ internal enum WindowMenuItemKind
     Motion,
     WaveSpirit,
     LanguageZhCN,
-    LanguageEnUs,
+    LanguageEnUS,
 }
 
 public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
@@ -123,7 +123,7 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
                     application.RequestedLanguageVariant = LanguageVariant.zh_CN;
                 });
             }
-            else if (kind == WindowMenuItemKind.LanguageEnUs)
+            else if (kind == WindowMenuItemKind.LanguageEnUS)
             {
                 Dispatcher.UIThread.Post(() =>
                 {

@@ -68,7 +68,7 @@
                               />
                 <atom:MenuItem Header="English" 
                                ToggleType="Radio"
-                               Tag="{x:Static workspaceviews:WindowMenuItemKind.LanguageEnUs}"/>
+                               Tag="{x:Static workspaceviews:WindowMenuItemKind.LanguageEnUS}"/>
             </atom:MenuItem>
         </atom:Menu>
         <workspaceviews:CaseNavigation DockPanel.Dock="Left" />

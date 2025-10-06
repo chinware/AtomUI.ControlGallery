@@ -1,6 +1,6 @@
 ﻿using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
-using AtomUIGallery.Workspace.ViewModes;
+using AtomUIGallery.Workspace.ViewModels;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Input;

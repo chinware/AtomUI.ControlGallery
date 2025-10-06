@@ -62,6 +62,7 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
         public static readonly LanguageResourceKey Navigation_DropdownButton = new LanguageResourceKey("CaseNavigation.Navigation_DropdownButton", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_Menu = new LanguageResourceKey("CaseNavigation.Navigation_Menu", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_Pagination = new LanguageResourceKey("CaseNavigation.Navigation_Pagination", "AtomUIGallery");
+        public static readonly LanguageResourceKey Navigation_Steps = new LanguageResourceKey("CaseNavigation.Navigation_Steps", "AtomUIGallery");
         public static readonly LanguageResourceKey Navigation_TabControl = new LanguageResourceKey("CaseNavigation.Navigation_TabControl", "AtomUIGallery");
     }
 }

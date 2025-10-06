@@ -2,7 +2,7 @@
 using Avalonia.Threading;
 using ReactiveUI;
 
-namespace AtomUIGallery.Workspace.ViewModes;
+namespace AtomUIGallery.Workspace.ViewModels;
 
 public class CaseNavigationViewModel : ReactiveObject
 {
@@ -62,7 +62,6 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(InfoFlyoutViewModel.ID, () => new InfoFlyoutViewModel(HostScreen));
         _showCaseViewModelFactories.Add(ListBoxViewModel.ID, () => new ListBoxViewModel(HostScreen));
         _showCaseViewModelFactories.Add(SegmentedViewModel.ID, () => new SegmentedViewModel(HostScreen));
-        _showCaseViewModelFactories.Add(TabControlViewModel.ID, () => new TabControlViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TagViewModel.ID, () => new TagViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TimelineViewModel.ID, () => new TimelineViewModel(HostScreen));
         _showCaseViewModelFactories.Add(TooltipViewModel.ID, () => new TooltipViewModel(HostScreen));
@@ -104,6 +103,8 @@ public class CaseNavigationViewModel : ReactiveObject
         _showCaseViewModelFactories.Add(DropdownButtonViewModel.ID, () => new DropdownButtonViewModel(HostScreen));
         _showCaseViewModelFactories.Add(MenuViewModel.ID, () => new MenuViewModel(HostScreen));
         _showCaseViewModelFactories.Add(PaginationViewModel.ID, () => new PaginationViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(StepsViewModel.ID, () => new StepsViewModel(HostScreen));
+        _showCaseViewModelFactories.Add(TabControlViewModel.ID, () => new TabControlViewModel(HostScreen));
     }
 
     public void NavigateTo(string showCaseId)
