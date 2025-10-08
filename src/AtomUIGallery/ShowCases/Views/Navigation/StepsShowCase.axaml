@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.StepsShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+             x:Name="StepsShowCaseName">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
@@ -10,10 +11,128 @@
             OccupyEntireRow="True"
             MinHeight="200">
             <atom:Steps CurrentStep="0">
-                <atom:StepsItem Header="Finished" Description="This is a description."/>
-                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08"/>
-                <atom:StepsItem Header="Waiting" Description="This is a description."/>
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
             </atom:Steps>
         </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Mini version"
+            Description="By setting like this: SizeType to Small, you can get a mini version."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="0" SizeType="Small">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="With icon"
+            Description="You can use your own custom icons by setting the property icon for items."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="0">
+                <atom:StepsItem Header="Login" Status="Finish" Icon="{atom:IconProvider Kind=UserOutlined}" />
+                <atom:StepsItem Header="Verification" Status="Finish" Icon="{atom:IconProvider Kind=SolutionOutlined}" />
+                <atom:StepsItem Header="Pay" Status="Process"
+                                Icon="{atom:IconProvider Kind=LoadingOutlined, Animation=Spin}" />
+                <atom:StepsItem Header="Done" Status="Wait" Icon="{atom:IconProvider Kind=SmileOutlined}" />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Switch Step"
+            Description="Cooperate with the content and buttons, to represent the progress of a process."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <StackPanel Orientation="Vertical" Spacing="20">
+                <atom:Steps Name="CurrentStepContentSteps" CurrentStep="{Binding CurrentStep}">
+                    <atom:StepsItem Header="First" Content="First-content" />
+                    <atom:StepsItem Header="Second" Content="Second-content" />
+                    <atom:StepsItem Header="Third" Content="Last-content" />
+                </atom:Steps>
+                <atom:DashedBorder BorderThickness="1"
+                                   BorderBrush="{DynamicResource {x:Static atom:SharedTokenKey.ColorBorder}}"
+                                   StrokeDashArray="{Binding #StepsShowCaseName.DashedArray}"
+                                   CornerRadius="{DynamicResource {x:Static atom:SharedTokenKey.BorderRadiusLG}}"
+                                   Background="{DynamicResource {x:Static atom:SharedTokenKey.ColorFillAlter}}"
+                                   TextElement.Foreground="{DynamicResource {x:Static atom:SharedTokenKey.ColorTextTertiary}}"
+                                   Height="260">
+                    <ContentPresenter Content="{Binding #CurrentStepContentSteps.CurrentContent}"
+                                      ContentTemplate="{Binding #CurrentStepContentSteps.CurrentContentTemplate}"
+                                      HorizontalAlignment="Center"
+                                      VerticalAlignment="Center" />
+                </atom:DashedBorder>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                    <atom:Button ButtonType="Primary" Content="Next" Name="NextStepButton" />
+                    <atom:Button ButtonType="Default" Content="Previous" Name="PreviousButton"
+                                 IsVisible="{Binding PreviousButtonVisible}" />
+                </StackPanel>
+            </StackPanel>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Vertical"
+            Description="A simple step bar in the vertical direction."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="1" Orientation="Vertical">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Vertical mini version"
+            Description="A simple mini version step bar in the vertical direction."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="1" Orientation="Vertical" SizeType="Small">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Error status"
+            Description="By using status of Steps, you can specify the state for current step."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="1" CurrentStepStatus="Error">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Dot Style"
+            Description="Steps with progress dot style."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="1" ItemIndicatorType="Dot">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Dot Style Vertical"
+            Description="Steps with progress dot style vertical."
+            OccupyEntireRow="True"
+            MinHeight="200">
+            <atom:Steps CurrentStep="1" ItemIndicatorType="Dot" Orientation="Vertical">
+                <atom:StepsItem Header="Finished" Description="This is a description." />
+                <atom:StepsItem Header="In Progress" Description="This is a description." SubHeader="Left 00:00:08" />
+                <atom:StepsItem Header="Waiting" Description="This is a description." />
+            </atom:Steps>
+        </gallerycontrols:ShowCaseItem>
+        
     </gallerycontrols:ShowCasePanel>
 </UserControl>
