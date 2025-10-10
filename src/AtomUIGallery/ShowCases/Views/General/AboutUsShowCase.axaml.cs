@@ -1,5 +1,6 @@
-using AtomUI;
+using AtomUI.Controls;
 using AtomUI.Data;
+using AtomUI.Theme;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia;
 using Avalonia.ReactiveUI;
@@ -10,7 +11,7 @@ namespace AtomUIGallery.ShowCases.Views;
 public partial class AboutUsShowCase : ReactiveUserControl<AboutUsViewModel>
 {
     public static readonly StyledProperty<bool> IsDarkThemeModeProperty =
-        AtomApplication.IsDarkThemeModeProperty.AddOwner<AboutUsShowCase>();
+        IThemeManager.IsDarkThemeModeProperty.AddOwner<AboutUsShowCase>();
     
     public bool IsDarkThemeMode
     {
@@ -22,10 +23,10 @@ public partial class AboutUsShowCase : ReactiveUserControl<AboutUsViewModel>
     {
         this.WhenActivated(disposables =>
         {
-            var application = AtomApplication.GetInstance();
-            if (application != null)
+            var themeManager = Application.Current?.GetThemeManager();
+            if (themeManager != null)
             {
-                disposables.Add(BindUtils.RelayBind(application, AtomApplication.IsDarkThemeModeProperty, this, IsDarkThemeModeProperty));
+                disposables.Add(BindUtils.RelayBind(themeManager.BindingSource, IThemeManager.IsDarkThemeModeProperty, this, IsDarkThemeModeProperty));
             }
         });
         InitializeComponent();

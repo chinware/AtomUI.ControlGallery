@@ -1,6 +1,7 @@
 using System.Reactive.Disposables;
-using AtomUI;
+using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
+using Avalonia;
 using Avalonia.Controls.Primitives;
 using Avalonia.Media;
 using Avalonia.ReactiveUI;
@@ -14,7 +15,7 @@ public partial class CardShowCase : ReactiveUserControl<CardViewModel>
     {
         this.WhenActivated(disposables =>
         {
-            var application = AtomApplication.Current;
+            var application = Application.Current;
             if (application != null)
             {
                 application.ActualThemeVariantChanged += HandleActualThemeVariantChanged;
@@ -37,11 +38,12 @@ public partial class CardShowCase : ReactiveUserControl<CardViewModel>
 
     private void ConfigureBorderlessBgFrame()
     {
-        if (AtomApplication.Current is AtomApplication application)
+        var application = Application.Current;
+        if (application != null)
         {
             if (DataContext is CardViewModel cardViewModel)
             {
-                if (application.IsDarkThemeMode)
+                if (application.IsDarkThemeMode())
                 {
                     cardViewModel.BorderlessFrameBg = new SolidColorBrush(Color.FromRgb(48, 48, 48));
                 }

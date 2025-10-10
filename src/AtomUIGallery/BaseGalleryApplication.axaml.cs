@@ -1,10 +1,10 @@
-﻿using AtomUI;
-using AtomUIGallery.ShowCases;
+﻿using AtomUIGallery.ShowCases;
 using AtomUIGallery.Workspace.Views;
+using Avalonia;
 
 namespace AtomUIGallery;
 
-public partial class BaseGalleryAtomApplication : AtomApplication
+public partial class BaseGalleryAtomApplication : Application
 {
     protected WorkspaceWindow CreateWorkspaceWindow()
     {

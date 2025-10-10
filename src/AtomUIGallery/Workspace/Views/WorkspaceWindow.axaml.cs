@@ -1,13 +1,10 @@
 ﻿using System.Diagnostics;
-using AtomUI;
 using AtomUI.Controls;
 using AtomUI.ReactiveUI;
 using AtomUI.Theme.Language;
 using AtomUIGallery.Workspace.ViewModels;
 using Avalonia;
 using Avalonia.Interactivity;
-using Avalonia.Media;
-using Avalonia.Platform;
 using Avalonia.Threading;
 
 namespace AtomUIGallery.Workspace.Views;
@@ -52,7 +49,7 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
     {
         if (e.Source is MenuItem menuItem && menuItem.Tag is WindowMenuItemKind kind)
         {
-            var application = Application.Current as AtomApplication;
+            var application = Application.Current;
             Debug.Assert(application != null);
             if (kind == WindowMenuItemKind.FullScreen)
             {
@@ -82,14 +79,14 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
             {
                 Dispatcher.UIThread.Post(() =>
                 {
-                    application.IsDarkThemeMode = menuItem.IsChecked;
+                    application.SetDarkThemeMode(menuItem.IsChecked);
                 });
             }
             else if (kind == WindowMenuItemKind.Compact)
             {
                 Dispatcher.UIThread.Post(() =>
                 {
-                    application.IsCompactThemeMode = menuItem.IsChecked;
+                    application.SetCompactThemeMode(menuItem.IsChecked);
                 });
             }
             else if (kind == WindowMenuItemKind.Motion)
@@ -110,24 +107,24 @@ public partial class WorkspaceWindow : ReactiveWindow<WorkspaceWindowViewModel>
                         }
                     }
                 }
-                application.IsMotionEnabled = menuItem.IsChecked;
+                application.SetMotionEnabled(menuItem.IsChecked);
             }
             else if (kind == WindowMenuItemKind.WaveSpirit)
             {
-                application.IsWaveSpiritEnabled = menuItem.IsChecked;
+                application.SetWaveSpiritEnabled(menuItem.IsChecked);
             }
             else if (kind == WindowMenuItemKind.LanguageZhCN)
             {
                 Dispatcher.UIThread.Post(() =>
                 {
-                    application.RequestedLanguageVariant = LanguageVariant.zh_CN;
+                    application.SetLanguageVariant(LanguageVariant.zh_CN);
                 });
             }
             else if (kind == WindowMenuItemKind.LanguageEnUS)
             {
                 Dispatcher.UIThread.Post(() =>
                 {
-                    application.RequestedLanguageVariant = LanguageVariant.en_US;
+                    application.SetLanguageVariant(LanguageVariant.en_US);
                 });
             }
         }
