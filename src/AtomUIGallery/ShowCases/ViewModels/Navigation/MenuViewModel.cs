@@ -1,4 +1,5 @@
 ﻿using AtomUI.Controls;
+using AtomUI.Controls.Primitives;
 using Avalonia.Interactivity;
 using ReactiveUI;
 
@@ -26,6 +27,14 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
     {
         get => _mode;
         set => this.RaiseAndSetIfChanged(ref _mode, value);
+    }
+    
+    private IList<TreeNodePath>? _defaultOpenPaths;
+
+    public IList<TreeNodePath>? DefaultOpenPaths
+    {
+        get => _defaultOpenPaths;
+        set => this.RaiseAndSetIfChanged(ref _defaultOpenPaths, value);
     }
 
     public MenuViewModel(IScreen screen)
