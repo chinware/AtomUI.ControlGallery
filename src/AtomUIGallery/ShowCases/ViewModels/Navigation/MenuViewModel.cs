@@ -37,6 +37,14 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _defaultOpenPaths, value);
     }
 
+    private TreeNodePath? _defaultSelectedPath;
+    
+    public TreeNodePath? DefaultSelectedPath
+    {
+        get => _defaultSelectedPath;
+        set => this.RaiseAndSetIfChanged(ref _defaultSelectedPath, value);
+    }
+
     public MenuViewModel(IScreen screen)
     {
         HostScreen = screen;

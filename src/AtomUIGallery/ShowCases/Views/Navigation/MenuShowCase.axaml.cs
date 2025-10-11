@@ -18,6 +18,7 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 var defaultOpenPaths = new List<TreeNodePath>();
                 defaultOpenPaths.Add(new TreeNodePath("/3/SubGroup2"));
                 viewModel.DefaultOpenPaths = defaultOpenPaths;
+                viewModel.DefaultSelectedPath = new TreeNodePath("/3/SubGroup1/Option1");
             }
         });
         InitializeComponent();
