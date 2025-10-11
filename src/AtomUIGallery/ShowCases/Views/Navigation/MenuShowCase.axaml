@@ -304,8 +304,8 @@
         
         <gallerycontrols:ShowCaseItem
             Title="Default Opened paths"
-            Description="You can open or select the path by default.">
-            <atom:NavMenu Mode="Inline" Width="300" Margin="0, 0, 0, 20"
+            Description="You can open or select the path by default." OccupyEntireRow="True">
+            <atom:NavMenu Mode="Inline"  Margin="0, 0, 0, 20"
                           DefaultOpenPaths="{Binding DefaultOpenPaths}">
                 <atom:NavMenuItem Header="Navigation One" Icon="{atom:IconProvider Kind=MailOutlined}" ItemKey="1"/>
                 <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"

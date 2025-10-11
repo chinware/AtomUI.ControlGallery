@@ -16,7 +16,7 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 ChangeModeSwitch.IsCheckedChanged  += viewModel.HandleChangeModeCheckChanged;
                 ChangeStyleSwitch.IsCheckedChanged += viewModel.HandleChangeStyleCheckChanged;
                 var defaultOpenPaths = new List<TreeNodePath>();
-                defaultOpenPaths.Add(new TreeNodePath("/3/SubGroup1/Option1"));
+                defaultOpenPaths.Add(new TreeNodePath("/3/SubGroup2"));
                 viewModel.DefaultOpenPaths = defaultOpenPaths;
             }
         });
