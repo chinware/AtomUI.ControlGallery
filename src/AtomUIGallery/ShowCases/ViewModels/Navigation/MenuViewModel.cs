@@ -20,6 +20,15 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
         get => _menuItems;
         set => this.RaiseAndSetIfChanged(ref _menuItems, value);
     }
+    
+        
+    private List<IMenuItemData> _contextMenuItems = [];
+    
+    public List<IMenuItemData> ContextMenuItems
+    {
+        get => _contextMenuItems;
+        set => this.RaiseAndSetIfChanged(ref _contextMenuItems, value);
+    }
 
     private bool _isDark;
 

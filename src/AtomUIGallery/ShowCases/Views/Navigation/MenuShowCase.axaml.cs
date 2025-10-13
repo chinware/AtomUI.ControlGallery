@@ -24,9 +24,51 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 viewModel.DefaultSelectedPath = new TreeNodePath("/3/SubGroup1/Option1");
                 InitNavMenuTreeNodes(viewModel);
                 InitMenuTreeNodes(viewModel);
+                InitContextMenuItems(viewModel);
             }
         });
         InitializeComponent();
+    }
+
+    private void InitContextMenuItems(MenuViewModel viewModel)
+    {
+        var nodes = new List<IMenuItemData>();
+        nodes.Add(new MenuItemData()
+        {
+            Header       = "Cut",
+            Icon         = AntDesignIconPackage.ScissorOutlined(),
+            InputGesture = KeyGesture.Parse("Ctrl+X"),
+        });
+        nodes.Add(new MenuItemData()
+        {
+            Header       = "Copy",
+            Icon         = AntDesignIconPackage.CopyOutlined(),
+            InputGesture = KeyGesture.Parse("Ctrl+C"),
+        });
+        nodes.Add(new MenuItemData()
+        {
+            Header       = "Delete",
+            Icon         = AntDesignIconPackage.CopyOutlined(),
+            InputGesture = KeyGesture.Parse("Ctrl+D"),
+        });
+        nodes.Add(new MenuItemData() {
+                Header    = "Paste",
+                Children = [
+                    new MenuItemData()
+                    {
+                        Header       = "Paste",
+                        Icon         = AntDesignIconPackage.FileDoneOutlined(),
+                        InputGesture = KeyGesture.Parse("Ctrl+P")
+                    },
+                    new MenuItemData()
+                    {
+                        Header       = "Paste from History",
+                        InputGesture = KeyGesture.Parse("Ctrl+Shift+V")
+                    }
+                ]
+            }
+        );
+        viewModel.MenuItems = nodes;
     }
 
     private void InitMenuTreeNodes(MenuViewModel viewModel)

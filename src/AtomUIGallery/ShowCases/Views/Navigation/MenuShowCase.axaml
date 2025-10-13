@@ -176,6 +176,33 @@
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
+            Title="Context menu, Generate MenuItem by ItemsSource"
+            Description="Right click to bring up the context menu.">
+            <gallerycontrols:ShowCaseItem.Styles>
+                <Style Selector="Border#ItemSourcesContextMenuContainer">
+                    <Setter Property="BorderBrush" Value="Gray" />
+                    <Setter Property="BorderThickness" Value="1" />
+                    <Setter Property="CornerRadius" Value="6" />
+                    <Setter Property="Padding" Value="10" />
+                    <Setter Property="Margin" Value="10" />
+                </Style>
+            </gallerycontrols:ShowCaseItem.Styles>
+            <Border Name="ItemSourcesContextMenuContainer">
+                <Border.ContextMenu>
+                    <atom:ContextMenu ItemsSource="{Binding MenuItems}"
+                                      x:DataType="viewModels:MenuViewModel">
+                        <atom:ContextMenu.ItemTemplate>
+                            <TreeDataTemplate ItemsSource="{Binding Children}">
+                                <atom:TextBlock Text="{Binding Header}" />
+                            </TreeDataTemplate>
+                        </atom:ContextMenu.ItemTemplate>
+                    </atom:ContextMenu>
+                </Border.ContextMenu>
+                <atom:TextBlock Text="Right Click to show Context Menu" />
+            </Border>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
             Title="Menu Flyout"
             Description="Right Click to show Context Flyout">
             <gallerycontrols:ShowCaseItem.Styles>
@@ -259,8 +286,7 @@
                     <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
                                       IsEnabled="False" />
                     <atom:NavMenuItem Header="Navigation Three - Submenu"
-                                      Icon="{atom:IconProvider Kind=SettingOutlined}"
-                                      ItemKey="XXX">
+                                      Icon="{atom:IconProvider Kind=SettingOutlined}">
                         <atom:NavMenuItem Header="Item 1">
                             <atom:NavMenuItem Header="Option 1" />
                             <atom:NavMenuItem Header="Option 2" />
