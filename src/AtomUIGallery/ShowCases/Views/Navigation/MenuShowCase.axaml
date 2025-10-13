@@ -214,7 +214,8 @@
                     <atom:NavMenuItem Header="Navigation Two" Icon="{atom:IconProvider Kind=AppstoreOutlined}"
                                       IsEnabled="False" />
                     <atom:NavMenuItem Header="Navigation Three - Submenu"
-                                      Icon="{atom:IconProvider Kind=SettingOutlined}">
+                                      Icon="{atom:IconProvider Kind=SettingOutlined}"
+                                      ItemKey="XXX">
                         <atom:NavMenuItem Header="Item 1">
                             <atom:NavMenuItem Header="Option 1" />
                             <atom:NavMenuItem Header="Option 2" />
