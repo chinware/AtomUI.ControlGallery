@@ -2,7 +2,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="AtomUIGallery.ShowCases.Views.ComboBoxShowCase"
              xmlns:atom="https://atomui.net"
-             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls">
+             xmlns:gallerycontrols="clr-namespace:AtomUIGallery.Controls"
+             xmlns:viewModels="clr-namespace:AtomUIGallery.ShowCases.ViewModels">
     <gallerycontrols:ShowCasePanel>
         <gallerycontrols:ShowCaseItem
             Title="Basic"
@@ -12,6 +13,56 @@
                 <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
                 <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
                 <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+                <atom:ComboBoxItem>床前明月光</atom:ComboBoxItem>
+                <atom:ComboBoxItem>疑是地上霜</atom:ComboBoxItem>
+                <atom:ComboBoxItem>举头望明月</atom:ComboBoxItem>
+                <atom:ComboBoxItem>低头思故乡</atom:ComboBoxItem>
+            </atom:ComboBox>
+        </gallerycontrols:ShowCaseItem>
+        
+        <gallerycontrols:ShowCaseItem
+            Title="Generate ComboBoxItem by ItemsSource"
+            Description="Generate structure based on ItemsSource and template.">
+            <atom:ComboBox PlaceholderText="Please select" Width="300"
+                           x:DataType="viewModels:ComboBoxViewModel"
+                           ItemsSource="{Binding ComboBoxItems}">
+                <atom:ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <atom:TextBlock Text="{Binding Text}" VerticalAlignment="Center"/>
+                    </DataTemplate>
+                </atom:ComboBox.ItemTemplate>
             </atom:ComboBox>
         </gallerycontrols:ShowCaseItem>
         

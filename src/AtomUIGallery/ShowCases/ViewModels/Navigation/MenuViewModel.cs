@@ -20,7 +20,6 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
         get => _menuItems;
         set => this.RaiseAndSetIfChanged(ref _menuItems, value);
     }
-    
         
     private List<IMenuItemData> _contextMenuItems = [];
     

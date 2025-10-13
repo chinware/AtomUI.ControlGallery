@@ -68,7 +68,7 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 ]
             }
         );
-        viewModel.MenuItems = nodes;
+        viewModel.ContextMenuItems = nodes;
     }
 
     private void InitMenuTreeNodes(MenuViewModel viewModel)
