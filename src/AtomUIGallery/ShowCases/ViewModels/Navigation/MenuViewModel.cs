@@ -12,6 +12,14 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
     public IScreen HostScreen { get; }
 
     public string UrlPathSegment { get; } = ID;
+    
+    private List<IMenuItemData> _menuItems = [];
+    
+    public List<IMenuItemData> MenuItems
+    {
+        get => _menuItems;
+        set => this.RaiseAndSetIfChanged(ref _menuItems, value);
+    }
 
     private bool _isDark;
 
@@ -45,9 +53,9 @@ public class MenuViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _defaultSelectedPath, value);
     }
 
-    private List<ITreeNode> _navMenuItems = [];
+    private List<INavMenuItemData> _navMenuItems = [];
     
-    public List<ITreeNode> NavMenuItems
+    public List<INavMenuItemData> NavMenuItems
     {
         get => _navMenuItems;
         set => this.RaiseAndSetIfChanged(ref _navMenuItems, value);

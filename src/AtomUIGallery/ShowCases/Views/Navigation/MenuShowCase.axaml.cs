@@ -2,6 +2,7 @@
 using AtomUI.Controls.Primitives;
 using AtomUI.IconPkg.AntDesign;
 using AtomUIGallery.ShowCases.ViewModels;
+using Avalonia.Input;
 using Avalonia.ReactiveUI;
 using ReactiveUI;
 
@@ -22,53 +23,101 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 viewModel.DefaultOpenPaths    = defaultOpenPaths;
                 viewModel.DefaultSelectedPath = new TreeNodePath("/3/SubGroup1/Option1");
                 InitNavMenuTreeNodes(viewModel);
+                InitMenuTreeNodes(viewModel);
             }
         });
         InitializeComponent();
     }
 
+    private void InitMenuTreeNodes(MenuViewModel viewModel)
+    {
+        var nodes = new List<IMenuItemData>();
+        nodes.Add(new MenuItemData()
+        {
+            Header  = "File",
+            Children = [new MenuItemData()
+            {
+                Header       = "New Text File",
+                InputGesture = KeyGesture.Parse("Ctrl+N")
+            },
+            new MenuItemData()
+            {
+                Header       = "New File",
+                InputGesture = KeyGesture.Parse("Ctrl+Alt+N")
+            },
+            new MenuItemData()
+            {
+                Header       = "New Window",
+                InputGesture = KeyGesture.Parse("Ctrl+Shift+N")
+            }]
+        });
+        nodes.Add(new MenuItemData() {
+                Header    = "Edit",
+                Children = [
+                    new MenuItemData()
+                    {
+                        Header       = "Undo",
+                        InputGesture = KeyGesture.Parse("Ctrl+Shift+Z")
+                    },
+                    new MenuSeparatorData(),
+                    new MenuItemData()
+                    {
+                        Header       = "Cut",
+                        InputGesture = KeyGesture.Parse("Ctrl+X")
+                    }
+                ]
+            }
+        );
+        nodes.Add(new MenuItemData() {
+                Header = "Disabled Item",
+                IsEnabled = false
+            }
+        );
+        viewModel.MenuItems = nodes;
+    }
+
     private void InitNavMenuTreeNodes(MenuViewModel viewModel)
     {
-        var nodes = new List<ITreeNode>();
-        nodes.Add(new NavMenuTreeNode()
+        var nodes = new List<INavMenuItemData>();
+        nodes.Add(new NavMenuItemData()
         {
             Header  = "Navigation One",
             Icon    = AntDesignIconPackage.MailOutlined(),
             ItemKey = "1"
         });
-        nodes.Add(new NavMenuTreeNode()
+        nodes.Add(new NavMenuItemData()
         {
             Header  = "Navigation Two",
             Icon    = AntDesignIconPackage.AppstoreOutlined(),
             ItemKey = "2"
         });
-        nodes.Add(new NavMenuTreeNode()
+        nodes.Add(new NavMenuItemData()
         {
             Header  = "Navigation Three - Submenu",
             Icon    = AntDesignIconPackage.SettingOutlined(),
             ItemKey = "3",
-            Children = [new NavMenuTreeNode()
+            Children = [new NavMenuItemData()
             {
                 Header  = "Item 1",
                 ItemKey = "SubGroup1",
-                Children = [new NavMenuTreeNode()
+                Children = [new NavMenuItemData()
                 {
                     Header  = "Option 1",
                     ItemKey = "Option1",
-                }, new NavMenuTreeNode()
+                }, new NavMenuItemData()
                 {
                     Header  = "Option 2",
                     ItemKey = "Option2",
                 }]
-            },new NavMenuTreeNode()
+            },new NavMenuItemData()
             {
                 Header  = "Item 2",
                 ItemKey = "SubGroup2",
-                Children = [new NavMenuTreeNode()
+                Children = [new NavMenuItemData()
                     {
                         Header  = "Option 3",
                         ItemKey = "Option3",
-                    }, new NavMenuTreeNode()
+                    }, new NavMenuItemData()
                     {
                         Header  = "Option 4",
                         ItemKey = "Option4",
@@ -76,7 +125,7 @@ public partial class MenuShowCase : ReactiveUserControl<MenuViewModel>
                 ]
             }]
         });
-        nodes.Add(new NavMenuTreeNode()
+        nodes.Add(new NavMenuItemData()
         {
             Header  = "Navigation Four",
             ItemKey = "4"
