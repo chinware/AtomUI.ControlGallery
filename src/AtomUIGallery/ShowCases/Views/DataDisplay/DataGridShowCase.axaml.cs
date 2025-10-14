@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using AtomUI.Controls;
 using AtomUIGallery.ShowCases.ViewModels;
 using Avalonia.Interactivity;
@@ -63,7 +64,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             ColumnCheckBox4.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox5.IsCheckedChanged += HandleColumnVisibleChanged;
             ColumnCheckBox6.IsCheckedChanged += HandleColumnVisibleChanged;
-
+            
             ShowTopPaginationCheckBox.IsCheckedChanged       += HandleShowTopPaginationCheckBoxChanged;
             ShowBottomPaginationCheckBox.IsCheckedChanged    += HandleShowBottomPaginationCheckBoxChanged;
             TopPaginationOptionGroup.OptionCheckedChanged    += HandleTopPaginationAlignChanged;
@@ -88,7 +89,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             BasicPagingCaseGrid.TopPaginationAlign = PaginationAlign.End;
         }
     }
-
+    
     private void HandleBottomPaginationAlignChanged(object? sender, OptionCheckedChangedEventArgs args)
     {
         if (args.Index == 0)
@@ -104,7 +105,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             BasicPagingCaseGrid.BottomPaginationAlign = PaginationAlign.End;
         }
     }
-
+    
     private void HandleShowTopPaginationCheckBoxChanged(object? sender, RoutedEventArgs args)
     {
         if (ShowTopPaginationCheckBox.IsChecked == true)
@@ -145,7 +146,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             }
         }
     }
-
+    
     private void HandleColumnVisibleChanged(object? sender, RoutedEventArgs e)
     {
         if (sender is CheckBox checkBox)
@@ -188,33 +189,33 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleSortAgeBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-       // ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
+       ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
     }
 
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-       // ResetFilterAndSortGrid.ClearFilters();
+       ResetFilterAndSortGrid.ClearFilters();
     }
 
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
-        // ResetFilterAndSortGrid.ClearFilters();
-        // ResetFilterAndSortGrid.ClearSort();
+        ResetFilterAndSortGrid.ClearFilters();
+        ResetFilterAndSortGrid.ClearSort();
     }
 
     private void HandleToggleEmptyGridItemsSource(object? sender, RoutedEventArgs? eventArgs)
     {
-        // if (CustomEmptyDataGrid.ItemsSource != null)
-        // {
-        //     CustomEmptyDataGrid.ItemsSource = null;
-        // }
-        // else
-        // {
-        //     if (DataContext is DataGridViewModel viewModel)
-        //     {
-        //         CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
-        //     }
-        // }
+        if (CustomEmptyDataGrid.ItemsSource != null)
+        {
+            CustomEmptyDataGrid.ItemsSource = null;
+        }
+        else
+        {
+            if (DataContext is DataGridViewModel viewModel)
+            {
+                CustomEmptyDataGrid.ItemsSource = viewModel.CustomEmptyDataSource;
+            }
+        }
     }
 
     private static int CellsEditableNewRowIndex = 1;
@@ -235,12 +236,12 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
 
     private void HandleRemoveRowCellsEditableGrid(object? sender, RoutedEventArgs? eventArgs)
     {
-        // if (sender is PopupConfirm popupConfirm)
-        // {
-        //     if (popupConfirm.DataContext is int index)
-        //     {
-        //         EditableCellsDataGrid.CollectionView?.RemoveAt(index);
-        //     }
-        // }
+        if (sender is PopupConfirm popupConfirm)
+        {
+            if (popupConfirm.DataContext is int index)
+            {
+                EditableCellsDataGrid.CollectionView?.RemoveAt(index);
+            }
+        }
     }
 }

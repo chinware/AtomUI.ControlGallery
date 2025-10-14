@@ -49,7 +49,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Selection"
                                       Description="Rows can be selectable by making first column as a selectable column. You can use rowSelection.type to set selection type. Default is checkbox."
                                       OccupyEntireRow="True">
@@ -103,7 +103,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Filter and sorter"
                                       Description="Use filters to generate filter menu in columns, onFilter to determine filtered result, and filterMultiple to indicate whether it's multiple or single selection, filterOnClose to specify whether to trigger filter when the filter menu closes.Use defaultFilteredValue to make a column filtered by default."
                                       OccupyEntireRow="True">
@@ -129,12 +129,12 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-
+        
                                              CanUserSort="True">
                     </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address"
                                              Binding="{Binding Address}"
-
+        
                                              CanUserSort="True"
                                              FilterMultiple="True"
                                              SupportedSortDirections="Ascending">
@@ -146,7 +146,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Filter in Tree"
                                       Description="You can use filterMode to change default filter interface, options: menu(default) and tree."
                                       OccupyEntireRow="True">
@@ -173,12 +173,12 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-
+        
                                              CanUserSort="True">
                     </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address"
                                              Binding="{Binding Address}"
-
+        
                                              CanUserSort="True"
                                              FilterMultiple="True"
                                              SupportedSortDirections="Ascending">
@@ -190,7 +190,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Multiple sorter"
                                       Description="column.sorter support multiple to config the priority of sort columns. Though sorter.compare to customize compare function. You can also leave it empty to use the interactive only."
                                       OccupyEntireRow="True">
@@ -198,24 +198,24 @@
                 <atom:DataGrid.Columns>
                     <atom:DataGridTextColumn Header="Name"
                                              Binding="{Binding Name}"
-
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="Chinese Score"
                                              Binding="{Binding Chinese}"
-
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="Math Score"
                                              Binding="{Binding Math}"
-
+        
                                              CanUserSort="True" />
                     <atom:DataGridTextColumn Header="English Score"
                                              Binding="{Binding English}"
-
+        
                                              CanUserSort="True" />
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Reset filters and sorters"
                                       Description="Control filters and sorters by API."
                                       OccupyEntireRow="True">
@@ -229,7 +229,7 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-
+        
                                                  CanUserSort="True"
                                                  FilterMultiple="True">
                             <atom:DataGridTextColumn.Filters>
@@ -242,12 +242,12 @@
                             </atom:DataGridTextColumn.Filters>
                         </atom:DataGridTextColumn>
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-
+        
                                                  CanUserSort="True">
                         </atom:DataGridTextColumn>
                         <atom:DataGridTextColumn Header="Address"
                                                  Binding="{Binding Address}"
-
+        
                                                  CanUserSort="True"
                                                  FilterMultiple="True">
                             <atom:DataGridTextColumn.Filters>
@@ -259,7 +259,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Size"
                                       Description="There are two compacted table sizes: middle and small. The small size is used in Modals only."
                                       OccupyEntireRow="True">
@@ -273,7 +273,7 @@
                                                  Binding="{Binding Address}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:DataGrid x:Name="MiddleSizeDataGrid" SizeType="Middle">
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
@@ -283,7 +283,7 @@
                                                  Binding="{Binding Address}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:DataGrid x:Name="SmallSizeDataGrid" SizeType="Small">
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
@@ -295,7 +295,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="border, title and footer"
                                       Description="Add border, title and footer for table." OccupyEntireRow="True">
             <atom:DataGrid x:Name="CustomHeaderAndFooterDataGrid"
@@ -320,7 +320,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Expandable Row"
                                       Description="When there's too much information to show and the table can't display all at once."
                                       OccupyEntireRow="True">
@@ -347,7 +347,7 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                 </atom:DataGrid.Columns>
-
+        
                 <atom:DataGrid.RowDetailsTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
@@ -355,7 +355,7 @@
                 </atom:DataGrid.RowDetailsTemplate>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Order Specific Column"
                                       Description="You can control the order of the expand and select columns."
                                       OccupyEntireRow="True">
@@ -384,7 +384,7 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                 </atom:DataGrid.Columns>
-
+        
                 <atom:DataGrid.RowDetailsTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Description}" TextWrapping="Wrap" />
@@ -458,7 +458,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Hidden Columns"
                                       Description="Hide columns with hidden."
                                       OccupyEntireRow="True">
@@ -484,7 +484,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Fixed Header"
                                       Description="Display large amounts of data in scrollable view."
                                       OccupyEntireRow="True">
@@ -496,11 +496,11 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Fixed Columns"
                                       Description="When there are too many columns, we can make some columns fixed."
                                       OccupyEntireRow="True">
-
+        
             <StackPanel Orientation="Vertical" Spacing="20">
                 <atom:DataGrid x:Name="FixedColumnsDataGrid1"
                                LeftFrozenColumnCount="2"
@@ -545,7 +545,7 @@
                         </atom:DataGridTemplateColumn>
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:DataGrid x:Name="FixedColumnsDataGrid2"
                                LeftFrozenColumnCount="2"
                                RightFrozenColumnCount="1"
@@ -575,11 +575,11 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Fixed Columns And Headers"
                                       Description="When there are too many columns, we can make some columns fixed."
                                       OccupyEntireRow="True">
-
+        
             <atom:DataGrid x:Name="FixedColumnsAndHeadersDataGrid"
                            LeftFrozenColumnCount="2"
                            RightFrozenColumnCount="1"
@@ -625,7 +625,7 @@
                 </atom:DataGrid.Columns>
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Drag Column sorting"
                                       Description="Drag the Header to sort the columns."
                                       OccupyEntireRow="True">
@@ -642,7 +642,7 @@
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:Separator Title="Many columns" TitlePosition="Left" Margin="0, 20, 0, 0"
                                 FontWeight="Bold" />
                 <atom:DataGrid x:Name="DragColumnDataGrid2"
@@ -664,7 +664,7 @@
                         <atom:DataGridTextColumn CanUserReorder="True" Header="Column9" Binding="{Binding Address}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:Separator Title="Drag reorder with frozen columns" TitlePosition="Left" Margin="0, 20, 0, 0"
                                 FontWeight="Bold" />
                 <atom:DataGrid x:Name="DragColumnDataGrid3"
@@ -690,7 +690,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Drag sorting with handler"
                                       Description="You can drag the row indicator column to sort the rows."
                                       OccupyEntireRow="True">
@@ -706,7 +706,7 @@
                         <atom:DataGridTextColumn Header="Age" Binding="{Binding Address}" />
                     </atom:DataGrid.Columns>
                 </atom:DataGrid>
-
+        
                 <atom:Separator Title="Normal" TitlePosition="Left"
                                 FontWeight="Bold"
                                 Margin="0, 20, 0, 0" />
@@ -722,7 +722,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Custom empty"
                                       Description="Custom empty status."
                                       OccupyEntireRow="True">
@@ -738,7 +738,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Editable Cells"
                                       Description="Table with editable cells."
                                       OccupyEntireRow="True">
@@ -767,7 +767,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Basic Paging" Description="Basic pagination table." OccupyEntireRow="True">
             <StackPanel Spacing="20">
                 <StackPanel Spacing="10">
@@ -776,7 +776,7 @@
                         <atom:CheckBox Name="ShowTopPaginationCheckBox">Top Pagination</atom:CheckBox>
                         <atom:CheckBox Name="ShowBottomPaginationCheckBox" IsChecked="True">Bottom Pagination</atom:CheckBox>
                     </StackPanel>
-
+        
                     <StackPanel Orientation="Horizontal" Spacing="10">
                         <atom:TextBlock Width="180" VerticalAlignment="Center">Top Pagination Align:</atom:TextBlock>
                         <atom:OptionButtonGroup ButtonStyle="Solid" Name="TopPaginationOptionGroup">
@@ -785,7 +785,7 @@
                             <atom:OptionButton IsChecked="True">End</atom:OptionButton>
                         </atom:OptionButtonGroup>
                     </StackPanel>
-
+        
                     <StackPanel Orientation="Horizontal" Spacing="10">
                         <atom:TextBlock Width="180" VerticalAlignment="Center">Bottom Pagination Align:</atom:TextBlock>
                         <atom:OptionButtonGroup ButtonStyle="Solid" Name="BottomPaginationOptionGroup">
@@ -794,7 +794,7 @@
                             <atom:OptionButton IsChecked="True">End</atom:OptionButton>
                         </atom:OptionButtonGroup>
                     </StackPanel>
-
+        
                 </StackPanel>
                 <atom:DataGrid x:Name="BasicPagingCaseGrid" Height="400" PaginationVisibility="Bottom">
                     <atom:DataGrid.Columns>
