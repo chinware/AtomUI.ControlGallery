@@ -71,7 +71,7 @@ internal static class ShowCaseRegister
     {
         Locator.CurrentMutable.Register(() => new AlertShowCase(), typeof(IViewFor<AlertViewModel>));
         Locator.CurrentMutable.Register(() => new DrawerShowCase(), typeof(IViewFor<DrawerViewModel>));
-        Locator.CurrentMutable.Register(() => new LoadingIndicatorShowCase(), typeof(IViewFor<LoadingIndicatorViewModel>));
+        Locator.CurrentMutable.Register(() => new SpinShowCase(), typeof(IViewFor<SpinViewModel>));
         Locator.CurrentMutable.Register(() => new MessageShowCase(), typeof(IViewFor<MessageViewModel>));
         Locator.CurrentMutable.Register(() => new ModalShowCase(), typeof(IViewFor<ModalViewModel>));
         Locator.CurrentMutable.Register(() => new NotificationShowCase(), typeof(IViewFor<NotificationViewModel>));

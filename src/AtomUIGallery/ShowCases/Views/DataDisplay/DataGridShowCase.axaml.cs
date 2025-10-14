@@ -186,23 +186,23 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             }
         }
     }
-
+    
     private void HandleSortAgeBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
        ResetFilterAndSortGrid.Sort(1, ListSortDirection.Descending);
     }
-
+    
     private void HandleClearFiltersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
        ResetFilterAndSortGrid.ClearFilters();
     }
-
+    
     private void HandleClearFiltersAndSortersBtnClick(object? sender, RoutedEventArgs? eventArgs)
     {
         ResetFilterAndSortGrid.ClearFilters();
         ResetFilterAndSortGrid.ClearSort();
     }
-
+    
     private void HandleToggleEmptyGridItemsSource(object? sender, RoutedEventArgs? eventArgs)
     {
         if (CustomEmptyDataGrid.ItemsSource != null)
@@ -217,9 +217,14 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             }
         }
     }
-
+    
+    private void HandleToggleLoadingState(object? sender, RoutedEventArgs? eventArgs)
+    {
+        CustomEmptyDataGrid.IsOperating = !CustomEmptyDataGrid.IsOperating;
+    }
+    
     private static int CellsEditableNewRowIndex = 1;
-
+    
     private void HandleAddARowToCellsEditableGrid(object? sender, RoutedEventArgs? eventArgs)
     {
         if (DataContext is DataGridViewModel viewModel)
@@ -233,7 +238,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
             CellsEditableNewRowIndex++;
         }
     }
-
+    
     private void HandleRemoveRowCellsEditableGrid(object? sender, RoutedEventArgs? eventArgs)
     {
         if (sender is PopupConfirm popupConfirm)

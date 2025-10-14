@@ -2,9 +2,9 @@
 
 namespace AtomUIGallery.ShowCases.ViewModels;
 
-public class LoadingIndicatorViewModel : ReactiveObject, IRoutableViewModel
+public class SpinViewModel : ReactiveObject, IRoutableViewModel
 {
-    public const string ID = "LoadingIndicator";
+    public const string ID = "Spin";
     
     public IScreen HostScreen { get; }
     
@@ -18,7 +18,7 @@ public class LoadingIndicatorViewModel : ReactiveObject, IRoutableViewModel
         set => this.RaiseAndSetIfChanged(ref _isLoadingSwitchChecked, value);
     }
 
-    public LoadingIndicatorViewModel(IScreen screen)
+    public SpinViewModel(IScreen screen)
     {
         HostScreen = screen;
     }

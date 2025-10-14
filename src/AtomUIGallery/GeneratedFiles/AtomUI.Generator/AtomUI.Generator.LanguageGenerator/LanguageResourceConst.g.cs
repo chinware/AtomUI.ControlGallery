@@ -37,13 +37,13 @@ namespace AtomUIGallery.Workspace.Localization.CaseNavigationLang
         public static readonly LanguageResourceKey Feedback = new LanguageResourceKey("CaseNavigation.Feedback", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Alert = new LanguageResourceKey("CaseNavigation.Feedback_Alert", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Drawer = new LanguageResourceKey("CaseNavigation.Feedback_Drawer", "AtomUIGallery");
-        public static readonly LanguageResourceKey Feedback_LoadingIndicator = new LanguageResourceKey("CaseNavigation.Feedback_LoadingIndicator", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Message = new LanguageResourceKey("CaseNavigation.Feedback_Message", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Modal = new LanguageResourceKey("CaseNavigation.Feedback_Modal", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Notification = new LanguageResourceKey("CaseNavigation.Feedback_Notification", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_PopupConfirm = new LanguageResourceKey("CaseNavigation.Feedback_PopupConfirm", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_ProgressBar = new LanguageResourceKey("CaseNavigation.Feedback_ProgressBar", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Skeleton = new LanguageResourceKey("CaseNavigation.Feedback_Skeleton", "AtomUIGallery");
+        public static readonly LanguageResourceKey Feedback_Spin = new LanguageResourceKey("CaseNavigation.Feedback_Spin", "AtomUIGallery");
         public static readonly LanguageResourceKey Feedback_Watermark = new LanguageResourceKey("CaseNavigation.Feedback_Watermark", "AtomUIGallery");
         public static readonly LanguageResourceKey General = new LanguageResourceKey("CaseNavigation.General", "AtomUIGallery");
         public static readonly LanguageResourceKey General_AboutUs = new LanguageResourceKey("CaseNavigation.General_AboutUs", "AtomUIGallery");

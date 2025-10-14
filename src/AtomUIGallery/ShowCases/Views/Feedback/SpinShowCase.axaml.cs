@@ -4,10 +4,9 @@ using ReactiveUI;
 
 namespace AtomUIGallery.ShowCases.Views;
 
-public partial class LoadingIndicatorShowCase : ReactiveUserControl<LoadingIndicatorViewModel>
+public partial class SpinShowCase : ReactiveUserControl<SpinViewModel>
 {
- 
-    public LoadingIndicatorShowCase()
+    public SpinShowCase()
     {
         this.WhenActivated(disposables => { });
         InitializeComponent();
