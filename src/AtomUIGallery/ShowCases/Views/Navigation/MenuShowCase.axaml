@@ -94,7 +94,7 @@
                                    Icon="{atom:IconProvider Kind=CheckOutlined}" />
                     <atom:MenuSeparator />
                     <atom:MenuItem Header="Exit" />
-                    <atom:MenuItem Header="Disabled" IsEnabled="False" />
+                    <atom:MenuItem Header="Disabled" IsEnabled="False" Icon="{atom:IconProvider Kind=DeleteOutlined}"/>
                 </atom:MenuItem>
             </atom:Menu>
         </gallerycontrols:ShowCaseItem>
