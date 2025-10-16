@@ -50,7 +50,7 @@
                 </atom:HyperLinkButton>
             </StackPanel>
 
-            <StackPanel HorizontalAlignment="Center" Spacing="20" Orientation="Horizontal" Margin="0, 20, 0, 0">
+            <StackPanel HorizontalAlignment="Center" Spacing="20" Orientation="Horizontal" Margin="0, 20, 0, 20">
                 <atom:GroupBox HeaderTitle="微信公众号">
                     <Image Source="/Assets/qinware-wechatpress.png"
                            HorizontalAlignment="Center"
