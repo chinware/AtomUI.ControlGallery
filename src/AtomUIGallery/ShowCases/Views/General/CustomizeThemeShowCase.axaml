@@ -27,7 +27,11 @@
                         <x:String>Default</x:String>
                     </atom:ThemeConfigProvider.Algorithms>
                     <atom:ThemeConfigProvider.SharedTokenSetters>
+                        <!-- Seed Token，影响范围大 -->
                         <atom:TokenSetter Key="ColorPrimary" Value="#00b96b" />
+                        <atom:TokenSetter Key="BorderRadius" Value="2" />
+                        <!-- 派生变量，影响范围小 -->
+                        <atom:TokenSetter Key="ColorBgContainer" Value="#f6ffed" />
                     </atom:ThemeConfigProvider.SharedTokenSetters>
                     <WrapPanel HorizontalAlignment="Left" Orientation="Horizontal">
                         <atom:Button ButtonType="Primary">Primary Button</atom:Button>
@@ -93,11 +97,11 @@
                 </Border>
             </atom:ThemeConfigProvider>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Customize Component Token"
             Description="In addition to Design Token, each component will also have its own Component Token to achieve style customization capabilities for components, and different components will not affect each other. Similarly, other Design Token of components can also be overridden in this way.">
-
+        
             <Border Padding="20">
                 <StackPanel Spacing="10">
                     <atom:ThemeConfigProvider>
@@ -134,7 +138,7 @@
                 </StackPanel>
             </Border>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem
             Title="Nested Theme"
             Description="By nesting ConfigProvider you can apply local theme to some parts of your page. Design Tokens that have not been changed in the child theme will inherit the parent theme.">
