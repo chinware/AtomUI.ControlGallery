@@ -25,7 +25,7 @@
                     <atom:MenuItem Header="{DynamicResource {x:Static lang:WorkspaceWindowLangResourceKey.MenuItemEnablePin}}" 
                                    ToggleType="CheckBox"
                                    IsChecked="True"
-                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Pin}"/>/>
+                                   Tag="{x:Static workspaceviews:WindowMenuItemKind.Pin}"/>
                     <atom:MenuItem Header="{DynamicResource {x:Static lang:WorkspaceWindowLangResourceKey.MenuItemEnableMinimize}}" 
                                    ToggleType="CheckBox"
                                    IsChecked="True"
