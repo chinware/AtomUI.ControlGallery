@@ -38,23 +38,23 @@
 
         <gallerycontrols:ShowCaseItem
             Title="Customized description"
-            Description="Customized description">
+            Description="Customized description" OccupyEntireRow="True">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <StackPanel Orientation="Horizontal" Spacing="10">
                     <atom:Spin IsSpinning="True" SizeType="Small"
                                IsShowTip="True"
                                Tip="Loading...">
-                        <Border Width="100" Height="100" Background="rgb(251, 251, 251)" />
+                        <Border Width="100" Height="100" Background="#0D000000" />
                     </atom:Spin>
                     <atom:Spin IsSpinning="True" SizeType="Middle"
                                IsShowTip="True"
                                Tip="Loading...">
-                        <Border Width="100" Height="100" Background="rgb(251, 251, 251)" />
+                        <Border Width="100" Height="100" Background="#0D000000" />
                     </atom:Spin>
                     <atom:Spin IsSpinning="True" SizeType="Large"
                                IsShowTip="True"
                                Tip="Loading...">
-                        <Border Width="100" Height="100" Background="rgb(251, 251, 251)" />
+                        <Border Width="100" Height="100" Background="#0D000000" />
                     </atom:Spin>
                 </StackPanel>
                 <atom:Spin IsSpinning="True"
@@ -68,12 +68,22 @@
         </gallerycontrols:ShowCaseItem>
         
         <gallerycontrols:ShowCaseItem
-            Title="Customized description"
-            Description="Customized description">
+            Title="Embedded mode"
+            Description="Embedding content into Spin will set it into loading state."
+            OccupyEntireRow="True">
             <StackPanel Orientation="Vertical" Spacing="10">
                 <atom:Spin IsSpinning="{Binding IsLoadingSwitchChecked}"
                            IsShowTip="True"
                            Tip="Loading...">
+                    <atom:Alert Message="Alert message title"
+                                Description="Further details about the context of this alert."
+                                Type="Info" />
+                </atom:Spin>
+                
+                <atom:Spin IsSpinning="{Binding IsLoadingSwitchChecked}"
+                           IsShowTip="True"
+                           Tip="Loading..."
+                           IsMaskBlurEnabled="True">
                     <atom:Alert Message="Alert message title"
                                 Description="Further details about the context of this alert."
                                 Type="Info" />
