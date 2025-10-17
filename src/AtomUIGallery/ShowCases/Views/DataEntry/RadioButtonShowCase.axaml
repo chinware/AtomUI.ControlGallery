@@ -39,11 +39,39 @@
         <gallerycontrols:ShowCaseItem
             Title="Radio Group"
             Description="A group of radio components.">
-            <WrapPanel Orientation="Horizontal">
-                <atom:RadioButton>A</atom:RadioButton>
-                <atom:RadioButton>B</atom:RadioButton>
-                <atom:RadioButton>C</atom:RadioButton>
-                <atom:RadioButton>D</atom:RadioButton>
+            <WrapPanel Orientation="Horizontal" ItemSpacing="10">
+                <atom:RadioButton>
+                    <StackPanel Spacing="5" Orientation="Vertical">
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=LineChartOutlined}" 
+                                   Width="18"
+                                   Height="18"/>
+                        <TextBlock>LineChart</TextBlock>
+                    </StackPanel>
+                </atom:RadioButton>
+                <atom:RadioButton>
+                    <StackPanel Spacing="5" Orientation="Vertical">
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=DotChartOutlined}"
+                                   Width="18"
+                                   Height="18"/>
+                        <TextBlock>DotChart</TextBlock>
+                    </StackPanel>
+                </atom:RadioButton>
+                <atom:RadioButton>
+                    <StackPanel Spacing="5" Orientation="Vertical">
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=BarChartOutlined}"
+                                   Width="18"
+                                   Height="18"/>
+                        <TextBlock>BarChart</TextBlock>
+                    </StackPanel>
+                </atom:RadioButton>
+                <atom:RadioButton>
+                    <StackPanel Spacing="5" Orientation="Vertical">
+                        <atom:Icon IconInfo="{atom:IconInfoProvider Kind=PieChartOutlined}"
+                                   Width="18"
+                                   Height="18"/>
+                        <TextBlock>PieChart</TextBlock>
+                    </StackPanel>
+                </atom:RadioButton>
             </WrapPanel>
         </gallerycontrols:ShowCaseItem>
         
