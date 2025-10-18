@@ -58,7 +58,7 @@
                     <atom:RadioButton x:Name="ExtendedSelection" IsChecked="True">Extended</atom:RadioButton>
                     <atom:RadioButton x:Name="SingleSelection">Single</atom:RadioButton>
                 </StackPanel>
-                <atom:DataGrid x:Name="SelectionDataGrid" SelectionMode="Extended">
+                <atom:DataGrid x:Name="SelectionDataGrid" SelectionMode="Extended" SelectTriggerType="Cell">
                     <atom:DataGrid.Columns>
                         <atom:DataGridSelectionColumn />
                         <atom:DataGridTemplateColumn Header="Name">
