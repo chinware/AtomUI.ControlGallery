@@ -129,7 +129,7 @@
                         </atom:DataGridTemplateColumn.CellTemplate>
                     </atom:DataGridTemplateColumn>
                     <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}"
-        
+                                             SupportedSortDirections="All"
                                              CanUserSort="True">
                     </atom:DataGridTextColumn>
                     <atom:DataGridTextColumn Header="Address"
@@ -147,6 +147,53 @@
             </atom:DataGrid>
         </gallerycontrols:ShowCaseItem>
         
+        <gallerycontrols:ShowCaseItem Title="Drag resize column"
+                                      Description="You can drag to change the size of the column"
+                                      OccupyEntireRow="True">
+            <atom:DataGrid x:Name="DragResizeColumn" IsHideOnSinglePage="True" CanUserResizeColumns="True">
+                <atom:DataGrid.Columns>
+                    <atom:DataGridTemplateColumn Header="Name" CanUserResize="True">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <atom:HyperLinkTextBlock Text="{Binding Name}" />
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                    <atom:DataGridTextColumn Header="Age" Binding="{Binding Age}" CanUserResize="True" CanUserSort="True"/>
+                    <atom:DataGridTextColumn Header="Address" Binding="{Binding Address}" />
+                    <atom:DataGridTemplateColumn Header="Tags">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <ItemsControl ItemsSource="{Binding Tags}">
+                                    <ItemsControl.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <StackPanel Orientation="Horizontal" Spacing="5" />
+                                        </ItemsPanelTemplate>
+                                    </ItemsControl.ItemsPanel>
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <atom:Tag TagText="{Binding Name}" TagColor="{Binding Color}"></atom:Tag>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                    <atom:DataGridTemplateColumn Header="Action">
+                        <atom:DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal" Spacing="15">
+                                    <atom:HyperLinkTextBlock Text="Invite" />
+                                    <atom:HyperLinkTextBlock Text="Modify" />
+                                    <atom:HyperLinkTextBlock Text="Delete" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </atom:DataGridTemplateColumn.CellTemplate>
+                    </atom:DataGridTemplateColumn>
+                </atom:DataGrid.Columns>
+            </atom:DataGrid>
+        </gallerycontrols:ShowCaseItem>
+
         <gallerycontrols:ShowCaseItem Title="Filter in Tree"
                                       Description="You can use filterMode to change default filter interface, options: menu(default) and tree."
                                       OccupyEntireRow="True">
@@ -229,7 +276,6 @@
                     <atom:DataGrid.Columns>
                         <atom:DataGridTextColumn Header="Name"
                                                  Binding="{Binding Name}"
-        
                                                  CanUserSort="True"
                                                  FilterMultiple="True">
                             <atom:DataGridTextColumn.Filters>
@@ -436,7 +482,8 @@
                                       Description="Group table head with columns[n].children." OccupyEntireRow="true">
             <StackPanel>
                 <atom:DataGrid Name="GroupHeaderDataGrid" LeftFrozenColumnCount="2"
-                               RightFrozenColumnCount="2">
+                               RightFrozenColumnCount="2"
+                               CanUserResizeColumns="True">
                     <atom:DataGrid.ColumnGroups>
                         <atom:DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                         <atom:DataGridColumnGroupItem Header="Other">
@@ -451,7 +498,7 @@
                         </atom:DataGridColumnGroupItem>
                         <atom:DataGridColumnGroupItem Header="Company">
                             <atom:DataGridTextColumn Header="Company Address" Binding="{Binding CompanyAddress}" />
-                            <atom:DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}" />
+                            <atom:DataGridTextColumn Header="Company Name" Binding="{Binding CompanyName}" CanUserResize="False" />
                         </atom:DataGridColumnGroupItem>
                         <atom:DataGridTextColumn Header="Gender" Binding="{Binding Gender}" />
                     </atom:DataGrid.ColumnGroups>
@@ -722,7 +769,7 @@
                 </atom:DataGrid>
             </StackPanel>
         </gallerycontrols:ShowCaseItem>
-
+        
         <gallerycontrols:ShowCaseItem Title="Custom empty and loading"
                                       Description="Custom empty status and loading."
                                       OccupyEntireRow="True">

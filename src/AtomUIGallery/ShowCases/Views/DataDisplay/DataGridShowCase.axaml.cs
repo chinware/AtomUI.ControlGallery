@@ -22,6 +22,7 @@ public partial class DataGridShowCase : ReactiveUserControl<DataGridViewModel>
                 Dispatcher.UIThread.Post(() => FilterInTreeGrid.ItemsSource      = viewModel.FilterAndSorterDataSource, DispatcherPriority.Background);
                 Dispatcher.UIThread.Post(() => MultiSorterDataGrid.ItemsSource   = viewModel.MultiSorterDataSource, DispatcherPriority.Background);
                 Dispatcher.UIThread.Post(() => ResetFilterAndSortGrid.ItemsSource = viewModel.BasicCaseDataSource, DispatcherPriority.Background);
+                Dispatcher.UIThread.Post(() => DragResizeColumn.ItemsSource = viewModel.BasicCaseDataSource, DispatcherPriority.Background);
                 Dispatcher.UIThread.Post(() => LargeSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource, DispatcherPriority.Background);
                 Dispatcher.UIThread.Post(() => MiddleSizeDataGrid.ItemsSource             = viewModel.BasicCaseDataSource, DispatcherPriority.Background);
                 Dispatcher.UIThread.Post(() => SmallSizeDataGrid.ItemsSource              = viewModel.BasicCaseDataSource, DispatcherPriority.Background);
